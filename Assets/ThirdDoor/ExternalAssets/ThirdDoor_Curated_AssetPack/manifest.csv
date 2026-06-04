@@ -1,0 +1,157 @@
+source,original_path,curated_path,note
+kenney,License.txt,Licenses/License.txt,原包授权/说明文件
+scifi,Modular SciFi MegaKit[Standard]/License_Standard.txt,Licenses/License_Standard.txt,原包授权/说明文件
+house,Ultimate House Interior Pack - June 2020/License.txt,Licenses/License.txt,原包授权/说明文件
+doors,README.txt,Licenses/README.txt,原包授权/说明文件
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-corner.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-corner.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-end.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-end.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-intersection.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-intersection.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-junction.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-junction.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-transition.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-transition.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-wide-corner.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-wide-corner.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-wide-end.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-wide-end.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-wide-intersection.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-wide-intersection.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-wide-junction.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-wide-junction.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor-wide.fbx,Assets/Kenney_ModularDungeon_FBX/corridor-wide.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/corridor.fbx,Assets/Kenney_ModularDungeon_FBX/corridor.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/gate-door-window.fbx,Assets/Kenney_ModularDungeon_FBX/gate-door-window.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/gate-door.fbx,Assets/Kenney_ModularDungeon_FBX/gate-door.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/gate-metal-bars.fbx,Assets/Kenney_ModularDungeon_FBX/gate-metal-bars.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/gate.fbx,Assets/Kenney_ModularDungeon_FBX/gate.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-corner.fbx,Assets/Kenney_ModularDungeon_FBX/room-corner.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-large-variation.fbx,Assets/Kenney_ModularDungeon_FBX/room-large-variation.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-large.fbx,Assets/Kenney_ModularDungeon_FBX/room-large.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-small-variation.fbx,Assets/Kenney_ModularDungeon_FBX/room-small-variation.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-small.fbx,Assets/Kenney_ModularDungeon_FBX/room-small.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-wide-variation.fbx,Assets/Kenney_ModularDungeon_FBX/room-wide-variation.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/room-wide.fbx,Assets/Kenney_ModularDungeon_FBX/room-wide.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/stairs-wide.fbx,Assets/Kenney_ModularDungeon_FBX/stairs-wide.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/stairs.fbx,Assets/Kenney_ModularDungeon_FBX/stairs.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-corner.fbx,Assets/Kenney_ModularDungeon_FBX/template-corner.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-detail.fbx,Assets/Kenney_ModularDungeon_FBX/template-detail.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-big.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-big.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-detail-a.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-detail-a.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-detail.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-detail.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-layer-hole.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-layer-hole.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-layer-raised.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-layer-raised.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor-layer.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor-layer.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-floor.fbx,Assets/Kenney_ModularDungeon_FBX/template-floor.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall-corner.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall-corner.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall-detail-a.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall-detail-a.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall-half.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall-half.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall-stairs.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall-stairs.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall-top.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall-top.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/template-wall.fbx,Assets/Kenney_ModularDungeon_FBX/template-wall.fbx,主房间/走廊/门洞/墙地模块；建议第一批使用
+Kenney Modular Dungeon Kit,Models/FBX format/Textures/colormap.png,Assets/Kenney_ModularDungeon_FBX/colormap.png,主房间/走廊/门洞/墙地模块；建议第一批使用
+Loafbrr DoorsAsset,fbx/Door_10_grp.fbx,Assets/DoorsAsset_FBX/Door_10_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_11_grp.fbx,Assets/DoorsAsset_FBX/Door_11_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_12_grp.fbx,Assets/DoorsAsset_FBX/Door_12_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_13_grp.fbx,Assets/DoorsAsset_FBX/Door_13_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_14_grp.fbx,Assets/DoorsAsset_FBX/Door_14_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_15_grp.fbx,Assets/DoorsAsset_FBX/Door_15_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_16_grp.fbx,Assets/DoorsAsset_FBX/Door_16_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_17_grp.fbx,Assets/DoorsAsset_FBX/Door_17_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_1_grp.fbx,Assets/DoorsAsset_FBX/Door_1_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_2_grp.fbx,Assets/DoorsAsset_FBX/Door_2_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_3_grp.fbx,Assets/DoorsAsset_FBX/Door_3_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_4_grp.fbx,Assets/DoorsAsset_FBX/Door_4_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_5_grp.fbx,Assets/DoorsAsset_FBX/Door_5_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_6_grp.fbx,Assets/DoorsAsset_FBX/Door_6_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_7_grp.fbx,Assets/DoorsAsset_FBX/Door_7_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_8_grp.fbx,Assets/DoorsAsset_FBX/Door_8_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Door_9_grp.fbx,Assets/DoorsAsset_FBX/Door_9_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Window1_grp.fbx,Assets/DoorsAsset_FBX/Window1_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Window2_grp.fbx,Assets/DoorsAsset_FBX/Window2_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Window3_grp.fbx,Assets/DoorsAsset_FBX/Window3_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Window4_grp.fbx,Assets/DoorsAsset_FBX/Window4_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,fbx/Window5_grp.fbx,Assets/DoorsAsset_FBX/Window5_grp.fbx,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_AO.png,Assets/DoorsAsset_FBX/DoorSet_AO.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_Base Color Dark.png,Assets/DoorsAsset_FBX/DoorSet_Base Color Dark.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_Base Color Red.png,Assets/DoorsAsset_FBX/DoorSet_Base Color Red.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_Base Color Blue.png,Assets/DoorsAsset_FBX/DoorSet_Base Color Blue.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_Base Color White.png,Assets/DoorsAsset_FBX/DoorSet_Base Color White.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_Base Color.png,Assets/DoorsAsset_FBX/DoorSet_Base Color.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_METALLIC.png,Assets/DoorsAsset_FBX/DoorSet_METALLIC.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_NORMAL.png,Assets/DoorsAsset_FBX/DoorSet_NORMAL.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Loafbrr DoorsAsset,Textures/DoorSet/DoorSet_ROUGHNESS.png,Assets/DoorsAsset_FBX/DoorSet_ROUGHNESS.png,出口黑门/左右房间门/备用窗；FBX 全保留，贴图只保留常用色与 PBR 辅助
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_DarkMetal.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_DarkMetal.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_Frame_A.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_Frame_A.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_Frame_Square.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_Frame_Square.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_Frame_SquareTall.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_Frame_SquareTall.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_Frame_Square_Blocked.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_Frame_Square_Blocked.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Door_Simple.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Door_Simple.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_CenterPlate.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_CenterPlate.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_DarkPlates.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_DarkPlates.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Ramp_2Short.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Ramp_2Short.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Simple.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Simple.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Simple2.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Simple2.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Squares.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Squares.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Stairs_2.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Stairs_2.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Window_Thin.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Window_Thin.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_Window_Wide.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_Window_Wide.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Platforms/Platform_X.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Platform_X.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/BottomSimple_Corner_Square_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/BottomSimple_Corner_Square_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/BottomSimple_Corner_Square_Outer_1.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/BottomSimple_Corner_Square_Outer_1.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/BottomSimple_Corner_Square_Outer_2.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/BottomSimple_Corner_Square_Outer_2.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/BottomSimple_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/BottomSimple_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_AccentStrip_Corner_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_AccentStrip_Corner_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_AccentStrip_Corner_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_AccentStrip_Corner_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_AccentStrip_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_AccentStrip_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple1_Corner_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple1_Corner_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple1_Corner_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple1_Corner_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple1_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple1_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple2_Corner_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple2_Corner_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple2_Corner_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple2_Corner_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/ShortWall_Simple2_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/ShortWall_Simple2_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/TopSimple_Corner_Round_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/TopSimple_Corner_Round_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/TopSimple_Corner_Round_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/TopSimple_Corner_Round_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/TopSimple_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/TopSimple_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallAstra_Corner_Square_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallAstra_Corner_Square_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallAstra_Corner_Square_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallAstra_Corner_Square_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallAstra_Straight_Flat.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallAstra_Straight_Flat.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallAstra_Straight_Flat_Window.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallAstra_Straight_Flat_Window.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallBand_Corner_Square_Inner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallBand_Corner_Square_Inner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallBand_Corner_Square_Outer.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallBand_Corner_Square_Outer.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Walls/WallBand_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/WallBand_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_AccessPoint.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_AccessPoint.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Cable_1.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Cable_1.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Cable_3.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Cable_3.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Fan_Small.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Fan_Small.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Light_Corner.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Light_Corner.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Light_Floor.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Light_Floor.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Light_Small.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Light_Small.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Light_Wide.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Light_Wide.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Vent_Small.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Vent_Small.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Props/Prop_Vent_Wide.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Prop_Vent_Wide.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Columns/Column_Hollow.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Column_Hollow.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Columns/Column_Large_Straight.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Column_Large_Straight.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Columns/Column_Round.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Column_Round.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Modular SciFi MegaKit Standard,Modular SciFi MegaKit[Standard]/FBX (Unity)/Columns/Column_Simple.fbx,Assets/Quaternius_ModularSciFi_UnityFBX/Column_Simple.fbx,只保留低干扰的门框、简单墙段、平台、灯条、少量机械符号件
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Small.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Small.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Floor1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Floor1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Cube2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Cube2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Cube.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Cube.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Floor2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Floor2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_CeilingSingle.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_CeilingSingle.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Column_Round1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Column_Round1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Stand1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Stand1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Column_Round2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Column_Round2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Column_SquareBig.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Column_SquareBig.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Shelf_1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Shelf_1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Light_Desk.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Light_Desk.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Shelf_Small1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Shelf_Small1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Drawer_1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Drawer_1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Table_RoundLarge.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Table_RoundLarge.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Table_RoundSmall.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Table_RoundSmall.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Bookshelf.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Bookshelf.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Column_SquareSmall.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Column_SquareSmall.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Chair_1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Chair_1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Table_RoundSmall2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Table_RoundSmall2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Shelf_Small2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Shelf_Small2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Carpet_2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Carpet_2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/NightStand_1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/NightStand_1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Trashcan_Small1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Trashcan_Small1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Carpet_1.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Carpet_1.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Chair_4.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Chair_4.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Chair_3.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Chair_3.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
+Quaternius Ultimate House Interior,Ultimate House Interior Pack - June 2020/FBX/Chair_2.fbx,Assets/Quaternius_HouseInterior_StageProps_FBX/Chair_2.fbx,只保留可作为抽象舞台道具的灯、椅、桌、架、柱；不保留强生活化杂物
