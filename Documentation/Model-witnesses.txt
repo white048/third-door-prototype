@@ -1,0 +1,41 @@
+RELATIONSHIP MODEL / PASS
+Dispatch V8 checks: 83869
+Dispatch V8 resolved packets: 3887
+Legacy compatibility checks: 404533
+Checks: 404533
+Random journeys: 3000
+Exhaustive choice/rest/final combinations: 17496
+Random correspondence journeys: 900
+Office random journeys: 600 / exhaustive combinations: 69984 / endings: 7
+Random save roundtrips: 250 across two cases
+Dispatch V8 ending route combinations: 8678
+Dispatch V8 random journeys: 600
+V8 Home / SharedTable / carry both; request-first + pause; fact-first + follow-up; carry again; confirm both
+V8 Home / Exhaustion / responses=111111 / lead=0 / restMask=0 / final=0
+V8 Home / Distance / responses=111111 / lead=0 / restMask=3 / final=2
+V8 Home / FalsePeace / responses=211111 / lead=0 / restMask=7 / final=0
+V8 Home / Boundary / responses=331111 / lead=0 / restMask=0 / final=2
+V8 Home / Alliance / responses=123311 / lead=0 / restMask=7 / final=0
+V8 Home / Loop / responses=112121 / lead=0 / restMask=3 / final=0
+V8 Office / SharedTable / carry both; request-first + pause; fact-first + follow-up; carry again; confirm both
+V8 Office / Exhaustion / responses=111111 / lead=0 / restMask=0 / final=0
+V8 Office / Distance / responses=111111 / lead=0 / restMask=3 / final=2
+V8 Office / FalsePeace / responses=211111 / lead=0 / restMask=7 / final=0
+V8 Office / Alliance / responses=213111 / lead=0 / restMask=7 / final=0
+V8 Office / Boundary / responses=131121 / lead=0 / restMask=3 / final=2
+V8 Office / Loop / responses=112121 / lead=0 / restMask=3 / final=0
+OFFICE ENDINGS / exhaustive combinations: 69984
+SharedTable / responses=321132 / firstVoice=1 / restMask=1 / publicDispatch=True / final=2
+Boundary / responses=131121 / firstVoice=0 / restMask=1 / publicDispatch=True / final=3
+Distance / responses=111111 / firstVoice=0 / restMask=3 / publicDispatch=False / final=3
+Loop / responses=112121 / firstVoice=0 / restMask=3 / publicDispatch=False / final=1
+Alliance / responses=213111 / firstVoice=0 / restMask=7 / publicDispatch=False / final=1
+Exhaustion / responses=111111 / firstVoice=0 / restMask=0 / publicDispatch=False / final=1
+FalsePeace / responses=111111 / firstVoice=0 / restMask=7 / publicDispatch=True / final=1
+Distance / leave before accepting a message
+Exhaustion / responses=111111 / restMask=0 / final=1
+FalsePeace / responses=211111 / restMask=7 / final=1
+Boundary / responses=331111 / restMask=0 / final=3
+Alliance / responses=123311 / restMask=7 / final=1
+Loop / responses=112121 / restMask=3 / final=1
+SharedTable / responses=221122 / restMask=1 / final=2

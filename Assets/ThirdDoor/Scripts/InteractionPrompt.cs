@@ -4,18 +4,20 @@ using UnityEngine.UI;
 public class InteractionPrompt : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
-    [SerializeField] private Text promptText;
+    [SerializeField] private ExhibitionText promptText;
     [SerializeField] private float interactDistance = 5.5f;
     [SerializeField] private float interactRadius = 0.28f;
     [SerializeField] private LayerMask raycastMask = ~0;
 
     private Interactable currentInteractable;
     private Interactable previousInteractable;
+    private GameObject paper;
 
-    public void Configure(PlayerController playerController, Text promptLabel)
+    public void Configure(PlayerController playerController, ExhibitionText promptLabel,GameObject backing=null)
     {
         player = playerController;
         promptText = promptLabel;
+        paper=backing;
     }
 
     private void Awake()
@@ -36,6 +38,7 @@ public class InteractionPrompt : MonoBehaviour
         }
 
         bool showPrompt = currentInteractable != null;
+        if(paper!=null)paper.SetActive(showPrompt);
         UpdateFocus(currentInteractable);
         if (promptText != null)
         {
@@ -43,12 +46,21 @@ public class InteractionPrompt : MonoBehaviour
             if (showPrompt)
             {
                 promptText.text = currentInteractable.PromptText;
+                var door=currentInteractable as DoorDialogue;
+                if(door!=null&&(door.Actor==DialogueActor.RedDoor||door.Actor==DialogueActor.BlueDoor)&&GameStateManager.Instance.Run.Messages.Count>0)
+                    promptText.text+="\n"+NarrativeText.L("[ F ]  处理在手的话 / 转述许可与交付","[ F ]  CORRESPONDENCE / PERMISSION AND DELIVERY");
             }
         }
 
-        if (showPrompt && Input.GetKeyDown(KeyCode.E))
+        if (showPrompt && Input.GetKeyDown(KeyCode.E) && DialogueUI.LastClosedFrame != Time.frameCount)
         {
             currentInteractable.Interact(player);
+        }
+        if(showPrompt&&Input.GetKeyDown(KeyCode.F)&&DialogueUI.LastClosedFrame!=Time.frameCount)
+        {
+            var door=currentInteractable as DoorDialogue;
+            if(door!=null&&(door.Actor==DialogueActor.RedDoor||door.Actor==DialogueActor.BlueDoor))
+                FindObjectOfType<NarrativeNotebook>().ShowCorrespondence(door.Actor==DialogueActor.RedDoor?0:1);
         }
 
         // Press K to dump diagnostic info — helps debug "why no prompt" issues.

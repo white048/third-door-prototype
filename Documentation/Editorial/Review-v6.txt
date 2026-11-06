@@ -1,0 +1,77 @@
+第三扇门 / 双语编辑记录
+2026-10-30
+
+已安装并应用的 skill
+英文：humanizer，blader/humanizer，版本 3.1.0。
+来源：https://github.com/blader/humanizer
+固定提交：0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0
+本地：C:\Users\17906\.codex\skills\humanizer\SKILL.md
+SHA-256：0612F1DFB1672B0EA9B97E139BF1F06CABE98D8B27424FE8FF01E1FB4CC99CAD
+
+中文：humanizer-zh，op7418/Humanizer-zh，修订日期 2026-09-23。
+来源：https://github.com/op7418/Humanizer-zh
+固定提交：f4518a8eab97b8bfebc66a89d34320a89bef6930
+本地：C:\Users\17906\.codex\skills\humanizer-zh\SKILL.md
+SHA-256：95627FD4437D886F98032CCC62D79136E6310F1FC04E354BB86431795FF206DF
+
+两个包均采用 MIT 许可。审核时的完整文件与许可在 SkillReview/，来源记录在 Sources.json。
+安装使用系统自带 skill-installer，安装后的 SKILL.md 与已审查文件逐字节一致。
+它们是编辑指令，使用方式是读规则、逐句修改、再检查含义。本轮已完成这一步。
+后续对话可以指定 $humanizer-zh 和 $humanizer，让编辑继续按这套规则执行。
+
+修改原则
+人说话时先说眼前的事。母亲担心孩子疏远，孩子想自己决定；经理关心交付，同事想调整安排。
+减少旁白替人物归纳道理，删去重复的疗愈式解释和每句都对称的警句。
+英文逐句按说话场景重写，不强求和中文有相同的语序或句数。
+构成主义标题、编号、短标语、术语和必要的规则对照有各自用途，合适的原文保留。
+故意有问题的回应仍有问题。例如“再解释一句，他们肯定答应”仍是保证，不改成谨慎建议。
+不添加人物经历，不改变数值、按键、条件、时间、结局触发、机器标识和存档键。
+
+修改示例
+原：“我需要自己的空间，不是失去她。”界限和离弃，原来不是同一件事。
+现：“我还是想跟她来往。可总得让我自己做决定吧。”
+原因：把意思放回当事人的话里，去掉旁白紧接着解释主旨的句子。
+
+原：Before the blame, what are you afraid of losing?
+现：What are you so worried about?
+原因：保留追问担忧的动作，用对话中更常见的问法。
+
+原：This envelope is resolved. Delivery and privacy both leave a record; neither pays twice.
+现：This envelope has been dealt with. Its result is recorded and cannot be repeated.
+原因：说明已处理、不可重复的规则，避免用俏皮话解释结算。
+
+原：两个人的需要，不等于两份公开许可。
+现：先听原话，再决定转告什么。
+原因：传话夹的总提示先告诉玩家能做什么。私下内容的许可另有明确标记和说明。
+
+术语与条件复查
+余力 / BREATH：0–8；承重 / LOAD：0–8；直连 / BRIDGE：0–6。
+BRIDGE 表示直接交流的准备程度，不是累计送信数量，也不代替同意。
+转述私下需要的许可，与愿不愿意直接谈分开；公开工作请求有自己的交付条件。
+信任变化、修复后的再次询问、一次性卡牌、重述限制、每轮休息和出口条件逐项保留。
+“翻译”的信任下降不会自动恢复。未经允许转述只会撤回实际存在的先前同意。
+有意站队、润色、催问私事和保证结果的选项仍保留相应风险。
+
+覆盖范围
+当前两案例：开场、动态对白、回应、反馈、结局、实际传话、原句与私下需要、许可与修复。
+界面：卡牌、预览说明、资源、休息、手记、逐句回看、目录、暂停、结局导航、图像手记。
+兼容层：LocalizationManager 的旧文案值。其查找键、路径、ID 和未使用旧规则不迁移。
+当前说明：README、第六版中英文试玩说明、设计说明、产品工作顺序、美术制作单及网页配文。
+无需改写的标题、短标签和技术说明保留。旧版设计/路线图/平衡记录按历史版本保留。
+第三方许可、素材署名、skill 快照、QA 日志、模型轨迹、存档、机器生成 ID 与原图均不作文字润色。
+作者与 AI 协作记录保留。本轮目标是更好的文字，不是隐去素材和代码的来源。
+
+可核查记录
+Before-v6.json：审校前所有项目 C# 字符串及去除字符串和注释后的代码校验值。
+Decisions-v6.json、Decisions-Dialogue-v6.json、Decisions-UI-v6.json、Decisions-Legacy-v6.json：逐项编辑决定。
+CopyReview-v6.json：最终字符串修改对照和代码一致性检查，包含随后缩短英文长选项等修订。
+最终对照共 410 处字符串变化，分布在 17 个 C# 文件中；其中包含 1 处自动生成字库语料变化。
+去掉字符串和注释后，可执行 C# token 与审校前一致。检查不把字符串改动自动当成语义正确。
+运行 Tools/Review-Copy.py 可重新生成最终对照；不要重复运行一次性的 Edit-Copy-v6*.py。
+运行时字库 NarrativeGlyphs.cs 根据修改后的语料自动重建，审校记录中会单列该生成文件的字符串变化。
+模型断言、原生玩家流程、截图和布局结果见 Documentation/QA-results.json。
+
+检查的边界
+本轮没有运行 AI 文本检测器，也没有提供检测分数或人工原创保证。
+代码一致性检查只证明可执行 C# token 未改；措辞的准确性依赖逐句复查和实机验证。
+最终仍应请真实玩家朗读、试玩，检查人物语气和选项是否容易误解。

@@ -1,0 +1,9 @@
+<linker>
+  <!-- Font atlas generation uses the pinned 2022.3 TextCore packing API also used by TMP. -->
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule">
+    <type fullname="UnityEngine.TextCore.LowLevel.FontEngine" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TMP_FontAsset" preserve="fields" />
+  </assembly>
+</linker>

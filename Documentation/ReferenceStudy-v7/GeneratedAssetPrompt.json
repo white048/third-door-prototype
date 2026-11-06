@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-04",
+  "method": "Built-in image_gen",
+  "referenceRole": "Style and negative space only; supplied artwork stays in reference-only and is not distributed with the game",
+  "asset": "Assets/Resources/Design/Illustrations/ObjectCutouts-v7.png",
+  "layout": "3 by 3; tile 0 envelope, 1 handset, 2 private envelope, 3 glass weight, 4 binder clip, 5 paper strip, 6 thread coil, 7 open door frame, 8 hand",
+  "request": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "E:\\014_Unity\\UnityProject\\ThirdDoorPrototype\\Documentation\\ReferenceStudy-v7\\Detail-02.png"
+    ],
+    "prompt": "Use case: illustration-story. Asset type: a production sprite atlas for an original Unity narrative game, The Third Door. The supplied image is a reference ONLY for its everyday photographic cutouts and clean negative space; do not reproduce its objects, text, or composition. Make a SQUARE transparent-background asset sheet in a precise 3 by 3 equal-cell grid, with NINE isolated, unconnected objects centered in their own cells. Generous fully transparent padding around each object (at least 12 percent of cell width); no objects touching cells. No grid lines, no background rectangles, no cast shadows outside the object, no letters, numbers, faces, logos or text. Editorial surreal photomontage: tactile photographic objects, clean slightly hand-cut edges, tiny restrained vermilion accents, natural ivory paper, charcoal black, metallic grey; realism rather than vector icons, no sepia print filter. Top row left: one CLOSED ivory paper envelope, seen three-quarter front. Top row center: one black vintage telephone handset with a short loose coiled cable, no telephone base. Top row right: one CLOSED charcoal envelope tied once with fine red cotton thread. Middle row left: one heavy clear faceted glass paperweight with a faint warm reflection, no lettering. Middle row center: a large black metal binder clip with silver wire handles. Middle row right: one torn blank ivory paper strip curling gently. Bottom row left: a small loose coil of vermilion cotton thread. Bottom row center: a freestanding small ivory door frame with a clear empty OPEN center and no door leaf. Bottom row right: one anonymous photographic open hand, palm up, cropped at wrist. Nine distinct objects; each cell usable individually by UV sampling. This sheet is new original game art. Transparent alpha is essential."
+  }
+}

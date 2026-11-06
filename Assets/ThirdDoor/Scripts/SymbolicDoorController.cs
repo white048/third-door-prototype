@@ -67,7 +67,7 @@ public class SymbolicDoorController : MonoBehaviour
         HideGlow();
         // Full open (good ending) slides the door straight up out of the frame — cleaner than a 76° swing
         // that crowds the middle room. Partial progress still uses rotation for the "small crack" feel.
-        MoveTo(closedPosition + Vector3.up * 3.0f, closedRotation);
+        MoveTo(closedPosition + openOffset, closedRotation);
     }
 
     public void DarkenDoor()
@@ -78,6 +78,7 @@ public class SymbolicDoorController : MonoBehaviour
 
     private void MoveTo(Vector3 targetPosition, Quaternion targetRotation)
     {
+        if (!Application.isPlaying) { doorPanel.SetPositionAndRotation(targetPosition, targetRotation); return; }
         if (moveRoutine != null)
         {
             StopCoroutine(moveRoutine);
@@ -129,7 +130,7 @@ public class SymbolicDoorController : MonoBehaviour
         {
             // Skip TextMesh renderers — they own their font material and would render invisibly
             // if we overrode it with the door's color material.
-            if (renderer.GetComponent<TextMesh>() != null)
+            if (renderer.GetComponent<TextMesh>() != null || renderer.gameObject.name != "Printed door leaf")
             {
                 continue;
             }

@@ -16,6 +16,21 @@ public class DoorDialogue : Interactable
 
     public DialogueActor Actor => actor;
 
+    public override string PromptText
+    {
+        get
+        {
+            string prefix = LocalizationManager.Get("prompt_press_e");
+            string speakerKey =
+                actor == DialogueActor.RedDoor ? "speaker_red" :
+                actor == DialogueActor.BlueDoor ? "speaker_blue" : "speaker_third";
+            var state = GameStateManager.Instance;
+            string progress = state != null && actor != DialogueActor.ExitDoor ? "  /  " + (state.Run.Phase + 1) + "·3" : "";
+            string who=actor==DialogueActor.RedDoor?NarrativeText.Speaker(0):actor==DialogueActor.BlueDoor?NarrativeText.Speaker(1):LocalizationManager.Get(speakerKey);
+            return prefix + " - " + who + progress;
+        }
+    }
+
     public void Configure(DialogueActor dialogueActor, DialogueUI ui)
     {
         actor = dialogueActor;
@@ -77,39 +92,7 @@ public class DoorDialogue : Interactable
                 return;
             }
 
-            if (state.finalChoiceAvailable)
-            {
-                state.TryUseExitDoor();
-            }
-            else
-            {
-                if (dialogueUI == null)
-                {
-                    dialogueUI = FindObjectOfType<DialogueUI>();
-                }
-
-                if (dialogueUI != null)
-                {
-                    dialogueUI.ShowOneShotLine("第三扇门", "还不是时候。");
-                }
-
-                if (lockedFeedback == null)
-                {
-                    lockedFeedback = FindObjectOfType<LockedFeedback>();
-                }
-
-                if (lockedFeedback != null)
-                {
-                    lockedFeedback.Play();
-                }
-
-                if (AudioManager.Instance != null)
-                {
-                    AudioManager.Instance.Play(GameSound.LockedThud, 0.8f);
-                }
-
-                state.MarkThirdDoorTried();
-            }
+            state.TryUseExitDoor();
             return;
         }
 
@@ -125,21 +108,10 @@ public class DoorDialogue : Interactable
         }
 
         GameStateManager stateForLine = GameStateManager.Instance != null ? GameStateManager.Instance : FindObjectOfType<GameStateManager>();
-        if (actor == DialogueActor.RedDoor && stateForLine != null && stateForLine.redDoorDone)
+        int voice = actor == DialogueActor.RedDoor ? 0 : 1;
+        if (stateForLine != null && !stateForLine.Run.CanTalk(voice))
         {
-            dialogueUI.ShowOneShotLine("红门", "没有言语。");
-            return;
-        }
-
-        if (actor == DialogueActor.BlueDoor && stateForLine != null && !stateForLine.redDoorDone)
-        {
-            dialogueUI.ShowOneShotLine("蓝门", "没有言语。");
-            return;
-        }
-
-        if (actor == DialogueActor.BlueDoor && stateForLine != null && stateForLine.blueDoorDone)
-        {
-            dialogueUI.ShowOneShotLine("蓝门", "没有言语。");
+            dialogueUI.ShowLocalizedReflection(()=>NarrativeText.Speaker(voice),()=>NarrativeText.L("这一轮的话先留在这里。\n", "Let these words rest here for now.\n") + NarrativeText.Objective(stateForLine.Run));
             return;
         }
 

@@ -2,10 +2,21 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    [SerializeField] private string promptText = "Press E to interact";
+    // Preserve the original scene's serialized layout when using the existing player as a preview host.
+    [SerializeField, HideInInspector] private string promptText = "";
     [SerializeField] private string interactionName = "";
 
-    public string PromptText => string.IsNullOrWhiteSpace(interactionName) ? promptText : promptText + " - " + interactionName;
+    // The "Press E to interact" prefix is pulled from LocalizationManager so it tracks language.
+    // The target name is set by subclasses (e.g. DoorDialogue can override this getter to localize).
+    public virtual string PromptText
+    {
+        get
+        {
+            string prefix = LocalizationManager.Get("prompt_press_e");
+            if (string.IsNullOrEmpty(prefix)) prefix = promptText;
+            return string.IsNullOrWhiteSpace(interactionName) ? prefix : prefix + " - " + interactionName;
+        }
+    }
 
     public void ConfigurePrompt(string targetName)
     {

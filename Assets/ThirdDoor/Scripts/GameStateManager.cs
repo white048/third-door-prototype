@@ -2,297 +2,133 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    private static GameStateManager _instance;
+    private static GameStateManager instance;
+    public static GameStateManager Instance => instance != null ? instance : (instance = FindObjectOfType<GameStateManager>());
 
-    // Self-healing accessor: if the static reference goes stale (scene reload, hot-reload, etc.)
-    // it transparently re-resolves via FindObjectOfType so callers never see a null state.
-    public static GameStateManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<GameStateManager>();
-            }
-            return _instance;
-        }
-    }
-
-    public int directConnection = 0;
-    public bool hasRedTruth = false;
-    public bool hasBlueTruth = false;
-    public bool redDoorDone = false;
-    public bool blueDoorDone = false;
-    public bool finalChoiceAvailable = false;
-    public bool gameEnded = false;
-    public bool thirdDoorTried = false;
-
+    // Preserve the original scene layout; the model owns the new rules.
+    public int directConnection;
+    public bool hasRedTruth, hasBlueTruth, redDoorDone, blueDoorDone, finalChoiceAvailable, gameEnded, thirdDoorTried;
     [SerializeField] private DoorController doorController;
     [SerializeField] private EndingManager endingManager;
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private SymbolicDoorController redDoorController;
     [SerializeField] private SymbolicDoorController blueDoorController;
+    private RelationshipRun run;
+    public RelationshipRun Run => run ?? (run = new RelationshipRun(CaseSession.Current));
+    public bool GoodEnding => RelationshipRun.OpensExit(Run.Ending);
+    public ConversationRecord LastRecord { get; private set; }
+
+    private void Awake() { instance = this; run = new RelationshipRun(CaseSession.Current); }
+    private void OnEnable() { LocalizationManager.OnLanguageChanged += UpdateWorldState; }
+    private void OnDisable() { LocalizationManager.OnLanguageChanged -= UpdateWorldState; }
+    private void Start() { UpdateWorldState(); }
+    private void OnApplicationQuit(){if(HasActiveJourney())SaveCheckpoint();}
+    private void OnApplicationFocus(bool focused){if(!focused&&HasActiveJourney())SaveCheckpoint();}
+    private bool HasActiveJourney()=>IntroSequence.HasPlayed&&!IntroSequence.IsActive&&run!=null&&!run.Ended;
 
     public void Configure(DoorController door, EndingManager endings, DialogueUI ui)
-    {
-        doorController = door;
-        endingManager = endings;
-        dialogueUI = ui;
-    }
-
+    { doorController = door; endingManager = endings; dialogueUI = ui; }
     public void ConfigureSymbolicDoors(SymbolicDoorController redDoor, SymbolicDoorController blueDoor)
+    { redDoorController = redDoor; blueDoorController = blueDoor; }
+
+    public void BeginCase(CaseId id)
     {
-        redDoorController = redDoor;
-        blueDoorController = blueDoor;
+        run=new RelationshipRun(id);LastRecord=null;
+        UpdateWorldState();SaveCheckpoint();
+    }
+    public void RestoreRun(RelationshipRun restored)
+    {
+        if(restored==null||restored.Ended)return;
+        run=restored;LastRecord=null;UpdateWorldState();
+    }
+    public void SaveCheckpoint()
+    {
+        if(!Run.Ended)CheckpointStore.Save(Run);
     }
 
-    private void Awake()
+    public string ApplyRedDoorChoice(int option) => Respond(0, option);
+    public string ApplyBlueDoorChoice(int option) => Respond(1, option);
+    private string Respond(int voice, int option)
     {
-        _instance = this;
-    }
-
-    private void Start()
-    {
-        if (doorController == null)
-        {
-            doorController = FindObjectOfType<DoorController>();
-        }
-
-        if (endingManager == null)
-        {
-            endingManager = FindObjectOfType<EndingManager>();
-        }
-
-        if (dialogueUI == null)
-        {
-            dialogueUI = FindObjectOfType<DialogueUI>();
-        }
-
+        LastRecord = Run.Respond(voice, option);
+        if (LastRecord == null) return "";
         UpdateWorldState();
+        SaveCheckpoint();
+        return LastFeedback();
     }
-
-    public string ApplyRedDoorChoice(int optionIndex)
+    public string LastFeedback()
     {
-        if (redDoorDone)
-        {
-            return string.Empty;
-        }
-
-        redDoorDone = true;
-
-        if (optionIndex == 0)
-        {
-            directConnection -= 1;
-            UpdateWorldState();
-            return "门开了一点。远处变暗了。";
-        }
-
-        if (optionIndex == 1)
-        {
-            directConnection += 1;
-            hasRedTruth = true;
-            UpdateWorldState();
-            return "门似乎敞开了一点。";
-        }
-
+        if(LastRecord==null)return "";
+        string feedback = NarrativeText.Feedback(LastRecord);
+        if (Run.Phase > LastRecord.Phase)
+            feedback += "\n" + (Run.Phase == 1 ? NarrativeText.L("下一轮：获得“追问”和“翻译”各一张。", "NEXT ROUND: one LISTEN and one REFRAME card.") : NarrativeText.L("最后一轮：获得“代偿”和“重述”。G 可撤回上一句。", "FINAL ROUND: TAKE OVER and SAY IT AGAIN. G revises your last response."));
+        return feedback;
+    }
+    public string ApplyFinalChoice(int option)
+    {
+        if (Run.Ended || option < 0 || option > 2) return "";
+        RelationshipEnding outcome = Run.Decide(option);
+        if (outcome == RelationshipEnding.None) { UpdateWorldState(); return ""; }
+        EndGame(outcome);
+        return NarrativeText.EndingBody(outcome);
+    }
+    public void TryUseExitDoor() { if (!Run.Ended && dialogueUI != null) dialogueUI.ShowDialogue(DialogueActor.FinalChoice); }
+    public void MarkThirdDoorTried() { thirdDoorTried = true; }
+    public void RefreshAfterCorrespondence(){UpdateWorldState();SaveCheckpoint();}
+    public bool Rest()
+    {
+        bool changed = Run.Rest();
+        if (changed) {UpdateWorldState();SaveCheckpoint();}
+        return changed;
+    }
+    public bool Rewind()
+    {
+        if (!Run.CanRewind || dialogueUI == null || dialogueUI.IsDialogueOpen || ExhibitionHUD.Paused) return false;
+        int voice = Run.History[Run.History.Count - 1].Voice;
+        if (!Run.Rewind()) return false;
         UpdateWorldState();
-        return "还不是时候。";
+        SaveCheckpoint();
+        dialogueUI.ShowDialogue(voice == 0 ? DialogueActor.RedDoor : DialogueActor.BlueDoor);
+        return true;
     }
-
-    public string ApplyBlueDoorChoice(int optionIndex)
+    private void EndGame(RelationshipEnding outcome)
     {
-        if (blueDoorDone)
+        gameEnded = true; finalChoiceAvailable = false;
+        bool exit = RelationshipRun.OpensExit(outcome);
+        if (outcome == RelationshipEnding.SharedTable)
+        { redDoorController?.OpenDoor(); blueDoorController?.OpenDoor(); }
+        else if (outcome == RelationshipEnding.Alliance)
         {
-            return string.Empty;
+            if (Run.RedTrust > Run.BlueTrust) redDoorController?.OpenDoor();
+            else if (Run.BlueTrust > Run.RedTrust) blueDoorController?.OpenDoor();
+            else { redDoorController?.SetProgress(1); blueDoorController?.SetProgress(1); }
         }
-
-        blueDoorDone = true;
-
-        if (optionIndex == 0)
+        else if (outcome == RelationshipEnding.FalsePeace)
+        { redDoorController?.SetProgress(2); blueDoorController?.SetProgress(2); }
+        else { redDoorController?.DarkenDoor(); blueDoorController?.DarkenDoor(); }
+        if (exit) doorController?.OpenDoor(); else doorController?.DarkenDoor();
+        if (AudioManager.Instance != null)
         {
-            directConnection -= 1;
-            UpdateWorldState();
-            return "门关的更紧了。";
+            if (exit) AudioManager.Instance.StopLoop();
+            AudioManager.Instance.Play(exit ? GameSound.DoorOpenSuccess : GameSound.DoorCloseBad, .55f);
         }
-
-        if (optionIndex == 1)
-        {
-            directConnection += 1;
-            hasBlueTruth = true;
-            UpdateWorldState();
-            return "门似乎敞开了一点。";
-        }
-
-        if (hasRedTruth)
-        {
-            directConnection += 1;
-            UpdateWorldState();
-            return "门似乎敞开了一点。";
-        }
-
-        directConnection -= 1;
-        UpdateWorldState();
-        return "还不是时候。";
+        EndingArchive.Record(outcome);
+        CheckpointStore.Clear();
+        endingManager?.ShowEnding(outcome, Run);
     }
-
-    public string ApplyFinalChoice(int optionIndex)
-    {
-        if (gameEnded)
-        {
-            return string.Empty;
-        }
-
-        if (optionIndex == 1 && directConnection >= 2)
-        {
-            EndGame(true);
-            return "门开了。";
-        }
-
-        EndGame(false);
-        return "那就继续循环吧。";
-    }
-
-    public void TryUseExitDoor()
-    {
-        if (gameEnded)
-        {
-            return;
-        }
-
-        if (finalChoiceAvailable)
-        {
-            FindObjectOfType<DialogueUI>().ShowDialogue(DialogueActor.FinalChoice);
-        }
-    }
-
-    public void MarkThirdDoorTried()
-    {
-        if (thirdDoorTried)
-        {
-            return;
-        }
-
-        thirdDoorTried = true;
-        if (dialogueUI != null && !gameEnded)
-        {
-            dialogueUI.SetStatusText(GetStatusText());
-        }
-    }
-
-    private void EndGame(bool goodEnding)
-    {
-        gameEnded = true;
-        finalChoiceAvailable = false;
-
-        if (goodEnding)
-        {
-            if (redDoorController != null)
-            {
-                redDoorController.OpenDoor();
-            }
-
-            if (blueDoorController != null)
-            {
-                blueDoorController.OpenDoor();
-            }
-
-            if (doorController != null)
-            {
-                doorController.OpenDoor();
-            }
-
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.StopLoop();
-                AudioManager.Instance.Play(GameSound.DoorOpenSuccess, 0.85f);
-            }
-        }
-        else
-        {
-            if (redDoorController != null)
-            {
-                redDoorController.DarkenDoor();
-            }
-
-            if (blueDoorController != null)
-            {
-                blueDoorController.DarkenDoor();
-            }
-
-            if (doorController != null)
-            {
-                doorController.DarkenDoor();
-            }
-
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.Play(GameSound.DoorCloseBad, 0.8f);
-            }
-        }
-
-        if (endingManager != null)
-        {
-            endingManager.ShowEnding(goodEnding);
-        }
-    }
-
     private void UpdateWorldState()
     {
-        finalChoiceAvailable = redDoorDone && blueDoorDone;
-        if (doorController != null)
+        directConnection = Run.Bridge;
+        hasRedTruth = Run.RedClarity > 0; hasBlueTruth = Run.BlueClarity > 0;
+        redDoorDone = Run.RedDone; blueDoorDone = Run.BlueDone;
+        gameEnded = Run.Ended; finalChoiceAvailable = !gameEnded;
+        if (!gameEnded)
         {
-            doorController.UpdateDoorState(directConnection);
+            doorController?.UpdateDoorState(Run.Bridge);
+            redDoorController?.SetProgress(Run.RedClarity > 0 ? 1 : 0);
+            blueDoorController?.SetProgress(Run.BlueClarity > 0 ? 1 : 0);
+            endingManager?.UpdateProgressFeedback(Run.Bridge);
+            dialogueUI?.SetStatusText(NarrativeText.Objective(Run));
         }
-
-        if (redDoorController != null)
-        {
-            redDoorController.SetProgress(hasRedTruth ? 1 : redDoorDone && directConnection < 0 ? -1 : 0);
-        }
-
-        if (blueDoorController != null)
-        {
-            blueDoorController.SetProgress(hasBlueTruth ? 1 : blueDoorDone && directConnection < 0 ? -1 : 0);
-        }
-
-        if (endingManager != null)
-        {
-            endingManager.UpdateProgressFeedback(directConnection);
-        }
-
-        if (dialogueUI != null && !gameEnded)
-        {
-            dialogueUI.SetStatusText(GetStatusText());
-        }
-    }
-
-    private string GetStatusText()
-    {
-        // Open with a push toward the third door — the player should try it first and discover it won't open.
-        if (!thirdDoorTried && !redDoorDone && !blueDoorDone)
-        {
-            return "目标：推开面前的门。";
-        }
-
-        if (!redDoorDone && !blueDoorDone)
-        {
-            return "目标：那扇门没动。先去听她和他说话。";
-        }
-
-        if (!redDoorDone)
-        {
-            return "目标：靠近红门，听他的话。";
-        }
-
-        if (!blueDoorDone)
-        {
-            return "目标：靠近蓝门，听她的话。";
-        }
-
-        if (finalChoiceAvailable)
-        {
-            return "目标：回到中间，走向第三扇门。";
-        }
-
-        return string.Empty;
     }
 }

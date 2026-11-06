@@ -1,0 +1,154 @@
+第三扇门 / 美术制作单与提示词
+初版原图：2026-10-29；第七版图集与制作单：2026-11-04
+
+主旨：替人传话时，谁来承担后续？画面围绕信封、红线和仍可离开的第三扇门展开。
+生成方式：内置 image_gen。四张源图未做像素编辑，原尺寸与 SHA-256 见 AssetManifest.json。
+A02/A03 用于案例，A04 用于长卷、交付校样和实体纸卷。A01 用于宣传构图。
+SVG 提供可编辑排版，上传前需按规格导出 PNG/JPG。
+空间海报参考 A02/A03；近距离摄影剪贴参考 A04。文字和状态由界面另排；玩法截图保留实机原样。
+
+A01 / 三扇门主视觉母版 / P0 / 已生成 / 构图母版
+尺寸：现有 1672×940；建议重绘母版 ≥2560×1440
+用途：商店构图、宣传页、未来主视觉
+要求：左侧约 42% 留给标题；三扇门、信封与手集中在右侧。现有母版宽 1672，3840 宽图仍需另做。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Landscape 16:9. Leave the left 42 percent mostly quiet ivory for a separately typeset title. On the right, three upright rectilinear paper door apertures, one red, one black, one untouched ivory; two cropped paper hands gently offer a closed ivory envelope with a tiny brass key. A loose red thread connects the first two doors, stopping short of the third. Large cropped red disk upper right. Keep focal objects inside the right half with margin for recomposition.
+
+A02 / 家庭案例：钥匙与红线 / P0 / 已接入游戏
+尺寸：现有 1254×1254；后续建议 2048×2048 PNG
+用途：选案页、开场、展厅与图像手记
+要求：钥匙象征联系；红线松弛，出口保持空白。双手不抓扯人物。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square companion print. A central ivory envelope of torn heavyweight paper, small worn brass house key tied with red cotton thread. Two opposing cropped anonymous photocopied hands enter from the left and right edges; neither restrains the other. Thread forms a loose open triangle and ends beside an unprinted door-shaped gap at lower right. Cropped red disk upper right, strong black diagonal. Broad breathing space. Care remains without carrying every message.
+
+A03 / 工作案例：留白事由 / P0 / 已接入游戏
+尺寸：现有 1254×1254；后续建议 2048×2048 PNG
+用途：选案页、开场、展厅与图像手记
+要求：两条公开工作线；下方矩形事由栏必须完全空白。黑色信封保持封闭。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square companion print matching A02. A large ivory work-plan sheet with a small black binder clip. Exactly two thin horizontal task rules, below them one clear EMPTY rectangular field. No writing or checkmarks. A closed carbon envelope lies beside the blank field, never opened. Red cotton thread connects only the two task rules to a cropped hand, bypassing the private blank. A second cropped hand holds the page lightly. Black diagonal, cropped red disk and clean ivory doorway gap.
+
+A04 / 传话摄影物件：九格透明图集 / P0 / 已接入游戏 / 第七版
+尺寸：已交付 1254×1254 RGBA；3×3，每格 418×418
+用途：本局拼贴长卷、交付校样与实体纸卷
+要求：原图保留透明通道，按 UV 取格。九件物体不跨格；不把文字画进图。照片质感、日常物件和大块留白用于近距离阅读。
+提示词：Use case: illustration-story. Asset type: a production sprite atlas for an original Unity narrative game, The Third Door. The supplied image is a reference ONLY for its everyday photographic cutouts and clean negative space; do not reproduce its objects, text, or composition. Make a SQUARE transparent-background asset sheet in a precise 3 by 3 equal-cell grid, with NINE isolated, unconnected objects centered in their own cells. Generous fully transparent padding around each object (at least 12 percent of cell width); no objects touching cells. No grid lines, no background rectangles, no cast shadows outside the object, no letters, numbers, faces, logos or text. Editorial surreal photomontage: tactile photographic objects, clean slightly hand-cut edges, tiny restrained vermilion accents, natural ivory paper, charcoal black, metallic grey; realism rather than vector icons, no sepia print filter. Top row left: one CLOSED ivory paper envelope, seen three-quarter front. Top row center: one black vintage telephone handset with a short loose coiled cable, no telephone base. Top row right: one CLOSED charcoal envelope tied once with fine red cotton thread. Middle row left: one heavy clear faceted glass paperweight with a faint warm reflection, no lettering. Middle row center: a large black metal binder clip with silver wire handles. Middle row right: one torn blank ivory paper strip curling gently. Bottom row left: a small loose coil of vermilion cotton thread. Bottom row center: a freestanding small ivory door frame with a clear empty OPEN center and no door leaf. Bottom row right: one anonymous photographic open hand, palm up, cropped at wrist. Nine distinct objects; each cell usable individually by UV sampling. This sheet is new original game art. Transparent alpha is essential.
+
+C01 / 停顿工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. A single loose red thread rests beside an untouched ivory envelope. One hand is open and still; generous empty space. No clock, timer or urgency.
+
+C02 / 原话工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. Two matching torn ivory paper fragments, one held and one offered, connected by a red thread without erasing or covering their surfaces. The original meaning is kept. No letters or quotation text.
+
+C03 / 界限工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. A red thread gently ends at the edge of a clean ivory doorway gap. An open hand remains outside the gap. The boundary is permeable and calm, never a prison wall.
+
+C04 / 追问工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. A small closed envelope offered toward two nested arcs cut from ivory paper; one open hand waits. Curiosity and attention without exposing contents. No realistic ear, eye or face.
+
+C05 / 翻译工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. Two angular paper fragments carefully unfolded into a single open ivory form. Red thread is rerouted without being cut. Preserve the source rather than conceal it. No written message.
+
+C06 / 代偿工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. Two cropped hands support a visibly heavy stack of closed envelopes, with several taut red threads converging on the hands. Responsibility accumulates; no suffering face or coercive imagery.
+
+C07 / 重述工具插画 / P1 / 待制作
+尺寸：建议 1024×1024 PNG，缩小验收到 128×128
+用途：下一轮扩大卡牌详情后接入；当前小按钮继续保留文字
+要求：每张一件主物；主体控制在中间 70%。先附 A02/A03 作风格参考，再单张生成。不要把插画挤进现有按钮。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Square single-object tool-card illustration. One red thread makes a single deliberate loop beside an ivory envelope, then continues forward. A small displaced paper fragment remains visible as a trace. No clock, rewind-button icon or erased history.
+
+E01 / 结局意象：出口 / P2 / 待制作
+尺寸：建议 2048×1152，16:9 PNG
+用途：未来结局回看页，不覆盖当前可探索的三维后果
+要求：三类意象按内容使用，不作好坏排名。等结局回看页需要配图时再制作，先共用三类意象。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Landscape 16:9. An untouched ivory door-shaped gap stays open beside a set-down envelope and loose red thread. Quiet room for the self, not a golden victory portal.
+
+E02 / 结局意象：在场 / P2 / 待制作
+尺寸：建议 2048×1152，16:9 PNG
+用途：未来结局回看页，不覆盖当前可探索的三维后果
+要求：三类意象按内容使用，不作好坏排名。等结局回看页需要配图时再制作，先共用三类意象。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Landscape 16:9. Two separate simple chairs share one work surface, with two distinct loose red threads. A closed envelope rests between them, and a third position remains available. Consent without merging identities.
+
+E03 / 结局意象：承担 / P2 / 待制作
+尺寸：建议 2048×1152，16:9 PNG
+用途：未来结局回看页，不覆盖当前可探索的三维后果
+要求：三类意象按内容使用，不作好坏排名。等结局回看页需要配图时再制作，先共用三类意象。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Landscape 16:9. Several closed envelopes accumulate on a narrow paper shelf, with converging red threads. A clean ivory gap remains visible at the edge. Dependency and weight, no moral judgment or villain.
+
+T01 / 低对比纸张材质 / P2 / 待制作
+尺寸：建议 2048×2048，可平铺 PNG
+用途：仅在程序化纸纹仍显单薄时补充
+要求：亮度起伏极低，边缘无接缝，无污渍折痕。文字区域必须可读。现有代码纸纹优先保留。
+提示词：Seamless uncoated warm ivory paper, near-uniform #E8E2CF, extremely subtle short fibers and tiny natural grain. Flat lighting, no shadows, no folds, stains, torn edges, text or vignette. Intended beneath readable UI typography.
+
+S01 / 商店头图 / P0 / 已有 SVG 构图稿 / 待导出
+尺寸：920×430，最终 PNG/JPG
+用途：正式商店图形资产
+要求：提供可编辑 SVG 构图稿。插画与标题分别排版；上传前按模板导出栅格并缩小检查。仅保留游戏标题和画面。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Recompose the three-door master for a 920×430 capsule. Keep title area separate and empty. Readable envelope, thread and third opening at thumbnail scale. Do not add badges, review scores, awards, genre labels or promotional copy.
+
+S02 / 小胶囊 / P0 / 已有 SVG 构图稿 / 待导出
+尺寸：462×174，最终 PNG/JPG
+用途：正式商店图形资产
+要求：提供可编辑 SVG 构图稿。插画与标题分别排版；上传前按模板导出栅格并缩小检查。仅保留游戏标题和画面。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Recompose the three-door master for a 462×174 capsule. Keep title area separate and empty. Readable envelope, thread and third opening at thumbnail scale. Do not add badges, review scores, awards, genre labels or promotional copy.
+
+S03 / 主胶囊 / P0 / 已有 SVG 构图稿 / 待导出
+尺寸：1232×706，最终 PNG/JPG
+用途：正式商店图形资产
+要求：提供可编辑 SVG 构图稿。插画与标题分别排版；上传前按模板导出栅格并缩小检查。仅保留游戏标题和画面。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Recompose the three-door master for a 1232×706 capsule. Keep title area separate and empty. Readable envelope, thread and third opening at thumbnail scale. Do not add badges, review scores, awards, genre labels or promotional copy.
+
+S04 / 竖胶囊 / P0 / 已有 SVG 构图稿 / 待导出
+尺寸：748×896，最终 PNG/JPG
+用途：正式商店图形资产
+要求：提供可编辑 SVG 构图稿。插画与标题分别排版；上传前按模板导出栅格并缩小检查。仅保留游戏标题和画面。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Recompose the three-door master for a 748×896 capsule. Keep title area separate and empty. Readable envelope, thread and third opening at thumbnail scale. Do not add badges, review scores, awards, genre labels or promotional copy.
+
+S05 / 库封面 / P0 / 已有 SVG 构图稿 / 待导出
+尺寸：600×900，最终 PNG/JPG
+用途：正式商店图形资产
+要求：提供可编辑 SVG 构图稿。插画与标题分别排版；上传前按模板导出栅格并缩小检查。仅保留游戏标题和画面。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Recompose the three-door master for a 600×900 capsule. Keep title area separate and empty. Readable envelope, thread and third opening at thumbnail scale. Do not add badges, review scores, awards, genre labels or promotional copy.
+
+S06 / 库横幅 / P0 / 待制作
+尺寸：3840×1240 PNG
+用途：Library Hero
+要求：这张不放游戏 logo。当前母版宽 1672，需按 3840×1240 重新绘制或扩图，并检查细节。
+提示词：Refined constructivist editorial photomontage for The Third Door, a game about care, consent, carrying words and a personal way out. Warm ivory #E8E2CF, carbon #141514, vermilion #C51B11 only; tiny muted brass accent only for a house key. Hand-cut heavy paper, anonymous photocopied hands, fine halftone, dry lithographic ink, subtle paper fibers, one decisive diagonal and restrained red disk. Flat full-bleed printed artwork, quiet negative space, clear thumbnail read. No faces, readable text, letters, numbers, logos, watermarks, political insignia, flags, fists, chains, coercion or decorative clutter. Keep all typography in the editable game or layout layer, outside the generated image. Ultrawide library hero artwork, 3840x1240 final. Broad ivory breathing space, three paper door openings with anonymous hands, closed envelope and loose red thread. Make a genuine wide composition, not a stretched square. No logo or text. Keep focal objects readable within the central safe region.
+
+S07 / 透明标题 Logo / P0 / 已有字体与 SVG / 待导出
+尺寸：1280 宽和/或 720 高 PNG
+用途：Library Logo 与商店标题层
+要求：用现有 Anton 字体排版，不让生成模型画字。附字体与 OFL 许可，以及可编辑 SVG；正式上传导出透明 PNG。
+提示词：不需要生图。用 THE THIRD DOOR 精确排字，保留三行或横排两个版本，缩小后检查字形与字距。
+
+S08 / 真实玩法截图 / P0 / 已采集 10 张真实玩法画面
+尺寸：至少 1920×1080，16:9，至少 5 张
+用途：商店截图
+要求：从实际播放器采集：空间、选择与代价、门前交付、逐句回看、结局后空间。生成插画不是玩法截图。
+提示词：不需要生图。以实际游戏窗口在 1920×1080 或更高分辨率采集；不后加广告文字、评分或奖项。
+
+验收：缩小到 128px 时能认出主物；采用纸白、炭黑、朱红，钥匙可用少量暗黄铜色。
+检查双手形状、事由栏是否空白、黑信封是否封闭。实际玩法截图与生成宣传图分别保存。
+Steam 规格核对日期 2026-10-29，要求见下方官方链接。当前页面更新日期 2026-11-04。
+
+Steam 图形资产尺寸：https://partner.steamgames.com/doc/store/assets
+Steam 商店图与截图要求：https://partner.steamgames.com/doc/store/assets/standard
+Steam 图形资产规则：https://partner.steamgames.com/doc/store/assets/rules

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "humanizer-en",
+    "repo": "blader/humanizer",
+    "revision": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+    "source": "https://raw.githubusercontent.com/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md",
+    "localReview": "E:\\014_Unity\\UnityProject\\ThirdDoorPrototype\\Documentation\\Editorial\\SkillReview\\humanizer-en-SKILL.md",
+    "sha256": "0612F1DFB1672B0EA9B97E139BF1F06CABE98D8B27424FE8FF01E1FB4CC99CAD"
+  },
+  {
+    "name": "humanizer-zh",
+    "repo": "op7418/Humanizer-zh",
+    "revision": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+    "source": "https://raw.githubusercontent.com/op7418/Humanizer-zh/f4518a8eab97b8bfebc66a89d34320a89bef6930/SKILL.md",
+    "localReview": "E:\\014_Unity\\UnityProject\\ThirdDoorPrototype\\Documentation\\Editorial\\SkillReview\\humanizer-zh-SKILL.md",
+    "sha256": "95627FD4437D886F98032CCC62D79136E6310F1FC04E354BB86431795FF206DF"
+  }
+]

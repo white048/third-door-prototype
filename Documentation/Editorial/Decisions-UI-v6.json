@@ -1,0 +1,458 @@
+[
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+    "before": "收信人听进去了，说这句话的人却没有同意让你转告。\n本人对你的信任下降，也收回了先前的谈话同意。",
+    "after": "收信人听进去了，说这句话的人却没有同意让你转告。\n本人对你的信任下降；先前若答应过直接谈，这份同意也会撤回。",
+    "reason": "保留条件：没有事先同意时，不能声称已经收回了一份存在的同意"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+    "before": "\n桌上只有工作安排。事由那一栏，仍然空着。",
+    "after": "\n桌上的事由栏，还空着。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+    "before": "\nOnly the work plan lies on the table. The reason stays blank.",
+    "after": "\nThe reason field on the table is still blank.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "还未接话。先去倾听这一扇门。",
+    "after": "还没有这人的话。先去门前听听。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "No message yet. First hear this voice.",
+    "after": "No message yet. Go and listen at this door first.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "两个人的需要，不等于两份公开许可。",
+    "after": "先听原话，再决定转告什么。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "TWO NEEDS ARE NOT TWO PERMISSIONS.",
+    "after": "LISTEN, THEN CHOOSE WHAT TO PASS ON.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "01 / 请求中的原话\n\n",
+    "after": "01 / 要转告的原话\n\n",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "接过一句话后，这里会保留当时的原句。",
+    "after": "听到对方的请求后，原话会记在这里。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "A received message keeps its original wording here.",
+    "after": "The request appears here once you have heard it.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "深入倾听，才会出现这一层内容。",
+    "after": "多了解对方后，私下的话会记在这里。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "Listen beneath the request to hear this part.",
+    "after": "Hear more from this person to reveal their private need.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "留作私下的倾听",
+    "after": "保密，不转告",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "一局保留每个人的一封话。你决定它承载请求，还是需要。\n转述许可与直接对话的同意，分别属于当事人。",
+    "after": "每人保留一封话，可转告原话或私下需要。\n私下内容须先问本人；是否愿意直接谈，要另外确认。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "Keep one envelope from each voice. Choose what it carries.\nPermission to quote and consent to talk are separate decisions.",
+    "after": "Each person has one envelope: a request and a private need.\nAsk before sharing the private part. Ask separately about talking directly.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "这封话已经交出，未经允许的转述尚未得到承认。\n回到原主门前，你仍可以承认并修复这次越界。",
+    "after": "这句话已经传出去了，你还没向本人承认。\n回到说话的人门前，可以说明你擅自转述了什么。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "This message has left your hands. A disclosure remains unacknowledged.\nReturn to its owner to acknowledge and repair the breach.",
+    "after": "The words have been shared. You haven't acknowledged doing it without permission.\nReturn to the speaker to put that right.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "这封话已经处理。交付与保密都留下记录，不再重复结算。",
+    "after": "这封话已经处理，结果已记下，不能重复使用。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "This envelope is resolved. Delivery and privacy both leave a record; neither pays twice.",
+    "after": "This envelope has been dealt with. Its result is recorded and cannot be repeated.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "未经允许：原主信任 -2，并留下需要承认的越界。",
+    "after": "未经本人允许：其信任 -2；需要当面承认擅自转述。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "WITHOUT PERMISSION: source trust -2; a breach remains.",
+    "after": "WITHOUT PERMISSION: speaker TRUST -2. Return to acknowledge what you shared.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "看向门前按 F：在原主处问许可、退回承诺；在另一人处交付。",
+    "after": "门前 F：问说话的人许可、退回承诺；去另一人那里转告。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+    "before": "保持私下，不改变资源",
+    "after": "保密，资源不变",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "一句话经过你 / ",
+    "after": "逐句回看 / ",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "A SENTENCE IN TRANSIT / ",
+    "after": "REVISIT A RESPONSE / ",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "当下的手记",
+    "after": "本局手记",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "CURRENT JOURNEY",
+    "after": "CURRENT NOTES",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "余力：深入倾听需要力气，0 时先休息。承重：达到 6，承接会额外消耗余力。\n直连：有多少话不必再经过你。长椅每轮可恢复一次；卡牌每种仅一张。",
+    "after": "余力为 0 时，先休息。承重达到 6，承接和追问会多耗余力。\n直连表示直接交流的准备程度，仍须本人同意。每轮可休息一次，每种卡仅一张。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "BREATH pays for attention; at 0, rest first. LOAD at 6 adds a breath cost to carrying.\nBRIDGE is what can pass without you. Rest once per round; each card is a single use.",
+    "after": "At 0 BREATH, rest first. At 6 LOAD, carrying and asking cost extra breath.\nBRIDGE helps direct conversation; consent is still needed. Rest once per round. Each card is single use.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "还没有接过一句话。你可以先走向任意一扇门。",
+    "after": "还没有回应记录。先去 01 或 02 听听。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "No words carried yet. You may begin at either voice.",
+    "after": "No responses recorded yet. Start at 01 or 02.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "另一种回应，会让房间呈现另一种形状。\n这里没有必须收集齐的正确答案。",
+    "after": "换一种回应，房间也会有变化。\n不必把所有结局都走一遍。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "Another response gives the room a different shape.\nThere is no correct set you must complete.",
+    "after": "Different responses change the room.\nYou don't have to find every ending.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "这些是关系中的位置，不是从坏到好的排名。",
+    "after": "编号按档案排列，不代表结局的好坏。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "These are positions in a relationship, not a ranking.",
+    "after": "The numbers organise the archive. They do not rank the endings.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "手记记录发生了什么，不给你打分。\n重述会撤回最后一句，但已经消耗的卡不会返还。",
+    "after": "手记保留你听到的话和自己的回应。\n重述可撤回上一句，用过的卡不返还。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "This ledger records what happened; it gives no score.\nRevising returns a sentence, but never a spent card.",
+    "after": "Your notes keep what you heard and how you answered.\nRevising takes back the last response, but spent cards stay spent.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "F / 在门前处理传话。私下的需要，需另行征得许可。\n交付、询问或退回后，重述不能抹去已经发生的交谈。",
+    "after": "F / 去门前处理传话。私下内容要先问本人。\n交付、询问或退回后，不能再用重述撤回上一句。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+    "before": "F at a door handles correspondence. Private needs require separate permission.\nSharing, asking or returning cannot be undone by SAY IT AGAIN.",
+    "after": "F at a door opens correspondence. Ask before sharing private words.\nDelivering, asking or returning a message closes the chance to revise your last response.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "他们的决定 / 你的边界",
+    "after": "是否谈下去 / 是否留下",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "THEIR CHOICE / YOUR LIMITS",
+    "after": "WHETHER TO TALK / WHETHER TO STAY",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "离开不需要通关",
+    "after": "可以现在离开",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "NO NEED TO EARN AN EXIT",
+    "after": "YOU CAN LEAVE NOW",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "让一句话停在这里",
+    "after": "先歇一会儿",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "LET A SENTENCE REST",
+    "after": "TAKE A MOMENT",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "共同的桌子，需要双方的理解与同意。\n自己的出口，不需要他们先和好。\nTab 可回看你听见和说过的每句话。",
+    "after": "一起谈，需要双方了解情况并各自答应。\n你也可以先离开。\nTab 可回看原话、回应和传话记录。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "A shared table needs understanding and consent.\nYour own exit does not require reconciliation.\nTAB revisits what you heard and said.",
+    "after": "Both people need to understand and agree before they talk.\nYou can also leave now.\nTAB revisits the words, responses and messages.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "没有倒计时。\n你不需要用每一秒来回应别人。\n读完以后，空格或 E 继续。",
+    "after": "慢慢读，不用赶。\n空格或 E 返回展厅。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+    "before": "There is no countdown.\nNot every moment has to be a response.\nSPACE or E when you are ready.",
+    "after": "Take your time reading.\nSPACE or E returns to the gallery.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "空格 / E    把这句话留在这里",
+    "after": "空格 / E    继续",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "SPACE / E    LET THESE WORDS REST",
+    "after": "SPACE / E    CONTINUE",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "反馈会等你读完。余力为 0 时，追问无法增加理解；可去长椅休息。",
+    "after": "读完再继续。余力为 0 时，追问不会增加理解；可去 00 长椅休息。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "Take your time. At 0 BREATH, questions cannot deepen insight. Rest at the bench.",
+    "after": "Read at your own pace. At 0 BREATH, asking adds no insight. Rest at bench 00.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "你可以随时回来，再读这幅图。",
+    "after": "随时可以回来再看。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+    "before": "You may return and read this image again whenever you wish.",
+    "after": "You can come back to this print whenever you like.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "[ E ]  给自己留一点余力 / 每轮一次",
+    "after": "[ E ]  坐下休息 / 每轮恢复一次",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "你把别人的话，暂时放在椅子上。\n休息并不会让你欠任何人更多。\n",
+    "after": "你坐了一会儿，缓过些劲来。\n",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "You set their words down for a moment.\nRest doesn't make you owe anyone more.\n",
+    "after": "You sit for a while and catch your breath.\n",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "这一轮已经在这里恢复过了。\n你仍然可以停一会儿，不必把安静也变成任务。",
+    "after": "这一轮已经休息过，不会再次恢复资源。\n想多坐一会儿也可以。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "You've restored your breath here this round.\nYou can still pause. Quiet doesn't have to be a task.",
+    "after": "You've already rested this round, so your resources won't change.\nYou can stay a little longer if you like.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "你现在有足够的余力，也没有承重。\n椅子会留在这里，等你需要时再恢复。",
+    "after": "你现在余力充足，也没有承重。\n这次先不使用休息机会。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+    "before": "You have breath to spare and no weight to carry.\nThe chair will be here when you need it.",
+    "after": "Your breath is full and you're carrying no load.\nThis won't use your rest for the round.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+    "before": "留白属于留下它的人。\n你可以带走工作请求，把私人原因留给本人。\n有限的协议，也可以让那一栏继续空着。",
+    "after": "纸上两条工作安排连着红线，事由栏却空着。\n旁边的黑信封也没有拆开。\n这次要转告的工作，已经写清楚了。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+    "before": "The blank belongs to the person who left it.\nCarry the work request, not an invented private reason.\nA limited agreement can leave that space untouched.",
+    "after": "Red thread connects the two tasks. The reason field is blank.\nBeside it, the black envelope stays closed.\nThe work request is already clear.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+    "before": "钥匙可以留下联系，不必成为索取的凭据。\n信封可以传递关心，不必占有你的声音。\n你可以放下红线，保留自己的出口。",
+    "after": "钥匙系在信封上，红线松松地绕过两只手。\n线头停在门边，没有把那条路封住。\n你可以接过信，也能把手松开。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+    "before": "A key keeps a connection; it need not become a claim.\nAn envelope can carry care without owning your voice.\nYou may put down the thread and keep your own exit.",
+    "after": "A key hangs from an envelope. Loose thread links two hands.\nIt ends beside the doorway, leaving a way through.\nYou can take the message. You can also let go.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/ArtReflectionView.cs",
+    "before": "拼贴图像 / 关心、责任与出口",
+    "after": "图像手记 / 拼贴中的细节",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/ArtReflectionView.cs",
+    "before": "COLLAGE / CARE, RESPONSIBILITY, A WAY OUT",
+    "after": "VISUAL NOTES / DETAILS IN THE COLLAGE",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+    "before": "余力已尽 / 左侧 00 长椅可休息，也可先划界。",
+    "after": "余力为 0 / 可去左侧 00 长椅休息，或先说清自己的限度。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+    "before": "NO BREATH / BENCH 00 IS ON THE LEFT, OR NAME A LIMIT.",
+    "after": "NO BREATH / REST AT BENCH 00 ON THE LEFT, OR SAY HOW MUCH YOU CAN HELP.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+    "before": "承重 ≥ 6 / 继续承接会额外消耗余力。",
+    "after": "承重 ≥ 6 / 承接和追问会额外消耗余力。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+    "before": "LOAD ≥ 6 / CARRYING COSTS AN EXTRA BREATH.",
+    "after": "LOAD ≥ 6 / CARRYING AND ASKING COST AN EXTRA BREATH.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+    "before": "新一轮开始：获得“追问”与“翻译”。",
+    "after": "下一轮：获得“追问”和“翻译”各一张。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+    "before": "NEW ROUND: LISTEN and REFRAME drawn.",
+    "after": "NEXT ROUND: one LISTEN and one REFRAME card.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+    "before": "最后一轮：获得“代偿”与“重述”。G 可撤回上一句。",
+    "after": "最后一轮：获得“代偿”和“重述”。G 可撤回上一句。",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  },
+  {
+    "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+    "before": "FINAL ROUND: TAKE OVER and SAY IT AGAIN drawn. G revises one response.",
+    "after": "FINAL ROUND: TAKE OVER and SAY IT AGAIN. G revises your last response.",
+    "reason": "界面说明直接写动作与条件，保留按键和数值"
+  }
+]

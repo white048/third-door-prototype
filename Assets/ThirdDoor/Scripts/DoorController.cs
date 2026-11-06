@@ -88,7 +88,7 @@ public class DoorController : MonoBehaviour
     {
         HideGlow();
         // Full open (good ending) slides the door straight up out of the frame — clean reveal of the corridor beyond.
-        MoveDoorTo(closedPosition + Vector3.up * 3.2f, closedRotation);
+        MoveDoorTo(closedPosition + Vector3.up * 4.25f, closedRotation);
     }
 
     public void DarkenDoor()
@@ -99,6 +99,7 @@ public class DoorController : MonoBehaviour
 
     private void MoveDoorTo(Vector3 targetPosition, Quaternion targetRotation)
     {
+        if (!Application.isPlaying) { doorPanel.SetPositionAndRotation(targetPosition, targetRotation); return; }
         if (moveRoutine != null)
         {
             StopCoroutine(moveRoutine);

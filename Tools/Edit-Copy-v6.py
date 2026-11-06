@@ -1,0 +1,102 @@
+"""Apply individually reviewed bilingual edits, recording each change. Not a word blacklist."""
+from pathlib import Path
+import json
+
+ROOT=Path(__file__).resolve().parents[1]
+EDITS=[]
+def pair(file,cn,en,new_cn,new_en,reason='人物语气和具体动作；保留选项意图与条件'):
+    for before,after,locale in ((cn,new_cn,'zh-CN'),(en,new_en,'en')):
+        if before!=after:EDITS.append(dict(file='Assets/ThirdDoor/Scripts/'+file+'.cs',locale=locale,before=before,after=after,reason=reason))
+
+f='NarrativeText'
+pair(f,'“那句需要，我没有答应让你带走。\n你这次回来，会先问我愿不愿意吗？”',"I didn't say you could share that need.\nWill you ask what I want this time?",'“那句话，我没让你告诉别人。\n这次能不能先问问我？”',"I didn't say you could tell them that.\nCould you ask me first this time?")
+pair(f,'“我还不知道能不能相信你。\n这次回来，你会先听我说，还是又替他作判断？”',"I don't know if I can trust you yet.\nWill you hear me this time, or decide for him?",'“我都不太敢跟你说了。\n你这次是来听我的，还是替他讲道理？”',"I'm not sure I can tell you things anymore.\nAre you here to listen, or to take his side?")
+pair(f,'“我还不确定，你是真的愿意听。\n你这次回来，会不会又替她判断我？”',"I'm not sure you're willing to hear me yet.\nWill you judge me for her this time?",'“你真的想听我说吗？\n别听到一半，又替她来劝我。”',"Do you actually want to hear me?\nPlease don't turn this into another talk on her behalf.")
+pair(f,'“你比我们都明白。干脆由你安排吧。\n有你在，我们就不用再说那些难听的话了。”',"You understand this better than either of us. You should arrange it.\nWith you here, we don't have to say the difficult things.",'“还是你来安排吧。\n你替我们说，总比我们一开口就吵强。”',"Why don't you arrange it?\nYou can say it for us. We always end up arguing.")
+pair(f,'“我还是会怕，但我愿意试一试。\n你可以在旁边听，不用替我们把每一句都接住。”',"I'm still afraid, but I'm willing to try.\nYou can listen beside us, without catching every word.",'“我还是有点怕。不过，我愿意试试。\n你在旁边听着就好，让我们自己说。”',"I'm still nervous, but I'll try.\nYou can stay and listen. Let us do the talking.")
+pair(f,'“告诉他，他不能总把我关在门外。\n我问一句，他就退一步。”',"Tell him he can't keep shutting me out.\nEvery time I ask, he takes another step away.",'“你帮我跟他说说，别总躲着我。\n我问问他怎么了，也有错吗？”',"Ask him to stop shutting me out.\nI ask how he's doing, and he pulls away.")
+pair(f,'“让她别再替我决定一切。\n我需要喘口气，可她总把距离当成拒绝。”',"Tell her to stop deciding everything for me.\nI need room to breathe. She calls that rejection.",'“你跟她说，我想自己做决定。\n我只是想喘口气，她就觉得我不要她了。”',"Tell her I want to make my own decisions.\nI ask for some space, and she thinks I don't want her around.")
+pair(f,'“你跟他说了吗？他怎么回答？\n你替我说得温和一点，好不好？”',"Did you tell him? What did he say?\nCould you make it sound gentler for me?",'“你跟他说了没有？他怎么说？\n你帮我说软一点，他兴许听得进去。”',"Did you tell him? What did he say?\nMaybe he'll listen if you put it more gently.")
+pair(f,'“她是不是又让你来管我？\n你明白我的意思，所以你会站在我这边吧？”',"Did she send you to manage me again?\nYou understand me. You'll take my side, won't you?",'“她又让你来劝我了？\n你知道我不是那个意思。你会帮我的吧？”',"Did she send you to talk me round again?\nYou know what I mean. You'll back me up, won't you?")
+pair(f,'“如果我自己说，他却不想听呢？\n你能保证，这一次不会把事情弄坏吗？”',"What if I speak and he won't listen?\nCan you promise it won't make things worse?",'“我去说了，他还是不理我怎么办？\n你能不能保证，这回别再闹僵了？”',"What if I talk to him and he still won't listen?\nCan you promise we won't fall out again?")
+pair(f,'“如果我说出需要，她还是生气呢？\n你能不能先替我挡一下？”',"What if I name what I need and she gets angry?\nCould you stand between us, just this once?",'“我说了，她照样生气怎么办？\n要不你先帮我应付一下？”',"What if I tell her what I want and she gets angry anyway?\nCould you deal with her for me first?")
+pair(f,'在责备之前，你最怕失去什么？',"Before the blame, what are you afraid of losing?",'你这么着急，是在担心什么？',"What are you so worried about?")
+pair(f,'你想要的是离开她，还是自己的空间？',"Do you want to lose her, or have space of your own?",'你想和她断了联系，还是想自己拿主意？',"Do you want to cut ties, or just make your own choices?")
+pair(f,'我现在不能替任何人传话。',"I can't carry someone else's words right now.",'我现在没法帮你传话。',"I can't pass this on right now.")
+pair(f,'先留下你自己的那句“我需要……”。',"Let's keep the sentence that starts with 'I need...'.",'先不说他该怎么做。你自己想要什么？',"Leave what he should do aside for a moment. What do you want?")
+pair(f,'我听见你的需要，但不替你判断她。',"I hear what you need. I won't decide who she is.",'我明白你想自己决定。我不替你评判她。',"I hear that you want your own choices. I won't judge her for you.")
+pair(f,'我先澄清我改过的话。你愿意自己说吗？',"First, I'll correct what I edited. Will you speak for yourself?",'我先把我改过的话说清楚。剩下的，你愿意自己说吗？',"I'll explain what I changed. Would you say the rest yourself?")
+pair(f,'我收回替你站队的承诺。你愿意自己说吗？',"I take back my promise to choose sides. Will you speak for yourself?",'我不该替你站队。你愿意自己去跟对方说吗？',"I shouldn't have taken sides. Would you speak to them yourself?")
+pair(f,'你愿意亲口说出需要，也听完对方吗？',"Will you name your need and hear the other person out?",'你愿意自己说想要什么，也听对方把话说完吗？',"Would you tell them what you want, and hear them out too?")
+pair(f,'我关心你，但我不替你决定这段关系。',"I care about you. I can't decide this relationship for you.",'我能听你说。接下来怎么相处，得由你们自己决定。',"I can listen. You'll have to decide how to get along yourselves.")
+pair(f,'你想追问，声音却先停住了。\n没有余力时，倾听也会变成硬撑。\n去长椅歇一下，或先把自己的界限说出来。',"You try to ask, but the words won't come.\nListening without breath becomes another way of enduring.\nRest at the bench, or name a limit of your own.",'你还想问，已经没力气听下去了。\n这次没能多了解对方。\n去 00 长椅歇歇，或者先说清自己能帮到哪里。',"You try to ask more, but you're too worn out to listen.\nYou learn nothing new this time.\nRest at bench 00, or say how much you can manage.")
+pair(f,'她和他之间的距离，暂时落在了你身上。\n被需要的感觉，和重量一起到来。',"Their distance settles on your shoulders.\nBeing needed arrives with a weight of its own.",'对方等着你把话带过去。\n你接下了这件事，自己的负担也重了。',"They're waiting for you to pass it on.\nYou've taken the job, and more of the weight.")
+pair(f,'“我怕他长大以后，就不再需要我。”\n你听见了责备背后的害怕。',"I'm afraid that growing up means he won't need me.\nYou hear the fear beneath the accusation.",'“我怕他长大了，真的就不再需要我了。”\n她总算说出了自己担心的事。',"I'm scared he won't need me when he's grown up.\nShe finally says what's been worrying her.")
+pair(f,'“我需要自己的空间，不是失去她。”\n界限和离弃，原来不是同一件事。',"I need my own space. I don't need to lose her.\nA boundary is not the same as abandonment.",'“我还是想跟她来往。可总得让我自己做决定吧。”',"I still want her in my life. I just need to make my own decisions.")
+pair(f,'对方暂时沉默。你没有替沉默填满解释。\n照顾自己的余力，也是一种选择。',"They fall silent. You don't fill the silence for them.\nKeeping some strength for yourself is also a choice.",'对方没接话。\n你也没有继续解释，给自己留了点力气。',"They don't answer.\nYou leave it there and save some strength.")
+pair(f,'房间安静了一点，原话也少了一点。\n现在，只有你知道句子被怎样改写。',"The room gets quieter. The original words get smaller.\nOnly you know what was edited out.",'你把话说得好听了些。\n对方暂时放心了，却不知道你改了哪里。',"You make it sound easier to accept.\nThey seem reassured. They don't know what you've changed.")
+pair(f,'“我需要知道，我在他的生活里还有位置。”\n这一次，你没有替她把需要藏起来。',"I need to know there's still a place for me in his life.\nThis time, you don't hide her need for her.",'“我就是想知道，他心里还有没有我。”',"I just want to know I still have a place in his life.")
+pair(f,'“我想自己作决定，也想和她保持联系。”\n你把需要留下，把站队的邀请放下。',"I want my own decisions, and I want to stay connected.\nYou keep the need and decline the invitation to take sides.",'“我想自己拿主意，也想和她好好来往。”\n你听着，没有答应替他站队。',"I want to make my own choices and still get along with her.\nYou listen without agreeing to take his side.")
+pair(f,'“至少你是懂我的。”\n一扇门靠近了你，另一扇门被推得更远。',"At least you understand me.\nOne door moves closer to you. The other moves farther away.",'“还是你懂我。”\n对方更亲近你了，另一人却更不信任你。',"At least you get it.\nThey trust you more. The other person trusts you less.")
+pair(f,'他们把结果交给了你。\n你许下的平静，需要由你不断维持。',"They hand you the outcome.\nThe peace you promised now needs you to keep it running.",'他们等着你安排。\n既然保证了不吵，往后的麻烦也得由你接着。',"They leave the arrangements to you.\nYou promised there wouldn't be an argument. Now it's yours to prevent.")
+pair(f,'“我可以试着自己说。但你不能替对方答应。”\n直接对话，需要两份属于本人的同意。',"I can try to speak for myself. You can't agree for them.\nA direct conversation needs two separate yeses.",'“我愿意试试。对方肯不肯，还得你去问。”\n这一人已经答应，另一人仍要单独确认。',"I'll try. You'll have to ask whether they're willing too.\nThis person has agreed. The other still needs to answer.")
+pair(f,'“我还没准备好。先别替我答应。”\n你听见了迟疑，没有把邀请当成同意。',"I'm not ready. Please don't agree for me.\nYou hear the hesitation. An invitation is not a yes.",'“我还没准备好。先别把我算进去。”\n这次邀请没有得到同意。',"I'm not ready for this. Don't count me in yet.\nThey haven't accepted the invitation.")
+pair(f,'你把关心留下，把责任还回去。\n他们是否开口，不再决定你能否离开。',"You leave your care with them and return their responsibility.\nWhether they speak no longer decides whether you may leave.",'你说清了自己能帮到哪里。\n接下来要不要谈，由他们决定。你可以先走。',"You say how much you can help.\nWhether they talk is up to them. You can leave.")
+pair(f,'你承认了未经允许的转述，没有把原谅当作理所当然。',"You acknowledge sharing without permission. Forgiveness is not assumed.",'你也承认了那次擅自转述，没有要求对方立刻原谅。',"You also acknowledge sharing without permission, without asking for immediate forgiveness.")
+pair(f,'你先澄清了自己的改写或站队，收回一份替对方承担的承诺。',"You correct your edit or allegiance, and return one promise that wasn't yours to make.",'你澄清了之前的改写或站队，不再替对方担保这件事。',"You correct your earlier edit or promise to take sides. One less commitment rests on you.")
+pair(f,'“还有哪些工作安排，需要我听清？”',"What else about the work arrangement should I hear?",'“工作上还有什么要先说清楚的？”',"What else do we need to clear up about the work?")
+pair(f,'“先写下能承担的部分，不替私事填空。”',"Let's write down what is workable, without filling in private reasons.",'“先说你能做什么，私事先放着。”',"Let's start with what you can do. Leave the private part aside.")
+pair(f,'“这句，我想慢一点回答。”',"I'd like to answer this one slowly.",'“等一下，让我想想怎么说。”',"Give me a moment to think.")
+pair(f,'“这句，我会保留你的原意，不替你改写。”',"I'll keep your meaning, without editing it for you.",'“我按你原来的意思说，不改。”',"I'll keep your original meaning.")
+pair(f,'“还有什么，是我没有真正听见的？”',"What have I still not really heard?",'“还有什么是我没听明白的？”',"Is there something I've missed?")
+pair(f,'“把‘你总是’换成‘我需要’，会是什么？”',"What would 'I need' sound like, instead of 'you always'?",'“先说‘我需要什么’，你会怎么讲？”',"How would you say it starting with 'I need'?")
+pair(f,'先让一句话落地。\n余力 +2 / 承重 -1\n每局一次，和本次回应一起结算。',"Let a sentence settle.\nBREATH +2 / LOAD -1\nOnce per run. Resolves with your response.",'想一想再答。\n余力 +2 / 承重 -1\n每局一张，随本次回应使用。',"Take a moment before answering.\nBREATH +2 / LOAD -1\nOne per run. Use with a response.")
+pair(f,'保留措辞，不替对方改写。\n直连 +1 / 承重 +1\n先理解另一人；私下内容仍需转述许可。',"Keep the wording without editing it.\nBRIDGE +1 / LOAD +1\nHear the other need first. Private needs still require permission.",'复述时保留对方原意。\n直连 +1 / 承重 +1\n先了解另一人；私下内容仍须先问。',"Keep their original meaning.\nBRIDGE +1 / LOAD +1\nHear the other person first. Ask before sharing private needs.")
+pair(f,'说清自己能做、不能做的部分。\n余力 +1 / 承重 -2\n建立一次属于自己的界限。',"Name what is and isn't yours to do.\nBREATH +1 / LOAD -2\nEstablishes a personal boundary.",'说清自己能帮到哪里。\n余力 +1 / 承重 -2\n记下一次主动划界。',"Say how much you can help.\nBREATH +1 / LOAD -2\nAdds one personal boundary.")
+pair(f,'多问一句，不替对方作答。\n余力 -1 / 直连 +1\n多听见一层真实需要。',"Ask one more question. Don't answer for them.\nBREATH -1 / BRIDGE +1\nHear one layer deeper.",'再问一句，听对方说完。\n余力 -1 / 直连 +1\n对这个人的理解增加 1。',"Ask another question and listen.\nBREATH -1 / BRIDGE +1\nAdds 1 insight into this person.")
+pair(f,'把责备翻译成“我需要”。\n余力 -1 / 承重 -1 / 直连 +1\n需已理解此人；信任暂时 -1。',"Translate blame into 'I need'.\nBREATH -1 / LOAD -1 / BRIDGE +1\nNeeds insight. Trust briefly falls by 1.",'把责备改成对方自己的诉求。\n余力 -1 / 承重 -1 / 直连 +1\n须已了解此人；信任 -1。',"Rephrase blame as what they need.\nBREATH -1 / LOAD -1 / BRIDGE +1\nRequires insight. TRUST -1.")
+pair(f,'“让我替你们处理好。”\n双方信任 +1 / 余力 -2 / 承重 +2\n对结果的责任也会留在你身上。',"Let me make everything all right.\nBOTH TRUST +1 / BREATH -2 / LOAD +2\nResponsibility for the outcome stays with you.",'“这件事我来负责。”\n双方信任 +1 / 余力 -2 / 承重 +2\n多接下一份保证结果的责任。',"I'll take care of it.\nBOTH TRUST +1 / BREATH -2 / LOAD +2\nAdds a promise to manage the outcome.")
+pair(f,'G / 撤回最后一句回应，每局一次。\n资源回到回应前，消耗的卡不返还。\n在长椅休息或结局之后无法撤回。',"G / Revise your last response, once per run.\nResources return; spent cards do not.\nUnavailable after resting or an ending.",'G / 撤回上一句，每局一次。\n恢复回应前的资源，用过的卡不返还。\n休息、处理传话或结局后不能撤回。',"G / Revise your last response once per run.\nRestore resources, but not spent cards.\nUnavailable after rest, message actions or an ending.")
+pair(f,'回应本身已经有分量。\n卡牌是有限的表达方式，不是必选项。\nQ 切换动作卡；点击同一张可取消。',"A response already has weight.\nCards are limited ways to speak, not a requirement.\nQ cycles cards. Click again to deselect.",'可以直接回应，也可以加用一张卡。\n每种卡只有一张。\nQ 切换；再点同一张可取消。',"Respond on its own, or add one card.\nYou have one of each card.\nQ cycles cards. Click again to deselect.")
+pair(f,'Tab 回看走过的路。R 开始另一种回应。',"TAB to revisit your words. R to begin again.",'Tab 回看记录。R 重新开始。',"TAB to read your notes. R to play again.")
+pair(f,'走向 03，决定自己的位置。',"Approach 03. Choose where you stand.",'去 03，决定接下来怎么办。',"Go to 03 and choose what to do next.")
+pair(f,'工作范围可以协商，私事仍由本人决定。\n你要继续代办、邀请有限协商，还是先离开？',"Work can be negotiated. Private reasons still belong to their owner.\nWill you manage it, invite a limited agreement, or step away?",'安排已经谈过了，私事仍由本人决定说不说。\n你要接着替他们处理、请他们自己谈工作，还是先走？',"You've discussed the work. They still choose whether to share private reasons.\nWill you keep managing it, ask them to discuss the plan, or leave?")
+pair(f,'你已经听过，也已经回应。\n你想继续承担、邀请对话，还是先照顾自己？',"You have heard them and answered them.\nWill you keep carrying, invite them to speak, or care for yourself?",'两边的话，你都听过了。\n接着传话、请他们自己谈，还是先离开？',"You've heard both sides.\nWill you keep passing messages, ask them to talk, or leave?")
+pair(f,'你不必等到他们和好，才拥有离开的权利。\n你也可以回去，把这一轮对话听完。',"You don't have to repair their relationship to earn a way out.\nYou can also return and hear the next part.",'你现在就可以离开。\n如果还想听，也能回去继续这一轮。',"You can leave now.\nOr go back and hear the rest of this round.")
+pair(f,'邀请他们亲口谈；是否接受由他们决定。',"Invite them to speak. The decision is theirs.",'问问他们，愿不愿意坐下来自己谈。',"Ask whether they're willing to sit down and talk.")
+pair(f,'我先离开，照顾自己的边界与余力。',"I'll step away and care for my own limits.",'我先歇歇。这些话得由你们自己说。',"I need a break. You'll have to take this from here.")
+pair(f,'他们各自答应，亲口说，也亲耳听。\n你可以在场，但不再是他们唯一的通道。',"Each agrees to speak and to listen.\nYou may stay, without being their only connection.",'他们都答应坐下来，说说自己的想法，也听对方说完。\n你可以旁听，接下来的话由他们自己说。',"They both agree to talk and hear each other out.\nYou can stay and listen. They can speak for themselves.")
+pair(f,'你把关心留下，把责任还给他们。\n这扇门，不以任何人的和好为条件。',"You leave your care and return their responsibility.\nThis door does not depend on their reconciliation.",'你说清自己能帮到哪里，先走了。\n他们要不要谈下去，不会把你留在这里。',"You say how much you can help, then leave.\nWhether they keep talking doesn't have to keep you here.")
+pair(f,'还有一些话没能说完。你仍可以先离开。\n距离是一段空间，不是对关系的判决。',"Some words remain unfinished. You may still step out.\nDistance is room, not a verdict on a relationship.",'有些话还没说清，你先离开了。\n以后要怎么相处，留待以后再谈。',"Some things are still unsaid. You leave for now.\nYou can decide what comes next another day.")
+pair(f,'每一段话都经过你，每一段沉默也等着你。\n三角很稳定。只是你一直没有自己的位置。',"Every message passes through you. Every silence waits.\nThe triangle holds, but leaves no room of your own.",'他们还在等你传话。\n下次有事，两个人大概还是会来找你。',"They're still waiting for you to pass things on.\nNext time something happens, they'll probably come to you again.")
+pair(f,'你用站队换来了亲近。\n两个人之间的墙，现在也把你围在里面。',"Taking sides bought a kind of closeness.\nThe wall between them now encloses you as well.",'你站到一边，得到了信任。\n另一人更难相信你，下次想开口也更难了。',"Taking a side earned you trust.\nThe other person has less reason to trust you, or to speak freely next time.")
+pair(f,'你已经没有余力，再替任何人说一句。\n休息不需要许可。门仍然属于你。',"There is no breath left to speak for someone else.\nRest needs no permission. The door is still yours.",'你累得说不下去了。\n先出去歇歇，不必等他们给出答复。',"You're too tired to keep talking for them.\nStep outside and rest. You don't need to wait for an answer.")
+pair(f,'没有人再争吵，因为原话已经被你改写。\n他们没有彼此理解，只学会了等你来维持平静。',"No one argues. Their words have been edited away.\nThey don't understand each other. They wait for you to keep the peace.",'改过的那些话，暂时压住了争执。\n可他们仍没弄清对方的意思，再有分歧还得等你处理。',"Your edits have settled the argument for now.\nThey still don't understand each other. The next disagreement may need you again.")
+pair(f,'你还未听见需要；目前只有对你的要求。',"You have heard a request of you, not the need beneath it.",'你知道对方要你做什么，还没问清为什么。',"You know what they want you to do, but not why.")
+pair(f,'她怕失去在他生活中的位置。',"She fears losing her place in his life.",'她担心他以后不再需要自己。',"She's afraid he won't need her anymore.")
+pair(f,'他要自主，也要继续保持联系。',"He wants autonomy and continued connection.",'他想自己拿主意，也想和她保持联系。',"He wants to make his own choices and stay in touch.")
+pair(f,'擅自转述尚未得到承认。',"Sharing without permission is still unacknowledged.",'你还没向本人承认那次擅自转述。',"You haven't acknowledged sharing their words without permission.")
+pair(f,'已亲口同意尝试直接对话。',"Has agreed to try speaking directly.",'本人已答应试着直接谈。',"Has agreed to try talking directly.")
+pair(f,'尚未亲口同意直接对话。',"Has not yet agreed to a direct conversation.",'本人还没答应直接谈。',"Hasn't agreed to talk directly yet.")
+
+f='CaseInfo'
+pair(f,'家人之间 · 关心、距离与两份同意',"A family · care, distance and two separate yeses",'家人之间 · 想靠近，也想留点空间',"Family · wanting closeness and room to choose")
+pair(f,'同事之间 · 工作可以协商，私事不必交代',"At work · agree on the task, keep private reasons private",'同事之间 · 先谈安排，私事由本人决定',"At work · agree on a plan, leave private reasons private")
+pair(f,'两个人，把彼此的话交给你。\n你能改变话语的走向。\n也可以保留自己的出口。',"Two people entrust you with their words.\nYou can change where those words go.\nYou can also keep a way out of your own.",'她担心他，他想自己做决定。\n两个人都来找你传话。\n怎么传，何时走，由你决定。',"She's worried about him. He wants his own choices.\nThey both ask you to pass a message.\nYou choose what to carry, and when to leave.")
+pair(f,'一份安排，空着一栏事由。\n你需要带过去的，真的是那个理由吗？\n工作可以继续，空白也可以留下。',"A work plan has a blank space for a reason.\nIs that reason really yours to carry?\nThe work can move forward. The blank may remain.",'周五要交草稿，评审却定在晚上。\n同事想改到白天，不愿解释私事。\n你接下了这份传话。',"A Friday draft is due. The review is set for the evening.\nYour colleague wants a daytime slot and won't discuss why.\nThey ask you to pass the request on.")
+
+# Validate all targets before changing any file, including exact C# escaping.
+grouped={}
+for edit in EDITS:grouped.setdefault(edit['file'],[]).append(edit)
+outputs={}
+for relative,edits in grouped.items():
+    source=(ROOT/relative).read_text(encoding='utf-8-sig')
+    for edit in edits:
+        old=json.dumps(edit['before'],ensure_ascii=False)
+        new=json.dumps(edit['after'],ensure_ascii=False)
+        if old not in source:raise SystemExit('Review target not found: '+relative+' / '+edit['before'])
+        source=source.replace(old,new)
+    outputs[relative]=source
+for relative,text in outputs.items():(ROOT/relative).write_text(text,encoding='utf-8')
+(ROOT/'Documentation/Editorial/Decisions-v6.json').write_text(json.dumps(EDITS,ensure_ascii=False,indent=2),encoding='utf-8')
+print(f'APPLIED / {len(EDITS)} individually reviewed bilingual edits / {len(outputs)} files')

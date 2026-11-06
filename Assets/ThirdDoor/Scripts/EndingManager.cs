@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class EndingManager : MonoBehaviour
@@ -12,178 +11,36 @@ public class EndingManager : MonoBehaviour
     [SerializeField] private Renderer[] sideDoorRenderers;
     [SerializeField] private Transform middleCeiling;
 
-    private Vector3 ceilingOriginPosition;
-    private Coroutine ceilingRoutine;
-
-    public void Configure(DialogueUI ui, Light centerLight)
+    public void Configure(DialogueUI ui,Light light){dialogueUI=ui;middleRoomLight=light;}
+    public void ConfigureEnvironment(Light exitLight,Transform red,Transform blue,Renderer[] guides,Renderer[] doors,Transform ceiling)
     {
-        dialogueUI = ui;
-        middleRoomLight = centerLight;
+        exitBackLight=exitLight;redPressureWall=red;bluePressureWall=blue;guidanceLineRenderers=guides;sideDoorRenderers=doors;middleCeiling=ceiling;
+        if(red!=null)red.gameObject.SetActive(false);if(blue!=null)blue.gameObject.SetActive(false);
+        if(exitLight!=null)exitLight.enabled=false;
     }
-
-    public void ConfigureEnvironment(Light exitLight, Transform redWall, Transform blueWall, Renderer[] guideLines, Renderer[] doorPanels, Transform ceiling)
+    public void ShowEnding(RelationshipEnding ending,RelationshipRun run)
     {
-        exitBackLight = exitLight;
-        redPressureWall = redWall;
-        bluePressureWall = blueWall;
-        guidanceLineRenderers = guideLines;
-        sideDoorRenderers = doorPanels;
-        middleCeiling = ceiling;
-
-        if (middleCeiling != null)
+        bool pressure=ending==RelationshipEnding.Loop||ending==RelationshipEnding.Alliance;
+        if(redPressureWall!=null)redPressureWall.gameObject.SetActive(pressure);
+        if(bluePressureWall!=null)bluePressureWall.gameObject.SetActive(pressure);
+        if(middleRoomLight!=null)
         {
-            ceilingOriginPosition = middleCeiling.position;
+            middleRoomLight.intensity=pressure?.25f:ending==RelationshipEnding.Exhaustion?.4f:1.2f;
+            middleRoomLight.color=pressure?ExhibitionDesign.Red:Color.white;
         }
-
-        if (exitBackLight != null)
+        if(exitBackLight!=null)
         {
-            exitBackLight.enabled = false;
+            exitBackLight.enabled=RelationshipRun.OpensExit(ending);
+            exitBackLight.intensity=ending==RelationshipEnding.SharedTable?2.2f:.9f;
+            exitBackLight.color=ending==RelationshipEnding.Distance?new Color(.8f,.9f,1):Color.white;
         }
-
-        if (redPressureWall != null)
-        {
-            redPressureWall.gameObject.SetActive(false);
-        }
-
-        if (bluePressureWall != null)
-        {
-            bluePressureWall.gameObject.SetActive(false);
-        }
+        dialogueUI.ShowEndingText(NarrativeText.EndingText(run));
     }
-
-    private void Awake()
+    public void ShowEnding(bool good){if(GameStateManager.Instance!=null)ShowEnding(GameStateManager.Instance.Run.Ending,GameStateManager.Instance.Run);}
+    public void UpdateProgressFeedback(int bridge)
     {
-        if (dialogueUI == null)
-        {
-            dialogueUI = FindObjectOfType<DialogueUI>();
-        }
-    }
-
-    public void ShowEnding(bool goodEnding)
-    {
-        if (goodEnding)
-        {
-            if (middleRoomLight != null)
-            {
-                middleRoomLight.intensity = 4.8f;
-                middleRoomLight.color = Color.white;
-            }
-
-            if (exitBackLight != null)
-            {
-                exitBackLight.enabled = true;
-                exitBackLight.intensity = 8f;
-                exitBackLight.range = 9f;
-            }
-
-            SetGuideLineEmission(1.6f);
-            LerpCeilingTo(ceilingOriginPosition.y);
-            dialogueUI.ShowEndingText("门开了。");
-        }
-        else
-        {
-            if (middleRoomLight != null)
-            {
-                middleRoomLight.intensity = 0.45f;
-                middleRoomLight.color = new Color(0.42f, 0.36f, 0.17f);
-            }
-
-            if (redPressureWall != null)
-            {
-                redPressureWall.gameObject.SetActive(true);
-            }
-
-            if (bluePressureWall != null)
-            {
-                bluePressureWall.gameObject.SetActive(true);
-            }
-
-            SetGuideLineEmission(0f);
-            LerpCeilingTo(ceilingOriginPosition.y - 0.55f);
-            dialogueUI.ShowEndingText("那就继续循环吧。");
-        }
-    }
-
-    public void UpdateProgressFeedback(int directConnection)
-    {
-        if (middleRoomLight != null)
-        {
-            if (directConnection <= 0)
-            {
-                middleRoomLight.intensity = directConnection < 0 ? 1.2f : 2.2f;
-                middleRoomLight.color = new Color(0.85f, 0.62f, 0.22f);
-            }
-            else if (directConnection == 1)
-            {
-                middleRoomLight.intensity = 3.0f;
-                middleRoomLight.color = new Color(1f, 0.83f, 0.38f);
-            }
-            else
-            {
-                middleRoomLight.intensity = 3.8f;
-                middleRoomLight.color = new Color(1f, 0.92f, 0.68f);
-            }
-        }
-
-        SetGuideLineEmission(directConnection <= 0 ? 0.25f : directConnection == 1 ? 0.75f : 1.15f);
-
-        // Ceiling presses down when player drifts toward the bad path.
-        float targetY = ceilingOriginPosition.y + Mathf.Min(0, directConnection) * 0.2f;
-        LerpCeilingTo(targetY);
-    }
-
-    private void LerpCeilingTo(float targetY)
-    {
-        if (middleCeiling == null)
-        {
-            return;
-        }
-
-        if (ceilingRoutine != null)
-        {
-            StopCoroutine(ceilingRoutine);
-        }
-
-        ceilingRoutine = StartCoroutine(CeilingRoutine(targetY));
-    }
-
-    private IEnumerator CeilingRoutine(float targetY)
-    {
-        Vector3 start = middleCeiling.position;
-        Vector3 end = new Vector3(start.x, targetY, start.z);
-        const float duration = 0.9f;
-        float elapsed = 0f;
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration);
-            middleCeiling.position = Vector3.Lerp(start, end, t);
-            yield return null;
-        }
-        middleCeiling.position = end;
-        ceilingRoutine = null;
-    }
-
-    private void SetGuideLineEmission(float intensity)
-    {
-        if (guidanceLineRenderers == null)
-        {
-            return;
-        }
-
-        Color emission = Color.white * intensity;
-        foreach (Renderer lineRenderer in guidanceLineRenderers)
-        {
-            if (lineRenderer == null)
-            {
-                continue;
-            }
-
-            foreach (Material material in lineRenderer.materials)
-            {
-                material.EnableKeyword("_EMISSION");
-                material.SetColor("_EmissionColor", emission);
-            }
-        }
+        if(middleRoomLight==null)return;
+        middleRoomLight.intensity=.55f+bridge*.1f;
+        middleRoomLight.color=Color.Lerp(new Color(1,.84f,.67f),Color.white,bridge/6f);
     }
 }

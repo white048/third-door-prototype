@@ -1,0 +1,43 @@
+{
+  "version": "7.0",
+  "date": "2026-11-04",
+  "coreRulesAndSaveCompatible": true,
+  "files": [
+    {
+      "file": "Assets/ThirdDoor/Scripts/RelationshipRun.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "26beffe90377ef0e35c4e1ff4736b0005fed9cfd942569ce753d7bf43e9e6c8c"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceRun.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "6aae1a67c0ab7ab6386f4ffaa95d87471408150782f531dd988d4a365dad75ea"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeRun.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "7817e8a7dd3736cb2ad157a293d1bdc8f3e759e653c0f9aca7219c1862e613bf"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RelationshipSave.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "26de5e61af01b244e417b29b505ac6828c88848033a2119076a9fcd9c2cab081"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CheckpointStore.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "84e5b165fca38373ece6ee96d3d532cdf89f90d3f1bd04bd5e4233c57bac9a8c"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseSession.cs",
+      "codeUnchangedSinceV6": true,
+      "stringValuesUnchanged": true,
+      "sha256": "b99d3ceda84961a71f7d94b4cf93c8b79caa5c0a1eea8199c046a80866d461de"
+    }
+  ]
+}

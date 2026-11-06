@@ -68,3 +68,17 @@ Thumbs.db
 
 # Local notes & plans not meant for the repo
 /CLAUDE.local.md
+/.claude/
+/.codex/
+/.cursor/
+/Tools/.build/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local reference collection and inspection images; production art lives in Assets.
+/Documentation/ReferenceStudy-v7/reference-only/
+/Documentation/ReferenceStudy-v7/Contact-*.jpg
+/Documentation/ReferenceStudy-v7/Detail-*.png
+/Documentation/ReferenceStudy-v7/阅读说明.txt
+/Documentation/ReferenceStudy-v7/目录.json

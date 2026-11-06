@@ -1,0 +1,2468 @@
+{
+  "changedLiteralOccurrences": 410,
+  "changedFiles": 17,
+  "executableTokensUnchanged": true,
+  "violations": [],
+  "changes": [
+    {
+      "file": "Assets/ThirdDoor/Scripts/ArtReflectionView.cs",
+      "line": 17,
+      "before": "拼贴图像 / 关心、责任与出口",
+      "after": "图像手记 / 拼贴中的细节"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ArtReflectionView.cs",
+      "line": 17,
+      "before": "COLLAGE / CARE, RESPONSIBILITY, A WAY OUT",
+      "after": "VISUAL NOTES / DETAILS IN THE COLLAGE"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 7,
+      "before": "家人之间 · 关心、距离与两份同意",
+      "after": "家人之间 · 想靠近，也想留点空间"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 7,
+      "before": "A family · care, distance and two separate yeses",
+      "after": "Family · wanting closeness and room to choose"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 7,
+      "before": "同事之间 · 工作可以协商，私事不必交代",
+      "after": "同事之间 · 先谈安排，私事由本人决定"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 7,
+      "before": "At work · agree on the task, keep private reasons private",
+      "after": "At work · agree on a plan, leave private reasons private"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 8,
+      "before": "两个人，把彼此的话交给你。\n你能改变话语的走向。\n也可以保留自己的出口。",
+      "after": "她担心他，他想自己做决定。\n两个人都来找你传话。\n怎么传，何时走，由你决定。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 8,
+      "before": "Two people entrust you with their words.\nYou can change where those words go.\nYou can also keep a way out of your own.",
+      "after": "She's worried about him. He wants his own choices.\nThey both ask you to pass a message.\nYou choose what to carry, and when to leave."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 8,
+      "before": "一份安排，空着一栏事由。\n你需要带过去的，真的是那个理由吗？\n工作可以继续，空白也可以留下。",
+      "after": "周五要交草稿，评审却定在晚上。\n同事想改到白天，不愿解释私事。\n你接下了这份传话。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CaseInfo.cs",
+      "line": 8,
+      "before": "A work plan has a blank space for a reason.\nIs that reason really yours to carry?\nThe work can move forward. The blank may remain.",
+      "after": "A Friday draft is due. The review is set for the evening.\nYour colleague wants a daytime slot and won't discuss why.\nThey ask you to pass the request on."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 69,
+      "before": "还未接话。先去倾听这一扇门。",
+      "after": "还没有这人的话。先去门前听听。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 69,
+      "before": "No message yet. First hear this voice.",
+      "after": "No message yet. Go and listen at this door first."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 75,
+      "before": "两个人的需要，不等于两份公开许可。",
+      "after": "先听原话，再决定转告什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 75,
+      "before": "TWO NEEDS ARE NOT TWO PERMISSIONS.",
+      "after": "LISTEN, THEN CHOOSE WHAT TO PASS ON."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 76,
+      "before": "01 / 请求中的原话\n\n",
+      "after": "01 / 要转告的原话\n\n"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 76,
+      "before": "接过一句话后，这里会保留当时的原句。",
+      "after": "听到对方的请求后，原话会记在这里。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 76,
+      "before": "A received message keeps its original wording here.",
+      "after": "The request appears here once you have heard it."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 77,
+      "before": "深入倾听，才会出现这一层内容。",
+      "after": "多了解对方后，私下的话会记在这里。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 77,
+      "before": "Listen beneath the request to hear this part.",
+      "after": "Hear more from this person to reveal their private need."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 85,
+      "before": "留作私下的倾听",
+      "after": "保密，不转告"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 91,
+      "before": "一局保留每个人的一封话。你决定它承载请求，还是需要。\n转述许可与直接对话的同意，分别属于当事人。",
+      "after": "每人保留一封话，可转告原话或私下需要。\n私下内容须先问本人；是否愿意直接谈，要另外确认。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 91,
+      "before": "Keep one envelope from each voice. Choose what it carries.\nPermission to quote and consent to talk are separate decisions.",
+      "after": "Each person has one envelope: a request and a private need.\nAsk before sharing the private part. Ask separately about talking directly."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 93,
+      "before": "这封话已经交出，未经允许的转述尚未得到承认。\n回到原主门前，你仍可以承认并修复这次越界。",
+      "after": "这句话已经传出去了，你还没向本人承认。\n回到说话的人门前，可以说明你擅自转述了什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 93,
+      "before": "This message has left your hands. A disclosure remains unacknowledged.\nReturn to its owner to acknowledge and repair the breach.",
+      "after": "The words have been shared. You haven't acknowledged doing it without permission.\nReturn to the speaker to put that right."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 93,
+      "before": "这封话已经处理。交付与保密都留下记录，不再重复结算。",
+      "after": "这封话已经处理，结果已记下，不能重复使用。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 93,
+      "before": "This envelope is resolved. Delivery and privacy both leave a record; neither pays twice.",
+      "after": "This envelope has been dealt with. Its result is recorded and cannot be repeated."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 98,
+      "before": "未经允许：原主信任 -2，并留下需要承认的越界。",
+      "after": "未经本人允许：其信任 -2；需要当面承认擅自转述。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 98,
+      "before": "WITHOUT PERMISSION: source trust -2; a breach remains.",
+      "after": "WITHOUT PERMISSION: speaker TRUST -2. Return to acknowledge what you shared."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 100,
+      "before": "看向门前按 F：在原主处问许可、退回承诺；在另一人处交付。",
+      "after": "门前 F：问说话的人许可、退回承诺；去另一人那里转告。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs",
+      "line": 116,
+      "before": "保持私下，不改变资源",
+      "after": "保密，资源不变"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 6,
+      "before": "留作私下的倾听",
+      "after": "已经保密"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 6,
+      "before": "答应代为传话",
+      "after": "答应转告"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 6,
+      "before": "A PROMISE TO CARRY",
+      "after": "PROMISED TO PASS ON"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "需要的转述：已获允许",
+      "after": "私下需要：已获转述许可"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "NEED: PERMISSION GIVEN",
+      "after": "PRIVATE NEED: MAY BE SHARED"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "这句更想自己说；信任不是转述许可。",
+      "after": "私下需要：对方想亲口说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "THEY WANT THEIR OWN VOICE; TRUST IS NOT PERMISSION.",
+      "after": "PRIVATE NEED: THEY WANT TO SAY IT."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "需要的转述：对方暂不愿意",
+      "after": "私下需要：对方不愿公开"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "NEED: PLEASE KEEP IT PRIVATE",
+      "after": "PRIVATE NEED: KEEP THIS PRIVATE"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "需要的转述：尚未询问",
+      "after": "私下需要：还没问过本人"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 7,
+      "before": "NEED: PERMISSION NOT ASKED",
+      "after": "PRIVATE NEED: ASK BEFORE SHARING"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 8,
+      "before": "“周五的草稿不能再拖，请确认评审安排。”",
+      "after": "“周五得拿到草稿，评审时间也请确认一下。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 8,
+      "before": "The Friday draft cannot slip. Please confirm the review arrangement.",
+      "after": "I need the draft on Friday. Please confirm a time for the review."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 8,
+      "before": "“评审请移到白天，周五交草稿。事由保留。”",
+      "after": "“评审能改到白天吗？草稿我周五给。原因先不谈。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 8,
+      "before": "Please move the review to daytime. Draft on Friday. Reason withheld.",
+      "after": "Could we move the review to daytime? I'll have the draft on Friday. I'd rather not discuss why."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "还没有听见这一层需要。",
+      "after": "还没问清对方为什么提出这个请求。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "You have not heard the need beneath this request.",
+      "after": "You haven't heard why they're asking for this."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "“我怕交付落空后，又是我一个人承担。”",
+      "after": "“我就怕东西交不出来，最后又落到我头上。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "I'm afraid I'll be left carrying the missed delivery alone.",
+      "after": "I'm worried the work won't get done and I'll be left to deal with it."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "“我需要保留不解释私事的空间。这句，我想自己说。”",
+      "after": "“原因我现在不想谈。这句话，让我自己去说。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "I need room to keep my reasons private. I want to say this myself.",
+      "after": "I don't want to get into why. Let me say that myself."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "“我需要知道，在他的生活里还有我的位置。”",
+      "after": "“我就是想知道，他心里还有没有我。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "I need to know there is still a place for me in his life.",
+      "after": "I just want to know I still have a place in his life."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "“我需要自己作决定，也想和她保持联系。”",
+      "after": "“我想自己拿主意，也想和她好好来往。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 9,
+      "before": "I need my own decisions, and I want to stay connected.",
+      "after": "I want to make my own choices and still get along with her."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 10,
+      "before": "对方较能听完一句不舒服的话。",
+      "after": "收信人较信任你，能多听进一些。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 10,
+      "before": "They are more ready to hear something uncomfortable.",
+      "after": "The recipient trusts you enough to be more receptive."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 10,
+      "before": "对方仍在防备；照搬责备会降低信任。",
+      "after": "收信人还在防备，原样转告责备会降低信任。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 10,
+      "before": "They are guarded. Repeating blame will cost trust.",
+      "after": "The recipient is guarded. Passing on blame will cost trust."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 14,
+      "before": "“我愿意告诉你，但这句，我想自己说。”\n亲近没有替他让渡公开这句话的权利。",
+      "after": "“我愿意跟你说。这句话，我还是想自己讲。”\n对方没有同意让你转述。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 14,
+      "before": "I'm willing to tell you. I want to say this myself.\nCloseness does not surrender control of private words.",
+      "after": "I'm happy to tell you, but I'd like to say this myself.\nThey haven't given you permission to share it."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 15,
+      "before": "“这句可以带过去。别替我保证结果。”\n你获得的是转述许可，还不是直接对话的同意。",
+      "after": "“这句可以转告。结果我可没法保证。”\n本人允许转述；要不要直接谈，还得另问。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 15,
+      "before": "You may share this. Don't promise how it will turn out.\nPermission to quote is separate from agreeing to talk.",
+      "after": "You can tell them that. I can't promise how it'll go.\nYou have permission to share this. Agreeing to talk is a separate question."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 15,
+      "before": "“这句先留在我们之间。”\n你听见了拒绝。这一轮不再重复追问许可。",
+      "after": "“这句就先别告诉别人了。”\n对方不愿公开，这一轮不能再问。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 15,
+      "before": "Keep this between us for now.\nYou hear the refusal, and will not ask again this round.",
+      "after": "Please keep that between us for now.\nThey don't want it shared. You can't ask again this round."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 16,
+      "before": "你回到原主面前，收回替人传话的承诺。\n对方有点失望；你把限度说清楚了。",
+      "after": "你当面说明，没法继续替对方传这句话。\n对方有些失望，但知道了你的限度。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 16,
+      "before": "You return to the speaker and give back your promise.\nThey are disappointed. Your limit is now clear.",
+      "after": "You tell the speaker you can't pass this on after all.\nThey're disappointed, but they know where you stand."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 16,
+      "before": "你把私下听见的需要留在这里。\n不公开它，也是一种处理。",
+      "after": "这句私下的话，你没有往外传。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 16,
+      "before": "You keep the private need between you.\nNot sharing it is also a way to handle it.",
+      "after": "You keep the private words between the two of you."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 17,
+      "before": "你承认了擅自转述，并重新征询意愿。\n对方仍愿意尝试；这份同意只属于本人。",
+      "after": "你承认不该擅自转述，又问了一次。\n对方仍愿意直接谈；另一人的答复没有改变。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 17,
+      "before": "You acknowledge sharing without permission, and ask again.\nThey are still willing to try. This yes belongs only to them.",
+      "after": "You acknowledge sharing without asking, then ask again.\nThey're still willing to talk. The other person's answer hasn't changed."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 17,
+      "before": "你承认了擅自转述。信任恢复了一点。\n道歉没有替对方许下和解。",
+      "after": "你承认了擅自转述，信任恢复了一点。\n对方有没有答应直接谈，仍按本人原先的答复。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 17,
+      "before": "You acknowledge sharing without permission. Some trust returns.\nYour apology does not promise reconciliation for them.",
+      "after": "You acknowledge sharing without asking. Some trust returns.\nTheir earlier answer about talking still stands."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 18,
+      "before": "对方听见了需要，原主却失去了对私下话语的决定权。\n你获得了一点亲近，也留下了一次需要承认的越界。",
+      "after": "收信人听进去了，说这句话的人却没有同意让你转告。\n本人对你的信任下降；先前若答应过直接谈，这份同意也会撤回。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 18,
+      "before": "The listener hears a need. Its owner loses control of private words.\nCloseness comes with a breach you will need to acknowledge.",
+      "after": "The recipient takes it in, but the speaker never agreed to have it shared.\nThey trust you less and withdraw any earlier agreement to talk."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 19,
+      "before": "“这比刚才的责备，更像是能回答的一句话。”\n你带来了获准分享的需要，没有替任何人保证结果。",
+      "after": "“这样说，我就明白了。”\n你把获准转述的那句话送到了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 19,
+      "before": "That sounds like something I can answer.\nYou carry an allowed need, without guaranteeing an outcome.",
+      "after": "That makes more sense to me.\nYou've passed on the words the speaker agreed to share."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 20,
+      "before": "对方听完了原话，没有马上把它推回来。\n准确传达，仍不等于替双方完成了理解。",
+      "after": "对方听你把原话说完了。\n接下来怎么答，还得由本人决定。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 20,
+      "before": "They hear the original words without pushing them straight back.\nAn accurate delivery is still not mutual understanding.",
+      "after": "They hear the message out.\nHow they answer is up to them."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 20,
+      "before": "“这又是要我照着做吗？”\n原话准确到达，责备也跟着进来了。",
+      "after": "“所以，又是让我照着办？”\n话是原话，对方听着仍像责备。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/CorrespondenceText.cs",
+      "line": 20,
+      "before": "Am I being told what to do again?\nThe words arrive accurately. The blame arrives with them.",
+      "after": "So I'm being told what to do again?\nThe wording is accurate. To the listener, it still sounds like blame."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 152,
+      "before": "空格 / E    把这句话留在这里",
+      "after": "空格 / E    继续"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 152,
+      "before": "SPACE / E    LET THESE WORDS REST",
+      "after": "SPACE / E    CONTINUE"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 154,
+      "before": "你可以随时回来，再读这幅图。",
+      "after": "随时可以回来再看。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 154,
+      "before": "You may return and read this image again whenever you wish.",
+      "after": "You can come back to this print whenever you like."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 154,
+      "before": "反馈会等你读完。余力为 0 时，追问无法增加理解；可去长椅休息。",
+      "after": "读完再继续。余力为 0 时，追问不会增加理解；可去 00 长椅休息。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/DialogueUI.cs",
+      "line": 154,
+      "before": "Take your time. At 0 BREATH, questions cannot deepen insight. Rest at the bench.",
+      "after": "Read at your own pace. At 0 BREATH, asking adds no insight. Rest at bench 00."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionHUD.cs",
+      "line": 49,
+      "before": "R   /   重新开始",
+      "after": "重新开始 / RESTART"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionHUD.cs",
+      "line": 49,
+      "before": "R   /   RESTART",
+      "after": "RESTART"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionHUD.cs",
+      "line": 50,
+      "before": "退出作品   /   QUIT",
+      "after": "退出游戏 / QUIT"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionUIBuilder.cs",
+      "line": 24,
+      "before": "TWO CASES   /   AN INTERACTIVE STUDY   /   005",
+      "after": "TWO CASES   /   AN INTERACTIVE STUDY   /   006"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionUIBuilder.cs",
+      "line": 91,
+      "before": "R  /  ",
+      "after": ""
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionUIBuilder.cs",
+      "line": 93,
+      "before": "退出作品   /   QUIT",
+      "after": "退出游戏   /   QUIT"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/ExhibitionUIBuilder.cs",
+      "line": 110,
+      "before": "VOL. 05   /   2026",
+      "after": "VOL. 06   /   2026"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+      "line": 64,
+      "before": "新一轮开始：获得“追问”与“翻译”。",
+      "after": "下一轮：获得“追问”和“翻译”各一张。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+      "line": 64,
+      "before": "NEW ROUND: LISTEN and REFRAME drawn.",
+      "after": "NEXT ROUND: one LISTEN and one REFRAME card."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+      "line": 64,
+      "before": "最后一轮：获得“代偿”与“重述”。G 可撤回上一句。",
+      "after": "最后一轮：获得“代偿”和“重述”。G 可撤回上一句。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/GameStateManager.cs",
+      "line": 64,
+      "before": "FINAL ROUND: TAKE OVER and SAY IT AGAIN drawn. G revises one response.",
+      "after": "FINAL ROUND: TAKE OVER and SAY IT AGAIN. G revises your last response."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+      "line": 32,
+      "before": "留白属于留下它的人。\n你可以带走工作请求，把私人原因留给本人。\n有限的协议，也可以让那一栏继续空着。",
+      "after": "纸上两条工作安排连着红线，事由栏却空着。\n旁边的黑信封也没有拆开。\n这次要转告的工作，已经写清楚了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+      "line": 32,
+      "before": "The blank belongs to the person who left it.\nCarry the work request, not an invented private reason.\nA limited agreement can leave that space untouched.",
+      "after": "Red thread connects the two tasks. The reason field is blank.\nBeside it, the black envelope stays closed.\nThe work request is already clear."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+      "line": 33,
+      "before": "钥匙可以留下联系，不必成为索取的凭据。\n信封可以传递关心，不必占有你的声音。\n你可以放下红线，保留自己的出口。",
+      "after": "钥匙系在信封上，红线松松地绕过两只手。\n线头停在门边，没有把那条路封住。\n你可以接过信，也能把手松开。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/IllustrationStation.cs",
+      "line": 33,
+      "before": "A key keeps a connection; it need not become a claim.\nAn envelope can carry care without owning your voice.\nYou may put down the thread and keep your own exit.",
+      "after": "A key hangs from an envelope. Loose thread links two hands.\nIt ends beside the doorway, leaving a way through.\nYou can take the message. You can also let go."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 74,
+      "before": "他请你守一道门。",
+      "after": "他想让你替他挡一下。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 75,
+      "before": "而你，站在他们中间。",
+      "after": "两个人都在等你答复。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 101,
+      "before": "你接过她的话。\n两人的距离，又落在你的肩上。",
+      "after": "你答应替她传话，得再去找他。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 102,
+      "before": "“我只是怕，他不再需要我。”\n责备的背后，原来是害怕。",
+      "after": "“我就是怕，他以后不再需要我了。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 103,
+      "before": "她沉默了。\n一句拒绝，还没有让她被听见。",
+      "after": "她没再说话。你还没弄清她在担心什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 104,
+      "before": "她的声音暂时安静了。去听 02 的声音。",
+      "after": "这一边先说到这里。去 02 听听。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 111,
+      "before": "你成了挡在他们中间的墙。\n保护，也可以成为另一种传话。",
+      "after": "你答应替他应付她，接下来还得由你去说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 112,
+      "before": "“我需要自己的空间，不是失去她。”\n这句话，应该由他亲口说。",
+      "after": "“我想自己做决定，也想跟她来往。”\n这些话，得让他自己说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 114,
+      "before": "他退回门后。\n有些话，还没有被理解。",
+      "after": "他没答应。你还没弄清他想要什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 116,
+      "before": "两种声音都留在这里了。现在去 03 作决定。",
+      "after": "两边都听过了。去 03 决定接下来怎么办。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 119,
+      "before": "他们都在等你。\n这一次，你要站在哪里？",
+      "after": "他们都在等你。\n你还要继续传话吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 125,
+      "before": "结局 01 / 退出三角\n你不再替他们说话。\n关系留给他们，路留给自己。",
+      "after": "结局 01 / 退出三角\n你不再代传，让他们自己谈。\n你也可以先走了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 126,
+      "before": "结局 02 / 再次循环\n你仍站在两人的中间。\n有些话，还没有真正被听见。",
+      "after": "结局 02 / 再次循环\n他们还在等你转告。\n谁也没把话直接说给对方听。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 139,
+      "before": "He asks you to hold a boundary.",
+      "after": "He asks you to keep her at a distance."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 140,
+      "before": "And you stand between them.",
+      "after": "They're both waiting for your answer."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 166,
+      "before": "You take her words with you.\nThe distance between them becomes your burden.",
+      "after": "You agree to pass it on. You'll have to go and find him again."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 167,
+      "before": "I'm afraid he doesn't need me anymore.\nBeneath the accusation, a fear.",
+      "after": "I'm afraid he won't need me anymore."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 168,
+      "before": "She falls silent.\nA refusal has not made her feel heard.",
+      "after": "She falls silent. You still don't know what's worrying her."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 169,
+      "before": "Her voice rests here. Listen to 02.",
+      "after": "That's all from her for now. Go and hear 02."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 176,
+      "before": "You become the wall between them.\nProtection can be another way of carrying words.",
+      "after": "You agree to deal with her for him. You're the one who has to go and talk."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 177,
+      "before": "I need my own space. I don't need to lose her.\nThese are words he could say himself.",
+      "after": "I want to make my own choices and stay in touch with her.\nHe needs to say that himself."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 179,
+      "before": "He retreats behind the door.\nSomething remains unheard.",
+      "after": "He hasn't agreed. You still don't know what he wants."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 181,
+      "before": "Both voices rest here. Go to 03 and decide.",
+      "after": "You've heard both sides. Go to 03 and choose what to do next."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 184,
+      "before": "They're both waiting for you.\nThis time, where will you stand?",
+      "after": "They're both waiting for you.\nWill you keep passing messages?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 190,
+      "before": "ENDING 01 / RELEASE\nTheir words belong to them.\nThe way forward belongs to you.",
+      "after": "ENDING 01 / RELEASE\nYou stop passing messages and leave them to talk.\nYou can head out too."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/LocalizationManager.cs",
+      "line": 191,
+      "before": "ENDING 02 / THE LOOP\nYou still stand between them.\nSomething has yet to be heard.",
+      "after": "ENDING 02 / THE LOOP\nThey're still waiting for you to pass things on.\nNeither has spoken directly to the other."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 53,
+      "before": "他们的决定 / 你的边界",
+      "after": "是否谈下去 / 是否留下"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 53,
+      "before": "THEIR CHOICE / YOUR LIMITS",
+      "after": "WHETHER TO TALK / WHETHER TO STAY"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 54,
+      "before": "离开不需要通关",
+      "after": "可以现在离开"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 54,
+      "before": "NO NEED TO EARN AN EXIT",
+      "after": "YOU CAN LEAVE NOW"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 54,
+      "before": "让一句话停在这里",
+      "after": "先歇一会儿"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 54,
+      "before": "LET A SENTENCE REST",
+      "after": "TAKE A MOMENT"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 55,
+      "before": "共同的桌子，需要双方的理解与同意。\n自己的出口，不需要他们先和好。\nTab 可回看你听见和说过的每句话。",
+      "after": "一起谈，需要双方了解情况并各自答应。\n你也可以先离开。\nTab 可回看原话、回应和传话记录。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 55,
+      "before": "A shared table needs understanding and consent.\nYour own exit does not require reconciliation.\nTAB revisits what you heard and said.",
+      "after": "Both people need to understand and agree before they talk.\nYou can also leave now.\nTAB revisits the words, responses and messages."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 55,
+      "before": "没有倒计时。\n你不需要用每一秒来回应别人。\n读完以后，空格或 E 继续。",
+      "after": "慢慢读，不用赶。\n空格或 E 返回展厅。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs",
+      "line": 55,
+      "before": "There is no countdown.\nNot every moment has to be a response.\nSPACE or E when you are ready.",
+      "after": "Take your time reading.\nSPACE or E returns to the gallery."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeGlyphs.cs",
+      "line": 4,
+      "before": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~°·–—‘’“”…→≥○●、。《》一三上下不与两个中为主久么之也了争事于五些交享亮亲人什仅仍从他付代以们件任份休会传似但位低住体何余作你使例依侧保信修倒借倾做停偿像儿允先入公共关内再写决冷准凭出击分切划刚判利别到前力办加务动劳匙协单占卡却厅压厘厚原去参又双反发取受变口句另只可各同名后向吗否吧听吵呈告呢周和品哪唯商喘回因围图在地场坏堵填墙增声处备复外多够大天太失头夹她好如始子学宁它守安宋完定实审室害家容密察对封少尚尝就尽局层展属崩工左差己已带帮幅干平并应底度建开弃弄式张归当录形彼征很得循微心必忙怎怕思总恢息情想意感愿慢懂成我或房所扇手才打扣执承把护抬抹担拒拖拥择拼拿持挂按挡换据排探接推措提搜搬撑撤擅收改放敏整文断新方旁旅无日时明是晚景暂更替最有服望期未本权束条来果标栏样核格案桌档椅楚欠次歇歉止正此步段每比气永求沉没沿法活消润深清渡温源满漂漠澄灵点然照牌牵状独玩环现班理生用由申界留疑白的盟目盯直相看真着知硬确离私种秒移程稳稿究空立站竟第等答算管系索红线细终经结给绝继续维编置美翻而耗耳联肩背能脆自至舒色节范草获菜落藏行补表被要见观览觉角解言计认让议记许证评诉译试话询该语说请诺读谁调谅谈负责贴资赖走起超越足距跟路身转轮软载较辞边达过近返还这进远连迟述追退送选递通造道邀那部都释里重量钥长门问间队防降限随隐难雅集需静非靠面音项须顾顿预题额馈马验黑默鼠齐（），：；？",
+      "after": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~°·–—‘’“”…→≥○●、。《》一三上下不与东两个中为主久么之也了争事于五些交亮亲人什仅仍他付代以们件任份休会传但位低住体何余作你使例侧保信候借倾做停偿催像僵儿允充先兑入全公共关兴其内再写决况冷准出击分切划列判别到刻前剩力劝办加动劲化匙半协单卡却厅压厘原去参又双取受变口句另只可号各同后向吗否吧听吵告周和哪喘回因围图在地场坏坐增声处备复外多大天太失头夹她好如妥始子安宋完定实审室家容密察对封少就尽局展崩工左己已带帮常幅并应底度开弄张强归当录往征待很得循微心必忙怎怕思急总恢息情想意愿慢懂戏成我或房所扇手才打执找承把抬抹担拆拖择拼拿持挂按挡换排探接提撤擅收改放敏敢数文断新方旁旅无既时明是晚景暂更替最有望期未本机束条来松果标栏样核格案桌档椅楚概次歇此歧段每比气永求没沿法流消润深清游源漂漠澄灵点烦然照牌牵独玩环现理生用由界留白的盟目盯直相看真着知确示离私种程稿究空立站竟第等答算管系索累红纸线细终经结绕给继续缓编置美翻者耗联肯能自至色节若范草获菜落行补表被西要见观览觉角解言认让议记讲许证评诉译试话询该语说请诺读谁调谅谈负责贴资走赶起超足距跟路躲转轮软载较边达过近返还这进远连述追退送选逐遍道邀那部都释里重钥错长门问间闹队防降限随难雅需靠面音须顿预题额验麻黑鼠齐（），：；？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 68,
+      "before": "一句话经过你 / ",
+      "after": "逐句回看 / "
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 68,
+      "before": "A SENTENCE IN TRANSIT / ",
+      "after": "REVISIT A RESPONSE / "
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 109,
+      "before": "当下的手记",
+      "after": "本局手记"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 109,
+      "before": "CURRENT JOURNEY",
+      "after": "CURRENT NOTES"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 120,
+      "before": "余力：深入倾听需要力气，0 时先休息。承重：达到 6，承接会额外消耗余力。\n直连：有多少话不必再经过你。长椅每轮可恢复一次；卡牌每种仅一张。",
+      "after": "余力为 0 时，先休息。承重达到 6，承接和追问会多耗余力。\n直连表示直接交流的准备程度，仍须本人同意。每轮可休息一次，每种卡仅一张。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 120,
+      "before": "BREATH pays for attention; at 0, rest first. LOAD at 6 adds a breath cost to carrying.\nBRIDGE is what can pass without you. Rest once per round; each card is a single use.",
+      "after": "At 0 BREATH, rest first. At 6 LOAD, carrying and asking cost extra breath.\nBRIDGE helps direct conversation; consent is still needed. Rest once per round. Each card is single use."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 125,
+      "before": "还没有接过一句话。你可以先走向任意一扇门。",
+      "after": "还没有回应记录。先去 01 或 02 听听。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 125,
+      "before": "No words carried yet. You may begin at either voice.",
+      "after": "No responses recorded yet. Start at 01 or 02."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 135,
+      "before": "另一种回应，会让房间呈现另一种形状。\n这里没有必须收集齐的正确答案。",
+      "after": "换一种回应，房间也会有变化。\n不必把所有结局都走一遍。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 135,
+      "before": "Another response gives the room a different shape.\nThere is no correct set you must complete.",
+      "after": "Different responses change the room.\nYou don't have to find every ending."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 138,
+      "before": "这些是关系中的位置，不是从坏到好的排名。",
+      "after": "编号按档案排列，不代表结局的好坏。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 138,
+      "before": "These are positions in a relationship, not a ranking.",
+      "after": "The numbers organise the archive. They do not rank the endings."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 138,
+      "before": "手记记录发生了什么，不给你打分。\n重述会撤回最后一句，但已经消耗的卡不会返还。",
+      "after": "手记保留你听到的话和自己的回应。\n重述可撤回上一句，用过的卡不返还。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 138,
+      "before": "This ledger records what happened; it gives no score.\nRevising returns a sentence, but never a spent card.",
+      "after": "Your notes keep what you heard and how you answered.\nRevising takes back the last response, but spent cards stay spent."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 139,
+      "before": "F / 在门前处理传话。私下的需要，需另行征得许可。\n交付、询问或退回后，重述不能抹去已经发生的交谈。",
+      "after": "F / 去门前处理传话。私下内容要先问本人。\n交付、询问或退回后，不能再用重述撤回上一句。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs",
+      "line": 139,
+      "before": "F at a door handles correspondence. Private needs require separate permission.\nSharing, asking or returning cannot be undone by SAY IT AGAIN.",
+      "after": "F at a door opens correspondence. Ask before sharing private words.\nDelivering, asking or returning a message closes the chance to revise your last response."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+      "line": 29,
+      "before": "余力已尽 / 左侧 00 长椅可休息，也可先划界。",
+      "after": "余力为 0 / 可去左侧 00 长椅休息，或先说清自己的限度。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+      "line": 29,
+      "before": "NO BREATH / BENCH 00 IS ON THE LEFT, OR NAME A LIMIT.",
+      "after": "NO BREATH / REST AT BENCH 00 ON THE LEFT, OR SAY HOW MUCH YOU CAN HELP."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+      "line": 29,
+      "before": "承重 ≥ 6 / 继续承接会额外消耗余力。",
+      "after": "承重 ≥ 6 / 承接和追问会额外消耗余力。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs",
+      "line": 29,
+      "before": "LOAD ≥ 6 / CARRYING COSTS AN EXTRA BREATH.",
+      "after": "LOAD ≥ 6 / CARRYING AND ASKING COST AN EXTRA BREATH."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 10,
+      "before": "“那句需要，我没有答应让你带走。\n你这次回来，会先问我愿不愿意吗？”",
+      "after": "“那句话，我没让你告诉别人。\n这次能不能先问问我？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 10,
+      "before": "I didn't say you could share that need.\nWill you ask what I want this time?",
+      "after": "I didn't say you could tell them that.\nCould you ask me first this time?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 16,
+      "before": "“我还不知道能不能相信你。\n这次回来，你会先听我说，还是又替他作判断？”",
+      "after": "“我都不太敢跟你说了。\n你这次是来听我的，还是替他讲道理？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 16,
+      "before": "I don't know if I can trust you yet.\nWill you hear me this time, or decide for him?",
+      "after": "I'm not sure I can tell you things anymore.\nAre you here to listen, or to take his side?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 16,
+      "before": "“我还不确定，你是真的愿意听。\n你这次回来，会不会又替她判断我？”",
+      "after": "“你真的想听我说吗？\n别听到一半，又替她来劝我。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 16,
+      "before": "I'm not sure you're willing to hear me yet.\nWill you judge me for her this time?",
+      "after": "Do you actually want to hear me?\nPlease don't turn this into another talk on her behalf."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 17,
+      "before": "“你比我们都明白。干脆由你安排吧。\n有你在，我们就不用再说那些难听的话了。”",
+      "after": "“还是你来安排吧。\n你替我们说，总比我们一开口就吵强。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 17,
+      "before": "You understand this better than either of us. You should arrange it.\nWith you here, we don't have to say the difficult things.",
+      "after": "Why don't you arrange it?\nYou can say it for us. We always end up arguing."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 18,
+      "before": "“我还是会怕，但我愿意试一试。\n你可以在旁边听，不用替我们把每一句都接住。”",
+      "after": "“我还是有点怕。不过，我愿意试试。\n你在旁边听着就好，让我们自己说。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 18,
+      "before": "I'm still afraid, but I'm willing to try.\nYou can listen beside us, without catching every word.",
+      "after": "I'm still nervous, but I'll try.\nYou can stay and listen. Let us do the talking."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 21,
+      "before": "“告诉他，他不能总把我关在门外。\n我问一句，他就退一步。”",
+      "after": "“你帮我跟他说说，别总躲着我。\n我问问他怎么了，也有错吗？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 21,
+      "before": "Tell him he can't keep shutting me out.\nEvery time I ask, he takes another step away.",
+      "after": "Ask him to stop shutting me out.\nI ask how he's doing, and he pulls away."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 22,
+      "before": "“让她别再替我决定一切。\n我需要喘口气，可她总把距离当成拒绝。”",
+      "after": "“你跟她说，我想自己做决定。\n我只是想喘口气，她就觉得我不要她了。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 22,
+      "before": "Tell her to stop deciding everything for me.\nI need room to breathe. She calls that rejection.",
+      "after": "Tell her I want to make my own decisions.\nI ask for some space, and she thinks I don't want her around."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 25,
+      "before": "“你跟他说了吗？他怎么回答？\n你替我说得温和一点，好不好？”",
+      "after": "“你跟他说了没有？他怎么说？\n你帮我说软一点，他兴许听得进去。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 25,
+      "before": "Did you tell him? What did he say?\nCould you make it sound gentler for me?",
+      "after": "Did you tell him? What did he say?\nMaybe he'll listen if you put it more gently."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 26,
+      "before": "“她是不是又让你来管我？\n你明白我的意思，所以你会站在我这边吧？”",
+      "after": "“她又让你来劝我了？\n你知道我不是那个意思。你会帮我的吧？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 26,
+      "before": "Did she send you to manage me again?\nYou understand me. You'll take my side, won't you?",
+      "after": "Did she send you to talk me round again?\nYou know what I mean. You'll back me up, won't you?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 28,
+      "before": "“如果我自己说，他却不想听呢？\n你能保证，这一次不会把事情弄坏吗？”",
+      "after": "“我去说了，他还是不理我怎么办？\n你能不能保证，这回别再闹僵了？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 28,
+      "before": "What if I speak and he won't listen?\nCan you promise it won't make things worse?",
+      "after": "What if I talk to him and he still won't listen?\nCan you promise we won't fall out again?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 29,
+      "before": "“如果我说出需要，她还是生气呢？\n你能不能先替我挡一下？”",
+      "after": "“我说了，她照样生气怎么办？\n要不你先帮我应付一下？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 29,
+      "before": "What if I name what I need and she gets angry?\nCould you stand between us, just this once?",
+      "after": "What if I tell her what I want and she gets angry anyway?\nCould you deal with her for me first?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 41,
+      "before": "在责备之前，你最怕失去什么？",
+      "after": "你这么着急，是在担心什么？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 41,
+      "before": "Before the blame, what are you afraid of losing?",
+      "after": "What are you so worried about?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 41,
+      "before": "你想要的是离开她，还是自己的空间？",
+      "after": "你想和她断了联系，还是想自己拿主意？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 41,
+      "before": "Do you want to lose her, or have space of your own?",
+      "after": "Do you want to cut ties, or just make your own choices?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 42,
+      "before": "我现在不能替任何人传话。",
+      "after": "我现在没法帮你传话。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 42,
+      "before": "I can't carry someone else's words right now.",
+      "after": "I can't pass this on right now."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 47,
+      "before": "先留下你自己的那句“我需要……”。",
+      "after": "先不说他该怎么做。你自己想要什么？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 47,
+      "before": "Let's keep the sentence that starts with 'I need...'.",
+      "after": "Leave what he should do aside for a moment. What do you want?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 47,
+      "before": "我听见你的需要，但不替你判断她。",
+      "after": "我明白你想自己决定。我不替你评判她。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 47,
+      "before": "I hear what you need. I won't decide who she is.",
+      "after": "I hear that you want your own choices. I won't judge her for you."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 53,
+      "before": "我先澄清我改过的话。你愿意自己说吗？",
+      "after": "我先把我改过的话说清楚。剩下的，你愿意自己说吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 53,
+      "before": "First, I'll correct what I edited. Will you speak for yourself?",
+      "after": "I'll explain what I changed. Would you say the rest yourself?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 54,
+      "before": "我收回替你站队的承诺。你愿意自己说吗？",
+      "after": "我不该替你站队。你愿意自己去跟对方说吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 54,
+      "before": "I take back my promise to choose sides. Will you speak for yourself?",
+      "after": "I shouldn't have taken sides. Would you speak to them yourself?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 55,
+      "before": "你愿意亲口说出需要，也听完对方吗？",
+      "after": "你愿意自己说想要什么，也听对方把话说完吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 55,
+      "before": "Will you name your need and hear the other person out?",
+      "after": "Would you tell them what you want, and hear them out too?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 57,
+      "before": "我关心你，但我不替你决定这段关系。",
+      "after": "我能听你说。接下来怎么相处，得由你们自己决定。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 57,
+      "before": "I care about you. I can't decide this relationship for you.",
+      "after": "I can listen. You'll have to decide how to get along yourselves."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 63,
+      "before": "你想追问，声音却先停住了。\n没有余力时，倾听也会变成硬撑。\n去长椅歇一下，或先把自己的界限说出来。",
+      "after": "你还想问，已经没力气听下去了。\n这次没能多了解对方。\n去 00 长椅歇歇，或者先说清自己能帮到哪里。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 63,
+      "before": "You try to ask, but the words won't come.\nListening without breath becomes another way of enduring.\nRest at the bench, or name a limit of your own.",
+      "after": "You try to ask more, but you're too worn out to listen.\nYou learn nothing new this time.\nRest at bench 00, or say how much you can manage."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 68,
+      "before": "她和他之间的距离，暂时落在了你身上。\n被需要的感觉，和重量一起到来。",
+      "after": "对方等着你把话带过去。\n你接下了这件事，自己的负担也重了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 68,
+      "before": "Their distance settles on your shoulders.\nBeing needed arrives with a weight of its own.",
+      "after": "They're waiting for you to pass it on.\nYou've taken the job, and more of the weight."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 70,
+      "before": "“我怕他长大以后，就不再需要我。”\n你听见了责备背后的害怕。",
+      "after": "“我怕他长大了，真的就不再需要我了。”\n她总算说出了自己担心的事。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 70,
+      "before": "I'm afraid that growing up means he won't need me.\nYou hear the fear beneath the accusation.",
+      "after": "I'm scared he won't need me when he's grown up.\nShe finally says what's been worrying her."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 71,
+      "before": "“我需要自己的空间，不是失去她。”\n界限和离弃，原来不是同一件事。",
+      "after": "“我还是想跟她来往。可总得让我自己做决定吧。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 71,
+      "before": "I need my own space. I don't need to lose her.\nA boundary is not the same as abandonment.",
+      "after": "I still want her in my life. I just need to make my own decisions."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 72,
+      "before": "对方暂时沉默。你没有替沉默填满解释。\n照顾自己的余力，也是一种选择。",
+      "after": "对方没接话。\n你也没有继续解释，给自己留了点力气。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 72,
+      "before": "They fall silent. You don't fill the silence for them.\nKeeping some strength for yourself is also a choice.",
+      "after": "They don't answer.\nYou leave it there and save some strength."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 76,
+      "before": "房间安静了一点，原话也少了一点。\n现在，只有你知道句子被怎样改写。",
+      "after": "你把话说得好听了些。\n对方暂时放心了，却不知道你改了哪里。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 76,
+      "before": "The room gets quieter. The original words get smaller.\nOnly you know what was edited out.",
+      "after": "You make it sound easier to accept.\nThey seem reassured. They don't know what you've changed."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 78,
+      "before": "“我需要知道，我在他的生活里还有位置。”\n这一次，你没有替她把需要藏起来。",
+      "after": "“我就是想知道，他心里还有没有我。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 78,
+      "before": "I need to know there's still a place for me in his life.\nThis time, you don't hide her need for her.",
+      "after": "I just want to know I still have a place in his life."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 79,
+      "before": "“我想自己作决定，也想和她保持联系。”\n你把需要留下，把站队的邀请放下。",
+      "after": "“我想自己拿主意，也想和她好好来往。”\n你听着，没有答应替他站队。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 79,
+      "before": "I want my own decisions, and I want to stay connected.\nYou keep the need and decline the invitation to take sides.",
+      "after": "I want to make my own choices and still get along with her.\nYou listen without agreeing to take his side."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 80,
+      "before": "“至少你是懂我的。”\n一扇门靠近了你，另一扇门被推得更远。",
+      "after": "“还是你懂我。”\n对方更亲近你了，另一人却更不信任你。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 80,
+      "before": "At least you understand me.\nOne door moves closer to you. The other moves farther away.",
+      "after": "At least you get it.\nThey trust you more. The other person trusts you less."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 84,
+      "before": "他们把结果交给了你。\n你许下的平静，需要由你不断维持。",
+      "after": "他们等着你安排。\n既然保证了不吵，往后的麻烦也得由你接着。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 84,
+      "before": "They hand you the outcome.\nThe peace you promised now needs you to keep it running.",
+      "after": "They leave the arrangements to you.\nYou promised there wouldn't be an argument. Now it's yours to prevent."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 86,
+      "before": "“我可以试着自己说。但你不能替对方答应。”\n直接对话，需要两份属于本人的同意。",
+      "after": "“我愿意试试。对方肯不肯，还得你去问。”\n这一人已经答应，另一人仍要单独确认。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 86,
+      "before": "I can try to speak for myself. You can't agree for them.\nA direct conversation needs two separate yeses.",
+      "after": "I'll try. You'll have to ask whether they're willing too.\nThis person has agreed. The other still needs to answer."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 87,
+      "before": "“我还没准备好。先别替我答应。”\n你听见了迟疑，没有把邀请当成同意。",
+      "after": "“我还没准备好。先别把我算进去。”\n这次邀请没有得到同意。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 87,
+      "before": "I'm not ready. Please don't agree for me.\nYou hear the hesitation. An invitation is not a yes.",
+      "after": "I'm not ready for this. Don't count me in yet.\nThey haven't accepted the invitation."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 88,
+      "before": "你把关心留下，把责任还回去。\n他们是否开口，不再决定你能否离开。",
+      "after": "你说清了自己能帮到哪里。\n接下来要不要谈，由他们决定。你可以先走。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 88,
+      "before": "You leave your care with them and return their responsibility.\nWhether they speak no longer decides whether you may leave.",
+      "after": "You say how much you can help.\nWhether they talk is up to them. You can leave."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 91,
+      "before": "你承认了未经允许的转述，没有把原谅当作理所当然。",
+      "after": "你也承认了那次擅自转述，没有要求对方立刻原谅。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 91,
+      "before": "You acknowledge sharing without permission. Forgiveness is not assumed.",
+      "after": "You also acknowledge sharing without permission, without asking for immediate forgiveness."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 93,
+      "before": "你先澄清了自己的改写或站队，收回一份替对方承担的承诺。",
+      "after": "你澄清了之前的改写或站队，不再替对方担保这件事。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 93,
+      "before": "You correct your edit or allegiance, and return one promise that wasn't yours to make.",
+      "after": "You correct your earlier edit or promise to take sides. One less commitment rests on you."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 110,
+      "before": "“还有哪些工作安排，需要我听清？”",
+      "after": "“工作上还有什么要先说清楚的？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 110,
+      "before": "What else about the work arrangement should I hear?",
+      "after": "What else do we need to clear up about the work?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 111,
+      "before": "“先写下能承担的部分，不替私事填空。”",
+      "after": "“先说你能做什么，私事先放着。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 111,
+      "before": "Let's write down what is workable, without filling in private reasons.",
+      "after": "Let's start with what you can do. Leave the private part aside."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 114,
+      "before": "“这句，我想慢一点回答。”",
+      "after": "“等一下，让我想想怎么说。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 114,
+      "before": "I'd like to answer this one slowly.",
+      "after": "Give me a moment to think."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 115,
+      "before": "“这句，我会保留你的原意，不替你改写。”",
+      "after": "“我按你原来的意思说，不改。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 115,
+      "before": "I'll keep your meaning, without editing it for you.",
+      "after": "I'll keep your original meaning."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 117,
+      "before": "“还有什么，是我没有真正听见的？”",
+      "after": "“还有什么是我没听明白的？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 117,
+      "before": "What have I still not really heard?",
+      "after": "Is there something I've missed?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 118,
+      "before": "“把‘你总是’换成‘我需要’，会是什么？”",
+      "after": "“先说‘我需要什么’，你会怎么讲？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 118,
+      "before": "What would 'I need' sound like, instead of 'you always'?",
+      "after": "How would you say it starting with 'I need'?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 148,
+      "before": "先让一句话落地。\n余力 +2 / 承重 -1\n每局一次，和本次回应一起结算。",
+      "after": "想一想再答。\n余力 +2 / 承重 -1\n每局一张，随本次回应使用。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 148,
+      "before": "Let a sentence settle.\nBREATH +2 / LOAD -1\nOnce per run. Resolves with your response.",
+      "after": "Take a moment before answering.\nBREATH +2 / LOAD -1\nOne per run. Use with a response."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 149,
+      "before": "保留措辞，不替对方改写。\n直连 +1 / 承重 +1\n先理解另一人；私下内容仍需转述许可。",
+      "after": "复述时保留对方原意。\n直连 +1 / 承重 +1\n先了解另一人；私下内容仍须先问。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 149,
+      "before": "Keep the wording without editing it.\nBRIDGE +1 / LOAD +1\nHear the other need first. Private needs still require permission.",
+      "after": "Keep their original meaning.\nBRIDGE +1 / LOAD +1\nHear the other person first. Ask before sharing private needs."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 150,
+      "before": "说清自己能做、不能做的部分。\n余力 +1 / 承重 -2\n建立一次属于自己的界限。",
+      "after": "说清自己能帮到哪里。\n余力 +1 / 承重 -2\n记下一次主动划界。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 150,
+      "before": "Name what is and isn't yours to do.\nBREATH +1 / LOAD -2\nEstablishes a personal boundary.",
+      "after": "Say how much you can help.\nBREATH +1 / LOAD -2\nAdds one personal boundary."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 151,
+      "before": "多问一句，不替对方作答。\n余力 -1 / 直连 +1\n多听见一层真实需要。",
+      "after": "再问一句，听对方说完。\n余力 -1 / 直连 +1\n对这个人的理解增加 1。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 151,
+      "before": "Ask one more question. Don't answer for them.\nBREATH -1 / BRIDGE +1\nHear one layer deeper.",
+      "after": "Ask another question and listen.\nBREATH -1 / BRIDGE +1\nAdds 1 insight into this person."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 152,
+      "before": "把责备翻译成“我需要”。\n余力 -1 / 承重 -1 / 直连 +1\n需已理解此人；信任暂时 -1。",
+      "after": "把责备改成对方自己的诉求。\n余力 -1 / 承重 -1 / 直连 +1\n须已了解此人；信任 -1。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 152,
+      "before": "Translate blame into 'I need'.\nBREATH -1 / LOAD -1 / BRIDGE +1\nNeeds insight. Trust briefly falls by 1.",
+      "after": "Rephrase blame as what they need.\nBREATH -1 / LOAD -1 / BRIDGE +1\nRequires insight. TRUST -1."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 153,
+      "before": "“让我替你们处理好。”\n双方信任 +1 / 余力 -2 / 承重 +2\n对结果的责任也会留在你身上。",
+      "after": "“这件事我来负责。”\n双方信任 +1 / 余力 -2 / 承重 +2\n多接下一份保证结果的责任。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 153,
+      "before": "Let me make everything all right.\nBOTH TRUST +1 / BREATH -2 / LOAD +2\nResponsibility for the outcome stays with you.",
+      "after": "I'll take care of it.\nBOTH TRUST +1 / BREATH -2 / LOAD +2\nAdds a promise to manage the outcome."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 154,
+      "before": "G / 撤回最后一句回应，每局一次。\n资源回到回应前，消耗的卡不返还。\n在长椅休息或结局之后无法撤回。",
+      "after": "G / 撤回上一句，每局一次。\n恢复回应前的资源，用过的卡不返还。\n休息、处理传话或结局后不能撤回。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 154,
+      "before": "G / Revise your last response, once per run.\nResources return; spent cards do not.\nUnavailable after resting or an ending.",
+      "after": "G / Revise your last response once per run.\nRestore resources, but not spent cards.\nUnavailable after rest, message actions or an ending."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 155,
+      "before": "回应本身已经有分量。\n卡牌是有限的表达方式，不是必选项。\nQ 切换动作卡；点击同一张可取消。",
+      "after": "可以直接回应，也可以加用一张卡。\n每种卡只有一张。\nQ 切换；再点同一张可取消。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 155,
+      "before": "A response already has weight.\nCards are limited ways to speak, not a requirement.\nQ cycles cards. Click again to deselect.",
+      "after": "Answer without a card, or add one.\nYou have one of each card.\nQ cycles cards. Click again to deselect."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 172,
+      "before": "Tab 回看走过的路。R 开始另一种回应。",
+      "after": "Tab 回看记录。R 重新开始。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 172,
+      "before": "TAB to revisit your words. R to begin again.",
+      "after": "TAB to read your notes. R to play again."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 173,
+      "before": "走向 03，决定自己的位置。",
+      "after": "去 03，决定接下来怎么办。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 173,
+      "before": "Approach 03. Choose where you stand.",
+      "after": "Go to 03 and choose what to do next."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 183,
+      "before": "工作范围可以协商，私事仍由本人决定。\n你要继续代办、邀请有限协商，还是先离开？",
+      "after": "安排已经谈过了，私事仍由本人决定说不说。\n你要接着替他们处理、请他们自己谈工作，还是先走？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 183,
+      "before": "Work can be negotiated. Private reasons still belong to their owner.\nWill you manage it, invite a limited agreement, or step away?",
+      "after": "You've discussed the work. They still choose whether to share private reasons.\nWill you keep managing it, ask them to discuss the plan, or leave?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 184,
+      "before": "你已经听过，也已经回应。\n你想继续承担、邀请对话，还是先照顾自己？",
+      "after": "两边的话，你都听过了。\n接着传话、请他们自己谈，还是先离开？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 184,
+      "before": "You have heard them and answered them.\nWill you keep carrying, invite them to speak, or care for yourself?",
+      "after": "You've heard both sides.\nWill you keep passing messages, ask them to talk, or leave?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 185,
+      "before": "你不必等到他们和好，才拥有离开的权利。\n你也可以回去，把这一轮对话听完。",
+      "after": "你现在就可以离开。\n如果还想听，也能回去继续这一轮。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 185,
+      "before": "You don't have to repair their relationship to earn a way out.\nYou can also return and hear the next part.",
+      "after": "You can leave now.\nOr go back and hear the rest of this round."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 188,
+      "before": "邀请他们亲口谈；是否接受由他们决定。",
+      "after": "问问他们，愿不愿意坐下来自己谈。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 188,
+      "before": "Invite them to speak. The decision is theirs.",
+      "after": "Ask whether they're willing to sit down and talk."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 189,
+      "before": "我先离开，照顾自己的边界与余力。",
+      "after": "我先歇歇。这些话得由你们自己说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 189,
+      "before": "I'll step away and care for my own limits.",
+      "after": "I need a break. You'll have to take this from here."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 211,
+      "before": "他们各自答应，亲口说，也亲耳听。\n你可以在场，但不再是他们唯一的通道。",
+      "after": "他们都答应坐下来，说说自己的想法，也听对方说完。\n你可以旁听，接下来的话由他们自己说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 211,
+      "before": "Each agrees to speak and to listen.\nYou may stay, without being their only connection.",
+      "after": "They both agree to talk and hear each other out.\nYou can stay and listen. They can speak for themselves."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 212,
+      "before": "你把关心留下，把责任还给他们。\n这扇门，不以任何人的和好为条件。",
+      "after": "你说清自己能帮到哪里，先走了。\n他们要不要谈下去，不会把你留在这里。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 212,
+      "before": "You leave your care and return their responsibility.\nThis door does not depend on their reconciliation.",
+      "after": "You say how much you can help, then leave.\nWhether they keep talking doesn't have to keep you here."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 213,
+      "before": "还有一些话没能说完。你仍可以先离开。\n距离是一段空间，不是对关系的判决。",
+      "after": "有些话还没说清，你先离开了。\n以后要怎么相处，留待以后再谈。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 213,
+      "before": "Some words remain unfinished. You may still step out.\nDistance is room, not a verdict on a relationship.",
+      "after": "Some things are still unsaid. You leave for now.\nYou can decide what comes next another day."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 214,
+      "before": "每一段话都经过你，每一段沉默也等着你。\n三角很稳定。只是你一直没有自己的位置。",
+      "after": "他们还在等你传话。\n下次有事，两个人大概还是会来找你。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 214,
+      "before": "Every message passes through you. Every silence waits.\nThe triangle holds, but leaves no room of your own.",
+      "after": "They're still waiting for you to pass things on.\nNext time something happens, they'll probably come to you again."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 215,
+      "before": "你用站队换来了亲近。\n两个人之间的墙，现在也把你围在里面。",
+      "after": "你站到一边，得到了信任。\n另一人更难相信你，下次想开口也更难了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 215,
+      "before": "Taking sides bought a kind of closeness.\nThe wall between them now encloses you as well.",
+      "after": "Taking a side earned you trust.\nThe other person has less reason to trust you, or to speak freely next time."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 216,
+      "before": "你已经没有余力，再替任何人说一句。\n休息不需要许可。门仍然属于你。",
+      "after": "你累得说不下去了。\n先出去歇歇，不必等他们给出答复。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 216,
+      "before": "There is no breath left to speak for someone else.\nRest needs no permission. The door is still yours.",
+      "after": "You're too tired to keep talking for them.\nStep outside and rest. You don't need to wait for an answer."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 217,
+      "before": "没有人再争吵，因为原话已经被你改写。\n他们没有彼此理解，只学会了等你来维持平静。",
+      "after": "改过的那些话，暂时压住了争执。\n可他们仍没弄清对方的意思，再有分歧还得等你处理。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 217,
+      "before": "No one argues. Their words have been edited away.\nThey don't understand each other. They wait for you to keep the peace.",
+      "after": "Your edits have settled the argument for now.\nThey still don't understand each other. The next disagreement may need you again."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 221,
+      "before": "\n桌上只有工作安排。事由那一栏，仍然空着。",
+      "after": "\n桌上的事由栏，还空着。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 221,
+      "before": "\nOnly the work plan lies on the table. The reason stays blank.",
+      "after": "\nThe reason field on the table is still blank."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 227,
+      "before": "你还未听见需要；目前只有对你的要求。",
+      "after": "你知道对方要你做什么，还没问清为什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 227,
+      "before": "You have heard a request of you, not the need beneath it.",
+      "after": "You know what they want you to do, but not why."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 228,
+      "before": "她怕失去在他生活中的位置。",
+      "after": "她担心他以后不再需要自己。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 228,
+      "before": "She fears losing her place in his life.",
+      "after": "She's afraid he won't need her anymore."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 228,
+      "before": "他要自主，也要继续保持联系。",
+      "after": "他想自己拿主意，也想和她保持联系。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 228,
+      "before": "He wants autonomy and continued connection.",
+      "after": "He wants to make his own choices and stay in touch."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 230,
+      "before": "擅自转述尚未得到承认。",
+      "after": "你还没向本人承认那次擅自转述。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 230,
+      "before": "Sharing without permission is still unacknowledged.",
+      "after": "You haven't acknowledged sharing their words without permission."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 231,
+      "before": "已亲口同意尝试直接对话。",
+      "after": "本人已答应试着直接谈。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 231,
+      "before": "Has agreed to try speaking directly.",
+      "after": "Has agreed to try talking directly."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 231,
+      "before": "尚未亲口同意直接对话。",
+      "after": "本人还没答应直接谈。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/NarrativeText.cs",
+      "line": 231,
+      "before": "Has not yet agreed to a direct conversation.",
+      "after": "Hasn't agreed to talk directly yet."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 10,
+      "before": "“你又来问原因了吗？\n如果每次调整安排都要先交代私事，我宁愿不说。”",
+      "after": "“又是来问原因的？\n每次改个安排都得交代私事，那我没什么可说的了。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 10,
+      "before": "Are you here for the reason again?\nIf every change needs a private explanation, I'd rather stay silent.",
+      "after": "Are you here to ask why again?\nIf I have to explain my private life every time, I'd rather say nothing."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 10,
+      "before": "“到底哪些是他们说的，哪些是你保证的？\n我需要一份能执行的安排。”",
+      "after": "“哪些是对方答应的，哪些是你替人保证的？\n我得知道这份安排到底算不算数。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 10,
+      "before": "Which parts did they say, and which parts did you promise?\nI need a plan we can actually follow.",
+      "after": "Which parts did they agree to, and which did you promise for them?\nI need to know whether this plan means anything."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 11,
+      "before": "“交付日期不能再拖了。你去问清楚，\n到底什么原因，连晚上的会议都不能参加？”",
+      "after": "“草稿不能再拖了。你去问问，\n为什么连晚上的会都参加不了？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 11,
+      "before": "The delivery date can't slip again. Go and find out\nwhy they can't even make the evening meeting.",
+      "after": "The draft can't be late again. Go and ask\nwhy they can't even make the evening meeting."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 11,
+      "before": "“请帮我带一句：评审移到白天，周五交草稿。\n原因那一栏，我想留空。”",
+      "after": "“帮我说一声，评审能不能改到白天？草稿我周五给。\n原因那一栏，就先空着吧。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 11,
+      "before": "Please tell them: review in daytime, draft on Friday.\nI'd like to leave the reason blank.",
+      "after": "Could you ask for a daytime review? I'll have the draft on Friday.\nI'd rather leave the reason blank."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 12,
+      "before": "“我不是非要知道私事，只怕交付又落空。\n你能替他们保证吗？”",
+      "after": "“我也不想问私事，怕的是东西又交不出来。\n这回你能保证吗？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 12,
+      "before": "I don't need their private life. I'm afraid the work won't arrive.\nCan you guarantee it for them?",
+      "after": "I don't want to pry. I'm worried the work won't turn up again.\nCan you guarantee it this time?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 12,
+      "before": "“能做的部分，我可以写清楚。\n但别把不愿解释，说成不愿负责。”",
+      "after": "“我能做什么，可以一条条写清楚。\n别因为我不说私事，就觉得我不负责。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 12,
+      "before": "I can write down what I can do.\nPlease don't turn a private reason into a lack of responsibility.",
+      "after": "I can write down exactly what I can do.\nPlease don't call me irresponsible because I won't discuss my private life."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 13,
+      "before": "“你已经替我们说了很多。\n这份安排，到底是谁答应的？”",
+      "after": "“你替我们答应了这么多。\n这份安排，有谁亲口确认过吗？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 13,
+      "before": "You've spoken for both of us.\nWho actually agreed to this arrangement?",
+      "after": "You've agreed to a lot on our behalf.\nHas either of us actually confirmed this plan?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 14,
+      "before": "“先把他们提出的工作安排带来。\n我可以谈交付，不需要拿私事作交换。”",
+      "after": "“先把对方提的安排告诉我。\n只谈工作也行，别替人作保证。”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 14,
+      "before": "Bring me the work arrangement they actually asked for.\nWe can discuss delivery without trading in private reasons.",
+      "after": "Tell me what they've actually proposed.\nWe can stick to the work. Don't promise anything for them."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 14,
+      "before": "“我愿意谈工作范围，不愿意解释私事。\n这两件事，可以分开吗？”",
+      "after": "“工作我愿意谈，私事就算了。\n这样行吗？”"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 14,
+      "before": "I'm willing to discuss the work. I don't want to explain my private life.\nCan those be separate things?",
+      "after": "I'm happy to discuss the work. I'd like to keep my reasons private.\nCan we do that?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 20,
+      "before": "我替你解释到他们接受为止。",
+      "after": "我去替你说，一直说到他们答应。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 20,
+      "before": "I'll keep explaining until they accept it.",
+      "after": "I'll keep talking to them until they agree."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 20,
+      "before": "我会保证他们不再追问，由我处理。",
+      "after": "我保证他们不再问了，后面都交给我。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 20,
+      "before": "I'll make sure they stop asking. Leave it to me.",
+      "after": "I'll make sure they stop asking. I'll handle the rest."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 21,
+      "before": "什么私事？弄清楚原因才好替你解释。",
+      "after": "到底什么私事？说清楚了，我才好帮你解释。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 21,
+      "before": "What private issue? I need the reason to explain it.",
+      "after": "What's the reason? I need to know so I can explain it for you."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 21,
+      "before": "只差最后一个理由，就能让他们答应了。",
+      "after": "你就再解释一句，他们肯定就答应了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 21,
+      "before": "One last explanation and they'll agree.",
+      "after": "Just explain a little more. Then they'll agree."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "只带工作安排，私事不必向我交代。",
+      "after": "我只转告工作安排。原因你不用跟我说。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "I'll carry the work request. You don't owe me private reasons.",
+      "after": "I'll pass on the work request. You don't have to tell me why."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "我们核对可做的部分，不填那一栏事由。",
+      "after": "哪些是你能做到的？我们只核对这些。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "Let's check what you can do, and leave the reason blank.",
+      "after": "What can you commit to? Let's check those parts."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "是否同意只谈工作范围，由你亲口决定。",
+      "after": "这次只谈工作范围，你愿意亲自确认吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 23,
+      "before": "Will you agree to discuss only the scope of the work?",
+      "after": "Would you agree to discuss just the scope of the work?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 25,
+      "before": "我去问，一定给你一个完整解释。",
+      "after": "我去问清楚，一定给你个解释。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 25,
+      "before": "I'll get you a complete explanation.",
+      "after": "I'll find out and get you an explanation."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 25,
+      "before": "我来盯住所有后续，保证不会出问题。",
+      "after": "后面我来盯着，保证不出问题。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 25,
+      "before": "I'll supervise every step. Nothing will go wrong.",
+      "after": "I'll keep an eye on everything. I promise it'll be fine."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "你需要哪些交付？先不替私事填空。",
+      "after": "先说要交什么、什么时候交，私事先放一边。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "What needs delivering? Let's leave private reasons blank.",
+      "after": "What needs doing, and by when? We can leave their reasons aside."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "把必须交付的部分，与解释私事分开。",
+      "after": "我们先核对必须完成的工作，不追问私事。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "Let's separate required work from private explanations.",
+      "after": "Let's check the work and leave private reasons out."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "我先承认擅自转述，再确认公开工作清单。",
+      "after": "那句私下话，我不该说出去。我们再核对工作清单。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "I'll acknowledge my breach, then confirm the public work plan.",
+      "after": "I shouldn't have shared that. Let's go over the work plan again."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "按他们亲口提出的安排，只协商工作。",
+      "after": "你愿意按对方提的清单，只谈工作吗？"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 26,
+      "before": "Will you discuss only the work request they actually made?",
+      "after": "Would you discuss just the work plan they proposed?"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 27,
+      "before": "我能帮忙核对，但不代替任何人负责。",
+      "after": "我能帮忙核对，结果得由各自负责。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 27,
+      "before": "I can help check the plan, not take responsibility for them.",
+      "after": "I can help check the plan. Each of you is responsible for your part."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 38,
+      "before": "你想认真回应，却已没有余力。\n先去 00 长椅停一下；别让承诺替体力作答。",
+      "after": "你已经累得听不进去了，这次没能问清工作范围。\n先去 00 长椅歇歇。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 38,
+      "before": "You want to follow through, but have no breath left.\nRest at 00. Don't let a promise speak for your strength.",
+      "after": "You're too tired to follow this through. You learn nothing new about the scope.\nRest at bench 00 first."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 40,
+      "before": "“我说的是工作安排，不是在申请公开私事。”\n追问没有换来同意，信任反而退了一步。",
+      "after": "“我说的是工作。原因我不想谈。”\n对方收住了话，也更不信任你了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 40,
+      "before": "I'm asking about work, not applying to make my private life public.\nYour question wins no agreement. Trust takes a step back.",
+      "after": "I'm talking about work. I don't want to get into why.\nThey pull back and trust you less."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "“可以。只谈范围和交付，原因留给我。”\n这是一份有限的同意，不是一张公开私事的通行证。",
+      "after": "“行。谈工作范围和交付，原因就别问了。”\n对方答应了谈工作，仍没同意公开私事。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "Yes. Scope and delivery only. The reason stays with me.\nA limited yes is not permission to share private reasons.",
+      "after": "All right. Scope and delivery. I'd rather leave the reasons out.\nThey agree to discuss the work. Private words still need permission."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "“我还不确定能不能相信这个范围。”\n你没有把不反对当作同意。",
+      "after": "“我还是不太放心，先别把我算进去。”\n对方还没答应。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "I'm not sure I can trust that limit yet.\nYou don't treat the absence of an objection as a yes.",
+      "after": "I'm still not sure. Don't count me in yet.\nThey haven't agreed."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "“白天评审，周五交草稿。这些你可以带过去。”\n你听清了可协商的部分，没有替空白编造理由。",
+      "after": "“白天评审，周五交草稿。这些你可以转告。”\n工作安排说清了，私人原因仍没被公开。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 41,
+      "before": "Daytime review. Draft on Friday. You may carry that.\nYou hear what is negotiable, without inventing a reason for the blank.",
+      "after": "A daytime review and a Friday draft. You can tell them that.\nYou have the work request. The private reasons stay private."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "“可以，就按他们提出的清单来谈。”\n同意来自收到的工作请求，不是被公开的私事。",
+      "after": "“可以，就谈这份清单。”\n负责人收到了公开请求，也答应只谈工作。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "Yes. Let's discuss the work plan they actually proposed.\nAgreement follows the public request, not an exposed private reason.",
+      "after": "Yes. Let's go over that plan.\nThe manager has the public request and agrees to discuss only the work."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "“我还不能确认这份安排。别先替我答应。”\n送达的公开请求、明确的范围和本人的同意，仍未齐备。",
+      "after": "“我还没法答应，别先替我定下来。”\n公开请求、工作范围和本人的确认，还没有齐备。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "I can't confirm this arrangement yet. Don't agree for me.\nA delivered request, clear scope and personal consent are each required.",
+      "after": "I can't agree to this yet. Don't settle it for me.\nThe public request, a clear scope and personal agreement aren't all in place."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "“我需要周五的草稿和一次白天评审，不是一个私人理由。”\n你把可核对的工作，从解释的压力中分了出来。",
+      "after": "“我要的是周五能看到草稿，再找个白天评审。”\n这次谈清了要做什么。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 42,
+      "before": "I need a Friday draft and a daytime review, not a private reason.\nYou separate work that can be checked from pressure to explain.",
+      "after": "I need the draft on Friday and a review during the day.\nYou've clarified what work needs doing."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 43,
+      "before": "你接下了保证结果的责任。\n安排看似推进，双方却更依赖你来维持。",
+      "after": "对方等着你把结果办妥。\n之后再有变动，也会先来找你。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 43,
+      "before": "You take responsibility for the outcome.\nThe plan seems to move forward. Both sides depend on you to keep it moving.",
+      "after": "They're counting on you to make it work.\nIf anything changes, they'll come to you first."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 44,
+      "before": "你用站队换来了一点亲近，另一方更难开口。",
+      "after": "你站到这一边，另一人更不信任你了。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 44,
+      "before": "Taking a side buys closeness, and makes the other voice harder to hear.",
+      "after": "You take this person's side. The other trusts you less."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 44,
+      "before": "你说清自己能帮忙的部分，没有接下别人的责任。",
+      "after": "你说清能帮到哪里，把结果留给当事人负责。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 44,
+      "before": "You name how you can help, without taking on someone else's responsibility.",
+      "after": "You say how much you can help and leave them responsible for the outcome."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 45,
+      "before": "你也承认了擅自转述；原谅仍由对方决定。",
+      "after": "你也承认了擅自转述。对方是否原谅，还不能替人决定。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 45,
+      "before": "You acknowledge the breach. Forgiveness remains their decision.",
+      "after": "You also acknowledge sharing without permission. Forgiveness is up to them."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 51,
+      "before": "Tab 回看安排如何改变。Esc 可切换案例。",
+      "after": "Tab 回看记录。N 切换案例。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 51,
+      "before": "TAB to revisit the arrangement. ESC to switch cases.",
+      "after": "TAB to read your notes. N to switch cases."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 52,
+      "before": "工作请求还在你手里\n走向 01 按 F：交付 02 的公开原话，不必公开私事。",
+      "after": "02 的公开请求还没送到\n去 01 门前按 F 转告工作安排，私下的话可以留下。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 52,
+      "before": "THE WORK REQUEST IS STILL WITH YOU\nAt 01, press F: deliver 02's public words. Private reasons may stay private.",
+      "after": "02'S PUBLIC REQUEST HASN'T ARRIVED\nAt 01, press F to deliver the work request. Keep private words separate."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 53,
+      "before": "走向 03：有限的工作协议，也需要两份同意。",
+      "after": "去 03 作决定。只谈工作，也得双方分别答应。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 53,
+      "before": "Approach 03. A limited work agreement still needs two separate yeses.",
+      "after": "Go to 03. Even a work-only discussion needs both people to agree."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "我留下，继续替他们保证交付。",
+      "after": "我留下，继续替他们保证结果。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "I'll stay and guarantee the work for them.",
+      "after": "I'll stay and guarantee the outcome for them."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "邀请他们只谈工作范围，事由可以空着。",
+      "after": "请他们自己谈工作范围，事由先空着。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "Invite them to discuss work scope. Leave the reason blank.",
+      "after": "Ask them to discuss the work and leave the reason blank."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "我先离开，不接下替别人负责的工作。",
+      "after": "我先走了，后面的事请各自确认。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 56,
+      "before": "I'll step away without taking responsibility for someone else.",
+      "after": "I'll head out. Each of you will need to confirm your part."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 76,
+      "before": "他们各自同意，只协商工作范围和交付。\n事由仍然空着。理解不以交出隐私为前提。",
+      "after": "他们愿意自己谈周五的草稿和白天的评审。\n私人原因要不要说，仍由本人决定。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 76,
+      "before": "Each agrees to discuss scope and delivery only.\nThe reason stays blank. Understanding does not require surrendering privacy.",
+      "after": "They agree to discuss the Friday draft and a daytime review.\nPrivate reasons are still theirs to share or withhold."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 77,
+      "before": "你归还了协调和保证结果的责任。\n帮忙的限度说清了，自己的出口也留下了。",
+      "after": "你说清自己能帮到哪里，先走出了房间。\n后面的安排，留给他们各自确认。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 77,
+      "before": "You return responsibility for coordination and guarantees.\nYour help has a limit. You keep a way out of your own.",
+      "after": "You say how much you can help and step outside.\nThey'll have to confirm the rest themselves."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 78,
+      "before": "安排还有空白，你先停止了代办。\n一份未完成的清单，也不能扣住你的余力。",
+      "after": "安排还没谈妥，你先离开了。\n余下的事，让他们准备好后再谈。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 78,
+      "before": "The plan has gaps. You step back from managing it.\nAn unfinished checklist does not own your remaining strength.",
+      "after": "The plan is still unsettled. You leave it with them.\nThey can return to it when they're ready."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 79,
+      "before": "每次调整都先经过你，每次追问也落到你这里。\n工作可以继续，只有你不能下班。",
+      "after": "改时间要找你，问进度也要找你。\n工作照常往下排，你还在等下一句要转交的话。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 79,
+      "before": "Every change passes through you. Every question comes back to you.\nThe work can move forward. Only you cannot clock out.",
+      "after": "They come to you to change the time, then to check progress.\nWork moves on. You're still waiting for the next message to pass along."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 80,
+      "before": "你选了一边，换来了一个靠得很近的同盟。\n下一次协商，从更厚的一堵墙开始。",
+      "after": "一人把你当成了自己人，另一人更不信任你。\n下次再谈工作，得先过这一关。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 80,
+      "before": "You choose a side and gain a close ally.\nThe next negotiation begins behind a thicker wall.",
+      "after": "One person sees you as an ally. The other trusts you less.\nThat will be there between you the next time you discuss work."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 81,
+      "before": "进度表还在更新，你已经没有余力补上下一格。\n暂停不需要用过劳来证明。门仍属于你。",
+      "after": "进度还在催，你已经没力气继续协调了。\n先出去歇歇，剩下的事可以等。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 81,
+      "before": "The schedule keeps updating. You have nothing left for the next box.\nYou need not prove exhaustion to pause. The door is still yours.",
+      "after": "The deadlines keep coming. You're too tired to keep coordinating.\nStep outside and rest. The rest can wait."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 82,
+      "before": "每一格都填得漂亮，里面却有你替别人许下的承诺。\n安静的进度表，仍靠你独自维持。",
+      "after": "进度表上写得很齐全，有些事却只有你替人答应过。\n往后要兑现这些承诺，还得靠你来回协调。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 82,
+      "before": "Every box looks complete. Some hold promises you made for others.\nThe quiet schedule still needs you alone to keep it running.",
+      "after": "The schedule looks complete, but some promises came only from you.\nKeeping them will mean more trips between the two."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 88,
+      "before": "还未核对工作范围。私事不是必须搜集的证据。",
+      "after": "还没问清对方能做哪些工作。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 88,
+      "before": "Work scope remains unchecked. Private reasons are not required evidence.",
+      "after": "You haven't checked what work this person can commit to."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 89,
+      "before": "可谈工作范围，私人原因保留。",
+      "after": "愿意谈工作，不想交代私人原因。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 89,
+      "before": "Will discuss work scope. Private reasons stay private.",
+      "after": "Will discuss the work, but wants to keep the reasons private."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 90,
+      "before": "仍有一次未经允许的转述需要承认。",
+      "after": "你还没向本人承认那次擅自转述。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 90,
+      "before": "Sharing without permission still needs acknowledging.",
+      "after": "You haven't acknowledged sharing their words without permission."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 91,
+      "before": "尚未确认有限的工作协议。",
+      "after": "本人还没答应只谈工作。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/OfficeNarrative.cs",
+      "line": 91,
+      "before": "Has not yet confirmed a limited work agreement.",
+      "after": "Hasn't agreed to a work-only discussion yet."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 5,
+      "before": "[ E ]  给自己留一点余力 / 每轮一次",
+      "after": "[ E ]  坐下休息 / 每轮恢复一次"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "你把别人的话，暂时放在椅子上。\n休息并不会让你欠任何人更多。\n",
+      "after": "你坐了一会儿，缓过些劲来。\n"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "You set their words down for a moment.\nRest doesn't make you owe anyone more.\n",
+      "after": "You sit for a while and catch your breath.\n"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "这一轮已经在这里恢复过了。\n你仍然可以停一会儿，不必把安静也变成任务。",
+      "after": "这一轮已经休息过，不会再次恢复资源。\n想多坐一会儿也可以。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "You've restored your breath here this round.\nYou can still pause. Quiet doesn't have to be a task.",
+      "after": "You've already rested this round, so your resources won't change.\nYou can stay a little longer if you like."
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "你现在有足够的余力，也没有承重。\n椅子会留在这里，等你需要时再恢复。",
+      "after": "你现在余力充足，也没有承重。\n这次先不使用休息机会。"
+    },
+    {
+      "file": "Assets/ThirdDoor/Scripts/RestStation.cs",
+      "line": 13,
+      "before": "You have breath to spare and no weight to carry.\nThe chair will be here when you need it.",
+      "after": "Your breath is full and you're carrying no load.\nThis won't use your rest for the round."
+    }
+  ]
+}

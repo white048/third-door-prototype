@@ -5,10 +5,19 @@ public class PrototypeResetController : MonoBehaviour
 {
     private void Update()
     {
+        if (IntroSequence.IsActive || ExhibitionHUD.Paused || NarrativeNotebook.Open) return;
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Scene activeScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(activeScene.buildIndex >= 0 ? activeScene.buildIndex : 0);
+            ReloadScene();
         }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            LocalizationManager.ToggleLanguage();
+        }
+    }
+
+    private static void ReloadScene()
+    {
+        CaseSession.StartFresh(GameStateManager.Instance.Run.Case);
     }
 }

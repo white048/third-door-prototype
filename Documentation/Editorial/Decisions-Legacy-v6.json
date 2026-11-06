@@ -1,0 +1,106 @@
+[
+  {
+    "before": "他请你守一道门。",
+    "after": "他想让你替他挡一下。"
+  },
+  {
+    "before": "而你，站在他们中间。",
+    "after": "两个人都在等你答复。"
+  },
+  {
+    "before": "你接过她的话。\n两人的距离，又落在你的肩上。",
+    "after": "你答应替她传话，得再去找他。"
+  },
+  {
+    "before": "“我只是怕，他不再需要我。”\n责备的背后，原来是害怕。",
+    "after": "“我就是怕，他以后不再需要我了。”"
+  },
+  {
+    "before": "她沉默了。\n一句拒绝，还没有让她被听见。",
+    "after": "她没再说话。你还没弄清她在担心什么。"
+  },
+  {
+    "before": "她的声音暂时安静了。去听 02 的声音。",
+    "after": "这一边先说到这里。去 02 听听。"
+  },
+  {
+    "before": "你成了挡在他们中间的墙。\n保护，也可以成为另一种传话。",
+    "after": "你答应替他应付她，接下来还得由你去说。"
+  },
+  {
+    "before": "“我需要自己的空间，不是失去她。”\n这句话，应该由他亲口说。",
+    "after": "“我想自己做决定，也想跟她来往。”\n这些话，得让他自己说。"
+  },
+  {
+    "before": "他退回门后。\n有些话，还没有被理解。",
+    "after": "他没答应。你还没弄清他想要什么。"
+  },
+  {
+    "before": "两种声音都留在这里了。现在去 03 作决定。",
+    "after": "两边都听过了。去 03 决定接下来怎么办。"
+  },
+  {
+    "before": "他们都在等你。\n这一次，你要站在哪里？",
+    "after": "他们都在等你。\n你还要继续传话吗？"
+  },
+  {
+    "before": "结局 01 / 退出三角\n你不再替他们说话。\n关系留给他们，路留给自己。",
+    "after": "结局 01 / 退出三角\n你不再代传，让他们自己谈。\n你也可以先走了。"
+  },
+  {
+    "before": "结局 02 / 再次循环\n你仍站在两人的中间。\n有些话，还没有真正被听见。",
+    "after": "结局 02 / 再次循环\n他们还在等你转告。\n谁也没把话直接说给对方听。"
+  },
+  {
+    "before": "He asks you to hold a boundary.",
+    "after": "He asks you to keep her at a distance."
+  },
+  {
+    "before": "And you stand between them.",
+    "after": "They're both waiting for your answer."
+  },
+  {
+    "before": "You take her words with you.\nThe distance between them becomes your burden.",
+    "after": "You agree to pass it on. You'll have to go and find him again."
+  },
+  {
+    "before": "I'm afraid he doesn't need me anymore.\nBeneath the accusation, a fear.",
+    "after": "I'm afraid he won't need me anymore."
+  },
+  {
+    "before": "She falls silent.\nA refusal has not made her feel heard.",
+    "after": "She falls silent. You still don't know what's worrying her."
+  },
+  {
+    "before": "Her voice rests here. Listen to 02.",
+    "after": "That's all from her for now. Go and hear 02."
+  },
+  {
+    "before": "You become the wall between them.\nProtection can be another way of carrying words.",
+    "after": "You agree to deal with her for him. You're the one who has to go and talk."
+  },
+  {
+    "before": "I need my own space. I don't need to lose her.\nThese are words he could say himself.",
+    "after": "I want to make my own choices and stay in touch with her.\nHe needs to say that himself."
+  },
+  {
+    "before": "He retreats behind the door.\nSomething remains unheard.",
+    "after": "He hasn't agreed. You still don't know what he wants."
+  },
+  {
+    "before": "Both voices rest here. Go to 03 and decide.",
+    "after": "You've heard both sides. Go to 03 and choose what to do next."
+  },
+  {
+    "before": "They're both waiting for you.\nThis time, where will you stand?",
+    "after": "They're both waiting for you.\nWill you keep passing messages?"
+  },
+  {
+    "before": "ENDING 01 / RELEASE\nTheir words belong to them.\nThe way forward belongs to you.",
+    "after": "ENDING 01 / RELEASE\nYou stop passing messages and leave them to talk.\nYou can head out too."
+  },
+  {
+    "before": "ENDING 02 / THE LOOP\nYou still stand between them.\nSomething has yet to be heard.",
+    "after": "ENDING 02 / THE LOOP\nThey're still waiting for you to pass things on.\nNeither has spoken directly to the other."
+  }
+]

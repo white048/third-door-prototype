@@ -1,0 +1,8232 @@
+{
+  "Assets/ThirdDoor/Scripts/ArtReflectionView.cs": {
+    "codeHash": "8c7ee7784629810317965c06fc5dab7a5473ae6f4a8c29dc122b7642cca71908",
+    "strings": [
+      {
+        "line": 17,
+        "value": "拼贴图像 / 关心、责任与出口"
+      },
+      {
+        "line": 17,
+        "value": "COLLAGE / CARE, RESPONSIBILITY, A WAY OUT"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/AudioManager.cs": {
+    "codeHash": "9ad7acd6a9de51bf9b2ddbfe4e033f224002c63cf5bed1321501bc44e8891843",
+    "strings": [
+      {
+        "line": 38,
+        "value": "letter_shatter"
+      },
+      {
+        "line": 39,
+        "value": "locked_thud"
+      },
+      {
+        "line": 40,
+        "value": "door_open_success"
+      },
+      {
+        "line": 41,
+        "value": "door_close_bad"
+      },
+      {
+        "line": 42,
+        "value": "choice_click"
+      },
+      {
+        "line": 43,
+        "value": "ambient_drone"
+      },
+      {
+        "line": 54,
+        "value": "Audio/"
+      },
+      {
+        "line": 66,
+        "value": "Room tone"
+      },
+      {
+        "line": 85,
+        "value": "Gallery footfall"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CaseArtworkView.cs": {
+    "codeHash": "a9d4ee881c9e3dfa658e4d941b2b869617fb0a6cbdc31a008f12a0ff37ccfdf9",
+    "strings": [
+      {
+        "line": 21,
+        "value": "PLATE 02 / A REASON LEFT BLANK"
+      },
+      {
+        "line": 21,
+        "value": "PLATE 01 / WORDS WE CARRY"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CaseInfo.cs": {
+    "codeHash": "208fda5f049d7f524676312d01e8bf7ccae59c77a95f385faf35c5ff595aa71a",
+    "strings": [
+      {
+        "line": 6,
+        "value": "01 / 借来的声音"
+      },
+      {
+        "line": 6,
+        "value": "01 / BORROWED VOICES"
+      },
+      {
+        "line": 6,
+        "value": "02 / 事由的空白"
+      },
+      {
+        "line": 6,
+        "value": "02 / A REASON LEFT BLANK"
+      },
+      {
+        "line": 7,
+        "value": "家人之间 · 关心、距离与两份同意"
+      },
+      {
+        "line": 7,
+        "value": "A family · care, distance and two separate yeses"
+      },
+      {
+        "line": 7,
+        "value": "同事之间 · 工作可以协商，私事不必交代"
+      },
+      {
+        "line": 7,
+        "value": "At work · agree on the task, keep private reasons private"
+      },
+      {
+        "line": 8,
+        "value": "两个人，把彼此的话交给你。\n你能改变话语的走向。\n也可以保留自己的出口。"
+      },
+      {
+        "line": 8,
+        "value": "Two people entrust you with their words.\nYou can change where those words go.\nYou can also keep a way out of your own."
+      },
+      {
+        "line": 8,
+        "value": "一份安排，空着一栏事由。\n你需要带过去的，真的是那个理由吗？\n工作可以继续，空白也可以留下。"
+      },
+      {
+        "line": 8,
+        "value": "A work plan has a blank space for a reason.\nIs that reason really yours to carry?\nThe work can move forward. The blank may remain."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CaseInstallation.cs": {
+    "codeHash": "588874597523862f45c2978f807692d46f0d1b20d22070ed0cad5c9b51b372bd",
+    "strings": [
+      {
+        "line": 31,
+        "value": "THE MANAGER"
+      },
+      {
+        "line": 31,
+        "value": "THE COLLEAGUE"
+      },
+      {
+        "line": 31,
+        "value": "THE WEIGHT"
+      },
+      {
+        "line": 31,
+        "value": "THE DISTANCE"
+      },
+      {
+        "line": 35,
+        "value": "0"
+      },
+      {
+        "line": 35,
+        "value": " / "
+      },
+      {
+        "line": 40,
+        "value": "PUBLIC REQUEST / DELIVERED"
+      },
+      {
+        "line": 40,
+        "value": "PUBLIC REQUEST / NOT YET CARRIED"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CaseInstallationBuilder.cs": {
+    "codeHash": "1fe37a8d01d2303d232e8d3484dcc4acda7addd9750cfdff4849207842bbc42d",
+    "strings": [
+      {
+        "line": 7,
+        "value": "04 / Terms and blank spaces"
+      },
+      {
+        "line": 11,
+        "value": "Office / Public workplan"
+      },
+      {
+        "line": 14,
+        "value": "Workplan / carbon backing"
+      },
+      {
+        "line": 15,
+        "value": "Workplan / paper"
+      },
+      {
+        "line": 16,
+        "value": "Workplan / red register"
+      },
+      {
+        "line": 17,
+        "value": "02 / WORK PLAN"
+      },
+      {
+        "line": 18,
+        "value": "ONLY WHAT THE WORK NEEDS"
+      },
+      {
+        "line": 19,
+        "value": "Workplan / heading rule"
+      },
+      {
+        "line": 20,
+        "value": "DELIVERABLES"
+      },
+      {
+        "line": 21,
+        "value": "FRIDAY DRAFT\nDAYTIME REVIEW"
+      },
+      {
+        "line": 22,
+        "value": "Workplan / task rule"
+      },
+      {
+        "line": 23,
+        "value": "REASON"
+      },
+      {
+        "line": 25,
+        "value": "Blank reason / top"
+      },
+      {
+        "line": 26,
+        "value": "Blank reason / bottom"
+      },
+      {
+        "line": 27,
+        "value": "Blank reason / left"
+      },
+      {
+        "line": 28,
+        "value": "Blank reason / right"
+      },
+      {
+        "line": 29,
+        "value": "THIS SPACE MAY STAY BLANK"
+      },
+      {
+        "line": 30,
+        "value": "PUBLIC REQUEST / NOT YET CARRIED"
+      },
+      {
+        "line": 32,
+        "value": "Office / A limited agreement"
+      },
+      {
+        "line": 35,
+        "value": "Agreement / paper"
+      },
+      {
+        "line": 36,
+        "value": "Agreement / red rule"
+      },
+      {
+        "line": 37,
+        "value": "LIMITED AGREEMENT"
+      },
+      {
+        "line": 38,
+        "value": "TASK / TIME / SCOPE"
+      },
+      {
+        "line": 39,
+        "value": "REASON: __________"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CaseSession.cs": {
+    "codeHash": "c4f54017f4d8c07f6cc6287c8d89c77c6a0aed6ca8e2fc7ae4621dc8d096a95c",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/CheckpointStore.cs": {
+    "codeHash": "fe251e0fa8e5f0f5765664202ef3cd9ab9d759c1b3634e125e18ea2865a6842b",
+    "strings": [
+      {
+        "line": 14,
+        "value": "checkpoint-v1.json"
+      },
+      {
+        "line": 16,
+        "value": ""
+      },
+      {
+        "line": 31,
+        "value": "validation"
+      },
+      {
+        "line": 34,
+        "value": "--validate-demo="
+      },
+      {
+        "line": 36,
+        "value": "--validate-demo="
+      },
+      {
+        "line": 41,
+        "value": ".."
+      },
+      {
+        "line": 41,
+        "value": "QA"
+      },
+      {
+        "line": 41,
+        "value": "Checkpoints"
+      },
+      {
+        "line": 52,
+        "value": "No run to save."
+      },
+      {
+        "line": 53,
+        "value": "A completed case cannot be continued."
+      },
+      {
+        "line": 59,
+        "value": "Run state could not be validated."
+      },
+      {
+        "line": 63,
+        "value": "Checkpoint is too large."
+      },
+      {
+        "line": 65,
+        "value": ".tmp"
+      },
+      {
+        "line": 77,
+        "value": ".bak"
+      },
+      {
+        "line": 104,
+        "value": ".bak"
+      },
+      {
+        "line": 109,
+        "value": "Checkpoint data is damaged or incompatible."
+      },
+      {
+        "line": 110,
+        "value": "Checkpoint storage could not be read."
+      },
+      {
+        "line": 110,
+        "value": ""
+      },
+      {
+        "line": 120,
+        "value": ".bak"
+      },
+      {
+        "line": 120,
+        "value": ".tmp"
+      },
+      {
+        "line": 157,
+        "value": "x2"
+      },
+      {
+        "line": 161,
+        "value": "Checkpoint storage is unavailable ("
+      },
+      {
+        "line": 161,
+        "value": ")."
+      },
+      {
+        "line": 162,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ConstructivistScene.cs": {
+    "codeHash": "280f4af1f5d13403aa343c09bf42a3171493e05e42ea1cb1ca5eb3c6c40a14d1",
+    "strings": [
+      {
+        "line": 15,
+        "value": "Print / Carbon"
+      },
+      {
+        "line": 16,
+        "value": "Print / Vermilion"
+      },
+      {
+        "line": 17,
+        "value": "Print / Warm white"
+      },
+      {
+        "line": 18,
+        "value": "01 / Architecture of a relationship"
+      },
+      {
+        "line": 20,
+        "value": "Paper plinth"
+      },
+      {
+        "line": 21,
+        "value": "Exhibition back wall"
+      },
+      {
+        "line": 22,
+        "value": "Left boundary"
+      },
+      {
+        "line": 23,
+        "value": "Right boundary"
+      },
+      {
+        "line": 24,
+        "value": "Entry boundary"
+      },
+      {
+        "line": 25,
+        "value": "Exit return / left"
+      },
+      {
+        "line": 26,
+        "value": "Exit return / right"
+      },
+      {
+        "line": 29,
+        "value": "The red sun"
+      },
+      {
+        "line": 30,
+        "value": "Suspended diagonal"
+      },
+      {
+        "line": 32,
+        "value": "Counterweight"
+      },
+      {
+        "line": 33,
+        "value": "Counterweight foot"
+      },
+      {
+        "line": 34,
+        "value": "03"
+      },
+      {
+        "line": 35,
+        "value": "THE THIRD\nDOOR"
+      },
+      {
+        "line": 36,
+        "value": "A STUDY IN DISTANCE"
+      },
+      {
+        "line": 37,
+        "value": "THREE VOICES.\nSEVEN POSITIONS.\nYOUR OWN WAY OUT."
+      },
+      {
+        "line": 40,
+        "value": "01 / carry"
+      },
+      {
+        "line": 41,
+        "value": "02 / distance"
+      },
+      {
+        "line": 42,
+        "value": "03 / release"
+      },
+      {
+        "line": 45,
+        "value": "Measurement / "
+      },
+      {
+        "line": 49,
+        "value": "Wall registration / "
+      },
+      {
+        "line": 52,
+        "value": "Red wing"
+      },
+      {
+        "line": 54,
+        "value": "Ink wing"
+      },
+      {
+        "line": 58,
+        "value": "Rhythm / "
+      },
+      {
+        "line": 62,
+        "value": "Breathing frame"
+      },
+      {
+        "line": 66,
+        "value": "Canopy rule / "
+      },
+      {
+        "line": 69,
+        "value": "Loop / red pressure"
+      },
+      {
+        "line": 70,
+        "value": "Loop / black pressure"
+      },
+      {
+        "line": 73,
+        "value": "Exit / daylight"
+      },
+      {
+        "line": 80,
+        "value": "Raking afternoon light"
+      },
+      {
+        "line": 90,
+        "value": "Soft gallery bounce"
+      },
+      {
+        "line": 96,
+        "value": "02 / Three voices"
+      },
+      {
+        "line": 98,
+        "value": "01"
+      },
+      {
+        "line": 98,
+        "value": "THE WEIGHT"
+      },
+      {
+        "line": 99,
+        "value": "02"
+      },
+      {
+        "line": 99,
+        "value": "THE DISTANCE"
+      },
+      {
+        "line": 103,
+        "value": "03"
+      },
+      {
+        "line": 103,
+        "value": "THE WAY OUT"
+      },
+      {
+        "line": 104,
+        "value": "YOU MAY CARE.\nYOU MAY LEAVE."
+      },
+      {
+        "line": 109,
+        "value": " / "
+      },
+      {
+        "line": 114,
+        "value": "Left jamb"
+      },
+      {
+        "line": 115,
+        "value": "Right jamb"
+      },
+      {
+        "line": 116,
+        "value": "Lintel"
+      },
+      {
+        "line": 117,
+        "value": "Threshold"
+      },
+      {
+        "line": 118,
+        "value": "Moving leaf"
+      },
+      {
+        "line": 120,
+        "value": "Printed door leaf"
+      },
+      {
+        "line": 128,
+        "value": "Typographic rule"
+      },
+      {
+        "line": 130,
+        "value": "Handle"
+      },
+      {
+        "line": 133,
+        "value": "Recess"
+      },
+      {
+        "line": 136,
+        "value": " / "
+      },
+      {
+        "line": 195,
+        "value": "Circular print / 160 segments"
+      },
+      {
+        "line": 205,
+        "value": "Print / "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CorrespondenceFolio.cs": {
+    "codeHash": "5ba3038ffc051efa2ea8dae08b80a90b83a5dc222765536bd14759c15cd295c8",
+    "strings": [
+      {
+        "line": 69,
+        "value": " → "
+      },
+      {
+        "line": 69,
+        "value": "\n\n"
+      },
+      {
+        "line": 69,
+        "value": "还未接话。先去倾听这一扇门。"
+      },
+      {
+        "line": 69,
+        "value": "No message yet. First hear this voice."
+      },
+      {
+        "line": 69,
+        "value": "\n"
+      },
+      {
+        "line": 75,
+        "value": "两个人的需要，不等于两份公开许可。"
+      },
+      {
+        "line": 75,
+        "value": "TWO NEEDS ARE NOT TWO PERMISSIONS."
+      },
+      {
+        "line": 75,
+        "value": " → "
+      },
+      {
+        "line": 75,
+        "value": "  /  "
+      },
+      {
+        "line": 76,
+        "value": "01 / 请求中的原话\n\n"
+      },
+      {
+        "line": 76,
+        "value": "01 / THE REQUEST\n\n"
+      },
+      {
+        "line": 76,
+        "value": "接过一句话后，这里会保留当时的原句。"
+      },
+      {
+        "line": 76,
+        "value": "A received message keeps its original wording here."
+      },
+      {
+        "line": 77,
+        "value": "02 / 私下听见的需要\n\n"
+      },
+      {
+        "line": 77,
+        "value": "02 / THE PRIVATE NEED\n\n"
+      },
+      {
+        "line": 77,
+        "value": "深入倾听，才会出现这一层内容。"
+      },
+      {
+        "line": 77,
+        "value": "Listen beneath the request to hear this part."
+      },
+      {
+        "line": 84,
+        "value": "交给 "
+      },
+      {
+        "line": 84,
+        "value": "DELIVER TO "
+      },
+      {
+        "line": 84,
+        "value": "…"
+      },
+      {
+        "line": 85,
+        "value": "留作私下的倾听"
+      },
+      {
+        "line": 85,
+        "value": "KEEP THIS PRIVATE"
+      },
+      {
+        "line": 87,
+        "value": "\n<size=14>"
+      },
+      {
+        "line": 87,
+        "value": "</size>"
+      },
+      {
+        "line": 90,
+        "value": "\n"
+      },
+      {
+        "line": 91,
+        "value": "一局保留每个人的一封话。你决定它承载请求，还是需要。\n转述许可与直接对话的同意，分别属于当事人。"
+      },
+      {
+        "line": 91,
+        "value": "Keep one envelope from each voice. Choose what it carries.\nPermission to quote and consent to talk are separate decisions."
+      },
+      {
+        "line": 93,
+        "value": "这封话已经交出，未经允许的转述尚未得到承认。\n回到原主门前，你仍可以承认并修复这次越界。"
+      },
+      {
+        "line": 93,
+        "value": "This message has left your hands. A disclosure remains unacknowledged.\nReturn to its owner to acknowledge and repair the breach."
+      },
+      {
+        "line": 93,
+        "value": "这封话已经处理。交付与保密都留下记录，不再重复结算。"
+      },
+      {
+        "line": 93,
+        "value": "This envelope is resolved. Delivery and privacy both leave a record; neither pays twice."
+      },
+      {
+        "line": 97,
+        "value": "\n"
+      },
+      {
+        "line": 97,
+        "value": "\n"
+      },
+      {
+        "line": 97,
+        "value": "到收信人的门前，可预览并交付。"
+      },
+      {
+        "line": 97,
+        "value": "Approach the recipient to preview and deliver."
+      },
+      {
+        "line": 98,
+        "value": "\n"
+      },
+      {
+        "line": 98,
+        "value": "未经允许：原主信任 -2，并留下需要承认的越界。"
+      },
+      {
+        "line": 98,
+        "value": "WITHOUT PERMISSION: source trust -2; a breach remains."
+      },
+      {
+        "line": 100,
+        "value": "先读完这段对话，再处理传话。"
+      },
+      {
+        "line": 100,
+        "value": "Finish this conversation before handling a message."
+      },
+      {
+        "line": 100,
+        "value": "看向门前按 F：在原主处问许可、退回承诺；在另一人处交付。"
+      },
+      {
+        "line": 100,
+        "value": "F AT A DOOR: ask or return at the source; deliver at the recipient."
+      },
+      {
+        "line": 100,
+        "value": "当前在 "
+      },
+      {
+        "line": 100,
+        "value": "AT "
+      },
+      {
+        "line": 100,
+        "value": " 门前 / 处理过的交谈不能用 G 抹去。"
+      },
+      {
+        "line": 100,
+        "value": " / These exchanges cannot be erased with G."
+      },
+      {
+        "line": 101,
+        "value": "在手 "
+      },
+      {
+        "line": 101,
+        "value": "HELD "
+      },
+      {
+        "line": 101,
+        "value": " / 2\n"
+      },
+      {
+        "line": 105,
+        "value": " / "
+      },
+      {
+        "line": 105,
+        "value": " · 擅自转述"
+      },
+      {
+        "line": 105,
+        "value": " · PRIVATE WORDS SHARED"
+      },
+      {
+        "line": 105,
+        "value": ""
+      },
+      {
+        "line": 105,
+        "value": "\n"
+      },
+      {
+        "line": 110,
+        "value": ""
+      },
+      {
+        "line": 111,
+        "value": "余力 "
+      },
+      {
+        "line": 111,
+        "value": "BREATH "
+      },
+      {
+        "line": 111,
+        "value": " / "
+      },
+      {
+        "line": 112,
+        "value": "承重 "
+      },
+      {
+        "line": 112,
+        "value": "LOAD "
+      },
+      {
+        "line": 112,
+        "value": " / "
+      },
+      {
+        "line": 113,
+        "value": "直连 "
+      },
+      {
+        "line": 113,
+        "value": "BRIDGE "
+      },
+      {
+        "line": 113,
+        "value": " / "
+      },
+      {
+        "line": 114,
+        "value": "信任 "
+      },
+      {
+        "line": 114,
+        "value": " TRUST "
+      },
+      {
+        "line": 114,
+        "value": " / "
+      },
+      {
+        "line": 115,
+        "value": "信任 "
+      },
+      {
+        "line": 115,
+        "value": " TRUST "
+      },
+      {
+        "line": 115,
+        "value": " / "
+      },
+      {
+        "line": 116,
+        "value": "保持私下，不改变资源"
+      },
+      {
+        "line": 116,
+        "value": "KEPT PRIVATE; NO RESOURCE CHANGE"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CorrespondenceRun.cs": {
+    "codeHash": "7512a7dfe4d2233917f2d87c75d2db79e8732a2cc8c34fc5407270d7d01a0de6",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/CorrespondenceText.cs": {
+    "codeHash": "7b7482f3000edfa1e4426c53386ae48c3e1ee17620d98f820e250bd8f3423291",
+    "strings": [
+      {
+        "line": 5,
+        "value": "01"
+      },
+      {
+        "line": 5,
+        "value": "02"
+      },
+      {
+        "line": 6,
+        "value": "已交付"
+      },
+      {
+        "line": 6,
+        "value": "DELIVERED"
+      },
+      {
+        "line": 6,
+        "value": "承诺已退回"
+      },
+      {
+        "line": 6,
+        "value": "PROMISE RETURNED"
+      },
+      {
+        "line": 6,
+        "value": "留作私下的倾听"
+      },
+      {
+        "line": 6,
+        "value": "KEPT PRIVATE"
+      },
+      {
+        "line": 6,
+        "value": "答应代为传话"
+      },
+      {
+        "line": 6,
+        "value": "A PROMISE TO CARRY"
+      },
+      {
+        "line": 6,
+        "value": "私下听见的需要"
+      },
+      {
+        "line": 6,
+        "value": "A PRIVATE NOTE"
+      },
+      {
+        "line": 7,
+        "value": "需要的转述：已获允许"
+      },
+      {
+        "line": 7,
+        "value": "NEED: PERMISSION GIVEN"
+      },
+      {
+        "line": 7,
+        "value": "这句更想自己说；信任不是转述许可。"
+      },
+      {
+        "line": 7,
+        "value": "THEY WANT THEIR OWN VOICE; TRUST IS NOT PERMISSION."
+      },
+      {
+        "line": 7,
+        "value": "需要的转述：对方暂不愿意"
+      },
+      {
+        "line": 7,
+        "value": "NEED: PLEASE KEEP IT PRIVATE"
+      },
+      {
+        "line": 7,
+        "value": "需要的转述：尚未询问"
+      },
+      {
+        "line": 7,
+        "value": "NEED: PERMISSION NOT ASKED"
+      },
+      {
+        "line": 8,
+        "value": "“周五的草稿不能再拖，请确认评审安排。”"
+      },
+      {
+        "line": 8,
+        "value": "The Friday draft cannot slip. Please confirm the review arrangement."
+      },
+      {
+        "line": 8,
+        "value": "“评审请移到白天，周五交草稿。事由保留。”"
+      },
+      {
+        "line": 8,
+        "value": "Please move the review to daytime. Draft on Friday. Reason withheld."
+      },
+      {
+        "line": 9,
+        "value": "还没有听见这一层需要。"
+      },
+      {
+        "line": 9,
+        "value": "You have not heard the need beneath this request."
+      },
+      {
+        "line": 9,
+        "value": "“我怕交付落空后，又是我一个人承担。”"
+      },
+      {
+        "line": 9,
+        "value": "I'm afraid I'll be left carrying the missed delivery alone."
+      },
+      {
+        "line": 9,
+        "value": "“我需要保留不解释私事的空间。这句，我想自己说。”"
+      },
+      {
+        "line": 9,
+        "value": "I need room to keep my reasons private. I want to say this myself."
+      },
+      {
+        "line": 9,
+        "value": "“我需要知道，在他的生活里还有我的位置。”"
+      },
+      {
+        "line": 9,
+        "value": "I need to know there is still a place for me in his life."
+      },
+      {
+        "line": 9,
+        "value": "“我需要自己作决定，也想和她保持联系。”"
+      },
+      {
+        "line": 9,
+        "value": "I need my own decisions, and I want to stay connected."
+      },
+      {
+        "line": 10,
+        "value": "对方较能听完一句不舒服的话。"
+      },
+      {
+        "line": 10,
+        "value": "They are more ready to hear something uncomfortable."
+      },
+      {
+        "line": 10,
+        "value": "对方仍在防备；照搬责备会降低信任。"
+      },
+      {
+        "line": 10,
+        "value": "They are guarded. Repeating blame will cost trust."
+      },
+      {
+        "line": 11,
+        "value": "\n"
+      },
+      {
+        "line": 11,
+        "value": " 信任 "
+      },
+      {
+        "line": 11,
+        "value": " TRUST "
+      },
+      {
+        "line": 11,
+        "value": "  /  "
+      },
+      {
+        "line": 11,
+        "value": " 信任 "
+      },
+      {
+        "line": 11,
+        "value": " TRUST "
+      },
+      {
+        "line": 14,
+        "value": "“我愿意告诉你，但这句，我想自己说。”\n亲近没有替他让渡公开这句话的权利。"
+      },
+      {
+        "line": 14,
+        "value": "I'm willing to tell you. I want to say this myself.\nCloseness does not surrender control of private words."
+      },
+      {
+        "line": 15,
+        "value": "“这句可以带过去。别替我保证结果。”\n你获得的是转述许可，还不是直接对话的同意。"
+      },
+      {
+        "line": 15,
+        "value": "You may share this. Don't promise how it will turn out.\nPermission to quote is separate from agreeing to talk."
+      },
+      {
+        "line": 15,
+        "value": "“这句先留在我们之间。”\n你听见了拒绝。这一轮不再重复追问许可。"
+      },
+      {
+        "line": 15,
+        "value": "Keep this between us for now.\nYou hear the refusal, and will not ask again this round."
+      },
+      {
+        "line": 16,
+        "value": "你回到原主面前，收回替人传话的承诺。\n对方有点失望；你把限度说清楚了。"
+      },
+      {
+        "line": 16,
+        "value": "You return to the speaker and give back your promise.\nThey are disappointed. Your limit is now clear."
+      },
+      {
+        "line": 16,
+        "value": "你把私下听见的需要留在这里。\n不公开它，也是一种处理。"
+      },
+      {
+        "line": 16,
+        "value": "You keep the private need between you.\nNot sharing it is also a way to handle it."
+      },
+      {
+        "line": 17,
+        "value": "你承认了擅自转述，并重新征询意愿。\n对方仍愿意尝试；这份同意只属于本人。"
+      },
+      {
+        "line": 17,
+        "value": "You acknowledge sharing without permission, and ask again.\nThey are still willing to try. This yes belongs only to them."
+      },
+      {
+        "line": 17,
+        "value": "你承认了擅自转述。信任恢复了一点。\n道歉没有替对方许下和解。"
+      },
+      {
+        "line": 17,
+        "value": "You acknowledge sharing without permission. Some trust returns.\nYour apology does not promise reconciliation for them."
+      },
+      {
+        "line": 18,
+        "value": "对方听见了需要，原主却失去了对私下话语的决定权。\n你获得了一点亲近，也留下了一次需要承认的越界。"
+      },
+      {
+        "line": 18,
+        "value": "The listener hears a need. Its owner loses control of private words.\nCloseness comes with a breach you will need to acknowledge."
+      },
+      {
+        "line": 19,
+        "value": "“这比刚才的责备，更像是能回答的一句话。”\n你带来了获准分享的需要，没有替任何人保证结果。"
+      },
+      {
+        "line": 19,
+        "value": "That sounds like something I can answer.\nYou carry an allowed need, without guaranteeing an outcome."
+      },
+      {
+        "line": 20,
+        "value": "对方听完了原话，没有马上把它推回来。\n准确传达，仍不等于替双方完成了理解。"
+      },
+      {
+        "line": 20,
+        "value": "They hear the original words without pushing them straight back.\nAn accurate delivery is still not mutual understanding."
+      },
+      {
+        "line": 20,
+        "value": "“这又是要我照着做吗？”\n原话准确到达，责备也跟着进来了。"
+      },
+      {
+        "line": 20,
+        "value": "Am I being told what to do again?\nThe words arrive accurately. The blame arrives with them."
+      },
+      {
+        "line": 22,
+        "value": "交付"
+      },
+      {
+        "line": 22,
+        "value": "DELIVERY"
+      },
+      {
+        "line": 22,
+        "value": "询问转述许可"
+      },
+      {
+        "line": 22,
+        "value": "ASK PERMISSION"
+      },
+      {
+        "line": 22,
+        "value": "承认擅自转述"
+      },
+      {
+        "line": 22,
+        "value": "ACKNOWLEDGE BREACH"
+      },
+      {
+        "line": 22,
+        "value": "退回或保密"
+      },
+      {
+        "line": 22,
+        "value": "RETURN / KEEP PRIVATE"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/CorrespondenceUIBuilder.cs": {
+    "codeHash": "728f6802f22a73086773e036cbc245042e3be98b4bcb923d1b7c326153ea8cec",
+    "strings": [
+      {
+        "line": 9,
+        "value": "Correspondence tab"
+      },
+      {
+        "line": 9,
+        "value": ""
+      },
+      {
+        "line": 10,
+        "value": "Correspondence page"
+      },
+      {
+        "line": 14,
+        "value": "Envelope source / "
+      },
+      {
+        "line": 14,
+        "value": ""
+      },
+      {
+        "line": 17,
+        "value": "Dispatch ledger heading"
+      },
+      {
+        "line": 17,
+        "value": "WORDS THAT HAVE LEFT YOUR HANDS"
+      },
+      {
+        "line": 18,
+        "value": "Dispatch ledger"
+      },
+      {
+        "line": 18,
+        "value": ""
+      },
+      {
+        "line": 19,
+        "value": "Open envelope"
+      },
+      {
+        "line": 20,
+        "value": "Envelope heading"
+      },
+      {
+        "line": 20,
+        "value": ""
+      },
+      {
+        "line": 24,
+        "value": "Message payload / "
+      },
+      {
+        "line": 24,
+        "value": ""
+      },
+      {
+        "line": 27,
+        "value": "Dispatch consequence"
+      },
+      {
+        "line": 27,
+        "value": ""
+      },
+      {
+        "line": 28,
+        "value": "Dispatch context"
+      },
+      {
+        "line": 28,
+        "value": ""
+      },
+      {
+        "line": 32,
+        "value": "Message action / "
+      },
+      {
+        "line": 32,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/DemoRestartValidation.cs": {
+    "codeHash": "d0d9ce26eba814d9e2bfb8cd0adc995d529230212729a26c7142d20e31084c04",
+    "strings": [
+      {
+        "line": 18,
+        "value": "restart resets narrative state"
+      },
+      {
+        "line": 19,
+        "value": "restart does not duplicate player or listener"
+      },
+      {
+        "line": 20,
+        "value": "restart resumes play without repeating introduction"
+      },
+      {
+        "line": 22,
+        "value": "09-restarted.png"
+      },
+      {
+        "line": 24,
+        "value": "checks.txt"
+      },
+      {
+        "line": 25,
+        "value": "PASS"
+      },
+      {
+        "line": 26,
+        "value": "DEMO_VALIDATION / "
+      },
+      {
+        "line": 26,
+        "value": "PASS"
+      },
+      {
+        "line": 26,
+        "value": "FAIL"
+      },
+      {
+        "line": 29,
+        "value": "PASS / "
+      },
+      {
+        "line": 29,
+        "value": "FAIL / "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/DemoSessionValidation.cs": {
+    "codeHash": "6dc759eb4ef546ac79ac51d5052602d1343310845baf7e0ff6a1628e381022fd",
+    "strings": [
+      {
+        "line": 21,
+        "value": "session exception: "
+      },
+      {
+        "line": 24,
+        "value": "checks.txt"
+      },
+      {
+        "line": 25,
+        "value": "PASS"
+      },
+      {
+        "line": 25,
+        "value": "DEMO_VALIDATION / "
+      },
+      {
+        "line": 25,
+        "value": "PASS"
+      },
+      {
+        "line": 25,
+        "value": "FAIL"
+      },
+      {
+        "line": 31,
+        "value": "checkpoint covers second case, correspondence and available rewind"
+      },
+      {
+        "line": 32,
+        "value": "native JSON checkpoint saves"
+      },
+      {
+        "line": 33,
+        "value": "native JSON roundtrip preserves every model field"
+      },
+      {
+        "line": 34,
+        "value": ".bak"
+      },
+      {
+        "line": 34,
+        "value": "atomic replacement retains a backup"
+      },
+      {
+        "line": 35,
+        "value": "{truncated"
+      },
+      {
+        "line": 36,
+        "value": "damaged primary recovers the complete backup"
+      },
+      {
+        "line": 37,
+        "value": ".bak"
+      },
+      {
+        "line": 37,
+        "value": "damaged backup"
+      },
+      {
+        "line": 38,
+        "value": "two corrupt files are rejected without an exception"
+      },
+      {
+        "line": 39,
+        "value": "clear retires primary and backup"
+      },
+      {
+        "line": 40,
+        "value": "active journey can be saved again"
+      },
+      {
+        "line": 42,
+        "value": "return to title keeps a single player and listener"
+      },
+      {
+        "line": 43,
+        "value": "title offers the suspended journey"
+      },
+      {
+        "line": 44,
+        "value": "15-continue-title"
+      },
+      {
+        "line": 44,
+        "value": "Continue saved journey"
+      },
+      {
+        "line": 46,
+        "value": "real Continue button restores the selected case and full checkpoint"
+      },
+      {
+        "line": 47,
+        "value": "continue returns control with the same revision opportunity"
+      },
+      {
+        "line": 48,
+        "value": "16-restored-notebook"
+      },
+      {
+        "line": 50,
+        "value": "a restored undo snapshot works without refunding its card"
+      },
+      {
+        "line": 51,
+        "value": "saved pre-revision journey stays independent"
+      },
+      {
+        "line": 56,
+        "value": "navigation begins after a completed first case"
+      },
+      {
+        "line": 58,
+        "value": "Next case"
+      },
+      {
+        "line": 59,
+        "value": "Next case starts an independent second case"
+      },
+      {
+        "line": 60,
+        "value": "new case resets resources and cards"
+      },
+      {
+        "line": 62,
+        "value": "Return to title"
+      },
+      {
+        "line": 63,
+        "value": "pause returns to the selected case title"
+      },
+      {
+        "line": 64,
+        "value": "Case Home"
+      },
+      {
+        "line": 66,
+        "value": "title case switch does not carry the previous case's state"
+      },
+      {
+        "line": 68,
+        "value": "replay resets the selected case without duplicating the player"
+      },
+      {
+        "line": 69,
+        "value": "15-case-navigation"
+      },
+      {
+        "line": 76,
+        "value": "scene transition completes within its limit"
+      },
+      {
+        "line": 80,
+        "value": ".png"
+      },
+      {
+        "line": 81,
+        "value": "PASS / "
+      },
+      {
+        "line": 81,
+        "value": "FAIL / "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/DemoValidation.cs": {
+    "codeHash": "44b3d777910dcc88a2e2bb87255766d635f283ec796048fe77c845108575780b",
+    "strings": [
+      {
+        "line": 25,
+        "value": "--validate-demo="
+      },
+      {
+        "line": 26,
+        "value": "--validate-demo="
+      },
+      {
+        "line": 40,
+        "value": "uncaught test error: "
+      },
+      {
+        "line": 44,
+        "value": "checks.txt"
+      },
+      {
+        "line": 45,
+        "value": "failure.png"
+      },
+      {
+        "line": 54,
+        "value": "PASS / "
+      },
+      {
+        "line": 54,
+        "value": "FAIL / "
+      },
+      {
+        "line": 61,
+        "value": "font"
+      },
+      {
+        "line": 63,
+        "value": "-unrefreshed.png"
+      },
+      {
+        "line": 68,
+        "value": ".png"
+      },
+      {
+        "line": 73,
+        "value": ".."
+      },
+      {
+        "line": 73,
+        "value": "QA"
+      },
+      {
+        "line": 74,
+        "value": "table"
+      },
+      {
+        "line": 74,
+        "value": "cards"
+      },
+      {
+        "line": 74,
+        "value": "aspect"
+      },
+      {
+        "line": 74,
+        "value": "v3-"
+      },
+      {
+        "line": 74,
+        "value": "v4-"
+      },
+      {
+        "line": 74,
+        "value": "v5-"
+      },
+      {
+        "line": 75,
+        "value": "v4-"
+      },
+      {
+        "line": 75,
+        "value": "v5-"
+      },
+      {
+        "line": 78,
+        "value": "one player and one listener"
+      },
+      {
+        "line": 79,
+        "value": "three voices and a place to rest"
+      },
+      {
+        "line": 80,
+        "value": "new run starts with the intended resources"
+      },
+      {
+        "line": 81,
+        "value": "01-title"
+      },
+      {
+        "line": 82,
+        "value": "v5-"
+      },
+      {
+        "line": 85,
+        "value": "case images load independently or provide an intentional geometry fallback"
+      },
+      {
+        "line": 86,
+        "value": "key art master travels with the preview"
+      },
+      {
+        "line": 89,
+        "value": "Title ending archive"
+      },
+      {
+        "line": 89,
+        "value": "archive can open from title"
+      },
+      {
+        "line": 90,
+        "value": "01b-archive"
+      },
+      {
+        "line": 90,
+        "value": "Close notebook"
+      },
+      {
+        "line": 91,
+        "value": "office"
+      },
+      {
+        "line": 91,
+        "value": "save-resume"
+      },
+      {
+        "line": 93,
+        "value": "Case Office"
+      },
+      {
+        "line": 94,
+        "value": "second case can be selected without completing the first"
+      },
+      {
+        "line": 95,
+        "value": "case picker"
+      },
+      {
+        "line": 95,
+        "value": "01c-office-title"
+      },
+      {
+        "line": 97,
+        "value": "-en"
+      },
+      {
+        "line": 98,
+        "value": "v5-"
+      },
+      {
+        "line": 98,
+        "value": "01d-illustrated-introduction"
+      },
+      {
+        "line": 98,
+        "value": "illustrated introduction"
+      },
+      {
+        "line": 99,
+        "value": "cards"
+      },
+      {
+        "line": 106,
+        "value": "introduction cannot steal controls from an open archive"
+      },
+      {
+        "line": 107,
+        "value": "Close notebook"
+      },
+      {
+        "line": 109,
+        "value": "introduction returns control"
+      },
+      {
+        "line": 110,
+        "value": "office"
+      },
+      {
+        "line": 110,
+        "value": "save-resume"
+      },
+      {
+        "line": 110,
+        "value": "selected case owns the new model"
+      },
+      {
+        "line": 113,
+        "value": "PERFORMANCE / calm frames per second: "
+      },
+      {
+        "line": 113,
+        "value": " / focused="
+      },
+      {
+        "line": 113,
+        "value": " / vsync="
+      },
+      {
+        "line": 114,
+        "value": "perf"
+      },
+      {
+        "line": 115,
+        "value": "02-arrival"
+      },
+      {
+        "line": 116,
+        "value": "v5-"
+      },
+      {
+        "line": 119,
+        "value": "unavailable art cannot leave an invisible interaction target"
+      },
+      {
+        "line": 125,
+        "value": "collage is reachable through the real interaction ray"
+      },
+      {
+        "line": 126,
+        "value": "02c-gallery-collage"
+      },
+      {
+        "line": 128,
+        "value": "physical art opens its matching enlarged print"
+      },
+      {
+        "line": 129,
+        "value": "02d-visual-notes"
+      },
+      {
+        "line": 129,
+        "value": "visual notes"
+      },
+      {
+        "line": 130,
+        "value": "translated visual notes"
+      },
+      {
+        "line": 131,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 132,
+        "value": "reading and translating art does not spend resources, cards or a response"
+      },
+      {
+        "line": 135,
+        "value": "office-agreement"
+      },
+      {
+        "line": 138,
+        "value": "02b-workplan"
+      },
+      {
+        "line": 141,
+        "value": "pause freezes controls and time"
+      },
+      {
+        "line": 142,
+        "value": "03-pause"
+      },
+      {
+        "line": 143,
+        "value": "resume restores controls"
+      },
+      {
+        "line": 146,
+        "value": "122122"
+      },
+      {
+        "line": 147,
+        "value": "distance"
+      },
+      {
+        "line": 147,
+        "value": ""
+      },
+      {
+        "line": 148,
+        "value": "boundary"
+      },
+      {
+        "line": 148,
+        "value": "33"
+      },
+      {
+        "line": 149,
+        "value": "exhaustion"
+      },
+      {
+        "line": 149,
+        "value": "111111"
+      },
+      {
+        "line": 150,
+        "value": "falsepeace"
+      },
+      {
+        "line": 150,
+        "value": "211111"
+      },
+      {
+        "line": 151,
+        "value": "alliance"
+      },
+      {
+        "line": 151,
+        "value": "123311"
+      },
+      {
+        "line": 152,
+        "value": "loop"
+      },
+      {
+        "line": 152,
+        "value": "112221"
+      },
+      {
+        "line": 153,
+        "value": "refusal"
+      },
+      {
+        "line": 153,
+        "value": "331122"
+      },
+      {
+        "line": 154,
+        "value": "cards"
+      },
+      {
+        "line": 154,
+        "value": "222222"
+      },
+      {
+        "line": 155,
+        "value": "v3-"
+      },
+      {
+        "line": 155,
+        "value": "return"
+      },
+      {
+        "line": 155,
+        "value": "112222"
+      },
+      {
+        "line": 155,
+        "value": "222222"
+      },
+      {
+        "line": 155,
+        "value": "return"
+      },
+      {
+        "line": 155,
+        "value": "return"
+      },
+      {
+        "line": 156,
+        "value": "office"
+      },
+      {
+        "line": 156,
+        "value": "save-resume"
+      },
+      {
+        "line": 156,
+        "value": "232323"
+      },
+      {
+        "line": 157,
+        "value": "intrusion"
+      },
+      {
+        "line": 157,
+        "value": "222222"
+      },
+      {
+        "line": 158,
+        "value": "v4-office-alliance-cn"
+      },
+      {
+        "line": 158,
+        "value": "213111"
+      },
+      {
+        "line": 159,
+        "value": "session-nav"
+      },
+      {
+        "line": 159,
+        "value": ""
+      },
+      {
+        "line": 160,
+        "value": "cards"
+      },
+      {
+        "line": 167,
+        "value": "voice "
+      },
+      {
+        "line": 167,
+        "value": " round "
+      },
+      {
+        "line": 169,
+        "value": "voice opens three responses"
+      },
+      {
+        "line": 170,
+        "value": "office-agreement"
+      },
+      {
+        "line": 172,
+        "value": "last-round warning corresponds to a request still in hand"
+      },
+      {
+        "line": 174,
+        "value": "returning from an unchosen response spends nothing"
+      },
+      {
+        "line": 175,
+        "value": "13-office-public-request"
+      },
+      {
+        "line": 177,
+        "value": "player can deliver the missing request and reopen the same choice"
+      },
+      {
+        "line": 182,
+        "value": "Card / "
+      },
+      {
+        "line": 183,
+        "value": "card selected: "
+      },
+      {
+        "line": 189,
+        "value": "live language change preserves dialogue and equipped card"
+      },
+      {
+        "line": 190,
+        "value": "live language choice"
+      },
+      {
+        "line": 195,
+        "value": "04-choice-"
+      },
+      {
+        "line": 196,
+        "value": "choice "
+      },
+      {
+        "line": 197,
+        "value": "Option "
+      },
+      {
+        "line": 198,
+        "value": "feedback waits for the reader"
+      },
+      {
+        "line": 199,
+        "value": "shown costs match resolution"
+      },
+      {
+        "line": 200,
+        "value": "refusal"
+      },
+      {
+        "line": 201,
+        "value": "还没准备好"
+      },
+      {
+        "line": 201,
+        "value": "I'm not ready"
+      },
+      {
+        "line": 201,
+        "value": "unaccepted invitation is reported as hesitation"
+      },
+      {
+        "line": 202,
+        "value": "05-feedback-"
+      },
+      {
+        "line": 203,
+        "value": "feedback "
+      },
+      {
+        "line": 205,
+        "value": "a result cannot be selected twice"
+      },
+      {
+        "line": 206,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 207,
+        "value": "continue returns to the gallery"
+      },
+      {
+        "line": 208,
+        "value": "agreement"
+      },
+      {
+        "line": 208,
+        "value": "save-resume"
+      },
+      {
+        "line": 208,
+        "value": "v5-"
+      },
+      {
+        "line": 210,
+        "value": "12-office-private-no"
+      },
+      {
+        "line": 211,
+        "value": "office scope agreement does not waive private words"
+      },
+      {
+        "line": 212,
+        "value": "save-resume"
+      },
+      {
+        "line": 212,
+        "value": "v5-"
+      },
+      {
+        "line": 215,
+        "value": "13-office-public-request"
+      },
+      {
+        "line": 216,
+        "value": "actual public request arrives while private words stay private"
+      },
+      {
+        "line": 219,
+        "value": "save-resume"
+      },
+      {
+        "line": 221,
+        "value": "Checkpoint journey verification"
+      },
+      {
+        "line": 224,
+        "value": "v3-"
+      },
+      {
+        "line": 224,
+        "value": "return"
+      },
+      {
+        "line": 225,
+        "value": "12-return-"
+      },
+      {
+        "line": 226,
+        "value": "v3-"
+      },
+      {
+        "line": 226,
+        "value": "consent"
+      },
+      {
+        "line": 228,
+        "value": "12-permission"
+      },
+      {
+        "line": 231,
+        "value": "13-allowed-delivery"
+      },
+      {
+        "line": 232,
+        "value": "14-a-trusted-no"
+      },
+      {
+        "line": 233,
+        "value": "high trust does not turn a private need into permission"
+      },
+      {
+        "line": 234,
+        "value": "14-kept-private"
+      },
+      {
+        "line": 240,
+        "value": "rewind card reopens the last voice"
+      },
+      {
+        "line": 241,
+        "value": "rewind restores choice without refunding cards"
+      },
+      {
+        "line": 242,
+        "value": "rewind returns the spent breath"
+      },
+      {
+        "line": 243,
+        "value": "05b-revision"
+      },
+      {
+        "line": 243,
+        "value": "Option 2"
+      },
+      {
+        "line": 243,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 247,
+        "value": "notes keep the world from taking input"
+      },
+      {
+        "line": 248,
+        "value": "06-notebook"
+      },
+      {
+        "line": 248,
+        "value": "notebook"
+      },
+      {
+        "line": 249,
+        "value": "Read response / 0"
+      },
+      {
+        "line": 250,
+        "value": "06b-sentence-trace"
+      },
+      {
+        "line": 250,
+        "value": "sentence trace"
+      },
+      {
+        "line": 251,
+        "value": "Ending archive"
+      },
+      {
+        "line": 254,
+        "value": "Sentence focus"
+      },
+      {
+        "line": 254,
+        "value": "sentence reading layer blocks buttons behind it"
+      },
+      {
+        "line": 256,
+        "value": "language change preserves open sentence trace"
+      },
+      {
+        "line": 257,
+        "value": "translated trace"
+      },
+      {
+        "line": 258,
+        "value": "Close sentence trace"
+      },
+      {
+        "line": 260,
+        "value": "new round resets both voices"
+      },
+      {
+        "line": 263,
+        "value": "single-use card spent: "
+      },
+      {
+        "line": 264,
+        "value": "v3-"
+      },
+      {
+        "line": 264,
+        "value": "breach"
+      },
+      {
+        "line": 266,
+        "value": "12-unallowed-delivery"
+      },
+      {
+        "line": 267,
+        "value": "a disclosure revokes only the source's prior yes"
+      },
+      {
+        "line": 269,
+        "value": "13-acknowledge-and-ask-again"
+      },
+      {
+        "line": 270,
+        "value": "repair asks for a fresh yes without speaking for the other voice"
+      },
+      {
+        "line": 273,
+        "value": "your own exit"
+      },
+      {
+        "line": 274,
+        "value": "exit permits a personal decision at any stage"
+      },
+      {
+        "line": 275,
+        "value": "07-decision"
+      },
+      {
+        "line": 275,
+        "value": "final decision"
+      },
+      {
+        "line": 275,
+        "value": "Option "
+      },
+      {
+        "line": 277,
+        "value": "expected position: "
+      },
+      {
+        "line": 278,
+        "value": "ending can be read and explored"
+      },
+      {
+        "line": 279,
+        "value": "an ending retires its active checkpoint"
+      },
+      {
+        "line": 280,
+        "value": "ending locks narrative changes"
+      },
+      {
+        "line": 281,
+        "value": "08-ending"
+      },
+      {
+        "line": 281,
+        "value": "ending"
+      },
+      {
+        "line": 282,
+        "value": "v5-"
+      },
+      {
+        "line": 282,
+        "value": "store"
+      },
+      {
+        "line": 287,
+        "value": "Case navigation"
+      },
+      {
+        "line": 287,
+        "value": "art can be reread after an ending without menus covering it"
+      },
+      {
+        "line": 288,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 289,
+        "value": "closing the post-ending print returns exploration without changing the outcome"
+      },
+      {
+        "line": 291,
+        "value": "v4-"
+      },
+      {
+        "line": 294,
+        "value": "Case navigation"
+      },
+      {
+        "line": 294,
+        "value": "ending papers fold away while the completed state remains"
+      },
+      {
+        "line": 296,
+        "value": "08b-work-agreement-table"
+      },
+      {
+        "line": 301,
+        "value": "exit is physically walkable with solid floor"
+      },
+      {
+        "line": 302,
+        "value": "09-through-the-door"
+      },
+      {
+        "line": 307,
+        "value": "closed outcome retains a physical door"
+      },
+      {
+        "line": 310,
+        "value": "closed exit cannot be bypassed around its right side"
+      },
+      {
+        "line": 312,
+        "value": "current ending appears in archive without persisting test progress"
+      },
+      {
+        "line": 313,
+        "value": "10-ending-archive"
+      },
+      {
+        "line": 313,
+        "value": "archive"
+      },
+      {
+        "line": 315,
+        "value": "language change cannot overwrite an ending"
+      },
+      {
+        "line": 316,
+        "value": "session-nav"
+      },
+      {
+        "line": 318,
+        "value": "Case navigation verification"
+      },
+      {
+        "line": 321,
+        "value": "Restart verification"
+      },
+      {
+        "line": 327,
+        "value": "correspondence opens at the actual addressed door"
+      },
+      {
+        "line": 328,
+        "value": "Envelope source / "
+      },
+      {
+        "line": 328,
+        "value": "Message payload / "
+      },
+      {
+        "line": 332,
+        "value": "envelope action is available in its actual context: "
+      },
+      {
+        "line": 333,
+        "value": "-preview"
+      },
+      {
+        "line": 333,
+        "value": "correspondence preview / "
+      },
+      {
+        "line": 335,
+        "value": "live translation preserves envelope selection and action history"
+      },
+      {
+        "line": 336,
+        "value": "translated correspondence"
+      },
+      {
+        "line": 337,
+        "value": "Message action / "
+      },
+      {
+        "line": 338,
+        "value": "a correspondence action leaves one receipt"
+      },
+      {
+        "line": 340,
+        "value": "message preview agrees with all resolved costs and both trust changes"
+      },
+      {
+        "line": 341,
+        "value": "an exchange heard by another person cannot be erased with revision"
+      },
+      {
+        "line": 342,
+        "value": "-receipt"
+      },
+      {
+        "line": 342,
+        "value": "correspondence receipt"
+      },
+      {
+        "line": 344,
+        "value": "leaving the folio restores exploration"
+      },
+      {
+        "line": 352,
+        "value": "bench reachable by interaction ray"
+      },
+      {
+        "line": 354,
+        "value": "rest restores breath only once in a round"
+      },
+      {
+        "line": 355,
+        "value": "03b-rest-"
+      },
+      {
+        "line": 356,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 369,
+        "value": "PROFILE / mode="
+      },
+      {
+        "line": 369,
+        "value": " fps="
+      },
+      {
+        "line": 369,
+        "value": "0.0"
+      },
+      {
+        "line": 369,
+        "value": " atlas="
+      },
+      {
+        "line": 378,
+        "value": "QA button not interactable: "
+      },
+      {
+        "line": 382,
+        "value": "QA button occluded: "
+      },
+      {
+        "line": 382,
+        "value": " / hit="
+      },
+      {
+        "line": 382,
+        "value": "none"
+      },
+      {
+        "line": 382,
+        "value": " / point="
+      },
+      {
+        "line": 382,
+        "value": " / depth="
+      },
+      {
+        "line": 385,
+        "value": "QA button missing: "
+      },
+      {
+        "line": 391,
+        "value": " has an unobstructed interaction ray"
+      },
+      {
+        "line": 407,
+        "value": "SDF "
+      },
+      {
+        "line": 407,
+        "value": " "
+      },
+      {
+        "line": 407,
+        "value": "0"
+      },
+      {
+        "line": 407,
+        "value": "/"
+      },
+      {
+        "line": 407,
+        "value": "0"
+      },
+      {
+        "line": 414,
+        "value": "hidden leading glyph / "
+      },
+      {
+        "line": 416,
+        "value": "empty leading quad / "
+      },
+      {
+        "line": 418,
+        "value": "aspect"
+      },
+      {
+        "line": 418,
+        "value": "choice 0"
+      },
+      {
+        "line": 418,
+        "value": "Status Text"
+      },
+      {
+        "line": 418,
+        "value": "Card selected name"
+      },
+      {
+        "line": 418,
+        "value": "Controls"
+      },
+      {
+        "line": 420,
+        "value": ""
+      },
+      {
+        "line": 421,
+        "value": ":"
+      },
+      {
+        "line": 421,
+        "value": ":"
+      },
+      {
+        "line": 421,
+        "value": ";"
+      },
+      {
+        "line": 422,
+        "value": "GLYPH_PROBE / "
+      },
+      {
+        "line": 422,
+        "value": " / source="
+      },
+      {
+        "line": 422,
+        "value": " / "
+      },
+      {
+        "line": 425,
+        "value": " "
+      },
+      {
+        "line": 425,
+        "value": "0"
+      },
+      {
+        "line": 425,
+        "value": "/"
+      },
+      {
+        "line": 425,
+        "value": "0"
+      },
+      {
+        "line": 427,
+        "value": "text fits / "
+      },
+      {
+        "line": 427,
+        "value": " / "
+      },
+      {
+        "line": 427,
+        "value": ", "
+      },
+      {
+        "line": 427,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/DialogueUI.cs": {
+    "codeHash": "7e308b27974fcec1760403e843dfe77eab4ed978393b001127aa03ab5bf31176",
+    "strings": [
+      {
+        "line": 58,
+        "value": ""
+      },
+      {
+        "line": 59,
+        "value": ""
+      },
+      {
+        "line": 67,
+        "value": "03 / 你的位置"
+      },
+      {
+        "line": 67,
+        "value": "03 / WHERE YOU STAND"
+      },
+      {
+        "line": 73,
+        "value": "    /    "
+      },
+      {
+        "line": 73,
+        "value": "/3  "
+      },
+      {
+        "line": 90,
+        "value": "回到展厅，继续这一局"
+      },
+      {
+        "line": 90,
+        "value": "RETURN TO THE GALLERY"
+      },
+      {
+        "line": 90,
+        "value": "结束本次旅程"
+      },
+      {
+        "line": 90,
+        "value": "ENDS THIS JOURNEY"
+      },
+      {
+        "line": 91,
+        "value": "  /  "
+      },
+      {
+        "line": 93,
+        "value": "0"
+      },
+      {
+        "line": 93,
+        "value": "  /  "
+      },
+      {
+        "line": 93,
+        "value": "\n<size=18>        "
+      },
+      {
+        "line": 93,
+        "value": "</size>"
+      },
+      {
+        "line": 96,
+        "value": "1–3 决定自己的位置 / Tab 回看 / ESC 暂停"
+      },
+      {
+        "line": 96,
+        "value": "1–3 CHOOSE YOUR POSITION / TAB REVISIT / ESC PAUSE"
+      },
+      {
+        "line": 97,
+        "value": "1–3 回应 / Q 切换动作卡 / Tab 手记 / ESC 先返回展厅"
+      },
+      {
+        "line": 97,
+        "value": "1–3 RESPOND / Q CYCLE CARD / TAB NOTES / ESC RETURN TO GALLERY"
+      },
+      {
+        "line": 118,
+        "value": ""
+      },
+      {
+        "line": 119,
+        "value": ""
+      },
+      {
+        "line": 152,
+        "value": "空格 / E    返回展厅"
+      },
+      {
+        "line": 152,
+        "value": "SPACE / E    RETURN TO THE GALLERY"
+      },
+      {
+        "line": 152,
+        "value": "空格 / E    把这句话留在这里"
+      },
+      {
+        "line": 152,
+        "value": "SPACE / E    LET THESE WORDS REST"
+      },
+      {
+        "line": 154,
+        "value": "你可以随时回来，再读这幅图。"
+      },
+      {
+        "line": 154,
+        "value": "You may return and read this image again whenever you wish."
+      },
+      {
+        "line": 154,
+        "value": "反馈会等你读完。余力为 0 时，追问无法增加理解；可去长椅休息。"
+      },
+      {
+        "line": 154,
+        "value": "Take your time. At 0 BREATH, questions cannot deepen insight. Rest at the bench."
+      },
+      {
+        "line": 196,
+        "value": "03 / 你的位置"
+      },
+      {
+        "line": 196,
+        "value": "03 / WHERE YOU STAND"
+      },
+      {
+        "line": 199,
+        "value": "    /    "
+      },
+      {
+        "line": 199,
+        "value": "/3  "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/DoorController.cs": {
+    "codeHash": "116c8a561c49b296618435db22d4a63affad8088b62f6aba3a9bb4cff3e77407",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/DoorDialogue.cs": {
+    "codeHash": "67b31fad1997396bf2d05d25cf27cb3a3384c7bb8d0c6fe365675bb9d234c76d",
+    "strings": [
+      {
+        "line": 23,
+        "value": "prompt_press_e"
+      },
+      {
+        "line": 25,
+        "value": "speaker_red"
+      },
+      {
+        "line": 26,
+        "value": "speaker_blue"
+      },
+      {
+        "line": 26,
+        "value": "speaker_third"
+      },
+      {
+        "line": 28,
+        "value": "  /  "
+      },
+      {
+        "line": 28,
+        "value": "·3"
+      },
+      {
+        "line": 28,
+        "value": ""
+      },
+      {
+        "line": 30,
+        "value": " - "
+      },
+      {
+        "line": 106,
+        "value": "DoorDialogue could not find DialogueUI."
+      },
+      {
+        "line": 114,
+        "value": "这一轮的话先留在这里。\n"
+      },
+      {
+        "line": 114,
+        "value": "Let these words rest here for now.\n"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/Editor/BuildWindowsExe.cs": {
+    "codeHash": "8b8eaf76ab71b0f0ea4a1d76e76cc8691f32df9378ed4dd6533190f67e1d6919",
+    "strings": [
+      {
+        "line": 8,
+        "value": "Assets/Scenes/MainScene.unity"
+      },
+      {
+        "line": 9,
+        "value": "TheThirdDoor"
+      },
+      {
+        "line": 10,
+        "value": "Builds/Windows"
+      },
+      {
+        "line": 12,
+        "value": "Third Door/Build Windows EXE"
+      },
+      {
+        "line": 22,
+        "value": "The Third Door"
+      },
+      {
+        "line": 23,
+        "value": "ThirdDoor Prototype"
+      },
+      {
+        "line": 28,
+        "value": ".exe"
+      },
+      {
+        "line": 43,
+        "value": "[Build] Succeeded → {exePath}  size={summary.totalSize / 1024 / 1024} MB  time={summary.totalTime}"
+      },
+      {
+        "line": 48,
+        "value": "[Build] {summary.result} — see Console for errors."
+      },
+      {
+        "line": 52,
+        "value": "Third Door/Open Build Folder"
+      },
+      {
+        "line": 63,
+        "value": "Build folder doesn't exist yet — run \"Third Door/Build Windows EXE\" first."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/Editor/ConstructivistBuild.cs": {
+    "codeHash": "c71126e9ad757f5aa0fc137fe27820c67d4f05dbeaef4b287c73553d69d2364f",
+    "strings": [
+      {
+        "line": 9,
+        "value": "Assets/Scenes/ConstructivistDemo.unity"
+      },
+      {
+        "line": 10,
+        "value": "Third Door/Build Constructivist Demo"
+      },
+      {
+        "line": 14,
+        "value": "Demo scene missing"
+      },
+      {
+        "line": 16,
+        "value": "The Third Door"
+      },
+      {
+        "line": 17,
+        "value": "Third Door Studio"
+      },
+      {
+        "line": 28,
+        "value": "Builds/Constructivist/TheThirdDoor.exe"
+      },
+      {
+        "line": 36,
+        "value": "Constructivist build failed: "
+      },
+      {
+        "line": 37,
+        "value": "CONSTRUCTIVIST_BUILD / PASS / "
+      },
+      {
+        "line": 42,
+        "value": "ProjectSettings/GraphicsSettings.asset"
+      },
+      {
+        "line": 43,
+        "value": "m_AlwaysIncludedShaders"
+      },
+      {
+        "line": 44,
+        "value": "Universal Render Pipeline/Lit"
+      },
+      {
+        "line": 44,
+        "value": "Universal Render Pipeline/Unlit"
+      },
+      {
+        "line": 44,
+        "value": "UI/Default"
+      },
+      {
+        "line": 44,
+        "value": "TextMeshPro/Mobile/Distance Field"
+      },
+      {
+        "line": 47,
+        "value": "Required shader missing: "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/Editor/DoorPreviewSceneBuilder.cs": {
+    "codeHash": "c3439edd71fb9c45d4b7a375c6b19a9089adfbffd2b609745d9e88e144bb0900",
+    "strings": [
+      {
+        "line": 9,
+        "value": "Assets/ThirdDoor/ExternalAssets/ThirdDoor_Curated_AssetPack/Assets/DoorsAsset_FBX"
+      },
+      {
+        "line": 10,
+        "value": "Assets/Scenes/DoorPreviewScene.unity"
+      },
+      {
+        "line": 15,
+        "value": "Third Door/Build Door Preview Scene"
+      },
+      {
+        "line": 19,
+        "value": "DoorPreviewScene"
+      },
+      {
+        "line": 21,
+        "value": "Preview_RedDoor_Mat"
+      },
+      {
+        "line": 22,
+        "value": "Preview_BlueDoor_Mat"
+      },
+      {
+        "line": 23,
+        "value": "Preview_BlackDoor_Mat"
+      },
+      {
+        "line": 24,
+        "value": "Preview_Floor_Mat"
+      },
+      {
+        "line": 32,
+        "value": "{DoorAssetFolder}/Door_{i}_grp.fbx"
+      },
+      {
+        "line": 36,
+        "value": "Door preview asset not found: "
+      },
+      {
+        "line": 45,
+        "value": "Door_{i:00}_Preview"
+      },
+      {
+        "line": 53,
+        "value": "Door {i}"
+      },
+      {
+        "line": 58,
+        "value": "Assets/Scenes"
+      },
+      {
+        "line": 63,
+        "value": "Built door preview scene with {doorCount} doors: {PreviewScenePath}"
+      },
+      {
+        "line": 68,
+        "value": "Assets/ThirdDoor/Materials"
+      },
+      {
+        "line": 70,
+        "value": "{folder}/{materialName}.mat"
+      },
+      {
+        "line": 74,
+        "value": "Universal Render Pipeline/Lit"
+      },
+      {
+        "line": 77,
+        "value": "Standard"
+      },
+      {
+        "line": 86,
+        "value": "_Smoothness"
+      },
+      {
+        "line": 94,
+        "value": "Preview Floor"
+      },
+      {
+        "line": 102,
+        "value": "Preview Camera"
+      },
+      {
+        "line": 103,
+        "value": "MainCamera"
+      },
+      {
+        "line": 109,
+        "value": "Preview Directional Light"
+      },
+      {
+        "line": 169,
+        "value": " Label"
+      },
+      {
+        "line": 184,
+        "value": "Color Role Marker"
+      },
+      {
+        "line": 189,
+        "value": "Preview_RedMarker_Mat"
+      },
+      {
+        "line": 189,
+        "value": "Preview_BlueMarker_Mat"
+      },
+      {
+        "line": 189,
+        "value": "Preview_BlackMarker_Mat"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/Editor/ThirdDoorSceneBuilder.cs": {
+    "codeHash": "2079976b25999fc1aeca78d7dad15943c7ff23ccf97e7d8d4a862031e93e1a68",
+    "strings": [
+      {
+        "line": 10,
+        "value": "Assets/Scenes/MainScene.unity"
+      },
+      {
+        "line": 11,
+        "value": "Assets/ThirdDoor/Materials"
+      },
+      {
+        "line": 13,
+        "value": "Third Door/Build Playable Prototype Scene"
+      },
+      {
+        "line": 17,
+        "value": "MainScene"
+      },
+      {
+        "line": 19,
+        "value": "SceneBootstrapper"
+      },
+      {
+        "line": 33,
+        "value": "Built The Third Door prototype scene at "
+      },
+      {
+        "line": 42,
+        "value": "RedRoom_Mat"
+      },
+      {
+        "line": 42,
+        "value": "RedRoom_Mat"
+      },
+      {
+        "line": 43,
+        "value": "BlueRoom_Mat"
+      },
+      {
+        "line": 43,
+        "value": "BlueRoom_Mat"
+      },
+      {
+        "line": 44,
+        "value": "MiddleRoom_Mat"
+      },
+      {
+        "line": 44,
+        "value": "MiddleRoom_Mat"
+      },
+      {
+        "line": 45,
+        "value": "BlackDoor_Mat"
+      },
+      {
+        "line": 45,
+        "value": "BlackDoor_Mat"
+      },
+      {
+        "line": 46,
+        "value": "WhiteGlow_Mat"
+      },
+      {
+        "line": 46,
+        "value": "WhiteGlow_Mat"
+      },
+      {
+        "line": 47,
+        "value": "DarkWall_Mat"
+      },
+      {
+        "line": 47,
+        "value": "DarkWall_Mat"
+      },
+      {
+        "line": 58,
+        "value": " (Instance)"
+      },
+      {
+        "line": 70,
+        "value": "{MaterialFolder}/{materialName}.mat"
+      },
+      {
+        "line": 74,
+        "value": "Universal Render Pipeline/Lit"
+      },
+      {
+        "line": 77,
+        "value": "Standard"
+      },
+      {
+        "line": 88,
+        "value": "_Smoothness"
+      },
+      {
+        "line": 92,
+        "value": "_EMISSION"
+      },
+      {
+        "line": 93,
+        "value": "_EmissionColor"
+      },
+      {
+        "line": 97,
+        "value": "_EMISSION"
+      },
+      {
+        "line": 98,
+        "value": "_EmissionColor"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/EndingArchive.cs": {
+    "codeHash": "b1899dd64b6c0a31141ce3a66521b0e87d07a03474211bc0b1b882ddc57e4fa7",
+    "strings": [
+      {
+        "line": 5,
+        "value": "ThirdDoor_Endings_v2"
+      },
+      {
+        "line": 5,
+        "value": "ThirdDoor_Endings_Office_v1"
+      },
+      {
+        "line": 27,
+        "value": "--validate-demo="
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/EndingManager.cs": {
+    "codeHash": "509aac5c89e8a7859a6070588927856d4cc3f4aa7c818195abaae1297c0f9bae",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionDesign.cs": {
+    "codeHash": "2d56334e2bbac2c209881c7fb2ee6a7d6e85d89eb8ea823429a5f48fdc2754a0",
+    "strings": [
+      {
+        "line": 15,
+        "value": "Design/Display"
+      },
+      {
+        "line": 16,
+        "value": "Impact"
+      },
+      {
+        "line": 16,
+        "value": "Arial Narrow"
+      },
+      {
+        "line": 16,
+        "value": "Arial"
+      },
+      {
+        "line": 69,
+        "value": "Label"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionGraphic.cs": {
+    "codeHash": "dd323baec543967eee4acbbca275f52e15a4623c5473d16d8f298bf1dea7a43a",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionHUD.cs": {
+    "codeHash": "9142c3c36f9464e4fd0e10414873422f3ede337fec8c7117c7cf395a2a9fbf6b",
+    "strings": [
+      {
+        "line": 47,
+        "value": "help_hint"
+      },
+      {
+        "line": 48,
+        "value": "继续   /   RESUME"
+      },
+      {
+        "line": 48,
+        "value": "RESUME"
+      },
+      {
+        "line": 49,
+        "value": "R   /   重新开始"
+      },
+      {
+        "line": 49,
+        "value": "R   /   RESTART"
+      },
+      {
+        "line": 50,
+        "value": "退出作品   /   QUIT"
+      },
+      {
+        "line": 50,
+        "value": "QUIT"
+      },
+      {
+        "line": 51,
+        "value": "F2 / 中文 → English"
+      },
+      {
+        "line": 51,
+        "value": "F2 / ENGLISH → 中文"
+      },
+      {
+        "line": 52,
+        "value": "再玩本案例 / REPLAY"
+      },
+      {
+        "line": 52,
+        "value": "REPLAY THIS CASE"
+      },
+      {
+        "line": 53,
+        "value": "另一个案例 / NEXT CASE"
+      },
+      {
+        "line": 53,
+        "value": "PLAY THE OTHER CASE"
+      },
+      {
+        "line": 54,
+        "value": "返回目录 / TITLE"
+      },
+      {
+        "line": 54,
+        "value": "RETURN TO TITLE"
+      },
+      {
+        "line": 55,
+        "value": "返回目录 / TITLE"
+      },
+      {
+        "line": 55,
+        "value": "RETURN TO TITLE"
+      },
+      {
+        "line": 56,
+        "value": "按住 Alt 点击菜单 · R 重玩 · N 切换 · Home 目录"
+      },
+      {
+        "line": 56,
+        "value": "HOLD ALT TO CLICK · R REPLAY · N NEXT · HOME TITLE"
+      },
+      {
+        "line": 67,
+        "value": "鼠标灵敏度"
+      },
+      {
+        "line": 67,
+        "value": "MOUSE SENSITIVITY"
+      },
+      {
+        "line": 67,
+        "value": "   /   "
+      },
+      {
+        "line": 67,
+        "value": "0.00"
+      },
+      {
+        "line": 68,
+        "value": "声音"
+      },
+      {
+        "line": 68,
+        "value": "AUDIO"
+      },
+      {
+        "line": 68,
+        "value": "   /   "
+      },
+      {
+        "line": 68,
+        "value": "ON"
+      },
+      {
+        "line": 68,
+        "value": "OFF"
+      },
+      {
+        "line": 84,
+        "value": "空格 收起/展开结局 / Alt 点击菜单 / Tab 回看 / R 重玩 / N 切换案例 / Esc 暂停"
+      },
+      {
+        "line": 84,
+        "value": "SPACE FOLD / UNFOLD ENDING / ALT CLICK MENU / TAB REVISIT / R REPLAY / N NEXT CASE / ESC PAUSE"
+      },
+      {
+        "line": 84,
+        "value": "help_hint"
+      },
+      {
+        "line": 85,
+        "value": "案例完成 / "
+      },
+      {
+        "line": 85,
+        "value": "CASE COMPLETE / "
+      },
+      {
+        "line": 88,
+        "value": "ENDING 0"
+      },
+      {
+        "line": 88,
+        "value": " / 07"
+      },
+      {
+        "line": 88,
+        "value": "CASE 0"
+      },
+      {
+        "line": 88,
+        "value": " / ROUND 0"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionMeshLifetime.cs": {
+    "codeHash": "bae925a98d9240440a8dcfe362df269d5851b89e46c0f5af9a306c9bcce4d513",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionMotion.cs": {
+    "codeHash": "111c5066968d7f49b47177f6f603f61789959ee71995bc80f7dd335727e6beec",
+    "strings": [
+      {
+        "line": 9,
+        "value": "Raking afternoon light"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionResourceLifetime.cs": {
+    "codeHash": "67cb5664fd313e9444b7045df37bded31d32a7a5349da97b9aa7795325475fa2",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionText.cs": {
+    "codeHash": "f7d2a06dd67a444ff5dcee82c34e02b1a01b03a1bbd543b80992f6c5e1f2f781",
+    "strings": [
+      {
+        "line": 16,
+        "value": ""
+      },
+      {
+        "line": 99,
+        "value": "Print atlas fallback / "
+      },
+      {
+        "line": 99,
+        "value": " / "
+      },
+      {
+        "line": 104,
+        "value": "TextMeshPro/Mobile/Distance Field"
+      },
+      {
+        "line": 104,
+        "value": "TextMeshPro/Distance Field"
+      },
+      {
+        "line": 113,
+        "value": "impact.ttf"
+      },
+      {
+        "line": 113,
+        "value": "arialbd.ttf"
+      },
+      {
+        "line": 113,
+        "value": "arial.ttf"
+      },
+      {
+        "line": 113,
+        "value": "msyh.ttc"
+      },
+      {
+        "line": 113,
+        "value": "simhei.ttf"
+      },
+      {
+        "line": 113,
+        "value": "simsun.ttc"
+      },
+      {
+        "line": 113,
+        "value": "arial.ttf"
+      },
+      {
+        "line": 122,
+        "value": "Exhibition font unavailable: "
+      },
+      {
+        "line": 126,
+        "value": "Print SDF / "
+      },
+      {
+        "line": 128,
+        "value": "ResetAtlasTexture"
+      },
+      {
+        "line": 129,
+        "value": "GetGlyphIndex"
+      },
+      {
+        "line": 140,
+        "value": "TryAddGlyphsToTexture"
+      },
+      {
+        "line": 145,
+        "value": "Exhibition SDF / "
+      },
+      {
+        "line": 146,
+        "value": "m_Version"
+      },
+      {
+        "line": 146,
+        "value": "1.1.0"
+      },
+      {
+        "line": 146,
+        "value": "m_AtlasWidth"
+      },
+      {
+        "line": 146,
+        "value": "m_AtlasHeight"
+      },
+      {
+        "line": 146,
+        "value": "m_AtlasPadding"
+      },
+      {
+        "line": 146,
+        "value": "m_AtlasRenderMode"
+      },
+      {
+        "line": 150,
+        "value": "Print SDF material / "
+      },
+      {
+        "line": 151,
+        "value": "_MainTex"
+      },
+      {
+        "line": 151,
+        "value": "_TextureWidth"
+      },
+      {
+        "line": 151,
+        "value": "_TextureHeight"
+      },
+      {
+        "line": 151,
+        "value": "_GradientScale"
+      },
+      {
+        "line": 152,
+        "value": "_WeightNormal"
+      },
+      {
+        "line": 152,
+        "value": "_WeightBold"
+      },
+      {
+        "line": 154,
+        "value": "EXHIBITION_TEXT / "
+      },
+      {
+        "line": 154,
+        "value": " / glyphs="
+      },
+      {
+        "line": 154,
+        "value": " / packed="
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionUIBuilder.cs": {
+    "codeHash": "f949d71eafb0942c79d43a91256826d124959332f38a8303f5144b976c0571f3",
+    "strings": [
+      {
+        "line": 10,
+        "value": "Exhibition input"
+      },
+      {
+        "line": 12,
+        "value": "Exhibition / Graphic system"
+      },
+      {
+        "line": 21,
+        "value": "Masthead"
+      },
+      {
+        "line": 22,
+        "value": "Red registration"
+      },
+      {
+        "line": 23,
+        "value": "Exhibition name"
+      },
+      {
+        "line": 23,
+        "value": "THE THIRD DOOR"
+      },
+      {
+        "line": 24,
+        "value": "Edition"
+      },
+      {
+        "line": 24,
+        "value": "TWO CASES   /   AN INTERACTIVE STUDY   /   005"
+      },
+      {
+        "line": 26,
+        "value": "Footer paper"
+      },
+      {
+        "line": 28,
+        "value": "Footer rule"
+      },
+      {
+        "line": 30,
+        "value": "Controls"
+      },
+      {
+        "line": 30,
+        "value": "help_hint"
+      },
+      {
+        "line": 31,
+        "value": "Chapter"
+      },
+      {
+        "line": 31,
+        "value": "01 / ARRIVAL"
+      },
+      {
+        "line": 35,
+        "value": "Objective paper"
+      },
+      {
+        "line": 36,
+        "value": "Objective caption"
+      },
+      {
+        "line": 36,
+        "value": "CURRENT INTENTION"
+      },
+      {
+        "line": 37,
+        "value": "Status Text"
+      },
+      {
+        "line": 37,
+        "value": ""
+      },
+      {
+        "line": 38,
+        "value": "Interaction Prompt"
+      },
+      {
+        "line": 38,
+        "value": ""
+      },
+      {
+        "line": 41,
+        "value": "Focus"
+      },
+      {
+        "line": 47,
+        "value": "Dialogue Panel"
+      },
+      {
+        "line": 53,
+        "value": "Speaker Color Bar"
+      },
+      {
+        "line": 54,
+        "value": "Panel Top Accent"
+      },
+      {
+        "line": 55,
+        "value": "Speaker"
+      },
+      {
+        "line": 55,
+        "value": ""
+      },
+      {
+        "line": 56,
+        "value": "Speaker Underline"
+      },
+      {
+        "line": 57,
+        "value": "Line"
+      },
+      {
+        "line": 57,
+        "value": ""
+      },
+      {
+        "line": 58,
+        "value": "Result"
+      },
+      {
+        "line": 58,
+        "value": ""
+      },
+      {
+        "line": 62,
+        "value": "Option "
+      },
+      {
+        "line": 62,
+        "value": ""
+      },
+      {
+        "line": 67,
+        "value": "Ending paper"
+      },
+      {
+        "line": 69,
+        "value": "Ending Text"
+      },
+      {
+        "line": 69,
+        "value": ""
+      },
+      {
+        "line": 73,
+        "value": "Continue feedback"
+      },
+      {
+        "line": 73,
+        "value": ""
+      },
+      {
+        "line": 74,
+        "value": "Resource change"
+      },
+      {
+        "line": 74,
+        "value": ""
+      },
+      {
+        "line": 75,
+        "value": "Conversation input hint"
+      },
+      {
+        "line": 75,
+        "value": ""
+      },
+      {
+        "line": 85,
+        "value": "Pause paper"
+      },
+      {
+        "line": 88,
+        "value": "Pause edition"
+      },
+      {
+        "line": 88,
+        "value": "03 / INTERMISSION"
+      },
+      {
+        "line": 89,
+        "value": "Pause title"
+      },
+      {
+        "line": 89,
+        "value": "TAKE YOUR\nTIME."
+      },
+      {
+        "line": 90,
+        "value": "Resume"
+      },
+      {
+        "line": 90,
+        "value": "继续   /   RESUME"
+      },
+      {
+        "line": 90,
+        "value": "RESUME"
+      },
+      {
+        "line": 91,
+        "value": "Restart"
+      },
+      {
+        "line": 91,
+        "value": "R  /  "
+      },
+      {
+        "line": 91,
+        "value": "重新开始"
+      },
+      {
+        "line": 91,
+        "value": "RESTART"
+      },
+      {
+        "line": 92,
+        "value": "Return to title"
+      },
+      {
+        "line": 92,
+        "value": ""
+      },
+      {
+        "line": 93,
+        "value": "Quit"
+      },
+      {
+        "line": 93,
+        "value": "退出作品   /   QUIT"
+      },
+      {
+        "line": 93,
+        "value": "QUIT"
+      },
+      {
+        "line": 94,
+        "value": "Sensitivity label"
+      },
+      {
+        "line": 94,
+        "value": ""
+      },
+      {
+        "line": 95,
+        "value": "Slower"
+      },
+      {
+        "line": 95,
+        "value": "-"
+      },
+      {
+        "line": 96,
+        "value": "Faster"
+      },
+      {
+        "line": 96,
+        "value": "+"
+      },
+      {
+        "line": 97,
+        "value": "Audio"
+      },
+      {
+        "line": 97,
+        "value": ""
+      },
+      {
+        "line": 99,
+        "value": "Language setting"
+      },
+      {
+        "line": 99,
+        "value": ""
+      },
+      {
+        "line": 103,
+        "value": "Intro Black Overlay"
+      },
+      {
+        "line": 107,
+        "value": "Language Picker"
+      },
+      {
+        "line": 108,
+        "value": "Top rule"
+      },
+      {
+        "line": 109,
+        "value": "Title masthead"
+      },
+      {
+        "line": 109,
+        "value": "AN INTERACTIVE SPATIAL ESSAY"
+      },
+      {
+        "line": 110,
+        "value": "Title index"
+      },
+      {
+        "line": 110,
+        "value": "VOL. 05   /   2026"
+      },
+      {
+        "line": 111,
+        "value": "Title"
+      },
+      {
+        "line": 111,
+        "value": "THE\nTHIRD\nDOOR"
+      },
+      {
+        "line": 112,
+        "value": "Title red rule"
+      },
+      {
+        "line": 113,
+        "value": "Case Home"
+      },
+      {
+        "line": 113,
+        "value": ""
+      },
+      {
+        "line": 114,
+        "value": "Case Office"
+      },
+      {
+        "line": 114,
+        "value": ""
+      },
+      {
+        "line": 116,
+        "value": "Picker Title"
+      },
+      {
+        "line": 116,
+        "value": ""
+      },
+      {
+        "line": 117,
+        "value": "Case brief"
+      },
+      {
+        "line": 117,
+        "value": ""
+      },
+      {
+        "line": 118,
+        "value": "Btn Chinese"
+      },
+      {
+        "line": 118,
+        "value": "1   /   中文进入"
+      },
+      {
+        "line": 119,
+        "value": "Btn English"
+      },
+      {
+        "line": 119,
+        "value": "2   /   ENTER IN ENGLISH"
+      },
+      {
+        "line": 120,
+        "value": "Title footnote"
+      },
+      {
+        "line": 120,
+        "value": "TWO VOICES   /   WORDS IN YOUR HANDS   /   YOUR OWN WAY OUT"
+      },
+      {
+        "line": 122,
+        "value": "Continue saved journey"
+      },
+      {
+        "line": 122,
+        "value": ""
+      },
+      {
+        "line": 124,
+        "value": "Intro Text"
+      },
+      {
+        "line": 124,
+        "value": ""
+      },
+      {
+        "line": 127,
+        "value": "Intro Skip Hint"
+      },
+      {
+        "line": 127,
+        "value": ""
+      },
+      {
+        "line": 128,
+        "value": "Introduction art"
+      },
+      {
+        "line": 129,
+        "value": "Introduction case plate"
+      },
+      {
+        "line": 139,
+        "value": "Spatial poster"
+      },
+      {
+        "line": 140,
+        "value": "Registration circle"
+      },
+      {
+        "line": 141,
+        "value": "Vermilion disc"
+      },
+      {
+        "line": 142,
+        "value": "Diagonal"
+      },
+      {
+        "line": 143,
+        "value": "Paper cut"
+      },
+      {
+        "line": 144,
+        "value": "Door 01"
+      },
+      {
+        "line": 145,
+        "value": "Door 02"
+      },
+      {
+        "line": 146,
+        "value": "Door 03"
+      },
+      {
+        "line": 147,
+        "value": "Poster numeral"
+      },
+      {
+        "line": 147,
+        "value": "03"
+      },
+      {
+        "line": 148,
+        "value": "Poster caption"
+      },
+      {
+        "line": 148,
+        "value": "THE SPACE\nBETWEEN US."
+      },
+      {
+        "line": 149,
+        "value": "Baseline"
+      },
+      {
+        "line": 150,
+        "value": "Title case plate"
+      },
+      {
+        "line": 151,
+        "value": "Paper grain"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ExhibitionWorldType.cs": {
+    "codeHash": "8689658b5b1fc61afb2e2aba58995e9fd1588aed5aa3d4966ea745350f49021b",
+    "strings": [
+      {
+        "line": 12,
+        "value": "UI/Default"
+      },
+      {
+        "line": 14,
+        "value": "Depth-tested print"
+      },
+      {
+        "line": 17,
+        "value": "_TextureSampleAdd"
+      },
+      {
+        "line": 18,
+        "value": "unity_GUIZTestMode"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/FinalChoiceZone.cs": {
+    "codeHash": "fd7a745033c6db155e4e2422c2acd4d4a574a21ba39b88c31d3fe5ebdad5b53b",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/FocusHighlighter.cs": {
+    "codeHash": "a43d46f5be6ca1789a3fb444bb4f476c647b7b67ed226657c608c642af1c2e69",
+    "strings": [
+      {
+        "line": 28,
+        "value": "_EMISSION"
+      },
+      {
+        "line": 62,
+        "value": "_EmissionColor"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/GameStateManager.cs": {
+    "codeHash": "845f25461e0ac3d3c96b28259d21cad2b3b9321b6fc5619c73ad8b126e9013f9",
+    "strings": [
+      {
+        "line": 54,
+        "value": ""
+      },
+      {
+        "line": 61,
+        "value": ""
+      },
+      {
+        "line": 64,
+        "value": "\n"
+      },
+      {
+        "line": 64,
+        "value": "新一轮开始：获得“追问”与“翻译”。"
+      },
+      {
+        "line": 64,
+        "value": "NEW ROUND: LISTEN and REFRAME drawn."
+      },
+      {
+        "line": 64,
+        "value": "最后一轮：获得“代偿”与“重述”。G 可撤回上一句。"
+      },
+      {
+        "line": 64,
+        "value": "FINAL ROUND: TAKE OVER and SAY IT AGAIN drawn. G revises one response."
+      },
+      {
+        "line": 69,
+        "value": ""
+      },
+      {
+        "line": 71,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/IllustrationBuilder.cs": {
+    "codeHash": "7ed51c24a3a83b4ae046d81919e39c48661806c9c6016ea9e40aa1f010aa0e01",
+    "strings": [
+      {
+        "line": 10,
+        "value": "Print border"
+      },
+      {
+        "line": 12,
+        "value": "Case illustration"
+      },
+      {
+        "line": 16,
+        "value": "Print opening"
+      },
+      {
+        "line": 18,
+        "value": " caption"
+      },
+      {
+        "line": 18,
+        "value": ""
+      },
+      {
+        "line": 24,
+        "value": "05 / A sentence as an image"
+      },
+      {
+        "line": 26,
+        "value": "Gallery illustration frame"
+      },
+      {
+        "line": 27,
+        "value": "Art / carbon backing"
+      },
+      {
+        "line": 28,
+        "value": "Art / paper mount"
+      },
+      {
+        "line": 29,
+        "value": "Art / red register"
+      },
+      {
+        "line": 30,
+        "value": "Printed narrative collage"
+      },
+      {
+        "line": 32,
+        "value": "Art / narrative print"
+      },
+      {
+        "line": 34,
+        "value": ""
+      },
+      {
+        "line": 40,
+        "value": "Visual note plate"
+      },
+      {
+        "line": 41,
+        "value": "Visual note illustration"
+      },
+      {
+        "line": 42,
+        "value": "Visual note caption"
+      },
+      {
+        "line": 42,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/IllustrationLibrary.cs": {
+    "codeHash": "09dc5011e7006e3af75afdae5929c686006cb5cc8fe2bc83bd3df40e296bc75d",
+    "strings": [
+      {
+        "line": 14,
+        "value": "--art-fallback"
+      },
+      {
+        "line": 16,
+        "value": "CaseOffice-v1"
+      },
+      {
+        "line": 16,
+        "value": "CaseHome-v1"
+      },
+      {
+        "line": 17,
+        "value": "KeyArtMaster-v1"
+      },
+      {
+        "line": 22,
+        "value": "Design/Illustrations/"
+      },
+      {
+        "line": 27,
+        "value": ".."
+      },
+      {
+        "line": 27,
+        "value": "Art"
+      },
+      {
+        "line": 27,
+        "value": ".png"
+      },
+      {
+        "line": 30,
+        "value": "Illustration / "
+      },
+      {
+        "line": 36,
+        "value": "ILLUSTRATION / "
+      },
+      {
+        "line": 36,
+        "value": " unavailable: "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/IllustrationStation.cs": {
+    "codeHash": "4069277cdbe13477b9d5ba6730f61198db7e6f822de15a59e15e4fbcadbb13a2",
+    "strings": [
+      {
+        "line": 20,
+        "value": "_BaseMap"
+      },
+      {
+        "line": 20,
+        "value": "_BaseMap"
+      },
+      {
+        "line": 21,
+        "value": "_MainTex"
+      },
+      {
+        "line": 21,
+        "value": "_MainTex"
+      },
+      {
+        "line": 23,
+        "value": "PLATE 02 / KEEP A SPACE PRIVATE"
+      },
+      {
+        "line": 23,
+        "value": "PLATE 01 / CARE WITHOUT CARRYING"
+      },
+      {
+        "line": 25,
+        "value": "[ E ]  读这幅拼贴 / 图像手记"
+      },
+      {
+        "line": 25,
+        "value": "[ E ]  READ THE COLLAGE / VISUAL NOTES"
+      },
+      {
+        "line": 32,
+        "value": "留白属于留下它的人。\n你可以带走工作请求，把私人原因留给本人。\n有限的协议，也可以让那一栏继续空着。"
+      },
+      {
+        "line": 32,
+        "value": "The blank belongs to the person who left it.\nCarry the work request, not an invented private reason.\nA limited agreement can leave that space untouched."
+      },
+      {
+        "line": 33,
+        "value": "钥匙可以留下联系，不必成为索取的凭据。\n信封可以传递关心，不必占有你的声音。\n你可以放下红线，保留自己的出口。"
+      },
+      {
+        "line": 33,
+        "value": "A key keeps a connection; it need not become a claim.\nAn envelope can carry care without owning your voice.\nYou may put down the thread and keep your own exit."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/Interactable.cs": {
+    "codeHash": "b419f7449b147b8282313388b4f010a054f61736378399e070dfe447c04b8e3a",
+    "strings": [
+      {
+        "line": 6,
+        "value": ""
+      },
+      {
+        "line": 7,
+        "value": ""
+      },
+      {
+        "line": 15,
+        "value": "prompt_press_e"
+      },
+      {
+        "line": 17,
+        "value": " - "
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/InteractionPrompt.cs": {
+    "codeHash": "6984fcace4df6b5b456b592d294a059de41a67f6de801f5286976605ecc829b2",
+    "strings": [
+      {
+        "line": 48,
+        "value": "\n"
+      },
+      {
+        "line": 48,
+        "value": "[ F ]  处理在手的话 / 转述许可与交付"
+      },
+      {
+        "line": 48,
+        "value": "[ F ]  CORRESPONDENCE / PERMISSION AND DELIVERY"
+      },
+      {
+        "line": 74,
+        "value": "[Interaction] player is null"
+      },
+      {
+        "line": 77,
+        "value": "[Interaction] player pos={player.transform.position} controlsEnabled={player.ControlsEnabled}"
+      },
+      {
+        "line": 80,
+        "value": "[Interaction] PlayerCamera is null"
+      },
+      {
+        "line": 85,
+        "value": "[Interaction] camera origin={origin} forward={dir}"
+      },
+      {
+        "line": 90,
+        "value": "[Interaction] SphereCast hit: collider={hit.collider.name} on GO={hit.collider.gameObject.name} layer={hit.collider.gameObject.layer} dist={hit.distance:F2}m Interactable={(found != null ? found.GetType().Name : "
+      },
+      {
+        "line": 90,
+        "value": ")} CanInteract={(found != null ? found.CanInteract(player).ToString() : "
+      },
+      {
+        "line": 90,
+        "value": ")}"
+      },
+      {
+        "line": 94,
+        "value": "[Interaction] SphereCast: no hit within "
+      },
+      {
+        "line": 94,
+        "value": "m"
+      },
+      {
+        "line": 100,
+        "value": "[Interaction] Raycast hit: collider={rayHit.collider.name} on GO={rayHit.collider.gameObject.name} dist={rayHit.distance:F2}m Interactable={(found != null ? found.GetType().Name : "
+      },
+      {
+        "line": 100,
+        "value": ")} CanInteract={(found != null ? found.CanInteract(player).ToString() : "
+      },
+      {
+        "line": 100,
+        "value": ")}"
+      },
+      {
+        "line": 104,
+        "value": "[Interaction] Raycast: no hit within "
+      },
+      {
+        "line": 104,
+        "value": "m"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/IntroSequence.cs": {
+    "codeHash": "cf426e67954e7949d1cba1bf1f1139a18fdaebb814f250625ff3486253b7d6a0",
+    "strings": [
+      {
+        "line": 55,
+        "value": "●   "
+      },
+      {
+        "line": 55,
+        "value": "○   "
+      },
+      {
+        "line": 56,
+        "value": "●   "
+      },
+      {
+        "line": 56,
+        "value": "○   "
+      },
+      {
+        "line": 60,
+        "value": "继续上次 / CONTINUE"
+      },
+      {
+        "line": 60,
+        "value": "CONTINUE SAVED JOURNEY"
+      },
+      {
+        "line": 70,
+        "value": "intro_skip_hint"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/LetterDisperse.cs": {
+    "codeHash": "ba6ac5dace0f81d74f1b253a0e5b52e0a42cb376e46bbe5220d7e402ceb0d9d0",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/LocalizationManager.cs": {
+    "codeHash": "2d38be7ec09019ab1e05c7d7ac0348742c55e538087ccb62f814137032d5f565",
+    "strings": [
+      {
+        "line": 14,
+        "value": "ThirdDoor_Language"
+      },
+      {
+        "line": 67,
+        "value": "["
+      },
+      {
+        "line": 67,
+        "value": "]"
+      },
+      {
+        "line": 73,
+        "value": "intro_line_1"
+      },
+      {
+        "line": 73,
+        "value": "她请你带一句话。"
+      },
+      {
+        "line": 74,
+        "value": "intro_line_2"
+      },
+      {
+        "line": 74,
+        "value": "他请你守一道门。"
+      },
+      {
+        "line": 75,
+        "value": "intro_line_3"
+      },
+      {
+        "line": 75,
+        "value": "而你，站在他们中间。"
+      },
+      {
+        "line": 76,
+        "value": "intro_title"
+      },
+      {
+        "line": 76,
+        "value": "《第三扇门》"
+      },
+      {
+        "line": 77,
+        "value": "intro_skip_hint"
+      },
+      {
+        "line": 77,
+        "value": "空格 / Enter 进入展厅"
+      },
+      {
+        "line": 80,
+        "value": "lang_title"
+      },
+      {
+        "line": 80,
+        "value": "选择语言   ·   Choose Language"
+      },
+      {
+        "line": 81,
+        "value": "lang_cn"
+      },
+      {
+        "line": 81,
+        "value": "中文"
+      },
+      {
+        "line": 82,
+        "value": "lang_en"
+      },
+      {
+        "line": 82,
+        "value": "English"
+      },
+      {
+        "line": 85,
+        "value": "status_initial"
+      },
+      {
+        "line": 85,
+        "value": "沿红线走向 01，听她的声音。"
+      },
+      {
+        "line": 86,
+        "value": "status_third_door_tried"
+      },
+      {
+        "line": 86,
+        "value": "出口还未打开。先听 01，再听 02。"
+      },
+      {
+        "line": 87,
+        "value": "status_red_door_pending"
+      },
+      {
+        "line": 87,
+        "value": "走向 01，听她的声音。"
+      },
+      {
+        "line": 88,
+        "value": "status_blue_door_pending"
+      },
+      {
+        "line": 88,
+        "value": "走向 02，听他的声音。"
+      },
+      {
+        "line": 89,
+        "value": "status_final_available"
+      },
+      {
+        "line": 89,
+        "value": "走向 03。决定你在关系中的位置。"
+      },
+      {
+        "line": 92,
+        "value": "speaker_red"
+      },
+      {
+        "line": 92,
+        "value": "01 / 牵挂"
+      },
+      {
+        "line": 93,
+        "value": "speaker_blue"
+      },
+      {
+        "line": 93,
+        "value": "02 / 距离"
+      },
+      {
+        "line": 94,
+        "value": "speaker_third"
+      },
+      {
+        "line": 94,
+        "value": "03 / 边界"
+      },
+      {
+        "line": 97,
+        "value": "red_line"
+      },
+      {
+        "line": 97,
+        "value": "“告诉他，他不能总是把我关在门外。”"
+      },
+      {
+        "line": 98,
+        "value": "red_opt_a"
+      },
+      {
+        "line": 98,
+        "value": "我会把话带给他。"
+      },
+      {
+        "line": 99,
+        "value": "red_opt_b"
+      },
+      {
+        "line": 99,
+        "value": "你究竟想让他听见什么？"
+      },
+      {
+        "line": 100,
+        "value": "red_opt_c"
+      },
+      {
+        "line": 100,
+        "value": "你自己跟他说。"
+      },
+      {
+        "line": 101,
+        "value": "red_fb_a"
+      },
+      {
+        "line": 101,
+        "value": "你接过她的话。\n两人的距离，又落在你的肩上。"
+      },
+      {
+        "line": 102,
+        "value": "red_fb_b"
+      },
+      {
+        "line": 102,
+        "value": "“我只是怕，他不再需要我。”\n责备的背后，原来是害怕。"
+      },
+      {
+        "line": 103,
+        "value": "red_fb_c"
+      },
+      {
+        "line": 103,
+        "value": "她沉默了。\n一句拒绝，还没有让她被听见。"
+      },
+      {
+        "line": 104,
+        "value": "red_already"
+      },
+      {
+        "line": 104,
+        "value": "她的声音暂时安静了。去听 02 的声音。"
+      },
+      {
+        "line": 107,
+        "value": "blue_line"
+      },
+      {
+        "line": 107,
+        "value": "“让她别再替我决定一切。我需要喘口气。”"
+      },
+      {
+        "line": 108,
+        "value": "blue_opt_a"
+      },
+      {
+        "line": 108,
+        "value": "我会替你挡住她。"
+      },
+      {
+        "line": 109,
+        "value": "blue_opt_b"
+      },
+      {
+        "line": 109,
+        "value": "你是想她离开，还是想要空间？"
+      },
+      {
+        "line": 110,
+        "value": "blue_opt_c"
+      },
+      {
+        "line": 110,
+        "value": "你自己跟她说。"
+      },
+      {
+        "line": 111,
+        "value": "blue_fb_a"
+      },
+      {
+        "line": 111,
+        "value": "你成了挡在他们中间的墙。\n保护，也可以成为另一种传话。"
+      },
+      {
+        "line": 112,
+        "value": "blue_fb_b"
+      },
+      {
+        "line": 112,
+        "value": "“我需要自己的空间，不是失去她。”\n这句话，应该由他亲口说。"
+      },
+      {
+        "line": 113,
+        "value": "blue_fb_c_with"
+      },
+      {
+        "line": 113,
+        "value": "他终于抬起头。\n“好，这次我自己说。”"
+      },
+      {
+        "line": 114,
+        "value": "blue_fb_c_without"
+      },
+      {
+        "line": 114,
+        "value": "他退回门后。\n有些话，还没有被理解。"
+      },
+      {
+        "line": 115,
+        "value": "blue_red_not_done"
+      },
+      {
+        "line": 115,
+        "value": "先听 01 的声音。再回到这里。"
+      },
+      {
+        "line": 116,
+        "value": "blue_already"
+      },
+      {
+        "line": 116,
+        "value": "两种声音都留在这里了。现在去 03 作决定。"
+      },
+      {
+        "line": 119,
+        "value": "third_line"
+      },
+      {
+        "line": 119,
+        "value": "他们都在等你。\n这一次，你要站在哪里？"
+      },
+      {
+        "line": 120,
+        "value": "third_opt_a"
+      },
+      {
+        "line": 120,
+        "value": "我会继续替她和他传话。"
+      },
+      {
+        "line": 121,
+        "value": "third_opt_b"
+      },
+      {
+        "line": 121,
+        "value": "让他们直接说。我退出。"
+      },
+      {
+        "line": 122,
+        "value": "third_locked"
+      },
+      {
+        "line": 122,
+        "value": "门没有回应。\n先听完 01 和 02，再决定怎样离开。"
+      },
+      {
+        "line": 125,
+        "value": "ending_good"
+      },
+      {
+        "line": 125,
+        "value": "结局 01 / 退出三角\n你不再替他们说话。\n关系留给他们，路留给自己。"
+      },
+      {
+        "line": 126,
+        "value": "ending_bad"
+      },
+      {
+        "line": 126,
+        "value": "结局 02 / 再次循环\n你仍站在两人的中间。\n有些话，还没有真正被听见。"
+      },
+      {
+        "line": 127,
+        "value": "ending_restart"
+      },
+      {
+        "line": 127,
+        "value": "R 重新体验   /   你可以继续探索"
+      },
+      {
+        "line": 130,
+        "value": "prompt_press_e"
+      },
+      {
+        "line": 130,
+        "value": "[ E ]  倾听"
+      },
+      {
+        "line": 131,
+        "value": "help_hint"
+      },
+      {
+        "line": 131,
+        "value": "WASD 行走 / 鼠标观察 / E 倾听 / F 传话 / 1–3 回应 / Q 卡牌 / Tab 手记 / ESC 暂停 / R 重玩 / F2 语言"
+      },
+      {
+        "line": 132,
+        "value": "scene_not_ready"
+      },
+      {
+        "line": 132,
+        "value": "场景还没有准备好。请退出 Play Mode 后重新进入。"
+      },
+      {
+        "line": 138,
+        "value": "intro_line_1"
+      },
+      {
+        "line": 138,
+        "value": "She asks you to carry a message."
+      },
+      {
+        "line": 139,
+        "value": "intro_line_2"
+      },
+      {
+        "line": 139,
+        "value": "He asks you to hold a boundary."
+      },
+      {
+        "line": 140,
+        "value": "intro_line_3"
+      },
+      {
+        "line": 140,
+        "value": "And you stand between them."
+      },
+      {
+        "line": 141,
+        "value": "intro_title"
+      },
+      {
+        "line": 141,
+        "value": "The Third Door"
+      },
+      {
+        "line": 142,
+        "value": "intro_skip_hint"
+      },
+      {
+        "line": 142,
+        "value": "SPACE / ENTER TO STEP INSIDE"
+      },
+      {
+        "line": 145,
+        "value": "lang_title"
+      },
+      {
+        "line": 145,
+        "value": "选择语言   ·   Choose Language"
+      },
+      {
+        "line": 146,
+        "value": "lang_cn"
+      },
+      {
+        "line": 146,
+        "value": "中文"
+      },
+      {
+        "line": 147,
+        "value": "lang_en"
+      },
+      {
+        "line": 147,
+        "value": "English"
+      },
+      {
+        "line": 150,
+        "value": "status_initial"
+      },
+      {
+        "line": 150,
+        "value": "Follow the red line to 01. Listen to her."
+      },
+      {
+        "line": 151,
+        "value": "status_third_door_tried"
+      },
+      {
+        "line": 151,
+        "value": "The exit is closed. Listen to 01, then 02."
+      },
+      {
+        "line": 152,
+        "value": "status_red_door_pending"
+      },
+      {
+        "line": 152,
+        "value": "Approach 01. Listen to her."
+      },
+      {
+        "line": 153,
+        "value": "status_blue_door_pending"
+      },
+      {
+        "line": 153,
+        "value": "Approach 02. Listen to him."
+      },
+      {
+        "line": 154,
+        "value": "status_final_available"
+      },
+      {
+        "line": 154,
+        "value": "Approach 03. Choose where you stand."
+      },
+      {
+        "line": 157,
+        "value": "speaker_red"
+      },
+      {
+        "line": 157,
+        "value": "01 / THE WEIGHT"
+      },
+      {
+        "line": 158,
+        "value": "speaker_blue"
+      },
+      {
+        "line": 158,
+        "value": "02 / THE DISTANCE"
+      },
+      {
+        "line": 159,
+        "value": "speaker_third"
+      },
+      {
+        "line": 159,
+        "value": "03 / THE BOUNDARY"
+      },
+      {
+        "line": 162,
+        "value": "red_line"
+      },
+      {
+        "line": 162,
+        "value": "Tell him he can't keep shutting me out."
+      },
+      {
+        "line": 163,
+        "value": "red_opt_a"
+      },
+      {
+        "line": 163,
+        "value": "I'll pass it on to him."
+      },
+      {
+        "line": 164,
+        "value": "red_opt_b"
+      },
+      {
+        "line": 164,
+        "value": "What do you actually want him to hear?"
+      },
+      {
+        "line": 165,
+        "value": "red_opt_c"
+      },
+      {
+        "line": 165,
+        "value": "Tell him yourself."
+      },
+      {
+        "line": 166,
+        "value": "red_fb_a"
+      },
+      {
+        "line": 166,
+        "value": "You take her words with you.\nThe distance between them becomes your burden."
+      },
+      {
+        "line": 167,
+        "value": "red_fb_b"
+      },
+      {
+        "line": 167,
+        "value": "I'm afraid he doesn't need me anymore.\nBeneath the accusation, a fear."
+      },
+      {
+        "line": 168,
+        "value": "red_fb_c"
+      },
+      {
+        "line": 168,
+        "value": "She falls silent.\nA refusal has not made her feel heard."
+      },
+      {
+        "line": 169,
+        "value": "red_already"
+      },
+      {
+        "line": 169,
+        "value": "Her voice rests here. Listen to 02."
+      },
+      {
+        "line": 172,
+        "value": "blue_line"
+      },
+      {
+        "line": 172,
+        "value": "Tell her to stop deciding everything for me. I need to breathe."
+      },
+      {
+        "line": 173,
+        "value": "blue_opt_a"
+      },
+      {
+        "line": 173,
+        "value": "I'll keep her away from you."
+      },
+      {
+        "line": 174,
+        "value": "blue_opt_b"
+      },
+      {
+        "line": 174,
+        "value": "Do you want her gone, or do you want space?"
+      },
+      {
+        "line": 175,
+        "value": "blue_opt_c"
+      },
+      {
+        "line": 175,
+        "value": "Tell her yourself."
+      },
+      {
+        "line": 176,
+        "value": "blue_fb_a"
+      },
+      {
+        "line": 176,
+        "value": "You become the wall between them.\nProtection can be another way of carrying words."
+      },
+      {
+        "line": 177,
+        "value": "blue_fb_b"
+      },
+      {
+        "line": 177,
+        "value": "I need my own space. I don't need to lose her.\nThese are words he could say himself."
+      },
+      {
+        "line": 178,
+        "value": "blue_fb_c_with"
+      },
+      {
+        "line": 178,
+        "value": "He looks up.\nAll right. This time, I'll say it myself."
+      },
+      {
+        "line": 179,
+        "value": "blue_fb_c_without"
+      },
+      {
+        "line": 179,
+        "value": "He retreats behind the door.\nSomething remains unheard."
+      },
+      {
+        "line": 180,
+        "value": "blue_red_not_done"
+      },
+      {
+        "line": 180,
+        "value": "Listen to 01 first. Then return here."
+      },
+      {
+        "line": 181,
+        "value": "blue_already"
+      },
+      {
+        "line": 181,
+        "value": "Both voices rest here. Go to 03 and decide."
+      },
+      {
+        "line": 184,
+        "value": "third_line"
+      },
+      {
+        "line": 184,
+        "value": "They're both waiting for you.\nThis time, where will you stand?"
+      },
+      {
+        "line": 185,
+        "value": "third_opt_a"
+      },
+      {
+        "line": 185,
+        "value": "I'll keep carrying their words."
+      },
+      {
+        "line": 186,
+        "value": "third_opt_b"
+      },
+      {
+        "line": 186,
+        "value": "Let them speak directly. I step out."
+      },
+      {
+        "line": 187,
+        "value": "third_locked"
+      },
+      {
+        "line": 187,
+        "value": "The door is silent.\nListen to 01 and 02 before deciding how to leave."
+      },
+      {
+        "line": 190,
+        "value": "ending_good"
+      },
+      {
+        "line": 190,
+        "value": "ENDING 01 / RELEASE\nTheir words belong to them.\nThe way forward belongs to you."
+      },
+      {
+        "line": 191,
+        "value": "ending_bad"
+      },
+      {
+        "line": 191,
+        "value": "ENDING 02 / THE LOOP\nYou still stand between them.\nSomething has yet to be heard."
+      },
+      {
+        "line": 192,
+        "value": "ending_restart"
+      },
+      {
+        "line": 192,
+        "value": "R TO REPLAY   /   KEEP EXPLORING"
+      },
+      {
+        "line": 195,
+        "value": "prompt_press_e"
+      },
+      {
+        "line": 195,
+        "value": "[ E ]  LISTEN"
+      },
+      {
+        "line": 196,
+        "value": "help_hint"
+      },
+      {
+        "line": 196,
+        "value": "WASD MOVE / MOUSE LOOK / E LISTEN / F MESSAGE / 1–3 REPLY / Q CARDS / TAB NOTES / ESC PAUSE / R REPLAY / F2 LANG"
+      },
+      {
+        "line": 197,
+        "value": "scene_not_ready"
+      },
+      {
+        "line": 197,
+        "value": "Scene isn't ready. Please exit Play Mode and re-enter."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/LockedFeedback.cs": {
+    "codeHash": "f3b3c07a2b71fa961e5a9f70ebb55b70e2b2bfcd17e66287fcba861def32d0bb",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeCardTray.cs": {
+    "codeHash": "4532ee8f148c26c2140f68484dcaa00805790cdf764fbc2705e0c37b46cda225",
+    "strings": [
+      {
+        "line": 53,
+        "value": "他们的决定 / 你的边界"
+      },
+      {
+        "line": 53,
+        "value": "THEIR CHOICE / YOUR LIMITS"
+      },
+      {
+        "line": 53,
+        "value": "动作卡 / 每种一张"
+      },
+      {
+        "line": 53,
+        "value": "ACTION CARDS / ONE OF EACH"
+      },
+      {
+        "line": 54,
+        "value": "离开不需要通关"
+      },
+      {
+        "line": 54,
+        "value": "NO NEED TO EARN AN EXIT"
+      },
+      {
+        "line": 54,
+        "value": "让一句话停在这里"
+      },
+      {
+        "line": 54,
+        "value": "LET A SENTENCE REST"
+      },
+      {
+        "line": 55,
+        "value": "共同的桌子，需要双方的理解与同意。\n自己的出口，不需要他们先和好。\nTab 可回看你听见和说过的每句话。"
+      },
+      {
+        "line": 55,
+        "value": "A shared table needs understanding and consent.\nYour own exit does not require reconciliation.\nTAB revisits what you heard and said."
+      },
+      {
+        "line": 55,
+        "value": "没有倒计时。\n你不需要用每一秒来回应别人。\n读完以后，空格或 E 继续。"
+      },
+      {
+        "line": 55,
+        "value": "There is no countdown.\nNot every moment has to be a response.\nSPACE or E when you are ready."
+      },
+      {
+        "line": 63,
+        "value": "● "
+      },
+      {
+        "line": 63,
+        "value": ""
+      },
+      {
+        "line": 63,
+        "value": "  /  1"
+      },
+      {
+        "line": 63,
+        "value": ""
+      },
+      {
+        "line": 63,
+        "value": "\n<size=16>"
+      },
+      {
+        "line": 63,
+        "value": "点击选用"
+      },
+      {
+        "line": 63,
+        "value": "SELECT"
+      },
+      {
+        "line": 63,
+        "value": "</size>"
+      },
+      {
+        "line": 68,
+        "value": "不出牌 / Q 循环切换"
+      },
+      {
+        "line": 68,
+        "value": "NO CARD / Q TO CYCLE"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeFontWarmup.cs": {
+    "codeHash": "ae58ea341a9f26ed18bd8cf4c14984566bb08dcd7f3969ddcb344434f6176b6c",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeGlyphs.cs": {
+    "codeHash": "ca11ed838f96559064fc051371f40cf89e38dc7873d0d08e286d24452a99796f",
+    "strings": [
+      {
+        "line": 4,
+        "value": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~°·–—‘’“”…→≥○●、。《》一三上下不与两个中为主久么之也了争事于五些交享亮亲人什仅仍从他付代以们件任份休会传似但位低住体何余作你使例依侧保信修倒借倾做停偿像儿允先入公共关内再写决冷准凭出击分切划刚判利别到前力办加务动劳匙协单占卡却厅压厘厚原去参又双反发取受变口句另只可各同名后向吗否吧听吵呈告呢周和品哪唯商喘回因围图在地场坏堵填墙增声处备复外多够大天太失头夹她好如始子学宁它守安宋完定实审室害家容密察对封少尚尝就尽局层展属崩工左差己已带帮幅干平并应底度建开弃弄式张归当录形彼征很得循微心必忙怎怕思总恢息情想意感愿慢懂成我或房所扇手才打扣执承把护抬抹担拒拖拥择拼拿持挂按挡换据排探接推措提搜搬撑撤擅收改放敏整文断新方旁旅无日时明是晚景暂更替最有服望期未本权束条来果标栏样核格案桌档椅楚欠次歇歉止正此步段每比气永求沉没沿法活消润深清渡温源满漂漠澄灵点然照牌牵状独玩环现班理生用由申界留疑白的盟目盯直相看真着知硬确离私种秒移程稳稿究空立站竟第等答算管系索红线细终经结给绝继续维编置美翻而耗耳联肩背能脆自至舒色节范草获菜落藏行补表被要见观览觉角解言计认让议记许证评诉译试话询该语说请诺读谁调谅谈负责贴资赖走起超越足距跟路身转轮软载较辞边达过近返还这进远连迟述追退送选递通造道邀那部都释里重量钥长门问间队防降限随隐难雅集需静非靠面音项须顾顿预题额馈马验黑默鼠齐（），：；？"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeInstallationBuilder.cs": {
+    "codeHash": "0a49ab1f4343006ff6f5198233115f18d997c7ccf44af94c31abbbdf8565d59c",
+    "strings": [
+      {
+        "line": 7,
+        "value": "03 / The weight of a sentence"
+      },
+      {
+        "line": 9,
+        "value": "00 / A place for yourself"
+      },
+      {
+        "line": 11,
+        "value": "Rest / seat"
+      },
+      {
+        "line": 12,
+        "value": "Rest / red foot"
+      },
+      {
+        "line": 13,
+        "value": "Rest / ink foot"
+      },
+      {
+        "line": 14,
+        "value": "Rest / back plaque"
+      },
+      {
+        "line": 15,
+        "value": "00 / REST\nYOU HAVE A PLACE HERE."
+      },
+      {
+        "line": 18,
+        "value": "Rest / breathing space"
+      },
+      {
+        "line": 20,
+        "value": "A line of your own"
+      },
+      {
+        "line": 22,
+        "value": "A shared table / needs two yeses"
+      },
+      {
+        "line": 24,
+        "value": "Table top"
+      },
+      {
+        "line": 25,
+        "value": "Table leg / 01"
+      },
+      {
+        "line": 26,
+        "value": "Table leg / 02"
+      },
+      {
+        "line": 29,
+        "value": "SPEAK / LISTEN"
+      },
+      {
+        "line": 34,
+        "value": "CARRY"
+      },
+      {
+        "line": 34,
+        "value": "SOFTEN"
+      },
+      {
+        "line": 34,
+        "value": "DEFEND"
+      },
+      {
+        "line": 34,
+        "value": "FIX"
+      },
+      {
+        "line": 34,
+        "value": "PROMISE"
+      },
+      {
+        "line": 34,
+        "value": "HOLD"
+      },
+      {
+        "line": 34,
+        "value": "ONE MORE"
+      },
+      {
+        "line": 34,
+        "value": "FOR THEM"
+      },
+      {
+        "line": 37,
+        "value": "Carried sentence / "
+      },
+      {
+        "line": 38,
+        "value": "Paper"
+      },
+      {
+        "line": 45,
+        "value": "Connection / "
+      },
+      {
+        "line": 50,
+        "value": "The revolving obligation"
+      },
+      {
+        "line": 51,
+        "value": "I / BORROWED VOICES"
+      },
+      {
+        "line": 57,
+        "value": "A voice has its own seat"
+      },
+      {
+        "line": 58,
+        "value": "Seat"
+      },
+      {
+        "line": 59,
+        "value": "Support"
+      },
+      {
+        "line": 60,
+        "value": "Back"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeNotebook.cs": {
+    "codeHash": "5d0fd711ad26bc361586a67f9503aad897e6afac090427ff65e607ef447f695d",
+    "strings": [
+      {
+        "line": 68,
+        "value": "一句话经过你 / "
+      },
+      {
+        "line": 68,
+        "value": "A SENTENCE IN TRANSIT / "
+      },
+      {
+        "line": 68,
+        "value": "·"
+      },
+      {
+        "line": 69,
+        "value": "返回手记 / ESC"
+      },
+      {
+        "line": 69,
+        "value": "BACK / ESC"
+      },
+      {
+        "line": 70,
+        "value": "对方说给你的：\n\n"
+      },
+      {
+        "line": 70,
+        "value": "WHAT THEY SAID:\n\n"
+      },
+      {
+        "line": 71,
+        "value": "你选择的回应：\n\n"
+      },
+      {
+        "line": 71,
+        "value": "WHAT YOU SAID:\n\n"
+      },
+      {
+        "line": 72,
+        "value": "\n\n"
+      },
+      {
+        "line": 107,
+        "value": "WORDS IN YOUR HANDS"
+      },
+      {
+        "line": 107,
+        "value": "SEVEN WAYS TO STAND"
+      },
+      {
+        "line": 107,
+        "value": "A REASON LEFT BLANK"
+      },
+      {
+        "line": 107,
+        "value": "WORDS IN TRANSIT"
+      },
+      {
+        "line": 108,
+        "value": "Tab / 返回"
+      },
+      {
+        "line": 108,
+        "value": "TAB / RETURN"
+      },
+      {
+        "line": 109,
+        "value": "当下的手记"
+      },
+      {
+        "line": 109,
+        "value": "CURRENT JOURNEY"
+      },
+      {
+        "line": 110,
+        "value": "走过的位置 "
+      },
+      {
+        "line": 110,
+        "value": "POSITIONS FOUND "
+      },
+      {
+        "line": 110,
+        "value": " / 7"
+      },
+      {
+        "line": 111,
+        "value": "档案 "
+      },
+      {
+        "line": 111,
+        "value": "ARCHIVE "
+      },
+      {
+        "line": 111,
+        "value": " / 7"
+      },
+      {
+        "line": 116,
+        "value": "传话夹 "
+      },
+      {
+        "line": 116,
+        "value": "CORRESPONDENCE "
+      },
+      {
+        "line": 116,
+        "value": " / 2"
+      },
+      {
+        "line": 120,
+        "value": "余力：深入倾听需要力气，0 时先休息。承重：达到 6，承接会额外消耗余力。\n直连：有多少话不必再经过你。长椅每轮可恢复一次；卡牌每种仅一张。"
+      },
+      {
+        "line": 120,
+        "value": "BREATH pays for attention; at 0, rest first. LOAD at 6 adds a breath cost to carrying.\nBRIDGE is what can pass without you. Rest once per round; each card is a single use."
+      },
+      {
+        "line": 121,
+        "value": "   /   "
+      },
+      {
+        "line": 121,
+        "value": "理解 "
+      },
+      {
+        "line": 121,
+        "value": "INSIGHT "
+      },
+      {
+        "line": 121,
+        "value": " / 3   ·   "
+      },
+      {
+        "line": 121,
+        "value": "信任 "
+      },
+      {
+        "line": 121,
+        "value": "TRUST "
+      },
+      {
+        "line": 121,
+        "value": " / 4\n"
+      },
+      {
+        "line": 124,
+        "value": ""
+      },
+      {
+        "line": 125,
+        "value": "还没有接过一句话。你可以先走向任意一扇门。"
+      },
+      {
+        "line": 125,
+        "value": "No words carried yet. You may begin at either voice."
+      },
+      {
+        "line": 125,
+        "value": ""
+      },
+      {
+        "line": 128,
+        "value": "·"
+      },
+      {
+        "line": 128,
+        "value": "  /  "
+      },
+      {
+        "line": 128,
+        "value": "  /  "
+      },
+      {
+        "line": 134,
+        "value": "0"
+      },
+      {
+        "line": 134,
+        "value": " / "
+      },
+      {
+        "line": 134,
+        "value": "未走过的位置"
+      },
+      {
+        "line": 134,
+        "value": "AN UNVISITED POSITION"
+      },
+      {
+        "line": 135,
+        "value": "另一种回应，会让房间呈现另一种形状。\n这里没有必须收集齐的正确答案。"
+      },
+      {
+        "line": 135,
+        "value": "Another response gives the room a different shape.\nThere is no correct set you must complete."
+      },
+      {
+        "line": 138,
+        "value": "这些是关系中的位置，不是从坏到好的排名。"
+      },
+      {
+        "line": 138,
+        "value": "These are positions in a relationship, not a ranking."
+      },
+      {
+        "line": 138,
+        "value": "手记记录发生了什么，不给你打分。\n重述会撤回最后一句，但已经消耗的卡不会返还。"
+      },
+      {
+        "line": 138,
+        "value": "This ledger records what happened; it gives no score.\nRevising returns a sentence, but never a spent card."
+      },
+      {
+        "line": 139,
+        "value": "F / 在门前处理传话。私下的需要，需另行征得许可。\n交付、询问或退回后，重述不能抹去已经发生的交谈。"
+      },
+      {
+        "line": 139,
+        "value": "F at a door handles correspondence. Private needs require separate permission.\nSharing, asking or returning cannot be undone by SAY IT AGAIN."
+      },
+      {
+        "line": 142,
+        "value": "G / 重述上一句"
+      },
+      {
+        "line": 142,
+        "value": "G / SAY IT AGAIN"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeResourceHUD.cs": {
+    "codeHash": "02a44c3aab29f3eb1de6ab4b72029e3472d0c35c33917681ec672352fccbbc8a",
+    "strings": [
+      {
+        "line": 21,
+        "value": "余力"
+      },
+      {
+        "line": 21,
+        "value": "BREATH"
+      },
+      {
+        "line": 21,
+        "value": "承重"
+      },
+      {
+        "line": 21,
+        "value": "LOAD"
+      },
+      {
+        "line": 21,
+        "value": "直连"
+      },
+      {
+        "line": 21,
+        "value": "BRIDGE"
+      },
+      {
+        "line": 24,
+        "value": "   "
+      },
+      {
+        "line": 24,
+        "value": " / "
+      },
+      {
+        "line": 29,
+        "value": "余力已尽 / 左侧 00 长椅可休息，也可先划界。"
+      },
+      {
+        "line": 29,
+        "value": "NO BREATH / BENCH 00 IS ON THE LEFT, OR NAME A LIMIT."
+      },
+      {
+        "line": 29,
+        "value": "承重 ≥ 6 / 继续承接会额外消耗余力。"
+      },
+      {
+        "line": 29,
+        "value": "LOAD ≥ 6 / CARRYING COSTS AN EXTRA BREATH."
+      },
+      {
+        "line": 29,
+        "value": "在手的话 "
+      },
+      {
+        "line": 29,
+        "value": "HELD "
+      },
+      {
+        "line": 29,
+        "value": " / F 门前处理 / Tab 传话夹"
+      },
+      {
+        "line": 29,
+        "value": " / F AT A DOOR / TAB CORRESPONDENCE"
+      },
+      {
+        "line": 29,
+        "value": "左侧 00 长椅可休息 / Tab 手记 / G 重述（获得卡后）"
+      },
+      {
+        "line": 29,
+        "value": "BENCH 00 ON THE LEFT / TAB NOTES / G REVISE"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeText.cs": {
+    "codeHash": "41c3a7ad9f7453ba1e35273fc681a723c8944e23613ac35f0152f2e4fcffcbc3",
+    "strings": [
+      {
+        "line": 6,
+        "value": "+"
+      },
+      {
+        "line": 7,
+        "value": "借来的声音"
+      },
+      {
+        "line": 7,
+        "value": "BORROWED VOICES"
+      },
+      {
+        "line": 7,
+        "value": "被改写的句子"
+      },
+      {
+        "line": 7,
+        "value": "WORDS IN TRANSIT"
+      },
+      {
+        "line": 7,
+        "value": "谁来开口"
+      },
+      {
+        "line": 7,
+        "value": "WHO SPEAKS NEXT"
+      },
+      {
+        "line": 8,
+        "value": "01 / 牵挂"
+      },
+      {
+        "line": 8,
+        "value": "01 / THE WEIGHT"
+      },
+      {
+        "line": 8,
+        "value": "02 / 距离"
+      },
+      {
+        "line": 8,
+        "value": "02 / THE DISTANCE"
+      },
+      {
+        "line": 10,
+        "value": "“那句需要，我没有答应让你带走。\n你这次回来，会先问我愿不愿意吗？”"
+      },
+      {
+        "line": 10,
+        "value": "I didn't say you could share that need.\nWill you ask what I want this time?"
+      },
+      {
+        "line": 16,
+        "value": "“我还不知道能不能相信你。\n这次回来，你会先听我说，还是又替他作判断？”"
+      },
+      {
+        "line": 16,
+        "value": "I don't know if I can trust you yet.\nWill you hear me this time, or decide for him?"
+      },
+      {
+        "line": 16,
+        "value": "“我还不确定，你是真的愿意听。\n你这次回来，会不会又替她判断我？”"
+      },
+      {
+        "line": 16,
+        "value": "I'm not sure you're willing to hear me yet.\nWill you judge me for her this time?"
+      },
+      {
+        "line": 17,
+        "value": "“你比我们都明白。干脆由你安排吧。\n有你在，我们就不用再说那些难听的话了。”"
+      },
+      {
+        "line": 17,
+        "value": "You understand this better than either of us. You should arrange it.\nWith you here, we don't have to say the difficult things."
+      },
+      {
+        "line": 18,
+        "value": "“我还是会怕，但我愿意试一试。\n你可以在旁边听，不用替我们把每一句都接住。”"
+      },
+      {
+        "line": 18,
+        "value": "I'm still afraid, but I'm willing to try.\nYou can listen beside us, without catching every word."
+      },
+      {
+        "line": 21,
+        "value": "“告诉他，他不能总把我关在门外。\n我问一句，他就退一步。”"
+      },
+      {
+        "line": 21,
+        "value": "Tell him he can't keep shutting me out.\nEvery time I ask, he takes another step away."
+      },
+      {
+        "line": 22,
+        "value": "“让她别再替我决定一切。\n我需要喘口气，可她总把距离当成拒绝。”"
+      },
+      {
+        "line": 22,
+        "value": "Tell her to stop deciding everything for me.\nI need room to breathe. She calls that rejection."
+      },
+      {
+        "line": 25,
+        "value": "“你跟他说了吗？他怎么回答？\n你替我说得温和一点，好不好？”"
+      },
+      {
+        "line": 25,
+        "value": "Did you tell him? What did he say?\nCould you make it sound gentler for me?"
+      },
+      {
+        "line": 26,
+        "value": "“她是不是又让你来管我？\n你明白我的意思，所以你会站在我这边吧？”"
+      },
+      {
+        "line": 26,
+        "value": "Did she send you to manage me again?\nYou understand me. You'll take my side, won't you?"
+      },
+      {
+        "line": 28,
+        "value": "“如果我自己说，他却不想听呢？\n你能保证，这一次不会把事情弄坏吗？”"
+      },
+      {
+        "line": 28,
+        "value": "What if I speak and he won't listen?\nCan you promise it won't make things worse?"
+      },
+      {
+        "line": 29,
+        "value": "“如果我说出需要，她还是生气呢？\n你能不能先替我挡一下？”"
+      },
+      {
+        "line": 29,
+        "value": "What if I name what I need and she gets angry?\nCould you stand between us, just this once?"
+      },
+      {
+        "line": 33,
+        "value": "我不该擅自转述。你还愿意自己开口吗？"
+      },
+      {
+        "line": 33,
+        "value": "I shouldn't have shared that. Will you still speak for yourself?"
+      },
+      {
+        "line": 35,
+        "value": "我不该擅自转述。你还愿意自己开口吗？"
+      },
+      {
+        "line": 35,
+        "value": "I shouldn't have shared that. Will you still speak for yourself?"
+      },
+      {
+        "line": 40,
+        "value": "我会把话带给他。"
+      },
+      {
+        "line": 40,
+        "value": "I'll carry your words to him."
+      },
+      {
+        "line": 40,
+        "value": "我会替你挡住她。"
+      },
+      {
+        "line": 40,
+        "value": "I'll keep her away from you."
+      },
+      {
+        "line": 41,
+        "value": "在责备之前，你最怕失去什么？"
+      },
+      {
+        "line": 41,
+        "value": "Before the blame, what are you afraid of losing?"
+      },
+      {
+        "line": 41,
+        "value": "你想要的是离开她，还是自己的空间？"
+      },
+      {
+        "line": 41,
+        "value": "Do you want to lose her, or have space of your own?"
+      },
+      {
+        "line": 42,
+        "value": "我现在不能替任何人传话。"
+      },
+      {
+        "line": 42,
+        "value": "I can't carry someone else's words right now."
+      },
+      {
+        "line": 46,
+        "value": "我会替你润色，让他听不出责备。"
+      },
+      {
+        "line": 46,
+        "value": "I'll smooth it out so he won't hear the blame."
+      },
+      {
+        "line": 46,
+        "value": "我会告诉她你没事，让她先放心。"
+      },
+      {
+        "line": 46,
+        "value": "I'll tell her you're fine so she stops worrying."
+      },
+      {
+        "line": 47,
+        "value": "先留下你自己的那句“我需要……”。"
+      },
+      {
+        "line": 47,
+        "value": "Let's keep the sentence that starts with 'I need...'."
+      },
+      {
+        "line": 47,
+        "value": "我听见你的需要，但不替你判断她。"
+      },
+      {
+        "line": 47,
+        "value": "I hear what you need. I won't decide who she is."
+      },
+      {
+        "line": 48,
+        "value": "是他太冷漠了。我站在你这边。"
+      },
+      {
+        "line": 48,
+        "value": "He's being cold. I'm on your side."
+      },
+      {
+        "line": 48,
+        "value": "是她管得太多。我站在你这边。"
+      },
+      {
+        "line": 48,
+        "value": "She's controlling. I'm on your side."
+      },
+      {
+        "line": 50,
+        "value": "我来安排。我保证你们不会争吵。"
+      },
+      {
+        "line": 50,
+        "value": "I'll manage it. I promise you won't fight."
+      },
+      {
+        "line": 53,
+        "value": "我先澄清我改过的话。你愿意自己说吗？"
+      },
+      {
+        "line": 53,
+        "value": "First, I'll correct what I edited. Will you speak for yourself?"
+      },
+      {
+        "line": 54,
+        "value": "我收回替你站队的承诺。你愿意自己说吗？"
+      },
+      {
+        "line": 54,
+        "value": "I take back my promise to choose sides. Will you speak for yourself?"
+      },
+      {
+        "line": 55,
+        "value": "你愿意亲口说出需要，也听完对方吗？"
+      },
+      {
+        "line": 55,
+        "value": "Will you name your need and hear the other person out?"
+      },
+      {
+        "line": 57,
+        "value": "我关心你，但我不替你决定这段关系。"
+      },
+      {
+        "line": 57,
+        "value": "I care about you. I can't decide this relationship for you."
+      },
+      {
+        "line": 63,
+        "value": "你想追问，声音却先停住了。\n没有余力时，倾听也会变成硬撑。\n去长椅歇一下，或先把自己的界限说出来。"
+      },
+      {
+        "line": 63,
+        "value": "You try to ask, but the words won't come.\nListening without breath becomes another way of enduring.\nRest at the bench, or name a limit of your own."
+      },
+      {
+        "line": 68,
+        "value": "她和他之间的距离，暂时落在了你身上。\n被需要的感觉，和重量一起到来。"
+      },
+      {
+        "line": 68,
+        "value": "Their distance settles on your shoulders.\nBeing needed arrives with a weight of its own."
+      },
+      {
+        "line": 70,
+        "value": "“我怕他长大以后，就不再需要我。”\n你听见了责备背后的害怕。"
+      },
+      {
+        "line": 70,
+        "value": "I'm afraid that growing up means he won't need me.\nYou hear the fear beneath the accusation."
+      },
+      {
+        "line": 71,
+        "value": "“我需要自己的空间，不是失去她。”\n界限和离弃，原来不是同一件事。"
+      },
+      {
+        "line": 71,
+        "value": "I need my own space. I don't need to lose her.\nA boundary is not the same as abandonment."
+      },
+      {
+        "line": 72,
+        "value": "对方暂时沉默。你没有替沉默填满解释。\n照顾自己的余力，也是一种选择。"
+      },
+      {
+        "line": 72,
+        "value": "They fall silent. You don't fill the silence for them.\nKeeping some strength for yourself is also a choice."
+      },
+      {
+        "line": 76,
+        "value": "房间安静了一点，原话也少了一点。\n现在，只有你知道句子被怎样改写。"
+      },
+      {
+        "line": 76,
+        "value": "The room gets quieter. The original words get smaller.\nOnly you know what was edited out."
+      },
+      {
+        "line": 78,
+        "value": "“我需要知道，我在他的生活里还有位置。”\n这一次，你没有替她把需要藏起来。"
+      },
+      {
+        "line": 78,
+        "value": "I need to know there's still a place for me in his life.\nThis time, you don't hide her need for her."
+      },
+      {
+        "line": 79,
+        "value": "“我想自己作决定，也想和她保持联系。”\n你把需要留下，把站队的邀请放下。"
+      },
+      {
+        "line": 79,
+        "value": "I want my own decisions, and I want to stay connected.\nYou keep the need and decline the invitation to take sides."
+      },
+      {
+        "line": 80,
+        "value": "“至少你是懂我的。”\n一扇门靠近了你，另一扇门被推得更远。"
+      },
+      {
+        "line": 80,
+        "value": "At least you understand me.\nOne door moves closer to you. The other moves farther away."
+      },
+      {
+        "line": 84,
+        "value": "他们把结果交给了你。\n你许下的平静，需要由你不断维持。"
+      },
+      {
+        "line": 84,
+        "value": "They hand you the outcome.\nThe peace you promised now needs you to keep it running."
+      },
+      {
+        "line": 86,
+        "value": "“我可以试着自己说。但你不能替对方答应。”\n直接对话，需要两份属于本人的同意。"
+      },
+      {
+        "line": 86,
+        "value": "I can try to speak for myself. You can't agree for them.\nA direct conversation needs two separate yeses."
+      },
+      {
+        "line": 87,
+        "value": "“我还没准备好。先别替我答应。”\n你听见了迟疑，没有把邀请当成同意。"
+      },
+      {
+        "line": 87,
+        "value": "I'm not ready. Please don't agree for me.\nYou hear the hesitation. An invitation is not a yes."
+      },
+      {
+        "line": 88,
+        "value": "你把关心留下，把责任还回去。\n他们是否开口，不再决定你能否离开。"
+      },
+      {
+        "line": 88,
+        "value": "You leave your care with them and return their responsibility.\nWhether they speak no longer decides whether you may leave."
+      },
+      {
+        "line": 91,
+        "value": "\n"
+      },
+      {
+        "line": 91,
+        "value": "你承认了未经允许的转述，没有把原谅当作理所当然。"
+      },
+      {
+        "line": 91,
+        "value": "You acknowledge sharing without permission. Forgiveness is not assumed."
+      },
+      {
+        "line": 92,
+        "value": "\n"
+      },
+      {
+        "line": 92,
+        "value": "Tab 传话夹：选原话或需要；到门前按 F 处理。"
+      },
+      {
+        "line": 92,
+        "value": "CORRESPONDENCE: TAB to inspect. F at a door to handle this message."
+      },
+      {
+        "line": 93,
+        "value": "\n"
+      },
+      {
+        "line": 93,
+        "value": "你先澄清了自己的改写或站队，收回一份替对方承担的承诺。"
+      },
+      {
+        "line": 93,
+        "value": "You correct your edit or allegiance, and return one promise that wasn't yours to make."
+      },
+      {
+        "line": 96,
+        "value": ""
+      },
+      {
+        "line": 96,
+        "value": "\n"
+      },
+      {
+        "line": 96,
+        "value": "你补上一句："
+      },
+      {
+        "line": 96,
+        "value": "YOU ADD: "
+      },
+      {
+        "line": 101,
+        "value": "余力不足，无法深入倾听"
+      },
+      {
+        "line": 101,
+        "value": "NO BREATH FOR INSIGHT"
+      },
+      {
+        "line": 101,
+        "value": "征询同意 / 归还承诺"
+      },
+      {
+        "line": 101,
+        "value": "CONSENT / RETURN A PROMISE"
+      },
+      {
+        "line": 101,
+        "value": "理解需要 +1"
+      },
+      {
+        "line": 101,
+        "value": "INSIGHT +1"
+      },
+      {
+        "line": 102,
+        "value": "暂得信任"
+      },
+      {
+        "line": 102,
+        "value": "SHORT-TERM TRUST"
+      },
+      {
+        "line": 102,
+        "value": "划界 +1 / 信任暂降"
+      },
+      {
+        "line": 102,
+        "value": "BOUNDARY +1 / TRUST FALLS"
+      },
+      {
+        "line": 102,
+        "value": "划界 +1"
+      },
+      {
+        "line": 102,
+        "value": "BOUNDARY +1"
+      },
+      {
+        "line": 103,
+        "value": "原话被改写"
+      },
+      {
+        "line": 103,
+        "value": "EDITED WORDS"
+      },
+      {
+        "line": 103,
+        "value": "站队 / 另一方信任下降"
+      },
+      {
+        "line": 103,
+        "value": "ALLEGIANCE / OTHER TRUST FALLS"
+      },
+      {
+        "line": 104,
+        "value": "结果由你担保"
+      },
+      {
+        "line": 104,
+        "value": "YOU GUARANTEE THE OUTCOME"
+      },
+      {
+        "line": 104,
+        "value": "划界 +1"
+      },
+      {
+        "line": 104,
+        "value": "BOUNDARY +1"
+      },
+      {
+        "line": 107,
+        "value": "余力 "
+      },
+      {
+        "line": 107,
+        "value": "BREATH "
+      },
+      {
+        "line": 107,
+        "value": "   /   "
+      },
+      {
+        "line": 107,
+        "value": "承重 "
+      },
+      {
+        "line": 107,
+        "value": "LOAD "
+      },
+      {
+        "line": 107,
+        "value": "   /   "
+      },
+      {
+        "line": 107,
+        "value": "直连 "
+      },
+      {
+        "line": 107,
+        "value": "BRIDGE "
+      },
+      {
+        "line": 110,
+        "value": "“还有哪些工作安排，需要我听清？”"
+      },
+      {
+        "line": 110,
+        "value": "What else about the work arrangement should I hear?"
+      },
+      {
+        "line": 111,
+        "value": "“先写下能承担的部分，不替私事填空。”"
+      },
+      {
+        "line": 111,
+        "value": "Let's write down what is workable, without filling in private reasons."
+      },
+      {
+        "line": 114,
+        "value": "“这句，我想慢一点回答。”"
+      },
+      {
+        "line": 114,
+        "value": "I'd like to answer this one slowly."
+      },
+      {
+        "line": 115,
+        "value": "“这句，我会保留你的原意，不替你改写。”"
+      },
+      {
+        "line": 115,
+        "value": "I'll keep your meaning, without editing it for you."
+      },
+      {
+        "line": 116,
+        "value": "“我只能帮这一次，接下来请你亲口说。”"
+      },
+      {
+        "line": 116,
+        "value": "I can help this once. After that, please speak for yourself."
+      },
+      {
+        "line": 117,
+        "value": "“还有什么，是我没有真正听见的？”"
+      },
+      {
+        "line": 117,
+        "value": "What have I still not really heard?"
+      },
+      {
+        "line": 118,
+        "value": "“把‘你总是’换成‘我需要’，会是什么？”"
+      },
+      {
+        "line": 118,
+        "value": "What would 'I need' sound like, instead of 'you always'?"
+      },
+      {
+        "line": 119,
+        "value": "“如果谈崩了，所有后果都由我来负责。”"
+      },
+      {
+        "line": 119,
+        "value": "If it goes wrong, I'll be responsible for all of it."
+      },
+      {
+        "line": 120,
+        "value": ""
+      },
+      {
+        "line": 126,
+        "value": "接过传话"
+      },
+      {
+        "line": 126,
+        "value": "CARRIED THE MESSAGE"
+      },
+      {
+        "line": 126,
+        "value": "听见需要"
+      },
+      {
+        "line": 126,
+        "value": "ASKED ABOUT THE NEED"
+      },
+      {
+        "line": 126,
+        "value": "说出自己的界限"
+      },
+      {
+        "line": 126,
+        "value": "NAMED A LIMIT"
+      },
+      {
+        "line": 127,
+        "value": "替对方润色"
+      },
+      {
+        "line": 127,
+        "value": "EDITED THE MESSAGE"
+      },
+      {
+        "line": 127,
+        "value": "留下真实需要"
+      },
+      {
+        "line": 127,
+        "value": "KEPT THE NEED"
+      },
+      {
+        "line": 127,
+        "value": "接受站队的邀请"
+      },
+      {
+        "line": 127,
+        "value": "TOOK A SIDE"
+      },
+      {
+        "line": 128,
+        "value": "保证对话结果"
+      },
+      {
+        "line": 128,
+        "value": "PROMISED AN OUTCOME"
+      },
+      {
+        "line": 128,
+        "value": "询问直接对话的同意"
+      },
+      {
+        "line": 128,
+        "value": "ASKED FOR CONSENT"
+      },
+      {
+        "line": 128,
+        "value": "把责任还回去"
+      },
+      {
+        "line": 128,
+        "value": "RETURNED RESPONSIBILITY"
+      },
+      {
+        "line": 134,
+        "value": "停顿"
+      },
+      {
+        "line": 134,
+        "value": "PAUSE"
+      },
+      {
+        "line": 135,
+        "value": "原话"
+      },
+      {
+        "line": 135,
+        "value": "QUOTE"
+      },
+      {
+        "line": 136,
+        "value": "界限"
+      },
+      {
+        "line": 136,
+        "value": "BOUNDARY"
+      },
+      {
+        "line": 137,
+        "value": "追问"
+      },
+      {
+        "line": 137,
+        "value": "LISTEN"
+      },
+      {
+        "line": 138,
+        "value": "翻译"
+      },
+      {
+        "line": 138,
+        "value": "REFRAME"
+      },
+      {
+        "line": 139,
+        "value": "代偿"
+      },
+      {
+        "line": 139,
+        "value": "TAKE OVER"
+      },
+      {
+        "line": 140,
+        "value": "重述"
+      },
+      {
+        "line": 140,
+        "value": "SAY IT AGAIN"
+      },
+      {
+        "line": 141,
+        "value": "不出牌"
+      },
+      {
+        "line": 141,
+        "value": "NO CARD"
+      },
+      {
+        "line": 148,
+        "value": "先让一句话落地。\n余力 +2 / 承重 -1\n每局一次，和本次回应一起结算。"
+      },
+      {
+        "line": 148,
+        "value": "Let a sentence settle.\nBREATH +2 / LOAD -1\nOnce per run. Resolves with your response."
+      },
+      {
+        "line": 149,
+        "value": "保留措辞，不替对方改写。\n直连 +1 / 承重 +1\n先理解另一人；私下内容仍需转述许可。"
+      },
+      {
+        "line": 149,
+        "value": "Keep the wording without editing it.\nBRIDGE +1 / LOAD +1\nHear the other need first. Private needs still require permission."
+      },
+      {
+        "line": 150,
+        "value": "说清自己能做、不能做的部分。\n余力 +1 / 承重 -2\n建立一次属于自己的界限。"
+      },
+      {
+        "line": 150,
+        "value": "Name what is and isn't yours to do.\nBREATH +1 / LOAD -2\nEstablishes a personal boundary."
+      },
+      {
+        "line": 151,
+        "value": "多问一句，不替对方作答。\n余力 -1 / 直连 +1\n多听见一层真实需要。"
+      },
+      {
+        "line": 151,
+        "value": "Ask one more question. Don't answer for them.\nBREATH -1 / BRIDGE +1\nHear one layer deeper."
+      },
+      {
+        "line": 152,
+        "value": "把责备翻译成“我需要”。\n余力 -1 / 承重 -1 / 直连 +1\n需已理解此人；信任暂时 -1。"
+      },
+      {
+        "line": 152,
+        "value": "Translate blame into 'I need'.\nBREATH -1 / LOAD -1 / BRIDGE +1\nNeeds insight. Trust briefly falls by 1."
+      },
+      {
+        "line": 153,
+        "value": "“让我替你们处理好。”\n双方信任 +1 / 余力 -2 / 承重 +2\n对结果的责任也会留在你身上。"
+      },
+      {
+        "line": 153,
+        "value": "Let me make everything all right.\nBOTH TRUST +1 / BREATH -2 / LOAD +2\nResponsibility for the outcome stays with you."
+      },
+      {
+        "line": 154,
+        "value": "G / 撤回最后一句回应，每局一次。\n资源回到回应前，消耗的卡不返还。\n在长椅休息或结局之后无法撤回。"
+      },
+      {
+        "line": 154,
+        "value": "G / Revise your last response, once per run.\nResources return; spent cards do not.\nUnavailable after resting or an ending."
+      },
+      {
+        "line": 155,
+        "value": "回应本身已经有分量。\n卡牌是有限的表达方式，不是必选项。\nQ 切换动作卡；点击同一张可取消。"
+      },
+      {
+        "line": 155,
+        "value": "A response already has weight.\nCards are limited ways to speak, not a requirement.\nQ cycles cards. Click again to deselect."
+      },
+      {
+        "line": 161,
+        "value": "下一轮获得"
+      },
+      {
+        "line": 161,
+        "value": "NEXT ROUND"
+      },
+      {
+        "line": 162,
+        "value": "已用完"
+      },
+      {
+        "line": 162,
+        "value": "SPENT"
+      },
+      {
+        "line": 163,
+        "value": "先听另一人的需要"
+      },
+      {
+        "line": 163,
+        "value": "HEAR OTHER NEED"
+      },
+      {
+        "line": 164,
+        "value": "先理解此人的需要"
+      },
+      {
+        "line": 164,
+        "value": "NEEDS INSIGHT FIRST"
+      },
+      {
+        "line": 165,
+        "value": "至少需要 2 余力"
+      },
+      {
+        "line": 165,
+        "value": "NEEDS 2 BREATH"
+      },
+      {
+        "line": 166,
+        "value": ""
+      },
+      {
+        "line": 172,
+        "value": "Tab 回看走过的路。R 开始另一种回应。"
+      },
+      {
+        "line": 172,
+        "value": "TAB to revisit your words. R to begin again."
+      },
+      {
+        "line": 173,
+        "value": "走向 03，决定自己的位置。"
+      },
+      {
+        "line": 173,
+        "value": "Approach 03. Choose where you stand."
+      },
+      {
+        "line": 178,
+        "value": "第 1 / 3 · 借来的声音\n走向 "
+      },
+      {
+        "line": 178,
+        "value": "ROUND 1 / 3 · BORROWED VOICES\nAT "
+      },
+      {
+        "line": 178,
+        "value": "02"
+      },
+      {
+        "line": 178,
+        "value": "01"
+      },
+      {
+        "line": 178,
+        "value": "：E 先听，F 决定怎么交付。03 可离开。"
+      },
+      {
+        "line": 178,
+        "value": ": E TO LISTEN, F TO HANDLE THE MESSAGE. 03 IS YOUR EXIT."
+      },
+      {
+        "line": 180,
+        "value": "01 或 02"
+      },
+      {
+        "line": 180,
+        "value": "01 OR 02"
+      },
+      {
+        "line": 180,
+        "value": "02"
+      },
+      {
+        "line": 180,
+        "value": "01"
+      },
+      {
+        "line": 181,
+        "value": "第 "
+      },
+      {
+        "line": 181,
+        "value": "ROUND "
+      },
+      {
+        "line": 181,
+        "value": " / 3  ·  "
+      },
+      {
+        "line": 181,
+        "value": "\n"
+      },
+      {
+        "line": 181,
+        "value": "走向 "
+      },
+      {
+        "line": 181,
+        "value": "APPROACH "
+      },
+      {
+        "line": 181,
+        "value": "。也可随时去 03 离开。"
+      },
+      {
+        "line": 181,
+        "value": ". You may also leave through 03."
+      },
+      {
+        "line": 183,
+        "value": "工作范围可以协商，私事仍由本人决定。\n你要继续代办、邀请有限协商，还是先离开？"
+      },
+      {
+        "line": 183,
+        "value": "Work can be negotiated. Private reasons still belong to their owner.\nWill you manage it, invite a limited agreement, or step away?"
+      },
+      {
+        "line": 184,
+        "value": "你已经听过，也已经回应。\n你想继续承担、邀请对话，还是先照顾自己？"
+      },
+      {
+        "line": 184,
+        "value": "You have heard them and answered them.\nWill you keep carrying, invite them to speak, or care for yourself?"
+      },
+      {
+        "line": 185,
+        "value": "你不必等到他们和好，才拥有离开的权利。\n你也可以回去，把这一轮对话听完。"
+      },
+      {
+        "line": 185,
+        "value": "You don't have to repair their relationship to earn a way out.\nYou can also return and hear the next part."
+      },
+      {
+        "line": 187,
+        "value": "我留下，继续替他们传话。"
+      },
+      {
+        "line": 187,
+        "value": "I'll stay and keep carrying their words."
+      },
+      {
+        "line": 187,
+        "value": "先回到对话中。"
+      },
+      {
+        "line": 187,
+        "value": "Return to the conversation."
+      },
+      {
+        "line": 188,
+        "value": "邀请他们亲口谈；是否接受由他们决定。"
+      },
+      {
+        "line": 188,
+        "value": "Invite them to speak. The decision is theirs."
+      },
+      {
+        "line": 189,
+        "value": "我先离开，照顾自己的边界与余力。"
+      },
+      {
+        "line": 189,
+        "value": "I'll step away and care for my own limits."
+      },
+      {
+        "line": 196,
+        "value": "01 / 共同的桌子"
+      },
+      {
+        "line": 196,
+        "value": "01 / A SHARED TABLE"
+      },
+      {
+        "line": 197,
+        "value": "02 / 门的这一边"
+      },
+      {
+        "line": 197,
+        "value": "02 / THIS SIDE OF THE DOOR"
+      },
+      {
+        "line": 198,
+        "value": "03 / 先有距离"
+      },
+      {
+        "line": 198,
+        "value": "03 / ROOM TO BREATHE"
+      },
+      {
+        "line": 199,
+        "value": "04 / 永远的信使"
+      },
+      {
+        "line": 199,
+        "value": "04 / THE MESSENGER"
+      },
+      {
+        "line": 200,
+        "value": "05 / 借来的同盟"
+      },
+      {
+        "line": 200,
+        "value": "05 / BORROWED ALLIANCE"
+      },
+      {
+        "line": 201,
+        "value": "06 / 耗尽的语言"
+      },
+      {
+        "line": 201,
+        "value": "06 / WORDS WORN OUT"
+      },
+      {
+        "line": 202,
+        "value": "07 / 漂亮的和解"
+      },
+      {
+        "line": 202,
+        "value": "07 / A PERFECTLY QUIET ROOM"
+      },
+      {
+        "line": 203,
+        "value": ""
+      },
+      {
+        "line": 211,
+        "value": "他们各自答应，亲口说，也亲耳听。\n你可以在场，但不再是他们唯一的通道。"
+      },
+      {
+        "line": 211,
+        "value": "Each agrees to speak and to listen.\nYou may stay, without being their only connection."
+      },
+      {
+        "line": 212,
+        "value": "你把关心留下，把责任还给他们。\n这扇门，不以任何人的和好为条件。"
+      },
+      {
+        "line": 212,
+        "value": "You leave your care and return their responsibility.\nThis door does not depend on their reconciliation."
+      },
+      {
+        "line": 213,
+        "value": "还有一些话没能说完。你仍可以先离开。\n距离是一段空间，不是对关系的判决。"
+      },
+      {
+        "line": 213,
+        "value": "Some words remain unfinished. You may still step out.\nDistance is room, not a verdict on a relationship."
+      },
+      {
+        "line": 214,
+        "value": "每一段话都经过你，每一段沉默也等着你。\n三角很稳定。只是你一直没有自己的位置。"
+      },
+      {
+        "line": 214,
+        "value": "Every message passes through you. Every silence waits.\nThe triangle holds, but leaves no room of your own."
+      },
+      {
+        "line": 215,
+        "value": "你用站队换来了亲近。\n两个人之间的墙，现在也把你围在里面。"
+      },
+      {
+        "line": 215,
+        "value": "Taking sides bought a kind of closeness.\nThe wall between them now encloses you as well."
+      },
+      {
+        "line": 216,
+        "value": "你已经没有余力，再替任何人说一句。\n休息不需要许可。门仍然属于你。"
+      },
+      {
+        "line": 216,
+        "value": "There is no breath left to speak for someone else.\nRest needs no permission. The door is still yours."
+      },
+      {
+        "line": 217,
+        "value": "没有人再争吵，因为原话已经被你改写。\n他们没有彼此理解，只学会了等你来维持平静。"
+      },
+      {
+        "line": 217,
+        "value": "No one argues. Their words have been edited away.\nThey don't understand each other. They wait for you to keep the peace."
+      },
+      {
+        "line": 218,
+        "value": ""
+      },
+      {
+        "line": 221,
+        "value": "\n"
+      },
+      {
+        "line": 221,
+        "value": "\n桌上只有工作安排。事由那一栏，仍然空着。"
+      },
+      {
+        "line": 221,
+        "value": "\nOnly the work plan lies on the table. The reason stays blank."
+      },
+      {
+        "line": 221,
+        "value": "\n回头看看。他们有了自己的桌子。"
+      },
+      {
+        "line": 221,
+        "value": "\nLook back. They have a table of their own."
+      },
+      {
+        "line": 221,
+        "value": ""
+      },
+      {
+        "line": 221,
+        "value": "\n\n"
+      },
+      {
+        "line": 221,
+        "value": "Tab 回看回应 / R 重新体验"
+      },
+      {
+        "line": 221,
+        "value": "TAB TO REVISIT / R TO REPLAY"
+      },
+      {
+        "line": 227,
+        "value": "你还未听见需要；目前只有对你的要求。"
+      },
+      {
+        "line": 227,
+        "value": "You have heard a request of you, not the need beneath it."
+      },
+      {
+        "line": 228,
+        "value": "她怕失去在他生活中的位置。"
+      },
+      {
+        "line": 228,
+        "value": "She fears losing her place in his life."
+      },
+      {
+        "line": 228,
+        "value": "他要自主，也要继续保持联系。"
+      },
+      {
+        "line": 228,
+        "value": "He wants autonomy and continued connection."
+      },
+      {
+        "line": 230,
+        "value": "\n"
+      },
+      {
+        "line": 230,
+        "value": "擅自转述尚未得到承认。"
+      },
+      {
+        "line": 230,
+        "value": "Sharing without permission is still unacknowledged."
+      },
+      {
+        "line": 231,
+        "value": "\n"
+      },
+      {
+        "line": 231,
+        "value": "已亲口同意尝试直接对话。"
+      },
+      {
+        "line": 231,
+        "value": "Has agreed to try speaking directly."
+      },
+      {
+        "line": 231,
+        "value": "尚未亲口同意直接对话。"
+      },
+      {
+        "line": 231,
+        "value": "Has not yet agreed to a direct conversation."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/NarrativeUIBuilder.cs": {
+    "codeHash": "cd1f16641b9367bca34df52440ef56c803ed652c13960fa88f8ea839f426d01f",
+    "strings": [
+      {
+        "line": 9,
+        "value": "Card column rule"
+      },
+      {
+        "line": 10,
+        "value": "Card heading"
+      },
+      {
+        "line": 10,
+        "value": ""
+      },
+      {
+        "line": 11,
+        "value": "Card selected name"
+      },
+      {
+        "line": 11,
+        "value": ""
+      },
+      {
+        "line": 12,
+        "value": "Card description"
+      },
+      {
+        "line": 12,
+        "value": ""
+      },
+      {
+        "line": 16,
+        "value": "Card / "
+      },
+      {
+        "line": 16,
+        "value": ""
+      },
+      {
+        "line": 19,
+        "value": "No card"
+      },
+      {
+        "line": 19,
+        "value": ""
+      },
+      {
+        "line": 25,
+        "value": "Relationship resources"
+      },
+      {
+        "line": 29,
+        "value": "Resource "
+      },
+      {
+        "line": 29,
+        "value": ""
+      },
+      {
+        "line": 32,
+        "value": "Bar "
+      },
+      {
+        "line": 32,
+        "value": " / "
+      },
+      {
+        "line": 34,
+        "value": "Resource note paper"
+      },
+      {
+        "line": 35,
+        "value": "Resource pressure note"
+      },
+      {
+        "line": 35,
+        "value": ""
+      },
+      {
+        "line": 41,
+        "value": "Words carried / notebook"
+      },
+      {
+        "line": 43,
+        "value": "Notebook title"
+      },
+      {
+        "line": 43,
+        "value": ""
+      },
+      {
+        "line": 44,
+        "value": "Close notebook"
+      },
+      {
+        "line": 44,
+        "value": "TAB / CLOSE"
+      },
+      {
+        "line": 45,
+        "value": "Current notes"
+      },
+      {
+        "line": 45,
+        "value": ""
+      },
+      {
+        "line": 46,
+        "value": "Ending archive"
+      },
+      {
+        "line": 46,
+        "value": ""
+      },
+      {
+        "line": 47,
+        "value": "Current journey"
+      },
+      {
+        "line": 48,
+        "value": "Resource definitions"
+      },
+      {
+        "line": 48,
+        "value": ""
+      },
+      {
+        "line": 52,
+        "value": "Heard need / "
+      },
+      {
+        "line": 53,
+        "value": "Speaker index"
+      },
+      {
+        "line": 54,
+        "value": "Need"
+      },
+      {
+        "line": 54,
+        "value": ""
+      },
+      {
+        "line": 59,
+        "value": "Ledger rule / "
+      },
+      {
+        "line": 60,
+        "value": "Response / "
+      },
+      {
+        "line": 60,
+        "value": ""
+      },
+      {
+        "line": 62,
+        "value": "Recorded change / "
+      },
+      {
+        "line": 62,
+        "value": ""
+      },
+      {
+        "line": 65,
+        "value": "Seven positions"
+      },
+      {
+        "line": 69,
+        "value": "Archive / "
+      },
+      {
+        "line": 70,
+        "value": "Ending title"
+      },
+      {
+        "line": 70,
+        "value": ""
+      },
+      {
+        "line": 71,
+        "value": "Ending body"
+      },
+      {
+        "line": 71,
+        "value": ""
+      },
+      {
+        "line": 73,
+        "value": "Notebook margin note"
+      },
+      {
+        "line": 73,
+        "value": ""
+      },
+      {
+        "line": 74,
+        "value": "Rewind response"
+      },
+      {
+        "line": 74,
+        "value": ""
+      },
+      {
+        "line": 75,
+        "value": "Title ending archive"
+      },
+      {
+        "line": 75,
+        "value": ""
+      },
+      {
+        "line": 83,
+        "value": "Read response / "
+      },
+      {
+        "line": 83,
+        "value": ""
+      },
+      {
+        "line": 86,
+        "value": "Sentence focus"
+      },
+      {
+        "line": 88,
+        "value": "A sentence in transit"
+      },
+      {
+        "line": 89,
+        "value": "Trace paper"
+      },
+      {
+        "line": 90,
+        "value": "Trace heading"
+      },
+      {
+        "line": 90,
+        "value": ""
+      },
+      {
+        "line": 91,
+        "value": "Close sentence trace"
+      },
+      {
+        "line": 91,
+        "value": ""
+      },
+      {
+        "line": 92,
+        "value": "Original sentence"
+      },
+      {
+        "line": 92,
+        "value": ""
+      },
+      {
+        "line": 93,
+        "value": "Transit division"
+      },
+      {
+        "line": 94,
+        "value": "Your response"
+      },
+      {
+        "line": 94,
+        "value": ""
+      },
+      {
+        "line": 95,
+        "value": "Sentence consequence"
+      },
+      {
+        "line": 95,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/OfficeNarrative.cs": {
+    "codeHash": "396600c70eb16a7d12624a0ce465e53b4d7c6e828fa89a1ffa5502b963e94b9d",
+    "strings": [
+      {
+        "line": 6,
+        "value": "空着的事由"
+      },
+      {
+        "line": 6,
+        "value": "THE BLANK REASON"
+      },
+      {
+        "line": 6,
+        "value": "可以交付的部分"
+      },
+      {
+        "line": 6,
+        "value": "WHAT CAN BE DELIVERED"
+      },
+      {
+        "line": 6,
+        "value": "有限的协议"
+      },
+      {
+        "line": 6,
+        "value": "A LIMITED AGREEMENT"
+      },
+      {
+        "line": 7,
+        "value": "01 / 负责人"
+      },
+      {
+        "line": 7,
+        "value": "01 / THE MANAGER"
+      },
+      {
+        "line": 7,
+        "value": "02 / 同事"
+      },
+      {
+        "line": 7,
+        "value": "02 / THE COLLEAGUE"
+      },
+      {
+        "line": 10,
+        "value": "“你又来问原因了吗？\n如果每次调整安排都要先交代私事，我宁愿不说。”"
+      },
+      {
+        "line": 10,
+        "value": "Are you here for the reason again?\nIf every change needs a private explanation, I'd rather stay silent."
+      },
+      {
+        "line": 10,
+        "value": "“到底哪些是他们说的，哪些是你保证的？\n我需要一份能执行的安排。”"
+      },
+      {
+        "line": 10,
+        "value": "Which parts did they say, and which parts did you promise?\nI need a plan we can actually follow."
+      },
+      {
+        "line": 11,
+        "value": "“交付日期不能再拖了。你去问清楚，\n到底什么原因，连晚上的会议都不能参加？”"
+      },
+      {
+        "line": 11,
+        "value": "The delivery date can't slip again. Go and find out\nwhy they can't even make the evening meeting."
+      },
+      {
+        "line": 11,
+        "value": "“请帮我带一句：评审移到白天，周五交草稿。\n原因那一栏，我想留空。”"
+      },
+      {
+        "line": 11,
+        "value": "Please tell them: review in daytime, draft on Friday.\nI'd like to leave the reason blank."
+      },
+      {
+        "line": 12,
+        "value": "“我不是非要知道私事，只怕交付又落空。\n你能替他们保证吗？”"
+      },
+      {
+        "line": 12,
+        "value": "I don't need their private life. I'm afraid the work won't arrive.\nCan you guarantee it for them?"
+      },
+      {
+        "line": 12,
+        "value": "“能做的部分，我可以写清楚。\n但别把不愿解释，说成不愿负责。”"
+      },
+      {
+        "line": 12,
+        "value": "I can write down what I can do.\nPlease don't turn a private reason into a lack of responsibility."
+      },
+      {
+        "line": 13,
+        "value": "“你已经替我们说了很多。\n这份安排，到底是谁答应的？”"
+      },
+      {
+        "line": 13,
+        "value": "You've spoken for both of us.\nWho actually agreed to this arrangement?"
+      },
+      {
+        "line": 14,
+        "value": "“先把他们提出的工作安排带来。\n我可以谈交付，不需要拿私事作交换。”"
+      },
+      {
+        "line": 14,
+        "value": "Bring me the work arrangement they actually asked for.\nWe can discuss delivery without trading in private reasons."
+      },
+      {
+        "line": 14,
+        "value": "“我愿意谈工作范围，不愿意解释私事。\n这两件事，可以分开吗？”"
+      },
+      {
+        "line": 14,
+        "value": "I'm willing to discuss the work. I don't want to explain my private life.\nCan those be separate things?"
+      },
+      {
+        "line": 20,
+        "value": "我替你解释到他们接受为止。"
+      },
+      {
+        "line": 20,
+        "value": "I'll keep explaining until they accept it."
+      },
+      {
+        "line": 20,
+        "value": "我先替你答应，细节以后再补。"
+      },
+      {
+        "line": 20,
+        "value": "I'll agree for you. We'll fill in the details later."
+      },
+      {
+        "line": 20,
+        "value": "我会保证他们不再追问，由我处理。"
+      },
+      {
+        "line": 20,
+        "value": "I'll make sure they stop asking. Leave it to me."
+      },
+      {
+        "line": 21,
+        "value": "什么私事？弄清楚原因才好替你解释。"
+      },
+      {
+        "line": 21,
+        "value": "What private issue? I need the reason to explain it."
+      },
+      {
+        "line": 21,
+        "value": "告诉我细节，我会让他们体谅你。"
+      },
+      {
+        "line": 21,
+        "value": "Tell me the details. I'll make them understand."
+      },
+      {
+        "line": 21,
+        "value": "只差最后一个理由，就能让他们答应了。"
+      },
+      {
+        "line": 21,
+        "value": "One last explanation and they'll agree."
+      },
+      {
+        "line": 22,
+        "value": "我不该擅自说出去。你还愿意只谈工作吗？"
+      },
+      {
+        "line": 22,
+        "value": "I shouldn't have shared that. Will you still discuss only the work?"
+      },
+      {
+        "line": 23,
+        "value": "只带工作安排，私事不必向我交代。"
+      },
+      {
+        "line": 23,
+        "value": "I'll carry the work request. You don't owe me private reasons."
+      },
+      {
+        "line": 23,
+        "value": "我们核对可做的部分，不填那一栏事由。"
+      },
+      {
+        "line": 23,
+        "value": "Let's check what you can do, and leave the reason blank."
+      },
+      {
+        "line": 23,
+        "value": "是否同意只谈工作范围，由你亲口决定。"
+      },
+      {
+        "line": 23,
+        "value": "Will you agree to discuss only the scope of the work?"
+      },
+      {
+        "line": 25,
+        "value": "我去问，一定给你一个完整解释。"
+      },
+      {
+        "line": 25,
+        "value": "I'll get you a complete explanation."
+      },
+      {
+        "line": 25,
+        "value": "我替他们保证，原来的期限不会变。"
+      },
+      {
+        "line": 25,
+        "value": "I guarantee they'll meet the original deadline."
+      },
+      {
+        "line": 25,
+        "value": "我来盯住所有后续，保证不会出问题。"
+      },
+      {
+        "line": 25,
+        "value": "I'll supervise every step. Nothing will go wrong."
+      },
+      {
+        "line": 26,
+        "value": "你需要哪些交付？先不替私事填空。"
+      },
+      {
+        "line": 26,
+        "value": "What needs delivering? Let's leave private reasons blank."
+      },
+      {
+        "line": 26,
+        "value": "把必须交付的部分，与解释私事分开。"
+      },
+      {
+        "line": 26,
+        "value": "Let's separate required work from private explanations."
+      },
+      {
+        "line": 26,
+        "value": "我先承认擅自转述，再确认公开工作清单。"
+      },
+      {
+        "line": 26,
+        "value": "I'll acknowledge my breach, then confirm the public work plan."
+      },
+      {
+        "line": 26,
+        "value": "按他们亲口提出的安排，只协商工作。"
+      },
+      {
+        "line": 26,
+        "value": "Will you discuss only the work request they actually made?"
+      },
+      {
+        "line": 27,
+        "value": "他们就是不负责。我站在你这边。"
+      },
+      {
+        "line": 27,
+        "value": "They're being irresponsible. I'm on your side."
+      },
+      {
+        "line": 27,
+        "value": "我能帮忙核对，但不代替任何人负责。"
+      },
+      {
+        "line": 27,
+        "value": "I can help check the plan, not take responsibility for them."
+      },
+      {
+        "line": 31,
+        "value": "余力不足，无法认真回应"
+      },
+      {
+        "line": 31,
+        "value": "NO BREATH TO FOLLOW THROUGH"
+      },
+      {
+        "line": 32,
+        "value": "只对工作征询同意"
+      },
+      {
+        "line": 32,
+        "value": "CONSENT TO WORK SCOPE"
+      },
+      {
+        "line": 32,
+        "value": "工作范围 +1 / 私事保留"
+      },
+      {
+        "line": 32,
+        "value": "SCOPE +1 / PRIVACY KEPT"
+      },
+      {
+        "line": 32,
+        "value": "追问私事 / 信任下降"
+      },
+      {
+        "line": 32,
+        "value": "PRESS FOR REASONS / TRUST FALLS"
+      },
+      {
+        "line": 32,
+        "value": "替别人承担结果"
+      },
+      {
+        "line": 32,
+        "value": "PROMISE FOR SOMEONE ELSE"
+      },
+      {
+        "line": 33,
+        "value": "已带到公开请求 / 征询同意"
+      },
+      {
+        "line": 33,
+        "value": "PUBLIC REQUEST ARRIVED / ASK CONSENT"
+      },
+      {
+        "line": 33,
+        "value": "须先按 F 交付 02 的公开请求"
+      },
+      {
+        "line": 33,
+        "value": "FIRST DELIVER 02'S PUBLIC REQUEST WITH F"
+      },
+      {
+        "line": 33,
+        "value": "厘清交付 +1"
+      },
+      {
+        "line": 33,
+        "value": "DELIVERABLES +1"
+      },
+      {
+        "line": 34,
+        "value": "结果由你担保"
+      },
+      {
+        "line": 34,
+        "value": "YOU GUARANTEE THE OUTCOME"
+      },
+      {
+        "line": 34,
+        "value": "站队 / 另一方信任下降"
+      },
+      {
+        "line": 34,
+        "value": "ALLEGIANCE / OTHER TRUST FALLS"
+      },
+      {
+        "line": 34,
+        "value": "划清自己的责任"
+      },
+      {
+        "line": 34,
+        "value": "NAME YOUR OWN LIMIT"
+      },
+      {
+        "line": 38,
+        "value": "你想认真回应，却已没有余力。\n先去 00 长椅停一下；别让承诺替体力作答。"
+      },
+      {
+        "line": 38,
+        "value": "You want to follow through, but have no breath left.\nRest at 00. Don't let a promise speak for your strength."
+      },
+      {
+        "line": 40,
+        "value": "“我说的是工作安排，不是在申请公开私事。”\n追问没有换来同意，信任反而退了一步。"
+      },
+      {
+        "line": 40,
+        "value": "I'm asking about work, not applying to make my private life public.\nYour question wins no agreement. Trust takes a step back."
+      },
+      {
+        "line": 41,
+        "value": "“可以。只谈范围和交付，原因留给我。”\n这是一份有限的同意，不是一张公开私事的通行证。"
+      },
+      {
+        "line": 41,
+        "value": "Yes. Scope and delivery only. The reason stays with me.\nA limited yes is not permission to share private reasons."
+      },
+      {
+        "line": 41,
+        "value": "“我还不确定能不能相信这个范围。”\n你没有把不反对当作同意。"
+      },
+      {
+        "line": 41,
+        "value": "I'm not sure I can trust that limit yet.\nYou don't treat the absence of an objection as a yes."
+      },
+      {
+        "line": 41,
+        "value": "“白天评审，周五交草稿。这些你可以带过去。”\n你听清了可协商的部分，没有替空白编造理由。"
+      },
+      {
+        "line": 41,
+        "value": "Daytime review. Draft on Friday. You may carry that.\nYou hear what is negotiable, without inventing a reason for the blank."
+      },
+      {
+        "line": 42,
+        "value": "“可以，就按他们提出的清单来谈。”\n同意来自收到的工作请求，不是被公开的私事。"
+      },
+      {
+        "line": 42,
+        "value": "Yes. Let's discuss the work plan they actually proposed.\nAgreement follows the public request, not an exposed private reason."
+      },
+      {
+        "line": 42,
+        "value": "“我还不能确认这份安排。别先替我答应。”\n送达的公开请求、明确的范围和本人的同意，仍未齐备。"
+      },
+      {
+        "line": 42,
+        "value": "I can't confirm this arrangement yet. Don't agree for me.\nA delivered request, clear scope and personal consent are each required."
+      },
+      {
+        "line": 42,
+        "value": "“我需要周五的草稿和一次白天评审，不是一个私人理由。”\n你把可核对的工作，从解释的压力中分了出来。"
+      },
+      {
+        "line": 42,
+        "value": "I need a Friday draft and a daytime review, not a private reason.\nYou separate work that can be checked from pressure to explain."
+      },
+      {
+        "line": 43,
+        "value": "你接下了保证结果的责任。\n安排看似推进，双方却更依赖你来维持。"
+      },
+      {
+        "line": 43,
+        "value": "You take responsibility for the outcome.\nThe plan seems to move forward. Both sides depend on you to keep it moving."
+      },
+      {
+        "line": 44,
+        "value": "你用站队换来了一点亲近，另一方更难开口。"
+      },
+      {
+        "line": 44,
+        "value": "Taking a side buys closeness, and makes the other voice harder to hear."
+      },
+      {
+        "line": 44,
+        "value": "你说清自己能帮忙的部分，没有接下别人的责任。"
+      },
+      {
+        "line": 44,
+        "value": "You name how you can help, without taking on someone else's responsibility."
+      },
+      {
+        "line": 45,
+        "value": "\n"
+      },
+      {
+        "line": 45,
+        "value": "你也承认了擅自转述；原谅仍由对方决定。"
+      },
+      {
+        "line": 45,
+        "value": "You acknowledge the breach. Forgiveness remains their decision."
+      },
+      {
+        "line": 46,
+        "value": "\n"
+      },
+      {
+        "line": 46,
+        "value": "门前 F：公开请求可以交付；私下需要仍需许可。"
+      },
+      {
+        "line": 46,
+        "value": "F AT A DOOR: carry a public request; private needs still require permission."
+      },
+      {
+        "line": 51,
+        "value": "Tab 回看安排如何改变。Esc 可切换案例。"
+      },
+      {
+        "line": 51,
+        "value": "TAB to revisit the arrangement. ESC to switch cases."
+      },
+      {
+        "line": 52,
+        "value": "工作请求还在你手里\n走向 01 按 F：交付 02 的公开原话，不必公开私事。"
+      },
+      {
+        "line": 52,
+        "value": "THE WORK REQUEST IS STILL WITH YOU\nAt 01, press F: deliver 02's public words. Private reasons may stay private."
+      },
+      {
+        "line": 53,
+        "value": "走向 03：有限的工作协议，也需要两份同意。"
+      },
+      {
+        "line": 53,
+        "value": "Approach 03. A limited work agreement still needs two separate yeses."
+      },
+      {
+        "line": 54,
+        "value": "第 "
+      },
+      {
+        "line": 54,
+        "value": "ROUND "
+      },
+      {
+        "line": 54,
+        "value": " / 3 · "
+      },
+      {
+        "line": 54,
+        "value": "\n"
+      },
+      {
+        "line": 54,
+        "value": "E 倾听 / 门前 F 交付 / 00 休息 / 03 可随时离开"
+      },
+      {
+        "line": 54,
+        "value": "E LISTEN / F AT A DOOR TO DELIVER / 00 REST / 03 YOUR EXIT"
+      },
+      {
+        "line": 56,
+        "value": "我留下，继续替他们保证交付。"
+      },
+      {
+        "line": 56,
+        "value": "I'll stay and guarantee the work for them."
+      },
+      {
+        "line": 56,
+        "value": "先回去核对工作安排。"
+      },
+      {
+        "line": 56,
+        "value": "Return to check the work arrangement."
+      },
+      {
+        "line": 56,
+        "value": "邀请他们只谈工作范围，事由可以空着。"
+      },
+      {
+        "line": 56,
+        "value": "Invite them to discuss work scope. Leave the reason blank."
+      },
+      {
+        "line": 56,
+        "value": "我先离开，不接下替别人负责的工作。"
+      },
+      {
+        "line": 56,
+        "value": "I'll step away without taking responsibility for someone else."
+      },
+      {
+        "line": 57,
+        "value": "保留事由，只核对工作"
+      },
+      {
+        "line": 57,
+        "value": "KEPT REASONS PRIVATE"
+      },
+      {
+        "line": 57,
+        "value": "追问私人原因"
+      },
+      {
+        "line": 57,
+        "value": "PRESSED FOR PRIVATE REASONS"
+      },
+      {
+        "line": 57,
+        "value": "替别人保证结果"
+      },
+      {
+        "line": 57,
+        "value": "GUARANTEED FOR SOMEONE ELSE"
+      },
+      {
+        "line": 57,
+        "value": "确认公开交付"
+      },
+      {
+        "line": 57,
+        "value": "CHECKED PUBLIC DELIVERABLES"
+      },
+      {
+        "line": 57,
+        "value": "接下代办责任"
+      },
+      {
+        "line": 57,
+        "value": "TOOK RESPONSIBILITY"
+      },
+      {
+        "line": 57,
+        "value": "接受站队邀请"
+      },
+      {
+        "line": 57,
+        "value": "TOOK A SIDE"
+      },
+      {
+        "line": 57,
+        "value": "说清自己的限度"
+      },
+      {
+        "line": 57,
+        "value": "NAMED A LIMIT"
+      },
+      {
+        "line": 62,
+        "value": "01 / 有限的工作协议"
+      },
+      {
+        "line": 62,
+        "value": "01 / A LIMITED AGREEMENT"
+      },
+      {
+        "line": 63,
+        "value": "02 / 责任的边界"
+      },
+      {
+        "line": 63,
+        "value": "02 / THE EDGE OF RESPONSIBILITY"
+      },
+      {
+        "line": 64,
+        "value": "03 / 暂停代办"
+      },
+      {
+        "line": 64,
+        "value": "03 / STEPPING BACK"
+      },
+      {
+        "line": 65,
+        "value": "04 / 永久的协调人"
+      },
+      {
+        "line": 65,
+        "value": "04 / THE PERMANENT COORDINATOR"
+      },
+      {
+        "line": 66,
+        "value": "05 / 办公室同盟"
+      },
+      {
+        "line": 66,
+        "value": "05 / AN OFFICE ALLIANCE"
+      },
+      {
+        "line": 67,
+        "value": "06 / 超出承载"
+      },
+      {
+        "line": 67,
+        "value": "06 / OVER CAPACITY"
+      },
+      {
+        "line": 68,
+        "value": "07 / 完美的进度表"
+      },
+      {
+        "line": 68,
+        "value": "07 / THE PERFECT SCHEDULE"
+      },
+      {
+        "line": 69,
+        "value": ""
+      },
+      {
+        "line": 76,
+        "value": "他们各自同意，只协商工作范围和交付。\n事由仍然空着。理解不以交出隐私为前提。"
+      },
+      {
+        "line": 76,
+        "value": "Each agrees to discuss scope and delivery only.\nThe reason stays blank. Understanding does not require surrendering privacy."
+      },
+      {
+        "line": 77,
+        "value": "你归还了协调和保证结果的责任。\n帮忙的限度说清了，自己的出口也留下了。"
+      },
+      {
+        "line": 77,
+        "value": "You return responsibility for coordination and guarantees.\nYour help has a limit. You keep a way out of your own."
+      },
+      {
+        "line": 78,
+        "value": "安排还有空白，你先停止了代办。\n一份未完成的清单，也不能扣住你的余力。"
+      },
+      {
+        "line": 78,
+        "value": "The plan has gaps. You step back from managing it.\nAn unfinished checklist does not own your remaining strength."
+      },
+      {
+        "line": 79,
+        "value": "每次调整都先经过你，每次追问也落到你这里。\n工作可以继续，只有你不能下班。"
+      },
+      {
+        "line": 79,
+        "value": "Every change passes through you. Every question comes back to you.\nThe work can move forward. Only you cannot clock out."
+      },
+      {
+        "line": 80,
+        "value": "你选了一边，换来了一个靠得很近的同盟。\n下一次协商，从更厚的一堵墙开始。"
+      },
+      {
+        "line": 80,
+        "value": "You choose a side and gain a close ally.\nThe next negotiation begins behind a thicker wall."
+      },
+      {
+        "line": 81,
+        "value": "进度表还在更新，你已经没有余力补上下一格。\n暂停不需要用过劳来证明。门仍属于你。"
+      },
+      {
+        "line": 81,
+        "value": "The schedule keeps updating. You have nothing left for the next box.\nYou need not prove exhaustion to pause. The door is still yours."
+      },
+      {
+        "line": 82,
+        "value": "每一格都填得漂亮，里面却有你替别人许下的承诺。\n安静的进度表，仍靠你独自维持。"
+      },
+      {
+        "line": 82,
+        "value": "Every box looks complete. Some hold promises you made for others.\nThe quiet schedule still needs you alone to keep it running."
+      },
+      {
+        "line": 83,
+        "value": ""
+      },
+      {
+        "line": 88,
+        "value": "还未核对工作范围。私事不是必须搜集的证据。"
+      },
+      {
+        "line": 88,
+        "value": "Work scope remains unchecked. Private reasons are not required evidence."
+      },
+      {
+        "line": 89,
+        "value": "需要周五草稿与白天评审。"
+      },
+      {
+        "line": 89,
+        "value": "Needs a Friday draft and a daytime review."
+      },
+      {
+        "line": 89,
+        "value": "可谈工作范围，私人原因保留。"
+      },
+      {
+        "line": 89,
+        "value": "Will discuss work scope. Private reasons stay private."
+      },
+      {
+        "line": 90,
+        "value": "\n"
+      },
+      {
+        "line": 90,
+        "value": "仍有一次未经允许的转述需要承认。"
+      },
+      {
+        "line": 90,
+        "value": "Sharing without permission still needs acknowledging."
+      },
+      {
+        "line": 91,
+        "value": "\n"
+      },
+      {
+        "line": 91,
+        "value": "已同意只谈工作安排。"
+      },
+      {
+        "line": 91,
+        "value": "Has agreed to discuss only the work."
+      },
+      {
+        "line": 91,
+        "value": "尚未确认有限的工作协议。"
+      },
+      {
+        "line": 91,
+        "value": "Has not yet confirmed a limited work agreement."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/OfficeRun.cs": {
+    "codeHash": "2815413bf5f7439afb08669fef432e424ebc6510727bf748ffafd3f92c85d710",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/PlayerController.cs": {
+    "codeHash": "3c75222d3cb1fef8b1740806050ffba948b1b4efe18a9a14fc2b238beb0daf11",
+    "strings": [
+      {
+        "line": 18,
+        "value": "ThirdDoor_Sensitivity"
+      },
+      {
+        "line": 32,
+        "value": "ThirdDoor_Sensitivity"
+      },
+      {
+        "line": 94,
+        "value": "Mouse X"
+      },
+      {
+        "line": 95,
+        "value": "Mouse Y"
+      },
+      {
+        "line": 104,
+        "value": "Horizontal"
+      },
+      {
+        "line": 105,
+        "value": "Vertical"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/PrototypeResetController.cs": {
+    "codeHash": "54438747f2c366b7ffb6fb93f1375fc4666b64cb7afcb26099ba6bc4f6221117",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/RelationshipInstallation.cs": {
+    "codeHash": "0ef2e691284204ac5d06a833a9c47966af63330a2ad848a3f04ae9d1f17bcbc5",
+    "strings": [
+      {
+        "line": 31,
+        "value": "POSITION 0"
+      },
+      {
+        "line": 31,
+        "value": " / 07"
+      },
+      {
+        "line": 31,
+        "value": "I / WHAT IS PUBLIC"
+      },
+      {
+        "line": 31,
+        "value": "II / TERMS OF THE TASK"
+      },
+      {
+        "line": 31,
+        "value": "III / A LIMITED AGREEMENT"
+      },
+      {
+        "line": 31,
+        "value": "I / BORROWED VOICES"
+      },
+      {
+        "line": 31,
+        "value": "II / WORDS IN TRANSIT"
+      },
+      {
+        "line": 31,
+        "value": "III / WHO SPEAKS NEXT"
+      },
+      {
+        "line": 32,
+        "value": "REASON LEFT BLANK"
+      },
+      {
+        "line": 32,
+        "value": "SPEAK / LISTEN"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/RelationshipRun.cs": {
+    "codeHash": "a3597d98c821d45f0d283f265abf08e7abb9ad6e7a248afd9ea0d442bba265e5",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/RelationshipSave.cs": {
+    "codeHash": "22e544fd5ed5849b7dbeb5bb78b8a87cfff0fda3d40116f06b345168703812bf",
+    "strings": []
+  },
+  "Assets/ThirdDoor/Scripts/RestStation.cs": {
+    "codeHash": "e664be3a541cf8dc788e7336430e317674ab35c9c1ff6967d48fe72d341313fd",
+    "strings": [
+      {
+        "line": 5,
+        "value": "[ E ]  给自己留一点余力 / 每轮一次"
+      },
+      {
+        "line": 5,
+        "value": "[ E ]  REST / ONCE EACH ROUND"
+      },
+      {
+        "line": 13,
+        "value": "00 / 留给自己"
+      },
+      {
+        "line": 13,
+        "value": "00 / A PLACE FOR YOU"
+      },
+      {
+        "line": 13,
+        "value": "你把别人的话，暂时放在椅子上。\n休息并不会让你欠任何人更多。\n"
+      },
+      {
+        "line": 13,
+        "value": "You set their words down for a moment.\nRest doesn't make you owe anyone more.\n"
+      },
+      {
+        "line": 13,
+        "value": "这一轮已经在这里恢复过了。\n你仍然可以停一会儿，不必把安静也变成任务。"
+      },
+      {
+        "line": 13,
+        "value": "You've restored your breath here this round.\nYou can still pause. Quiet doesn't have to be a task."
+      },
+      {
+        "line": 13,
+        "value": "你现在有足够的余力，也没有承重。\n椅子会留在这里，等你需要时再恢复。"
+      },
+      {
+        "line": 13,
+        "value": "You have breath to spare and no weight to carry.\nThe chair will be here when you need it."
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/SceneBootstrapper.cs": {
+    "codeHash": "ed5804979997bf8f2238056d0f6191dc195024da1c642410efd72607f3f71877",
+    "strings": [
+      {
+        "line": 12,
+        "value": "ThirdDoor_RuntimeRoot"
+      },
+      {
+        "line": 90,
+        "value": "Build Third Door Scene"
+      },
+      {
+        "line": 162,
+        "value": "RedRoom_Mat"
+      },
+      {
+        "line": 163,
+        "value": "BlueRoom_Mat"
+      },
+      {
+        "line": 164,
+        "value": "MiddleRoom_Mat"
+      },
+      {
+        "line": 166,
+        "value": "Paper fibres / procedural"
+      },
+      {
+        "line": 174,
+        "value": "_BaseMap"
+      },
+      {
+        "line": 174,
+        "value": "_BaseMap"
+      },
+      {
+        "line": 175,
+        "value": "_Smoothness"
+      },
+      {
+        "line": 176,
+        "value": "BlackDoor_Mat"
+      },
+      {
+        "line": 177,
+        "value": "WhiteGlow_Mat"
+      },
+      {
+        "line": 178,
+        "value": "DarkWall_Mat"
+      },
+      {
+        "line": 179,
+        "value": "Void_Black_Mat"
+      },
+      {
+        "line": 185,
+        "value": "Universal Render Pipeline/Unlit"
+      },
+      {
+        "line": 188,
+        "value": "Unlit/Color"
+      },
+      {
+        "line": 191,
+        "value": "_BaseColor"
+      },
+      {
+        "line": 193,
+        "value": "_BaseColor"
+      },
+      {
+        "line": 195,
+        "value": "_Color"
+      },
+      {
+        "line": 197,
+        "value": "_Color"
+      },
+      {
+        "line": 204,
+        "value": "Universal Render Pipeline/Lit"
+      },
+      {
+        "line": 207,
+        "value": "Standard"
+      },
+      {
+        "line": 215,
+        "value": "_BaseColor"
+      },
+      {
+        "line": 217,
+        "value": "_BaseColor"
+      },
+      {
+        "line": 220,
+        "value": "_Color"
+      },
+      {
+        "line": 222,
+        "value": "_Color"
+      },
+      {
+        "line": 225,
+        "value": "_Smoothness"
+      },
+      {
+        "line": 229,
+        "value": "_EMISSION"
+      },
+      {
+        "line": 230,
+        "value": "_EmissionColor"
+      },
+      {
+        "line": 238,
+        "value": "Player"
+      },
+      {
+        "line": 247,
+        "value": "First Person Camera"
+      },
+      {
+        "line": 257,
+        "value": "MainCamera"
+      },
+      {
+        "line": 288,
+        "value": "Microsoft YaHei UI"
+      },
+      {
+        "line": 289,
+        "value": "Microsoft YaHei"
+      },
+      {
+        "line": 290,
+        "value": "微软雅黑"
+      },
+      {
+        "line": 291,
+        "value": "SimHei"
+      },
+      {
+        "line": 292,
+        "value": "黑体"
+      },
+      {
+        "line": 293,
+        "value": "SimSun"
+      },
+      {
+        "line": 294,
+        "value": "宋体"
+      },
+      {
+        "line": 295,
+        "value": "Arial Unicode MS"
+      },
+      {
+        "line": 296,
+        "value": "Noto Sans CJK SC"
+      },
+      {
+        "line": 305,
+        "value": "Arial.ttf"
+      },
+      {
+        "line": 310,
+        "value": "Game Managers"
+      },
+      {
+        "line": 321,
+        "value": "High Contrast Volume"
+      },
+      {
+        "line": 327,
+        "value": "ThirdDoor_Stylized_Volume"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/SessionUIBuilder.cs": {
+    "codeHash": "ac50754e97354a1770bf9cdaac5ecf6df1f50128f0c6491ca27664e27b9c36fa",
+    "strings": [
+      {
+        "line": 8,
+        "value": "Case navigation"
+      },
+      {
+        "line": 10,
+        "value": "Case navigation rule"
+      },
+      {
+        "line": 11,
+        "value": "Case navigation caption"
+      },
+      {
+        "line": 11,
+        "value": ""
+      },
+      {
+        "line": 12,
+        "value": "Replay case"
+      },
+      {
+        "line": 12,
+        "value": ""
+      },
+      {
+        "line": 13,
+        "value": "Next case"
+      },
+      {
+        "line": 13,
+        "value": ""
+      },
+      {
+        "line": 14,
+        "value": "Ending return to title"
+      },
+      {
+        "line": 14,
+        "value": ""
+      },
+      {
+        "line": 15,
+        "value": "Case navigation hint"
+      },
+      {
+        "line": 15,
+        "value": ""
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/SymbolicDoorController.cs": {
+    "codeHash": "0fbb208ee3e187eaff6203f163994020069da47a4a991283b470c4078b321610",
+    "strings": [
+      {
+        "line": 133,
+        "value": "Printed door leaf"
+      }
+    ]
+  },
+  "Assets/ThirdDoor/Scripts/ToggleDoor.cs": {
+    "codeHash": "73bc9b6ad22f11e2d6184bf79289654cdbf910186313b7c29fdaf94c3ca606a6",
+    "strings": []
+  }
+}

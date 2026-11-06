@@ -1,0 +1,271 @@
+{
+  "version": "7.0",
+  "date": "2026-11-04T02:13:54.7645830Z",
+  "engine": "2022.3.62f3",
+  "build": "Original Windows player resources with newly compiled project assembly",
+  "runtimeCompilation": "Passed",
+  "editorCodeCompilation": "Passed with pinned Unity references",
+  "freshUnityBuild": "Not completed in this iteration; inherited Windows preview player used",
+  "productStatus": "Two cases with a live collage strip, physical paper roll, full-word delivery proof and local continuation; no Steam submission or release",
+  "model": {
+    "passed": 404533,
+    "randomJourneys": 3000,
+    "correspondenceJourneys": 900,
+    "exhaustiveRouteRestFinalCombinations": 17496,
+    "officeRandomJourneys": 600,
+    "officeExhaustiveCombinations": 69984,
+    "randomSaveRoundtrips": 250,
+    "endingsReachablePerCase": 7,
+    "playableCases": 2
+  },
+  "cases": [
+    {
+      "scenario": "v2-table-cn",
+      "passed": 82,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-boundary-en",
+      "passed": 39,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-distance-cn",
+      "passed": 22,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-loop-cn",
+      "passed": 77,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-alliance-en",
+      "passed": 79,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-exhaustion-cn",
+      "passed": 72,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-falsepeace-en",
+      "passed": 79,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-cards-cn",
+      "passed": 101,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-refusal-cn",
+      "passed": 76,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-dispatch-consent-cn",
+      "passed": 129,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-dispatch-breach-en",
+      "passed": 110,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-dispatch-return-cn",
+      "passed": 106,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-office-agreement-cn",
+      "passed": 116,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-office-intrusion-en",
+      "passed": 90,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-office-alliance-cn",
+      "passed": 90,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-save-resume-en",
+      "passed": 91,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-session-nav-cn",
+      "passed": 29,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-office-agreement-aspect-en",
+      "passed": 116,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-aspect-en",
+      "passed": 86,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-aspect-consent-en",
+      "passed": 129,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v5-art-home-cn",
+      "passed": 92,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v5-art-office-aspect-en",
+      "passed": 123,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v5-art-fallback-cn",
+      "passed": 85,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": true
+    },
+    {
+      "scenario": "v5-art-home-store-cn",
+      "passed": 90,
+      "failed": 0,
+      "resolution": "1920x1080",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v5-art-office-store-en",
+      "passed": 121,
+      "failed": 0,
+      "resolution": "1920x1080",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v7-ribbon-office-agreement-aspect-en",
+      "passed": 160,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v7-ribbon-home-store-cn",
+      "passed": 139,
+      "failed": 0,
+      "resolution": "1920x1080",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v7-ribbon-office-agreement-store-en",
+      "passed": 160,
+      "failed": 0,
+      "resolution": "1920x1080",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v7-ribbon-loop-en",
+      "passed": 142,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v7-ribbon-fallback-cn",
+      "passed": 139,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": true
+    }
+  ],
+  "nativePassed": 2970,
+  "assemblySHA256": "599F4024DBDA6EBECA72DF29E7D88C8FAA5099FBD67882468B63AB18F67B3A43",
+  "generatedArt": {
+    "method": "Built-in image_gen",
+    "sourceImages": 4,
+    "inGameCaseImages": 2,
+    "cutoutAtlasObjects": 9,
+    "sourcePixels": [
+      "1254x1254",
+      "1254x1254",
+      "1672x940",
+      "1254x1254 RGBA"
+    ],
+    "originalsEdited": false,
+    "productionBriefEntries": 23,
+    "editableSVGLayouts": 6,
+    "suppliedReferenceArtDistributed": false
+  },
+  "collage": {
+    "modelAndSaveCoreUnchanged": true,
+    "physicalStation": true,
+    "perRunRecords": true,
+    "deliveryProof": true,
+    "cancelIsReadOnly": true,
+    "languageKeepsPosition": true,
+    "offscreenSheetsDisabled": true,
+    "continuedRunRebuilt": true,
+    "geometryFallback": true
+  },
+  "editorial": {
+    "skills": [
+      "blader/humanizer",
+      "op7418/Humanizer-zh"
+    ],
+    "previousEditionReview": "EditorialReview.txt",
+    "aiDetectorUsed": false
+  },
+  "scope": "Real CharacterController movement, physics and UI raycasts, bilingual layout and leading glyphs, cards, costs and rewind, message permission and repair, two-case endings, JSON backup recovery, Continue, case navigation, physical art and paper roll, per-run collage records, scroll and chapter jumps, language position retention, offscreen sheet culling, verbatim delivery proofs, cancel/confirm input, art fallbacks, continued-run reconstruction with the undo snapshot intact, native 1920x1080 captures. Short frame samples are not hardware certification."
+}
