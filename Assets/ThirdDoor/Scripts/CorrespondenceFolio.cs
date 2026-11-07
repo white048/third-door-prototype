@@ -48,7 +48,7 @@ public class CorrespondenceFolio : MonoBehaviour
         if(voice>=0)
         {
             var incoming=run.MessageFrom(1-voice);
-            selectedSource=incoming!=null&&(incoming.Status==MessageStatus.Held||incoming.Assumed)?1-voice:voice;
+            selectedSource=incoming!=null&&(incoming.Status==MessageStatus.Held||incoming.Assumed||incoming.TaskActive)?1-voice:voice;
         }
         else if(run.MessageFrom(selectedSource)==null&&run.Messages.Count>0)selectedSource=run.Messages[0].Source;
         payload=MessagePayload.Request;feedback=null;revision=-1;
@@ -59,7 +59,7 @@ public class CorrespondenceFolio : MonoBehaviour
     {
         if(dialogue.IsDialogueOpen||IntroSequence.IsActive||ExhibitionHUD.Paused||!NarrativeNotebook.Open)return;
         var state=GameStateManager.Instance;var item=state.Run.MessageFrom(selectedSource);if(item==null)return;
-        if(action==MessageAction.Repair&&state.Run.DispatchRules&&!state.Run.HasUnrepairedDisclosure(selectedSource))action=MessageAction.Reconfirm;
+        action=MappedAction(action,state.Run,item);
         if(action==MessageAction.Deliver)
         {
             if(state.Run.DispatchRules)
@@ -77,6 +77,13 @@ public class CorrespondenceFolio : MonoBehaviour
         var state=GameStateManager.Instance;var item=state.Run.MessageFrom(selectedSource);if(item==null)return;
         var result=state.Run.ActOnMessage(item.Id,action,payload,NearbyVoice(player));if(result==null)return;
         feedback=result;state.RefreshAfterCorrespondence();AudioManager.Instance?.Play(GameSound.ChoiceClick,.3f);Refresh();
+    }
+    private static MessageAction MappedAction(MessageAction action,RelationshipRun run,MessageEnvelope item)
+    {
+        if(run.DeckRules&&action==MessageAction.AskPermission)return MessageAction.CheckFacts;
+        if(action==MessageAction.Repair&&run.DeckRules&&item.TaskActive)return MessageAction.HandOffTask;
+        if(action==MessageAction.Repair&&run.DispatchRules&&!run.HasUnrepairedDisclosure(item.Source))return MessageAction.Reconfirm;
+        return action;
     }
     public void ConfigureProof(GameObject panel,ExhibitionText route,ExhibitionText words,ExhibitionText permission,ExhibitionText delta,Button confirm,Button cancel,RawImage art)
     {
@@ -115,6 +122,7 @@ public class CorrespondenceFolio : MonoBehaviour
         proofRoute.text=CorrespondenceText.Source(item.Source)+" → "+CorrespondenceText.Source(1-item.Source)+NarrativeText.L(" / 传话校样"," / DELIVERY PROOF");
         proofWords.text=NarrativeText.L("你将转告：\n\n","YOU WILL SAY:\n\n")+(packetProof?DispatchText.Packet(run.Case,item.Source,packetFirst,packetSecond,packetTool):privateWords?CorrespondenceText.Need(item):CorrespondenceText.Request(item));
         proofPermission.text=breach?CorrespondenceText.Permission(item)+"\n"+NarrativeText.L("对方没有同意转述这句话。先前若答应过直接谈，说出去后也会撤回同意。","The speaker hasn't agreed to sharing this. Any earlier agreement to talk will be withdrawn."):privateWords?CorrespondenceText.Permission(item):NarrativeText.L("这句是请你转告的原话。\n私下听到的内容不会一并带出。","This is the request you were asked to carry.\nThe private part stays out.");
+        if(run.DeckRules&&packetFirst==DispatchFragment.None)proofPermission.text=NarrativeText.L("这是核对、回执或交接动作。不会替任何人作出同意。","This checks a record, returns a receipt or hands back a task. It does not give anyone's consent.");
         if(packetProof&&(packetFirst==DispatchFragment.Guess||packetSecond==DispatchFragment.Guess))proofPermission.text=(privateWords?proofPermission.text+"\n":"")+NarrativeText.L("这句保证是你补的，没有向本人核对。","You added this promise. The speaker hasn't confirmed it.");
         proofDelta.text=packetProof?DispatchText.ToolDetail(packetTool):CorrespondenceText.Delta(preview);
         proofConfirm.GetComponentInChildren<ExhibitionText>().text=breach?NarrativeText.L("仍要转告私下内容","SHARE THE PRIVATE WORDS ANYWAY"):NarrativeText.L("说出这句话","SAY THESE WORDS");
@@ -154,8 +162,7 @@ public class CorrespondenceFolio : MonoBehaviour
         Style(payloads[0],payload==MessagePayload.Request&&item!=null);Style(payloads[1],payload==MessagePayload.Need&&item!=null);
         for(int i=0;i<4;i++)
         {
-            var action=(MessageAction)i;
-            if(i==3&&run.DispatchRules&&item!=null&&!run.HasUnrepairedDisclosure(item.Source))action=MessageAction.Reconfirm;
+            var action=item==null?(MessageAction)i:MappedAction((MessageAction)i,run,item);
             bool compose=run.DispatchRules&&action==MessageAction.Deliver;
             actions[i].interactable=item!=null&&!dialogue.IsDialogueOpen&&(compose?run.CanDraft(item.Id,context):run.CanActOnMessage(item.Id,action,payload,context));
             string label=i==0?NarrativeText.L("交给 ","DELIVER TO ")+(item==null?"…":CorrespondenceText.Source(1-item.Source)):CorrespondenceText.ActionName(action);
@@ -176,6 +183,12 @@ public class CorrespondenceFolio : MonoBehaviour
             if(payload==MessagePayload.Need&&item.Permission!=MessagePermission.Granted&&item.Status==MessageStatus.Held)details.text+="\n"+NarrativeText.L("未经本人允许：其信任 -2；需要当面承认擅自转述。","WITHOUT PERMISSION: speaker TRUST -2. Return to acknowledge what you shared.");
         }
         reason.text=dialogue.IsDialogueOpen?NarrativeText.L("先读完这段对话，再处理传话。","Finish this conversation before handling a message."):context<0?NarrativeText.L("门前 F：问说话的人许可、退回承诺；去另一人那里转告。","F AT A DOOR: ask or return at the source; deliver at the recipient."):NarrativeText.L("当前在 ","AT ")+CorrespondenceText.Source(context)+NarrativeText.L(" 门前 / 处理过的交谈不能用 G 抹去。"," / These exchanges cannot be erased with G.");
+        if(run.DeckRules&&item!=null)
+        {
+            if(feedback==null)details.text=(item.SourceChecked?NarrativeText.L("公开版本已核对。","Public edition checked."):NarrativeText.L("可回说话人门前核对版本，不需要核对卡。","You can check the source's edition without a VERIFY card."))+"\n"+DispatchText.Progress(item)+(item.TaskActive?NarrativeText.L("\n代办清单还在你名下；送达后可交接。","\nYour list is still under your name. Hand it back after delivery."):"");
+            payloads[1].GetComponentInChildren<ExhibitionText>().text=NarrativeText.L("私事不在工作清单里\n\n这一趟只处理草稿、时间、通知版本和交接。","PRIVATE REASONS STAY OFF THE LIST\n\nThis trip covers the draft, time, notice edition and handoff.");
+            reason.text=NarrativeText.L("F：原主处核对；收信人处组句、交接。03 收这一场。","F: check at the source; compose or hand back at the recipient. 03 closes this scene.");
+        }
         ledger.text=NarrativeText.L("在手 ","HELD ")+run.HeldMessages+" / 2\n";
         int first=Mathf.Max(0,run.Correspondence.Count-3);
         for(int i=first;i<run.Correspondence.Count;i++)

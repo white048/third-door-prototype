@@ -3,8 +3,9 @@ using static NarrativeText;
 public static class DispatchText
 {
     public static string Name(DispatchFragment part)=>part==DispatchFragment.Fact?L("已知的事","WHAT YOU KNOW"):part==DispatchFragment.Request?L("要商量的事","THE PROPOSAL"):part==DispatchFragment.Need?L("私下那句","THE PRIVATE WORDS"):part==DispatchFragment.Guess?L("你补的一句","YOUR ADDITION"):L("空着","EMPTY");
-    public static string Fragment(CaseId id,int source,DispatchFragment part,DispatchTool tool=DispatchTool.None)
+    public static string Fragment(CaseId id,int source,DispatchFragment part,DispatchTool tool=DispatchTool.None,int phase=-1)
     {
+        if(id==CaseId.Office&&CaseDeckText.Active)return CaseDeckText.Fragment(phase<0?GameStateManager.Instance.Run.Phase:phase,source,part,tool);
         if(part==DispatchFragment.None)return "";
         if(part==DispatchFragment.Need)return id==CaseId.Home?(source==0?L("她想知道，自己在他心里还有没有位置。","She wants to know she still has a place in his life."):L("他还想保持联系，但想自己拿主意。","He still wants to stay in touch, on his own terms.")):(source==0?L("他怕草稿交不出来，最后还得自己兜底。","They're worried they'll be left to finish the draft."):L("私人原因，他想留着自己说。","They want to discuss their private reasons themselves."));
         if(part==DispatchFragment.Guess)
@@ -18,17 +19,19 @@ public static class DispatchText
         return part==DispatchFragment.Fact?(source==0?L("草稿的期限是周五。","The draft is due on Friday."):L("同事能在周五交出草稿。","Your colleague can deliver the draft on Friday."))
             :(source==0?L("请同事报一个能参加评审的时间。","The manager asks for a review time your colleague can attend."):L("同事希望评审改到白天。","Your colleague asks to move the review to daytime."));
     }
-    public static string Packet(CaseId id,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool)
+    public static string Packet(CaseId id,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool,int phase=-1)
     {
+        if(id==CaseId.Office&&CaseDeckText.Active)return CaseDeckText.Packet(phase<0?GameStateManager.Instance.Run.Phase:phase,source,first,second,tool);
         string text=Fragment(id,source,first,tool);
         if(second!=DispatchFragment.None)text+="\n"+Fragment(id,source,second,tool);
         if(first==DispatchFragment.None)return L("我先问一句，你现在最急着弄清什么？","Before I pass this on, what do you need to know first?");
         string prefix=tool==DispatchTool.Quote?L("这是对方原来的意思：\n","Their words, as they meant them:\n"):tool==DispatchTool.Boundary?L("这趟我只带这几句：\n","This time, I'm only carrying these words:\n"):tool==DispatchTool.TakeOver?L("我先替这份安排担保：\n","I'll put my name behind this plan:\n"):tool==DispatchTool.Pause?L("等一下，我理一理：\n","Give me a moment to get this straight:\n"):"";
         return prefix+text;
     }
-    public static string HeardWords(CorrespondenceEvent e)=>Packet(CaseInfo.Active,e.Source,e.First,e.Second,e.Tool);
+    public static string HeardWords(CorrespondenceEvent e)=>Packet(CaseInfo.Active,e.Source,e.First,e.Second,e.Tool,e.Phase);
     public static string Actor(RelationshipRun run,MessageEnvelope m)
     {
+        if(run.DeckRules)return CaseDeckText.Actor(run,m.Source);
         int target=1-m.Source;
         if(run.Trust(target)==0)return run.Case==CaseId.Office?L("“你上次那份‘准信’，落款写的是谁？”","Whose name was on that last 'confirmed' plan of yours?"):L("“这回是他的话，还是你替他想的？”","Are these their words, or what you think they mean?");
         if(run.Case==CaseId.Office)return target==0
@@ -38,9 +41,11 @@ public static class DispatchText
             :L("“先说聊多久。‘十分钟’后面有没有括号？”","How long? Is there anything in brackets after 'ten minutes'?");
     }
     public static string TimeClue(RelationshipRun run,MessageEnvelope m)=>run.HearingRoom(1-m.Source,m)==1?L("“赶着走，先说一件。”","I'm on my way out. One thing first."):L("“两件事，说吧。”","Two things. Go on.");
-    public static string ToolName(DispatchTool tool)=>tool==DispatchTool.None?L("直接说","JUST SAY IT"):CardName(RelationshipRun.CardFor(tool));
+    public static string ToolName(DispatchTool tool)=>CaseDeckText.Active?CaseDeckText.Name(tool):ToolNameLegacy(tool);
+    public static string ToolNameLegacy(DispatchTool tool)=>tool==DispatchTool.None?L("直接说","JUST SAY IT"):CardName(RelationshipRun.CardFor(tool));
     public static string ToolDetail(DispatchTool tool)
     {
+        if(CaseDeckText.Active)return CaseDeckText.Detail(tool);
         switch(tool)
         {
             case DispatchTool.Quote:return L("整句听完，也能应对怀疑。承重 +1；消耗“原话”。","They hear both pieces, even when doubtful. LOAD +1; spends QUOTE.");
@@ -54,6 +59,8 @@ public static class DispatchText
     }
     public static string Progress(MessageEnvelope m)=>L("已对上：","HEARD: ")+((m.PublicProgress&1)!=0?"● ":"○ ")+Name(DispatchFragment.Fact)+"  /  "+((m.PublicProgress&2)!=0?"● ":"○ ")+Name(DispatchFragment.Request)+(m.Assumed?L("\n先照你的保证排了，原话仍未核对。","\nThey've pencilled in your promise. The original words still need checking."):"");
     public static string Reaction(CorrespondenceEvent e)
+        =>CaseDeckText.Active?CaseDeckText.Reaction(e):ReactionLegacy(e);
+    public static string ReactionLegacy(CorrespondenceEvent e)
     {
         if(e.Breach)return L("“哦，原来还说了这个。”\n收信人记下了。说这句话的人还不知道。","Oh. They said that too?\nThe recipient notes it down. The speaker doesn't know yet.")+(e.Completed?L("\n两项安排也已记下。","\nBoth parts of the plan were recorded too."):"");
         if(e.Guarded)return L("“先把出处说清楚。你上回就加过一句。”\n对方把纸推回来了。","Tell me whose words these are. You added something last time.\nThey push the paper back.");
@@ -102,6 +109,7 @@ public static class DispatchText
     }
     public static string Objective(RelationshipRun run)
     {
+        if(run.DeckRules)return CaseDeckText.Objective(run);
         if(run.Ended)return L("V 回读长卷 / R 再跑一趟","V READ THE STRIP / R MAKE ANOTHER RUN");
         if(run.AllVoicesHeard)return L("去 03 收这一趟。还可以送遗漏的话，再回本人门前按 F 确认安排。","Finish at 03, or deliver missing words and use F at the speaker to confirm the plan again.");
         return L("第 ","ROUND ")+(run.Phase+1)+" / 3\n"+L("E 接话 / F 门前组句 / 00 休息 / 03 收工","E HEAR THEM / F COMPOSE AT A DOOR / 00 REST / 03 FINISH");

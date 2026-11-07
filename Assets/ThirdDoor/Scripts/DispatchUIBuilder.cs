@@ -20,8 +20,8 @@ public partial class SceneBootstrapper
         }
         var packet=Type(sheet.transform,"Composed actual words","",new Vector2(925,240),new Vector2(810,175),27,Ink,chineseUiFont);
         var reaction=Type(sheet.transform,"Recipient actual response","",new Vector2(925,445),new Vector2(810,225),24,Red,chineseUiFont);
-        var tools=new Button[7];
-        for(int i=0;i<7;i++)
+        var tools=new Button[10];
+        for(int i=0;i<10;i++)
         {
             tools[i]=Button(sheet.transform,"Dispatch tool / "+(DispatchTool)i,"",new Vector2(35+(i%4)*205,590+(i/4)*62),new Vector2(190,52),Ink,Paper,chineseUiFont);
             var label=tools[i].GetComponentInChildren<ExhibitionText>();label.fontSize=18;

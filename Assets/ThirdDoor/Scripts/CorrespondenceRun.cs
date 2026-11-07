@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 public enum MessagePayload { Request, Need }
-public enum MessageAction { Deliver, AskPermission, Return, Repair, Reconfirm }
+public enum MessageAction { Deliver, AskPermission, Return, Repair, Reconfirm, CheckFacts, HandOffTask }
 public enum MessageStatus { Held, Delivered, Returned, KeptPrivate }
 public enum MessagePermission { Unasked, Granted, Declined }
 public enum SharingPreference { AskFirst, OwnVoice }
@@ -17,12 +17,15 @@ public sealed class MessageEnvelope
     public SharingPreference Sharing;
     public int PublicProgress,DispatchAttempts;
     public bool Inspected,PrivateHeard,GuessHeard,Assumed;
+    public bool SourceChecked,TaskActive,TaskHandedOff;
+    public DispatchTool LastTool;
     internal MessageEnvelope Copy() => (MessageEnvelope)MemberwiseClone();
     internal void Restore(MessageEnvelope copy)
     {
         Id=copy.Id;Source=copy.Source;Phase=copy.Phase;SourceTrust=copy.SourceTrust;PriorManaged=copy.PriorManaged;PriorAlliances=copy.PriorAlliances;
         HasNeed=copy.HasNeed;Promised=copy.Promised;PermissionPhase=copy.PermissionPhase;Permission=copy.Permission;Status=copy.Status;Sharing=copy.Sharing;
         PublicProgress=copy.PublicProgress;DispatchAttempts=copy.DispatchAttempts;Inspected=copy.Inspected;PrivateHeard=copy.PrivateHeard;GuessHeard=copy.GuessHeard;Assumed=copy.Assumed;
+        SourceChecked=copy.SourceChecked;TaskActive=copy.TaskActive;TaskHandedOff=copy.TaskHandedOff;LastTool=copy.LastTool;
     }
 }
 
@@ -37,6 +40,8 @@ public sealed class CorrespondenceEvent
     public DispatchFragment First,Second;
     public DispatchTool Tool;
     public int PublicBefore,PublicAfter,HearingRoom,HeardCount;
+    public DispatchCombo Combo;
+    public bool CheckMissing;
 }
 
 // Two authored voices, two envelopes. The content stays attached to its actual source.
@@ -48,23 +53,28 @@ public sealed partial class RelationshipRun
     public IReadOnlyList<MessageEnvelope> Messages => messages;
     public IReadOnlyList<CorrespondenceEvent> Correspondence => correspondence;
     public bool HasUnrepairedDisclosure(int voice) => voice >= 0 && voice < 2 && disclosures[voice];
-    public int HeldMessages { get { int count=0;foreach(var item in messages)if(item.Status==MessageStatus.Held)count++;return count; } }
+    public int HeldMessages { get { int count=0;foreach(var item in messages)if(IsCurrentEnvelope(item)&&item.Status==MessageStatus.Held)count++;return count; } }
     public MessageEnvelope Message(int id) => messages.Find(item=>item.Id==id);
-    public MessageEnvelope MessageFrom(int source) => messages.Find(item=>item.Source==source);
+    public MessageEnvelope MessageFrom(int source) => messages.Find(item=>item.Source==source&&IsCurrentEnvelope(item));
 
     private void ObserveMessage(ConversationRecord record)
     {
         if(record.TooExhaustedToListen)return;
         var item=MessageFrom(record.Voice);
         bool workScope=Case==CaseId.Office&&record.Voice==1&&record.Option==2;
-        if(item==null&&(record.Option<2||record.Card==ConversationCard.Listen||workScope))
+        if(item==null&&(record.Option<2||record.Card==ConversationCard.Listen||workScope||DeckRules))
         {
             item=new MessageEnvelope{Id=messages.Count,Source=record.Voice,Phase=record.Phase,SourceTrust=record.VoiceTrustBefore,PriorManaged=record.PriorManagedMessages,PriorAlliances=record.PriorAlliances,Sharing=record.Voice==1?SharingPreference.OwnVoice:SharingPreference.AskFirst};
             messages.Add(item);
             record.CreatedMessageId=item.Id;
         }
         if(item==null)return;
-        if(DispatchRules)item.HasNeed=item.HasNeed||(record.Phase<2&&record.Option==1&&!workScope&&!(Case==CaseId.Office&&record.Voice==1))||record.Card==ConversationCard.Listen;
+        if(DeckRules)
+        {
+            item.HasNeed=false;
+            if((record.Voice==0&&record.Option==1)||(record.Voice==1&&record.Option==2))item.SourceChecked=true;
+        }
+        if(DispatchRules&&!DeckRules)item.HasNeed=item.HasNeed||(record.Phase<2&&record.Option==1&&!workScope&&!(Case==CaseId.Office&&record.Voice==1))||record.Card==ConversationCard.Listen;
         if(item.Status!=MessageStatus.Held)return;
         if(!DispatchRules)item.HasNeed=Clarity(record.Voice)>0;
         if(record.Option==0||workScope)item.Promised=true;
@@ -74,8 +84,11 @@ public sealed partial class RelationshipRun
 
     public bool CanActOnMessage(int id,MessageAction action,MessagePayload payload,int atVoice)
     {
-        if(action<MessageAction.Deliver||action>MessageAction.Reconfirm||payload<MessagePayload.Request||payload>MessagePayload.Need)return false;
+        if(action<MessageAction.Deliver||action>MessageAction.HandOffTask||payload<MessagePayload.Request||payload>MessagePayload.Need)return false;
         var item=Message(id);if(Ended||item==null)return false;
+        if(!IsCurrentEnvelope(item))return false;
+        if(action==MessageAction.CheckFacts)return DeckReady&&atVoice==item.Source&&!item.SourceChecked&&Capacity>0;
+        if(action==MessageAction.HandOffTask)return DeckReady&&atVoice==1-item.Source&&item.TaskActive&&item.PublicProgress==3&&!item.Assumed&&Capacity>0;
         if(action==MessageAction.Reconfirm)return atVoice==item.Source&&CanReconfirmPlan(item.Source);
         if(DispatchRules&&action==MessageAction.Deliver)return false;
         if(action==MessageAction.Repair)return atVoice==item.Source&&disclosures[item.Source]&&Capacity>0;
@@ -108,7 +121,9 @@ public sealed partial class RelationshipRun
         var item=Message(id);int source=item.Source,recipient=1-source;
         int breath=Capacity,load=Load,bridge=Bridge,sourceTrust=Trust(source),recipientTrust=Trust(recipient);
         var result=new CorrespondenceEvent{MessageId=id,Source=source,Phase=Phase,Action=action,Payload=payload,WasPromise=item.Promised,RecipientReady=Trust(recipient)>=2,PrefersOwnVoice=item.Sharing==SharingPreference.OwnVoice};
-        if(action==MessageAction.Reconfirm)
+        if(action==MessageAction.CheckFacts){Capacity--;item.SourceChecked=true;AddClarity(source,1);AddTrust(source,1);}
+        else if(action==MessageAction.HandOffTask){Capacity--;DeckTaskHandoff(item);}
+        else if(action==MessageAction.Reconfirm)
         {
             Capacity--;Load--;Bridge++;if(source==0)RedConsents=true;else BlueConsents=true;result.ConsentRenewed=true;
         }

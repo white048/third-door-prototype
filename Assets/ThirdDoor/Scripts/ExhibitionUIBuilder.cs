@@ -21,7 +21,7 @@ public partial class SceneBootstrapper
         Block(c,"Masthead",new Vector2(36,30),new Vector2(1848,58),Paper);
         Block(c,"Red registration",new Vector2(36,30),new Vector2(8,58),Red);
         Type(c,"Exhibition name","THE THIRD DOOR",new Vector2(62,38),new Vector2(340,42),30,Ink);
-        var edition=Type(c,"Edition","TWO CASES   /   WORDS IN PLAY   /   008",new Vector2(1310,46),new Vector2(540,30),18,Ink);
+        var edition=Type(c,"Edition","TWO CASES   /   FIVE CARDS IN HAND   /   009",new Vector2(1310,46),new Vector2(540,30),18,Ink);
         edition.alignment=TextAnchor.UpperRight;
         var footer=Block(c,"Footer paper",new Vector2(36,1010),new Vector2(1848,70),Paper);
         Bottom(footer.rectTransform);

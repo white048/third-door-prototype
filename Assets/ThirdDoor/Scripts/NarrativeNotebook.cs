@@ -30,6 +30,13 @@ public class NarrativeNotebook : MonoBehaviour
     private Button ribbonTab;
     private NarrativeRibbon ribbon;
     private bool viewingRibbon;
+    private CaseDeckPanel deckPanel;
+    public void ConfigureDeck(CaseDeckPanel panel){deckPanel=panel;}
+    public void ShowDeck(int voice=-1)
+    {
+        if(ExhibitionHUD.Paused||IntroSequence.IsActive||deckPanel==null)return;
+        viewingArchive=viewingCorrespondence=viewingRibbon=false;Present();deckPanel.Show(voice);
+    }
 
     public void Configure(GameObject paper,PlayerController controller,DialogueUI ui,ExhibitionText heading,Button closeButton,Button currentButton,Button archiveButton,GameObject notes,ExhibitionText definitions,ExhibitionText[] needs,ExhibitionText[] ledger,ExhibitionText[] deltas,GameObject endings,ExhibitionText[] names,ExhibitionText[] bodies,Image[] cards,ExhibitionText note,Button revise,Button titleButton)
     {
@@ -40,7 +47,7 @@ public class NarrativeNotebook : MonoBehaviour
         close.onClick.AddListener(Close);
         current.onClick.AddListener(()=>Show(false));archive.onClick.AddListener(()=>Show(true));
         titleArchive.onClick.AddListener(()=>Show(true));
-        rewind.onClick.AddListener(()=>{Close();GameStateManager.Instance.Rewind();});
+        rewind.onClick.AddListener(()=>{if(GameStateManager.Instance.Run.DeckRules){ShowDeck();return;}Close();GameStateManager.Instance.Rewind();});
         Open=false;group.alpha=0;group.blocksRaycasts=group.interactable=false;
     }
     public void ConfigureTrace(GameObject panel,ExhibitionText heading,ExhibitionText source,ExhibitionText reply,ExhibitionText consequence,Button closeButton,Button[] rows)
@@ -88,7 +95,7 @@ public class NarrativeNotebook : MonoBehaviour
         if(Open&&Input.GetKeyDown(KeyCode.F2))LocalizationManager.ToggleLanguage();
         if(Input.GetKeyDown(KeyCode.Tab)){if(Open)Close();else Show(IntroSequence.IsActive);}
         else if(Input.GetKeyDown(KeyCode.V)&&!IntroSequence.IsActive&&!dialogue.IsDialogueOpen){if(Open&&viewingRibbon)Close();else ShowRibbon();}
-        else if(Open&&Input.GetKeyDown(KeyCode.Escape)){EscapeFrame=Time.frameCount;if(traceIndex>=0)CloseTrace();else if(folio!=null&&folio.ProofOpen)folio.CloseProof();else if(folio!=null&&folio.ComposerOpen)folio.CloseComposer();else Close();}
+        else if(Open&&Input.GetKeyDown(KeyCode.Escape)){EscapeFrame=Time.frameCount;if(deckPanel!=null&&deckPanel.IsOpen)deckPanel.Hide();else if(traceIndex>=0)CloseTrace();else if(folio!=null&&folio.ProofOpen)folio.CloseProof();else if(folio!=null&&folio.ComposerOpen)folio.CloseComposer();else Close();}
         else if(!Open&&!IntroSequence.IsActive&&!dialogue.IsDialogueOpen&&Input.GetKeyDown(KeyCode.G))GameStateManager.Instance?.Rewind();
         var state=GameStateManager.Instance;if(state==null)return;
         if(revision!=state.Run.Revision||language!=LocalizationManager.Current||known!=EndingArchive.Count||activeCase!=CaseInfo.Active)Refresh();
@@ -101,6 +108,7 @@ public class NarrativeNotebook : MonoBehaviour
     }
     private void Present()
     {
+        if(deckPanel!=null)deckPanel.Hide();
         Open=true;
         if(folio!=null){folio.CloseProof();folio.CloseComposer();}
         CloseTrace();
@@ -109,6 +117,7 @@ public class NarrativeNotebook : MonoBehaviour
     }
     public void Close()
     {
+        if(deckPanel!=null)deckPanel.Hide();
         Open=false;group.alpha=0;group.blocksRaycasts=group.interactable=false;
         if(folio!=null){folio.CloseProof();folio.CloseComposer();}
         CloseTrace();
@@ -140,6 +149,7 @@ public class NarrativeNotebook : MonoBehaviour
         StyleTab(archive,viewingArchive);StyleTab(correspondenceTab,viewingCorrespondence);StyleTab(ribbonTab,viewingRibbon);
         currentPage.SetActive(!viewingArchive&&!viewingCorrespondence&&!viewingRibbon);archivePage.SetActive(viewingArchive);
         explanation.text=NarrativeText.L("余力为 0 时，先休息。承重达到 6，承接和追问会多耗余力。\n直连表示直接交流的准备程度，仍须本人同意。每轮可休息一次，每种卡仅一张。","At 0 BREATH, rest first. At 6 LOAD, carrying and asking cost extra breath.\nBRIDGE helps direct conversation; consent is still needed. Rest once per round. Each card is single use.");
+        if(run.DeckRules)explanation.text=NarrativeText.L("本局选五张策略牌，每场各用一次；下一场恢复，可换一张。\n00 每场休息一次。基本核对、传话和交接始终可用，卡牌只改变做法。","Five strategy cards, once each per scene. Refresh next scene; swap up to one.\nRest once per scene at 00. Basic checking, delivery and handoff remain available.");
         for(int i=0;i<2;i++)memories[i].text=NarrativeText.Speaker(i)+"   /   "+NarrativeText.L("理解 ","INSIGHT ")+run.Clarity(i)+" / 3   ·   "+NarrativeText.L("信任 ","TRUST ")+run.Trust(i)+" / 4\n"+NarrativeText.Memory(run,i);
         for(int i=0;i<6;i++)
         {
@@ -161,8 +171,8 @@ public class NarrativeNotebook : MonoBehaviour
         if(viewingCorrespondence)margin.text=NarrativeText.L("F / 去门前处理传话。私下内容要先问本人。\n交付、询问或退回后，不能再用重述撤回上一句。","F at a door opens correspondence. Ask before sharing private words.\nDelivering, asking or returning a message closes the chance to revise your last response.");
         if(viewingRibbon)margin.text=NarrativeText.L("滚轮 / ↑ ↓ 阅读，左侧按钮跳到各轮。\n长卷保留本局回应和实际传话；V / Tab 返回。","WHEEL / ↑ ↓ to read. Use the left buttons to jump by round.\nThe strip keeps this run's responses and exchanges. V / TAB returns.");
         rewind.gameObject.SetActive(!viewingArchive&&!viewingCorrespondence&&!viewingRibbon);
-        rewind.interactable=run.CanRewind&&!dialogue.IsDialogueOpen&&!IntroSequence.IsActive;
-        rewind.GetComponentInChildren<ExhibitionText>().text=NarrativeText.L("G / 重述上一句","G / SAY IT AGAIN");
+        rewind.interactable=(run.DeckRules||run.CanRewind)&&!dialogue.IsDialogueOpen&&!IntroSequence.IsActive;
+        rewind.GetComponentInChildren<ExhibitionText>().text=run.DeckRules?NarrativeText.L("查看 / 调整五张牌","VIEW / PREPARE YOUR FIVE CARDS"):NarrativeText.L("G / 重述上一句","G / SAY IT AGAIN");
         if(readButtons!=null)for(int i=0;i<readButtons.Length;i++)readButtons[i].interactable=i<run.History.Count;
         if(traceIndex>=0)RefreshTrace();
     }

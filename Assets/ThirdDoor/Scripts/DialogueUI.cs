@@ -87,7 +87,7 @@ public class DialogueUI : MonoBehaviour
             optionButtons[i].onClick.AddListener(() => Choose(index));
             string caption = IsFinalDecision ? NarrativeText.FinalChoice(run, i) : NarrativeText.Choice(run, Voice, i);
             string preview;
-            if (IsFinalDecision) preview = i == 0 && !run.AllVoicesHeard ? NarrativeText.L("回到展厅，继续这一局", "RETURN TO THE GALLERY") : NarrativeText.L("结束本次旅程", "ENDS THIS JOURNEY");
+            if (IsFinalDecision) preview = run.DeckRules?(i==2?NarrativeText.L("结束这一趟","END THIS RUN"):i==1&&run.Phase<2?(run.CanAdvanceEncounter?NarrativeText.L("恢复 2 余力，下一场可换一张牌","RESTORE 2 BREATH; SWAP UP TO ONE NEXT SCENE"):NarrativeText.L("须先送达两份话并交接清单","DELIVER BOTH MESSAGES AND HAND BACK TASKS FIRST")):NarrativeText.L("按当前进度处理","USE THE CURRENT PROGRESS")):i == 0 && !run.AllVoicesHeard ? NarrativeText.L("回到展厅，继续这一局", "RETURN TO THE GALLERY") : NarrativeText.L("结束本次旅程", "ENDS THIS JOURNEY");
             else { int[] d = run.Preview(Voice, i); preview = NarrativeText.Delta(d[0], d[1], d[2])+"  /  "+NarrativeText.ChoiceTag(run,Voice,i); }
             optionLabels[i].supportRichText = true;
             optionLabels[i].text = "0" + (i + 1) + "  /  " + caption + "\n<size=18>        " + preview + "</size>";
@@ -95,6 +95,7 @@ public class DialogueUI : MonoBehaviour
         if (inputHint != null) inputHint.text = IsFinalDecision
             ? NarrativeText.L("1–3 决定自己的位置 / Tab 回看 / ESC 暂停", "1–3 CHOOSE YOUR POSITION / TAB REVISIT / ESC PAUSE")
             : NarrativeText.L("1–3 回应 / Q 切换动作卡 / Tab 手记 / ESC 先返回展厅", "1–3 RESPOND / Q CYCLE CARD / TAB NOTES / ESC RETURN TO GALLERY");
+        if(inputHint!=null&&run.DeckRules&&!IsFinalDecision)inputHint.text=NarrativeText.L("1–3 回应 / F 门前组句出牌 / Tab 手牌与记录 / ESC 返回","1–3 RESPOND / F COMPOSE AT A DOOR / TAB HAND AND NOTES / ESC RETURN");
     }
     public void ShowOneShotLine(string speaker, string line, float closeDelay = 1.8f)
     {

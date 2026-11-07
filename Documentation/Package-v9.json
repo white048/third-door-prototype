@@ -1,0 +1,18 @@
+{
+  "version": "9.0",
+  "created": "2026-11-07T00:38:25.7616421Z",
+  "file": "TheThirdDoor_Constructivist_v9_Preview.zip",
+  "bytes": 43807296,
+  "sha256": "B4AA40934E3E4CF6BBF3261BC0EEDE3C288EC70A4D62AC5CA846CF0D79339AF8",
+  "assemblySHA256": "AF55484748623114C04588F92D75E05067625892F3EA689C3E0A8D9FD9C3DB7E",
+  "sourceBaseCheckpoint": "4a703dcb74f1aae516746315f93de6b507506466",
+  "sourceBranch": "codex/case-deck-v9",
+  "extractedPackageSmoke": {
+    "passed": true,
+    "scenario": "v4-session-nav-cn",
+    "checks": 29,
+    "failures": 0,
+    "description": "Separate extraction of the final ZIP; real player startup, case navigation and replay on this machine",
+    "cleanMachine": false
+  }
+}

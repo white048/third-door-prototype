@@ -16,6 +16,7 @@ public sealed class ConversationRecord
     public int VoiceTrustBefore;
     public int CreatedMessageId = -1;
     public bool DispatchRules;
+    public bool DeckRules;
     public int PriorReceipt;
 }
 
@@ -53,13 +54,14 @@ public sealed partial class RelationshipRun
     public IReadOnlyList<ConversationRecord> History => history;
     public bool CanRest => !Ended && !rested[Phase] && (Capacity < CapacityMax || Load > 0);
     public bool RestUsedThisRound => rested[Phase];
-    public bool CanRewind => !Ended && beforeLastChoice != null && Stock(ConversationCard.Rewind) > 0;
+    public bool CanRewind => !DeckRules && !Ended && beforeLastChoice != null && Stock(ConversationCard.Rewind) > 0;
 
-    public RelationshipRun(CaseId caseId = CaseId.Home,bool dispatchRules=true)
+    public RelationshipRun(CaseId caseId = CaseId.Home,bool dispatchRules=true,bool deckRules=false)
     {
         if (caseId != CaseId.Home && caseId != CaseId.Office) throw new ArgumentOutOfRangeException(nameof(caseId));
         Case = caseId;
         DispatchRules=dispatchRules;
+        if(deckRules){if(caseId!=CaseId.Office||!dispatchRules)throw new ArgumentException("Deck mode requires the office dispatch case.");caseDeck=new CaseDeckData();}
         Draw(ConversationCard.Pause);
         Draw(ConversationCard.Quote);
         Draw(ConversationCard.Boundary);
@@ -68,7 +70,7 @@ public sealed partial class RelationshipRun
     private static int Clamp(int value, int max) => Math.Max(0, Math.Min(value, max));
     public int Clarity(int voice) => voice == 0 ? RedClarity : BlueClarity;
     public int Trust(int voice) => voice == 0 ? RedTrust : BlueTrust;
-    public bool CanTalk(int voice) => !Ended && voice >= 0 && voice < 2 && !(voice == 0 ? RedDone : BlueDone);
+    public bool CanTalk(int voice) => (!DeckRules||DeckReady)&&!Ended && voice >= 0 && voice < 2 && !(voice == 0 ? RedDone : BlueDone);
     public int Stock(ConversationCard card) => card >= ConversationCard.Pause && card <= ConversationCard.Rewind ? stock[(int)card] : 0;
     public bool Acquired(ConversationCard card) => card >= ConversationCard.Pause && card <= ConversationCard.Rewind && acquired[(int)card];
 
@@ -76,6 +78,7 @@ public sealed partial class RelationshipRun
     {
         if (Ended || voice < 0 || voice > 1) return false;
         if (card == ConversationCard.None) return true;
+        if (DeckRules) return false;
         if (card == ConversationCard.Rewind || Stock(card) == 0) return false;
         if (card == ConversationCard.Quote && Clarity(1 - voice) == 0) return false;
         if (card == ConversationCard.Reframe && Clarity(voice) == 0) return false;
@@ -94,11 +97,11 @@ public sealed partial class RelationshipRun
     public ConversationRecord Respond(int voice, int option)
     {
         if (!CanTalk(voice) || option < 0 || option > 2) return null;
-        beforeLastChoice = new Snapshot(this);
+        beforeLastChoice = DeckRules?null:new Snapshot(this);
         var record = new ConversationRecord
         {
             Phase = Phase, Voice = voice, Option = option,
-            DispatchRules=DispatchRules,PriorReceipt=ReceiptState(voice),
+            DispatchRules=DispatchRules,DeckRules=DeckRules,PriorReceipt=ReceiptState(voice),
             CapacityBefore = Capacity, LoadBefore = Load, BridgeBefore = Bridge,
             PriorManagedMessages = ManagedMessages, PriorAlliances = Alliances,
             VoiceTrustBefore = Trust(voice),
@@ -126,7 +129,7 @@ public sealed partial class RelationshipRun
         history.Add(record);
         SelectedCard = ConversationCard.None;
         if (voice == 0) RedDone = true; else BlueDone = true;
-        if (RedDone && BlueDone && Phase < 2)
+        if (!DeckRules&&RedDone && BlueDone && Phase < 2)
         {
             Phase++;
             RedDone = BlueDone = false;
@@ -232,6 +235,8 @@ public sealed partial class RelationshipRun
     public RelationshipEnding Decide(int option)
     {
         if (Ended || option < 0 || option > 2) return Ending;
+        if(DeckRules&&option==1&&Phase<2){AdvanceEncounter();return RelationshipEnding.None;}
+        if(DeckRules&&option==1&&(!AllVoicesHeard||!BothPlansVerified||!RedConsents||!BlueConsents||CurrentTasks))return RelationshipEnding.None;
         if (option == 0 && !AllVoicesHeard) return RelationshipEnding.None;
         if (option == 2)
         {
@@ -239,7 +244,7 @@ public sealed partial class RelationshipRun
             else if (Boundaries >= 2 || (RedClarity > 0 && BlueClarity > 0 && Load <= 3)) Ending = RelationshipEnding.Boundary;
             else Ending = RelationshipEnding.Distance;
         }
-        else if (option == 1 && AllVoicesHeard && RedConsents && BlueConsents && Bridge >= 4 && ManagedMessages < 2 && !HasUnrepairedDisclosure(0) && !HasUnrepairedDisclosure(1) && (Case != CaseId.Office || (OfficePublicRequestDelivered && Alliances == 0))&&(!DispatchRules||BothPlansVerified))
+        else if (option == 1 && AllVoicesHeard && RedConsents && BlueConsents && Bridge >= 4 && ManagedMessages < 2 && !HasUnrepairedDisclosure(0) && !HasUnrepairedDisclosure(1) && (Case != CaseId.Office || (OfficePublicRequestDelivered && Alliances == 0))&&(!DispatchRules||BothPlansVerified)&&(!DeckRules||!CurrentTasks))
             Ending = RelationshipEnding.SharedTable;
         else if (Capacity <= 1 || Load >= 8) Ending = RelationshipEnding.Exhaustion;
         else if (Alliances >= (Case==CaseId.Office?1:2)) Ending = RelationshipEnding.Alliance;

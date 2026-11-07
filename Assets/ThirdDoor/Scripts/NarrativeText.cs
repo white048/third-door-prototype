@@ -4,13 +4,13 @@ public static class NarrativeText
 {
     public static string L(string cn, string en) => LocalizationManager.Current == Language.Chinese ? cn : en;
     public static string Signed(int value) => value > 0 ? "+" + value : value.ToString();
-    public static string PhaseName(int phase) => CaseInfo.Active==CaseId.Office?OfficeNarrative.Phase(phase):phase == 0 ? L("借来的声音", "BORROWED VOICES") : phase == 1 ? L("被改写的句子", "WORDS IN TRANSIT") : L("谁来开口", "WHO SPEAKS NEXT");
+    public static string PhaseName(int phase) => CaseDeckText.Active?CaseDeckText.Phase(phase):CaseInfo.Active==CaseId.Office?OfficeNarrative.Phase(phase):phase == 0 ? L("借来的声音", "BORROWED VOICES") : phase == 1 ? L("被改写的句子", "WORDS IN TRANSIT") : L("谁来开口", "WHO SPEAKS NEXT");
     public static string Speaker(int voice) => CaseInfo.Active==CaseId.Office?OfficeNarrative.Speaker(voice):voice == 0 ? L("01 / 牵挂", "01 / THE WEIGHT") : L("02 / 距离", "02 / THE DISTANCE");
 
     private static string DisclosureLine()=>L("“那句话，我没让你告诉别人。\n这次能不能先问问我？”","I didn't say you could tell them that.\nCould you ask me first this time?");
     public static bool DispatchActive=>GameStateManager.Instance!=null&&GameStateManager.Instance.Run.DispatchRules;
-    public static string Line(RelationshipRun run, int voice) => run.DispatchRules?DispatchText.Incoming(run.Case,run.Phase,voice,run.ReceiptState(voice),run.HasUnrepairedDisclosure(voice)):run.HasUnrepairedDisclosure(voice)?DisclosureLine():LineAt(run.Phase,voice,run.Trust(voice),run.ManagedMessages,run.Alliances);
-    public static string RecordedLine(ConversationRecord record) => record.DispatchRules?DispatchText.Incoming(CaseInfo.Active,record.Phase,record.Voice,record.PriorReceipt,record.PriorDisclosure):record.PriorDisclosure?DisclosureLine():LineAt(record.Phase,record.Voice,record.VoiceTrustBefore,record.PriorManagedMessages,record.PriorAlliances);
+    public static string Line(RelationshipRun run, int voice) => run.DeckRules?CaseDeckText.Incoming(run.Phase,voice,run.ReceiptState(voice)):run.DispatchRules?DispatchText.Incoming(run.Case,run.Phase,voice,run.ReceiptState(voice),run.HasUnrepairedDisclosure(voice)):run.HasUnrepairedDisclosure(voice)?DisclosureLine():LineAt(run.Phase,voice,run.Trust(voice),run.ManagedMessages,run.Alliances);
+    public static string RecordedLine(ConversationRecord record) => record.DeckRules?CaseDeckText.Incoming(record.Phase,record.Voice,record.PriorReceipt):record.DispatchRules?DispatchText.Incoming(CaseInfo.Active,record.Phase,record.Voice,record.PriorReceipt,record.PriorDisclosure):record.PriorDisclosure?DisclosureLine():LineAt(record.Phase,record.Voice,record.VoiceTrustBefore,record.PriorManagedMessages,record.PriorAlliances);
     public static string LineAt(int phase,int voice,int trust=1,int managed=0,int alliances=0)
     {
         if(CaseInfo.Active==CaseId.Office)return OfficeNarrative.Line(phase,voice,trust,managed,alliances);
@@ -30,10 +30,10 @@ public static class NarrativeText
             : L("“我说了，她照样生气怎么办？\n要不你先帮我应付一下？”", "What if I tell her what I want and she gets angry anyway?\nCould you deal with her for me first?");
     }
 
-    public static string Choice(RelationshipRun run, int voice, int option) => run.DispatchRules?DispatchText.Choice(run,voice,option):run.Case==CaseId.Office?OfficeNarrative.Choice(run.Phase,voice,option,run.HasUnrepairedDisclosure(voice)):run.Phase==2&&option==1&&run.HasUnrepairedDisclosure(voice)
+    public static string Choice(RelationshipRun run, int voice, int option) => run.DeckRules?CaseDeckText.Choice(run,voice,option):run.DispatchRules?DispatchText.Choice(run,voice,option):run.Case==CaseId.Office?OfficeNarrative.Choice(run.Phase,voice,option,run.HasUnrepairedDisclosure(voice)):run.Phase==2&&option==1&&run.HasUnrepairedDisclosure(voice)
         ? L("我不该擅自转述。你还愿意自己开口吗？","I shouldn't have shared that. Will you still speak for yourself?")
         : ChoiceAt(run.Phase,voice,option,run.ManagedMessages,run.Alliances);
-    public static string RecordReply(ConversationRecord record) => record.DispatchRules?DispatchText.ChoiceAt(CaseInfo.Active,record.Phase,record.Voice,record.Option):CaseInfo.Active==CaseId.Office?OfficeNarrative.Choice(record.Phase,record.Voice,record.Option,record.PriorDisclosure):record.Phase==2&&record.Option==1&&record.PriorDisclosure?L("我不该擅自转述。你还愿意自己开口吗？","I shouldn't have shared that. Will you still speak for yourself?"):ChoiceAt(record.Phase,record.Voice,record.Option,record.PriorManagedMessages,record.PriorAlliances);
+    public static string RecordReply(ConversationRecord record) => record.DeckRules?CaseDeckText.ChoiceAt(record.Phase,record.Voice,record.Option):record.DispatchRules?DispatchText.ChoiceAt(CaseInfo.Active,record.Phase,record.Voice,record.Option):CaseInfo.Active==CaseId.Office?OfficeNarrative.Choice(record.Phase,record.Voice,record.Option,record.PriorDisclosure):record.Phase==2&&record.Option==1&&record.PriorDisclosure?L("我不该擅自转述。你还愿意自己开口吗？","I shouldn't have shared that. Will you still speak for yourself?"):ChoiceAt(record.Phase,record.Voice,record.Option,record.PriorManagedMessages,record.PriorAlliances);
     private static string ChoiceAt(int phase,int voice,int option,int managed,int alliances)
     {
         if (phase == 0)
@@ -60,6 +60,7 @@ public static class NarrativeText
 
     public static string Feedback(ConversationRecord record)
     {
+        if(record.DeckRules)return CaseDeckText.Feedback(record);
         if(record.DispatchRules)return DispatchText.Feedback(record)+CardAddition(record);
         if(CaseInfo.Active==CaseId.Office)return OfficeNarrative.Feedback(record)+CardAddition(record);
         if (record.TooExhaustedToListen) return L("你还想问，已经没力气听下去了。\n这次没能多了解对方。\n去 00 长椅歇歇，或者先说清自己能帮到哪里。", "You try to ask more, but you're too worn out to listen.\nYou learn nothing new this time.\nRest at bench 00, or say how much you can manage.")+CardAddition(record);
@@ -184,10 +185,10 @@ public static class NarrativeText
         string target = !run.RedDone && !run.BlueDone ? L("01 或 02", "01 OR 02") : run.RedDone ? "02" : "01";
         return L("第 ", "ROUND ") + (run.Phase + 1) + " / 3  ·  " + PhaseName(run.Phase) + "\n" + L("走向 ", "APPROACH ") + target + L("。也可随时去 03 离开。", ". You may also leave through 03.");
     }
-    public static string FinalLine(RelationshipRun run) => run.Case==CaseId.Office?L("安排已经谈过了，私事仍由本人决定说不说。\n你要接着替他们处理、请他们自己谈工作，还是先走？","You've discussed the work. They still choose whether to share private reasons.\nWill you keep managing it, ask them to discuss the plan, or leave?"):run.AllVoicesHeard
+    public static string FinalLine(RelationshipRun run) => run.DeckRules?CaseDeckText.FinalLine(run):run.Case==CaseId.Office?L("安排已经谈过了，私事仍由本人决定说不说。\n你要接着替他们处理、请他们自己谈工作，还是先走？","You've discussed the work. They still choose whether to share private reasons.\nWill you keep managing it, ask them to discuss the plan, or leave?"):run.AllVoicesHeard
         ? L("两边的话，你都听过了。\n接着传话、请他们自己谈，还是先离开？", "You've heard both sides.\nWill you keep passing messages, ask them to talk, or leave?")
         : L("你现在就可以离开。\n如果还想听，也能回去继续这一轮。", "You can leave now.\nOr go back and hear the rest of this round.");
-    public static string FinalChoice(RelationshipRun run, int option) => run.Case==CaseId.Office?OfficeNarrative.FinalChoice(run,option):option == 0
+    public static string FinalChoice(RelationshipRun run, int option) => run.DeckRules?CaseDeckText.FinalChoice(run,option):run.Case==CaseId.Office?OfficeNarrative.FinalChoice(run,option):option == 0
         ? (run.AllVoicesHeard ? L("我留下，继续替他们传话。", "I'll stay and keep carrying their words.") : L("先回到对话中。", "Return to the conversation."))
         : option == 1 ? L("问问他们，愿不愿意坐下来自己谈。", "Ask whether they're willing to sit down and talk.")
         : L("我先歇歇。这些话得由你们自己说。", "I need a break. You'll have to take this from here.");
@@ -210,6 +211,7 @@ public static class NarrativeText
     }
     public static string EndingBody(RelationshipEnding ending)
     {
+        if(CaseDeckText.Active)return CaseDeckText.Ending(GameStateManager.Instance.Run);
         if(DispatchActive)return DispatchText.EndingBody(GameStateManager.Instance.Run,ending);
         if(CaseInfo.Active==CaseId.Office)return OfficeNarrative.EndingBody(ending);
         switch (ending)
@@ -228,6 +230,7 @@ public static class NarrativeText
 
     public static string Memory(RelationshipRun run, int voice)
     {
+        if(run.DeckRules)return CaseDeckText.Memory(run,voice);
         if(run.DispatchRules)return DispatchText.NotebookMemory(run,voice);
         if(run.Case==CaseId.Office)return OfficeNarrative.Memory(run,voice);
         int clarity = run.Clarity(voice);

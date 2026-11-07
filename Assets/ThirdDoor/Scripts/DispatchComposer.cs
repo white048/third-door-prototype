@@ -25,7 +25,7 @@ public class DispatchComposer : MonoBehaviour
         panel=root;folio=f;player=p;parts=fragments;tools=cards;send=submit;close=back;clear=reset;
         title=heading;actor=recipient;progress=status;words=packet;cost=price;response=reaction;help=instructions;
         for(int i=0;i<4;i++){var part=(DispatchFragment)(i+1);parts[i].onClick.AddListener(()=>Toggle(part));}
-        for(int i=0;i<7;i++){var card=(DispatchTool)i;tools[i].onClick.AddListener(()=>{tool=card;Refresh();});}
+        for(int i=0;i<tools.Length;i++){var card=(DispatchTool)i;tools[i].onClick.AddListener(()=>{tool=card;Refresh();});}
         send.onClick.AddListener(()=>folio.OpenPacketProof(source,first,second,tool));
         close.onClick.AddListener(Close);clear.onClick.AddListener(()=>{first=second=DispatchFragment.None;Refresh();});
         panel.SetActive(false);
@@ -61,6 +61,7 @@ public class DispatchComposer : MonoBehaviour
         if(m==null){Close();return;}
         revision=run.Revision;language=LocalizationManager.Current;
         title.text="01 / 02    "+L("把话带到","MAKE IT HEARD")+"     "+CorrespondenceText.Source(source)+" → "+CorrespondenceText.Source(1-source);
+        if(run.DeckRules)title.text=(run.Phase+1)+" / 3   "+CaseDeckText.Phase(run.Phase)+"    "+CorrespondenceText.Source(source)+" → "+CorrespondenceText.Source(1-source);
         actor.text=DispatchText.Actor(run,m)+"\n"+DispatchText.TimeClue(run,m);
         progress.text=DispatchText.Progress(m)+"\n"+L("接话次数 ","ATTEMPTS ")+m.DispatchAttempts+" / 4"+(m.DispatchAttempts==4?L(" · 代偿可再接一次"," · TAKE OVER ALLOWS ONE MORE"):"");
         for(int i=0;i<4;i++)
@@ -71,10 +72,17 @@ public class DispatchComposer : MonoBehaviour
             parts[i].GetComponentInChildren<ExhibitionText>().text=slot+DispatchText.Name(p)+"\n"+(p==DispatchFragment.Need&&!m.HasNeed?L("这句还没听到。","You haven't heard this yet."):DispatchText.Fragment(run.Case,source,p,tool));
             Style(parts[i],first==p||second==p);
         }
-        for(int i=0;i<7;i++)
+        int visibleTool=0;
+        for(int i=0;i<tools.Length;i++)
         {
-            var t=(DispatchTool)i;tools[i].interactable=run.CanUseDispatchTool(source,t);
-            tools[i].GetComponentInChildren<ExhibitionText>().text=DispatchText.ToolName(t)+(i==0?"":"  ×"+run.Stock(RelationshipRun.CardFor(t)));
+            var t=(DispatchTool)i;bool visible=run.DeckRules?(i==0||run.InDeck(t)):i<7;tools[i].gameObject.SetActive(visible);if(!visible)continue;
+            if(run.DeckRules)
+            {
+                var rect=tools[i].GetComponent<RectTransform>();rect.anchoredPosition=new Vector2(35+(visibleTool%3)*275,-590-(visibleTool/3)*62);rect.sizeDelta=new Vector2(260,52);
+                var label=tools[i].GetComponentInChildren<ExhibitionText>();label.rectTransform.sizeDelta=new Vector2(232,52);visibleTool++;
+            }
+            tools[i].interactable=run.CanUseDispatchTool(source,t);
+            tools[i].GetComponentInChildren<ExhibitionText>().text=DispatchText.ToolName(t)+(i==0?"":"  ×"+(run.DeckRules?run.DeckStock(t):run.Stock(RelationshipRun.CardFor(t))));
             Style(tools[i],tool==t);
         }
         words.text=first==DispatchFragment.None&&tool!=DispatchTool.Listen?L("先点一段，再点一段。\n点击已选的话可移除；先选的先说。","Choose a piece, then another.\nTap a selected piece to remove it. First picked, first spoken."):DispatchText.Packet(run.Case,source,first,second,tool);
@@ -83,6 +91,7 @@ public class DispatchComposer : MonoBehaviour
         // Do not solve the encounter by revealing the recipient's future answer in a preview.
         cost.text=DispatchText.ToolDetail(tool)+"\n"+L("余力 ","BREATH ")+run.Capacity+" / 8    "+L("承重 ","LOAD ")+run.Load+" / 8";
         response.text=last==null?L("门里还有动静。先说哪句？","You can hear someone inside. What do you lead with?"):DispatchText.Reaction(last)+"\n\n"+CorrespondenceText.Delta(last);
+        if(run.DeckRules&&m.TaskActive&&m.PublicProgress==3)response.text=L("你整理的清单已送到，但这件事还挂在你名下。\n可空着两格用交接卡，或返回信封点交接按钮。","Your list arrived, but the task is still under your name.\nUse HANDOFF with empty slots, or return to the envelope's task button.");
         if(preview==null&&(first==DispatchFragment.Guess||second==DispatchFragment.Guess)&&(first==DispatchFragment.Fact||first==DispatchFragment.Request||second==DispatchFragment.Fact||second==DispatchFragment.Request)&&tool!=DispatchTool.Reframe)
             response.text=L("补出的保证要单独说。\n或用“翻译”，把它改成待确认的问题。","Make your added promise separately.\nOr use REFRAME to turn it into an unconfirmed question.");
         if(preview==null&&!run.PublicPlanVerified(source))response.text+="\n"+(m.DispatchAttempts>=4?L("这封话的接话次数已用完，可以离开，或用代偿再试一次。","No ordinary attempts left. Leave, or use TAKE OVER for one more."):run.Capacity==0?L("没有余力了。去长椅歇歇，或用停顿。","No breath left. Rest at the bench, or use PAUSE."):"");
@@ -90,5 +99,6 @@ public class DispatchComposer : MonoBehaviour
         close.GetComponentInChildren<ExhibitionText>().text=L("返回信封 / ESC","BACK TO ENVELOPE / ESC");
         clear.GetComponentInChildren<ExhibitionText>().text=L("清空顺序","CLEAR ORDER");
         help.text=L("每封信最多接话四次，没听完的部分会留下。\n原话 / 翻译：先了解说话人；界限：先了解收信人。\n卡牌与门前回应共用，每种一张。","Four attempts per envelope. Unfinished words stay with you.\nQUOTE / REFRAME: know the speaker; BOUNDARY: know the recipient.\nThese are the same single-use cards as in your door replies.");
+        if(run.DeckRules)help.text=L("本场五张牌各用一次，下一场恢复。\n已核对 → 原话省承重；停顿 → 翻译省余力。\n代办清单送达后须交接；核对与交接也有基本动作。","Five cards, once each this scene; refresh next scene.\nChecked → QUOTE saves load; PAUSE → REFRAME saves breath.\nHand back your list. Basic checking and handoff are also available.");
     }
 }

@@ -84,6 +84,9 @@ public class DoorDialogue : Interactable
 
     public override void Interact(PlayerController player)
     {
+        var deckState=GameStateManager.Instance;
+        if(deckState!=null&&deckState.Run.DeckRules&&!deckState.Run.DeckReady&&(actor==DialogueActor.RedDoor||actor==DialogueActor.BlueDoor))
+        {FindObjectOfType<NarrativeNotebook>().ShowDeck(actor==DialogueActor.RedDoor?0:1);return;}
         if (actor == DialogueActor.ExitDoor)
         {
             GameStateManager state = GameStateManager.Instance != null ? GameStateManager.Instance : FindObjectOfType<GameStateManager>();

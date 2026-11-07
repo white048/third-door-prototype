@@ -14,11 +14,12 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private SymbolicDoorController redDoorController;
     [SerializeField] private SymbolicDoorController blueDoorController;
     private RelationshipRun run;
-    public RelationshipRun Run => run ?? (run = new RelationshipRun(CaseSession.Current));
+    public RelationshipRun Run => run ?? (run = NewCase(CaseSession.Current));
+    private static RelationshipRun NewCase(CaseId id)=>new RelationshipRun(id,true,id==CaseId.Office);
     public bool GoodEnding => RelationshipRun.OpensExit(Run.Ending);
     public ConversationRecord LastRecord { get; private set; }
 
-    private void Awake() { instance = this; run = new RelationshipRun(CaseSession.Current); }
+    private void Awake() { instance = this; run = NewCase(CaseSession.Current); }
     private void OnEnable() { LocalizationManager.OnLanguageChanged += UpdateWorldState; }
     private void OnDisable() { LocalizationManager.OnLanguageChanged -= UpdateWorldState; }
     private void Start() { UpdateWorldState(); }
@@ -33,7 +34,7 @@ public class GameStateManager : MonoBehaviour
 
     public void BeginCase(CaseId id)
     {
-        run=new RelationshipRun(id);LastRecord=null;
+        run=NewCase(id);LastRecord=null;
         UpdateWorldState();SaveCheckpoint();
     }
     public void RestoreRun(RelationshipRun restored)
@@ -68,7 +69,7 @@ public class GameStateManager : MonoBehaviour
     {
         if (Run.Ended || option < 0 || option > 2) return "";
         RelationshipEnding outcome = Run.Decide(option);
-        if (outcome == RelationshipEnding.None) { UpdateWorldState(); return ""; }
+        if (outcome == RelationshipEnding.None) { UpdateWorldState(); SaveCheckpoint(); return ""; }
         EndGame(outcome);
         return NarrativeText.EndingBody(outcome);
     }

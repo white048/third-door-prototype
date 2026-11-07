@@ -1,400 +1,182 @@
 {
-  "version": "8.0",
-  "date": "2026-11-04T04:36:09.7910692Z",
+  "version": "9.0",
+  "date": "2026-11-07T00:36:51.2012180Z",
   "engine": "2022.3.62f3",
   "build": "Original Windows player resources with newly compiled project assembly",
   "runtimeCompilation": "Passed",
   "editorCodeCompilation": "Passed with pinned Unity references",
   "freshUnityBuild": "Not completed in this iteration; inherited Windows preview player used",
-  "productStatus": "Two-case gameplay slice: ordered message negotiation, recipient interruptions, a shared finite deck and provisional promises; no Steam submission or release",
-  "model": {
-    "passed": 488402,
-    "legacyCompatibilityPassed": 404533,
-    "dispatchPassed": 83869,
-    "dispatchResolvedPackets": 3887,
-    "dispatchRandomJourneys": 600,
-    "dispatchEndingRouteCombinations": 8678,
-    "endingsReachablePerCase": 7,
-    "playableCases": 2
-  },
+  "productStatus": "Three-scene work-case deck experiment; home case and old saves retain previous rules. No Steam submission or player blind test.",
+  "assemblySHA256": "AF55484748623114C04588F92D75E05067625892F3EA689C3E0A8D9FD9C3DB7E",
+  "nativePassed": 3033,
+  "nativeScenarioCount": 17,
   "cases": [
     {
-      "scenario": "v2-table-cn",
-      "passed": 82,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-boundary-en",
-      "passed": 39,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-distance-cn",
-      "passed": 22,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-loop-cn",
-      "passed": 77,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-alliance-en",
-      "passed": 79,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-exhaustion-cn",
-      "passed": 72,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-falsepeace-en",
-      "passed": 79,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-cards-cn",
-      "passed": 101,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-refusal-cn",
-      "passed": 76,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-dispatch-consent-cn",
-      "passed": 129,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-dispatch-breach-en",
-      "passed": 110,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-dispatch-return-cn",
-      "passed": 106,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-office-agreement-cn",
-      "passed": 116,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-office-intrusion-en",
-      "passed": 90,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-office-alliance-cn",
-      "passed": 90,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-save-resume-en",
-      "passed": 91,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-session-nav-cn",
-      "passed": 29,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v4-office-agreement-aspect-en",
-      "passed": 116,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-aspect-en",
-      "passed": 86,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-aspect-consent-en",
-      "passed": 129,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v5-art-home-cn",
-      "passed": 92,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v5-art-office-aspect-en",
-      "passed": 123,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v5-art-fallback-cn",
-      "passed": 85,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": true
-    },
-    {
-      "scenario": "v5-art-home-store-cn",
-      "passed": 90,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v5-art-office-store-en",
-      "passed": 121,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v7-ribbon-office-agreement-aspect-en",
-      "passed": 163,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v7-ribbon-home-store-cn",
-      "passed": 142,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v7-ribbon-office-agreement-store-en",
-      "passed": 163,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v7-ribbon-loop-en",
-      "passed": 145,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v7-ribbon-fallback-cn",
-      "passed": 142,
-      "failed": 0,
-      "rules": "legacy-save-compatibility",
-      "resolution": "1600x900",
-      "missingArtFallback": true
-    },
-    {
       "scenario": "v8-dispatch-home-cn",
+      "rules": "ordered-dispatch-v8",
       "passed": 138,
       "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-promise-cn",
-      "passed": 138,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-late-cn",
-      "passed": 146,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-resume-cn",
-      "passed": 71,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-privacy-en",
-      "passed": 138,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-falsepeace-en",
-      "passed": 84,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
       "resolution": "1600x900",
       "missingArtFallback": false
     },
     {
       "scenario": "v8-dispatch-office-aspect-en",
+      "rules": "ordered-dispatch-v8",
       "passed": 129,
       "failed": 0,
-      "rules": "ordered-dispatch-v8",
       "resolution": "1280x960",
       "missingArtFallback": false
     },
     {
-      "scenario": "v8-dispatch-home-store-cn",
-      "passed": 138,
-      "failed": 0,
+      "scenario": "v8-dispatch-late-cn",
       "rules": "ordered-dispatch-v8",
+      "passed": 146,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v8-dispatch-falsepeace-en",
+      "rules": "ordered-dispatch-v8",
+      "passed": 84,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-save-resume-en",
+      "rules": "legacy-save-compatibility",
+      "passed": 91,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v4-session-nav-cn",
+      "rules": "legacy-save-compatibility",
+      "passed": 29,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v2-cards-cn",
+      "rules": "legacy-save-compatibility",
+      "passed": 101,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v3-dispatch-breach-en",
+      "rules": "legacy-save-compatibility",
+      "passed": 110,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-paper-cn",
+      "rules": "case-deck-v9",
+      "passed": 250,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-room-en",
+      "rules": "case-deck-v9",
+      "passed": 287,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-task-cn",
+      "rules": "case-deck-v9",
+      "passed": 257,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-swap-en",
+      "rules": "case-deck-v9",
+      "passed": 252,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-basic-cn",
+      "rules": "case-deck-v9",
+      "passed": 246,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-resume-en",
+      "rules": "case-deck-v9",
+      "passed": 156,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-paper-aspect-en",
+      "rules": "case-deck-v9",
+      "passed": 250,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-task-store-cn",
+      "rules": "case-deck-v9",
+      "passed": 257,
+      "failed": 0,
       "resolution": "1920x1080",
       "missingArtFallback": false
     },
     {
-      "scenario": "v8-dispatch-office-store-en",
-      "passed": 129,
+      "scenario": "v9-office-paper-fallback-en",
+      "rules": "case-deck-v9",
+      "passed": 250,
       "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-fallback-cn",
-      "passed": 138,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
       "resolution": "1600x900",
       "missingArtFallback": true
-    },
-    {
-      "scenario": "v8-dispatch-public-only-en",
-      "passed": 139,
-      "failed": 0,
-      "rules": "ordered-dispatch-v8",
-      "resolution": "1600x900",
-      "missingArtFallback": false
     }
   ],
-  "nativePassed": 4373,
-  "assemblySHA256": "1BA908DECF877112A47FBC11D1EA0C177AA7CB98204CD7F2B150573BE5DF4E2B",
+  "model": {
+    "passed": 512517,
+    "caseDeckPassed": 24115,
+    "dispatchV8Passed": 83869,
+    "legacyCompatibilityPassed": 404533,
+    "caseDeckRandomJourneys": 250,
+    "dispatchV8RandomJourneys": 600
+  },
+  "deck": {
+    "candidateCards": 9,
+    "equippedCards": 5,
+    "scenes": 3,
+    "usesPerScene": 1,
+    "maximumSwapsBetweenScenes": 1,
+    "randomDraw": false,
+    "presets": 3,
+    "basicActionsDoNotRequireCards": true,
+    "allThreePresetsReachAgreement": true,
+    "noStrategyCardRouteReachesAgreement": true,
+    "tasksRequireHandoff": true,
+    "actualEditionPreservedInHistory": true,
+    "realContinueAfterPartialCombo": true,
+    "oldSaveRulesPreserved": true
+  },
   "generatedArt": {
-    "method": "Built-in image_gen",
-    "sourceImages": 4,
-    "inGameCaseImages": 2,
-    "cutoutAtlasObjects": 9,
-    "sourcePixels": [
-      "1254x1254",
-      "1254x1254",
-      "1672x940",
-      "1254x1254 RGBA"
-    ],
-    "originalsEdited": false,
-    "productionBriefEntries": 23,
-    "editableSVGLayouts": 6,
-    "suppliedReferenceArtDistributed": false
+    "newImagesThisIteration": 0,
+    "existingSourceImages": 4,
+    "suppliedReferenceArtDistributed": false,
+    "originalsEdited": false
   },
-  "dispatch": {
-    "orderedPieces": true,
-    "recipientInterruptions": true,
-    "sharedFiniteDeck": true,
-    "attemptsPersist": true,
-    "provisionalCanBeCorrected": true,
-    "lateIndividualConfirmation": true,
-    "fabricatedGuaranteeCannotCountAsVerified": true,
-    "allComposerGlyphsChecked": true,
-    "v1SavesKeepLegacyRules": true,
-    "allSevenArchiveSummariesInBothLanguages": true
-  },
-  "collage": {
-    "historicalCoreCompatibilityReportOnly": true,
-    "physicalStation": true,
-    "perRunRecords": true,
-    "deliveryProof": true,
-    "cancelIsReadOnly": true,
-    "languageKeepsPosition": true,
-    "offscreenSheetsDisabled": true,
-    "continuedRunRebuilt": true,
-    "geometryFallback": true
-  },
-  "editorial": {
-    "skills": [
-      "blader/humanizer",
-      "op7418/Humanizer-zh"
-    ],
-    "previousEditionReview": "EditorialReview.txt",
-    "aiDetectorUsed": false
-  },
-  "scope": "Historical v2-v7 scenarios explicitly use legacy rules for save compatibility. Eleven v8 scenarios exercise production new-game rules, ordered packets, recipient interruption, draft translation, confirmation/cancel, finite shared deck, provisional/corrected promises, unverified-promise ending, private disclosure, late consent, public-only completion, compact current notes, all seven archive summaries through an isolated UI fixture and real Continue after partial delivery. Real CharacterController movement, physics and UI raycasts, bilingual layout and leading glyphs, cards, costs and rewind, message permission and repair, two-case endings, JSON backup recovery, Continue, case navigation, physical art and paper roll, per-run collage records, scroll and chapter jumps, language position retention, offscreen sheet culling, verbatim delivery proofs, cancel/confirm input, art fallbacks, continued-run reconstruction with the undo snapshot intact, native 1920x1080 captures. Short frame samples are not hardware certification."
+  "scope": "Nine v9 real-window scenarios cover three full preset journeys, a one-card swap, an all-basic route, actual title Continue after PAUSE with saved stocks, bilingual draft preservation, proof/cancel, readonly hand, current notes, all seven archive summaries via an isolated UI fixture, original-scene collage, 4:3 and 1080p, and missing-art fallback. Four v8 and four legacy cases are selected regressions, not a rerun of the full v8 matrix. Native tests use CharacterController movement, physics sight checks and UI raycasts. Model checks include save roundtrips and preview equivalence. No human playtest, new Unity BuildPipeline build, clean-machine verification or hardware certification was completed."
 }

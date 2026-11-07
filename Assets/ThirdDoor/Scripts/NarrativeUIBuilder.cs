@@ -97,5 +97,6 @@ public partial class SceneBootstrapper
         notebook.ConfigureTrace(traceLayer.gameObject,traceTitle,source,reply,consequence,traceClose,readButtons);
         BuildDispatchComposer(paper.transform,paper.GetComponentInChildren<CorrespondenceFolio>(true),controller);
         BuildDispatchProof(paper.transform,paper.GetComponentInChildren<CorrespondenceFolio>(true));
+        BuildCaseDeck(paper.transform,notebook,controller,dialogue);
     }
 }

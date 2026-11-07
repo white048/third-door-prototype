@@ -1,7 +1,7 @@
 using System;
 
 public enum DispatchFragment { None, Fact, Request, Need, Guess }
-public enum DispatchTool { None, Quote, Pause, Listen, Reframe, Boundary, TakeOver }
+public enum DispatchTool { None, Quote, Pause, Listen, Reframe, Boundary, TakeOver, Check, Receipt, Handoff }
 
 // A recipient hears an ordered packet, not an abstract good/bad answer.
 public sealed partial class RelationshipRun
@@ -22,6 +22,8 @@ public sealed partial class RelationshipRun
     public DispatchFragment PriorityAt(int recipient)=>recipient==0?DispatchFragment.Fact:DispatchFragment.Request;
     public int HearingRoom(int recipient,MessageEnvelope item)
     {
+        if(DeckRules&&Phase==2)return 1;
+        if(DeckRules&&Phase==1)return 2;
         int room=Case==CaseId.Home?(recipient==0?(Phase==0?2:1):(Phase==1?2:1)):(recipient==0?(Phase==1?2:1):(Phase==0?2:1));
         return Math.Min(2,room+(item!=null&&(item.Inspected||item.PrivateHeard)?1:0));
     }
@@ -33,6 +35,7 @@ public sealed partial class RelationshipRun
     }
     public bool CanUseDispatchTool(int source,DispatchTool tool)
     {
+        if(DeckRules)return CanUseDeckTool(source,tool);
         if(source<0||source>1)return false;
         if(tool<DispatchTool.None||tool>DispatchTool.TakeOver)return false;
         if(tool==DispatchTool.None)return true;
@@ -43,8 +46,8 @@ public sealed partial class RelationshipRun
     }
     public bool CanDraft(int id,int atVoice)
     {
-        var m=Message(id);return DispatchRules&&!Ended&&m!=null&&atVoice==1-m.Source
-            &&(m.Status==MessageStatus.Held||m.Assumed)&&!(m.PublicProgress==3&&!m.Assumed)
+        var m=Message(id);return DispatchRules&&(!DeckRules||DeckReady)&&!Ended&&m!=null&&IsCurrentEnvelope(m)&&atVoice==1-m.Source
+            &&(m.Status==MessageStatus.Held||m.Assumed||(DeckRules&&m.TaskActive))&&!(m.PublicProgress==3&&!m.Assumed&&(!DeckRules||!m.TaskActive))
             &&m.Status!=MessageStatus.Returned&&m.Status!=MessageStatus.KeptPrivate;
     }
     public bool FragmentAvailable(MessageEnvelope m,DispatchFragment part)
@@ -59,9 +62,10 @@ public sealed partial class RelationshipRun
     {
         if(!CanDraft(id,atVoice)||!CanUseDispatchTool(Message(id).Source,tool))return false;
         var m=Message(id);
+        if(m.PublicProgress==3&&!m.Assumed)return DeckRules&&tool==DispatchTool.Handoff&&first==DispatchFragment.None&&second==DispatchFragment.None;
         if(m.DispatchAttempts>=4&&!(m.DispatchAttempts==4&&tool==DispatchTool.TakeOver))return false;
-        if(Capacity==0&&tool!=DispatchTool.Pause)return false;
-        if(first==DispatchFragment.None)return second==DispatchFragment.None&&tool==DispatchTool.Listen;
+        if(Capacity==0&&tool!=DispatchTool.Pause&&!(DeckRules&&tool==DispatchTool.Receipt))return false;
+        if(first==DispatchFragment.None)return second==DispatchFragment.None&&(tool==DispatchTool.Listen||(DeckRules&&(tool==DispatchTool.Check||tool==DispatchTool.Receipt)));
         bool addition=first==DispatchFragment.Guess||second==DispatchFragment.Guess;
         bool publicWords=first==DispatchFragment.Fact||first==DispatchFragment.Request||second==DispatchFragment.Fact||second==DispatchFragment.Request;
         // A fabricated guarantee is a separate bid. Accurate words cannot launder it into a verified plan.
@@ -77,7 +81,7 @@ public sealed partial class RelationshipRun
     {
         if(!CanSendPacket(id,first,second,tool,atVoice))return null;
         var result=ResolvePacket(id,first,second,tool);
-        var card=CardFor(tool);if(card!=ConversationCard.None)stock[(int)card]--;
+        var card=CardFor(tool);if(DeckRules)CommitDeckPacket(result);else if(card!=ConversationCard.None)stock[(int)card]--;
         if(card!=ConversationCard.None&&SelectedCard==card)SelectedCard=ConversationCard.None;
         correspondence.Add(result);beforeLastChoice=null;Revision++;return result;
     }
@@ -90,7 +94,8 @@ public sealed partial class RelationshipRun
             Payload=first==DispatchFragment.Need&&second==DispatchFragment.None?MessagePayload.Need:MessagePayload.Request,
             Packet=true,First=first,Second=second,Tool=tool,WasPromise=m.Promised,RecipientReady=Trust(target)>=2,
             PrefersOwnVoice=m.Sharing==SharingPreference.OwnVoice,PublicBefore=oldProgress};
-        m.DispatchAttempts++;Capacity--;
+        if(!DeckRules||tool!=DispatchTool.Handoff)m.DispatchAttempts++;
+        Capacity--;
         int room=HearingRoom(target,m);
         bool bypass=tool==DispatchTool.Quote||tool==DispatchTool.TakeOver;
         if(tool==DispatchTool.Pause){Capacity+=2;room=2;}
@@ -99,8 +104,24 @@ public sealed partial class RelationshipRun
         if(tool==DispatchTool.Reframe){Load--;AddTrust(target,1);m.Inspected=true;}
         if(tool==DispatchTool.Boundary){Load-=2;Boundaries++;room=2;}
         if(tool==DispatchTool.TakeOver){Load+=3;ManagedMessages++;AddTrust(target,1);room=2;}
+        if(DeckRules)
+        {
+            if(tool==DispatchTool.Check){m.SourceChecked=true;AddClarity(source,1);m.Inspected=true;}
+            if(tool==DispatchTool.Receipt)
+            {
+                var other=MessageFrom(target);if(other!=null&&other.PublicProgress==3&&!other.Assumed)m.SourceChecked=true;
+                Capacity++;room=2;result.Combo=DispatchCombo.ReceiptChain;
+            }
+            if(tool==DispatchTool.Quote&&m.SourceChecked){Load--;result.Combo=DispatchCombo.CheckedQuote;}
+            if(tool==DispatchTool.Reframe&&m.LastTool==DispatchTool.Pause){Capacity++;room=2;result.Combo=DispatchCombo.PacedReframe;}
+            if(tool==DispatchTool.TakeOver){Capacity--;m.TaskActive=true;m.SourceChecked=true;}
+        }
         result.HearingRoom=room;
-        if(Trust(target)==0&&!bypass)
+        if(DeckRules&&tool==DispatchTool.Handoff)
+        {Capacity++;DeckTaskHandoff(m);result.Combo=DispatchCombo.Handoff;result.Completed=true;}
+        else if(NeedsSourceCheck(m)&&(first==DispatchFragment.Fact||first==DispatchFragment.Request||second==DispatchFragment.Fact||second==DispatchFragment.Request))
+        {result.CheckMissing=true;Load++;}
+        else if(Trust(target)==0&&!bypass)
         {result.Guarded=true;Load++;m.Inspected=true;}
         else
         {
@@ -151,6 +172,7 @@ public sealed partial class RelationshipRun
             else if(gained!=0)Load++;
             else if(result.PriorityMiss||result.Unbelieved)Load++;
         }
+        if(DeckRules)m.LastTool=tool;
         Normalize();result.PublicAfter=m.PublicProgress;result.Provisional=m.Assumed;
         result.CapacityDelta=Capacity-breath;result.LoadDelta=Load-load;result.BridgeDelta=Bridge-bridge;
         result.SourceTrustDelta=Trust(source)-sourceTrust;result.RecipientTrustDelta=Trust(target)-targetTrust;

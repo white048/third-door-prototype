@@ -16,6 +16,9 @@ public sealed class RelationshipSaveData
     public bool[] Disclosures, ConsentBeforeDisclosure;
     public bool HasUndo;
     public bool DispatchRules;
+    // JsonUtility serializes null inline classes as default objects; presence cannot identify the mode.
+    public bool CaseDeckRules;
+    public CaseDeckData Deck;
     public RelationshipSnapshotSaveData Undo;
 }
 
@@ -44,6 +47,7 @@ public sealed class ConversationRecordSaveData
     public bool TooExhaustedToListen, UnderPressure, VoiceConsentsAfter, RepairedDisclosure, PriorDisclosure;
     public int PriorManagedMessages, PriorAlliances, VoiceTrustBefore, CreatedMessageId;
     public bool DispatchRules;
+    public bool DeckRules;
     public int PriorReceipt;
 }
 
@@ -55,6 +59,8 @@ public sealed class MessageSaveData
     public int PermissionPhase, Permission, Status, Sharing;
     public int PublicProgress,DispatchAttempts;
     public bool Inspected,PrivateHeard,GuessHeard,Assumed;
+    public bool SourceChecked,TaskActive,TaskHandedOff;
+    public int LastTool;
 }
 
 [Serializable]
@@ -65,17 +71,19 @@ public sealed class CorrespondenceEventSaveData
     public int CapacityDelta, LoadDelta, BridgeDelta, SourceTrustDelta, RecipientTrustDelta;
     public bool Packet,Completed,Provisional,Interrupted,PriorityMiss,Guarded,Unbelieved,QuestionedGuess,CorrectedAssumption;
     public int First,Second,Tool,PublicBefore,PublicAfter,HearingRoom,HeardCount;
+    public int Combo;
+    public bool CheckMissing;
 }
 
 public sealed partial class RelationshipRun
 {
-    public const int SaveVersion = 2;
+    public const int SaveVersion = 3;
 
     public RelationshipSaveData ExportSave()
     {
         var data = new RelationshipSaveData
         {
-            Version = SaveVersion, Case = (int)Case, DispatchRules=DispatchRules,
+            Version = SaveVersion, Case = (int)Case, DispatchRules=DispatchRules,CaseDeckRules=DeckRules,Deck=caseDeck==null?null:caseDeck.Copy(),
             State = new RelationshipStateData
             {
                 Capacity = Capacity, Load = Load, Bridge = Bridge, Phase = Phase,
@@ -101,7 +109,8 @@ public sealed partial class RelationshipRun
     {
         run = null;
         if (!ValidSave(data)) return false;
-        var restored = new RelationshipRun((CaseId)data.Case,data.Version>=2&&data.DispatchRules);
+        var restored = new RelationshipRun((CaseId)data.Case,data.Version>=2&&data.DispatchRules,data.CaseDeckRules);
+        if(data.CaseDeckRules)restored.caseDeck=data.Deck.Copy();
         RestoreState(restored, data.State);
         restored.Revision = data.Revision; restored.RevisionsUsed = data.RevisionsUsed; restored.RestStops = data.RestStops;
         restored.Ending = (RelationshipEnding)data.Ending; restored.SelectedCard = (ConversationCard)data.SelectedCard;
@@ -120,13 +129,13 @@ public sealed partial class RelationshipRun
 
     private static bool InRange(int value, int maximum) => value >= 0 && value <= maximum;
     private static bool Flags(bool[] values, int length) => values != null && values.Length == length;
-    private static bool ValidState(RelationshipStateData s)
+    private static bool ValidState(RelationshipStateData s,bool deck=false)
     {
         return s != null && InRange(s.Capacity, CapacityMax) && InRange(s.Load, LoadMax) && InRange(s.Bridge, BridgeMax)
             && InRange(s.Phase, PhaseCount - 1) && InRange(s.RedClarity, 3) && InRange(s.BlueClarity, 3)
             && InRange(s.RedTrust, 4) && InRange(s.BlueTrust, 4) && InRange(s.Boundaries, 64)
             && InRange(s.ManagedMessages, 64) && InRange(s.Alliances, 64)
-            && (s.Phase == PhaseCount - 1 || !s.RedDone || !s.BlueDone);
+            && (deck||s.Phase == PhaseCount - 1 || !s.RedDone || !s.BlueDone);
     }
 
     private static bool ValidProgress(RelationshipStateData state, ConversationRecordSaveData[] records, int count)
@@ -140,14 +149,14 @@ public sealed partial class RelationshipRun
         return red == state.RedDone && blue == state.BlueDone;
     }
 
-    private static bool ValidMessages(MessageSaveData[] items, int phase)
+    private static bool ValidMessages(MessageSaveData[] items, int phase,bool deck=false)
     {
-        if (items == null || items.Length > 2) return false;
-        bool[] sources = new bool[2];
+        if (items == null || items.Length > (deck?6:2)) return false;
+        bool[] sources = new bool[6];
         for (int i = 0; i < items.Length; i++)
         {
             var item = items[i];
-            if (item == null || item.Id != i || !InRange(item.Source, 1) || sources[item.Source]
+            if (item == null || item.Id != i || !InRange(item.Source, 1)
                 || !InRange(item.Phase, phase) || !InRange(item.SourceTrust, 4)
                 || !InRange(item.PriorManaged, 64) || !InRange(item.PriorAlliances, 64)
                 || item.PermissionPhase < -1 || item.PermissionPhase > phase
@@ -157,19 +166,22 @@ public sealed partial class RelationshipRun
                 || !InRange(item.Sharing, (int)SharingPreference.OwnVoice)) return false;
             if ((item.Permission == (int)MessagePermission.Unasked) != (item.PermissionPhase == -1)) return false;
             if (item.Promised && item.Status != (int)MessageStatus.Held) return false;
-            sources[item.Source] = true;
+            int key=item.Source+(deck?item.Phase*2:0);if(sources[key])return false;sources[key]=true;
+            if(!ValidDeckMessage(item,deck))return false;
         }
         return true;
     }
 
     private static bool ValidSave(RelationshipSaveData d)
     {
-        if (d == null || (d.Version!=1&&d.Version!=SaveVersion) || (d.Version==1&&d.DispatchRules) || !InRange(d.Case, (int)CaseId.Office) || !ValidState(d.State)
+        bool deck=d!=null&&d.CaseDeckRules;
+        if (d == null || d.Version<1||d.Version>SaveVersion || (d.Version==1&&d.DispatchRules) || !InRange(d.Case, (int)CaseId.Office) || !ValidState(d.State,deck)
             || !InRange(d.Revision, int.MaxValue - 1) || !InRange(d.RevisionsUsed, 1) || !InRange(d.RestStops, PhaseCount)
             || !InRange(d.Ending, (int)RelationshipEnding.FalsePeace) || d.SelectedCard < -1 || d.SelectedCard >= (int)ConversationCard.Rewind
             || d.CardStock == null || d.CardStock.Length != 7 || !Flags(d.CardsAcquired, 7) || !Flags(d.Rested, PhaseCount)
             || d.History == null || d.History.Length > 6 || d.Correspondence == null || d.Correspondence.Length > 64
-            || !Flags(d.Disclosures, 2) || !Flags(d.ConsentBeforeDisclosure, 2) || !ValidMessages(d.Messages, d.State.Phase)) return false;
+            || !Flags(d.Disclosures, 2) || !Flags(d.ConsentBeforeDisclosure, 2) || !ValidMessages(d.Messages, d.State.Phase,deck)) return false;
+        if(!ValidDeckSave(d))return false;
         int restCount = 0;
         for (int i = 0; i < d.Rested.Length; i++)
         {
@@ -195,7 +207,7 @@ public sealed partial class RelationshipRun
                 || !InRange(h.LoadBefore, LoadMax) || !InRange(h.LoadAfter, LoadMax)
                 || !InRange(h.BridgeBefore, BridgeMax) || !InRange(h.BridgeAfter, BridgeMax)
                 || !InRange(h.PriorManagedMessages, 64) || !InRange(h.PriorAlliances, 64) || !InRange(h.VoiceTrustBefore, 4)
-                ||!InRange(h.PriorReceipt,3)||h.DispatchRules!=d.DispatchRules
+                ||!InRange(h.PriorReceipt,3)||h.DispatchRules!=d.DispatchRules||h.DeckRules!=deck
                 || h.CreatedMessageId < -1 || h.CreatedMessageId >= d.Messages.Length) return false;
             if (i % 2 == 1 && h.Voice == d.History[i - 1].Voice) return false;
             if (h.Card >= 0 && d.CardStock[h.Card] != 0) return false;
@@ -205,11 +217,11 @@ public sealed partial class RelationshipRun
         foreach (var e in d.Correspondence)
         {
             if (e == null || !InRange(e.MessageId, d.Messages.Length - 1) || e.Source != d.Messages[e.MessageId].Source
-                || !InRange(e.Phase, d.State.Phase) || !InRange(e.Action, (int)MessageAction.Reconfirm) || (!d.DispatchRules&&e.Action==(int)MessageAction.Reconfirm)
+                || !InRange(e.Phase, d.State.Phase) || !InRange(e.Action, (int)(deck?MessageAction.HandOffTask:MessageAction.Reconfirm)) || (!d.DispatchRules&&e.Action==(int)MessageAction.Reconfirm)
                 || !InRange(e.Payload, (int)MessagePayload.Need) || Math.Abs((long)e.CapacityDelta) > CapacityMax
                 || Math.Abs((long)e.LoadDelta) > LoadMax || Math.Abs((long)e.BridgeDelta) > BridgeMax
                 || Math.Abs((long)e.SourceTrustDelta) > 4 || Math.Abs((long)e.RecipientTrustDelta) > 4) return false;
-            if(!ValidPacketEvent(e,d.DispatchRules))return false;
+            if(!ValidPacketEvent(e,d.DispatchRules,deck)||!ValidDeckEvent(e,deck))return false;
         }
         if (d.Ending != 0 && (d.HasUndo || d.SelectedCard != -1)) return false;
         if (d.HasUndo)
@@ -243,7 +255,7 @@ public sealed partial class RelationshipRun
         TooExhaustedToListen = h.TooExhaustedToListen, UnderPressure = h.UnderPressure,
         VoiceConsentsAfter = h.VoiceConsentsAfter, RepairedDisclosure = h.RepairedDisclosure, PriorDisclosure = h.PriorDisclosure,
         PriorManagedMessages = h.PriorManagedMessages, PriorAlliances = h.PriorAlliances,
-        VoiceTrustBefore = h.VoiceTrustBefore, CreatedMessageId = h.CreatedMessageId,DispatchRules=h.DispatchRules,PriorReceipt=h.PriorReceipt
+        VoiceTrustBefore = h.VoiceTrustBefore, CreatedMessageId = h.CreatedMessageId,DispatchRules=h.DispatchRules,DeckRules=h.DeckRules,PriorReceipt=h.PriorReceipt
     };
     private static ConversationRecord LoadRecord(ConversationRecordSaveData h) => new ConversationRecord
     {
@@ -253,7 +265,7 @@ public sealed partial class RelationshipRun
         TooExhaustedToListen = h.TooExhaustedToListen, UnderPressure = h.UnderPressure,
         VoiceConsentsAfter = h.VoiceConsentsAfter, RepairedDisclosure = h.RepairedDisclosure, PriorDisclosure = h.PriorDisclosure,
         PriorManagedMessages = h.PriorManagedMessages, PriorAlliances = h.PriorAlliances,
-        VoiceTrustBefore = h.VoiceTrustBefore, CreatedMessageId = h.CreatedMessageId,DispatchRules=h.DispatchRules,PriorReceipt=h.PriorReceipt
+        VoiceTrustBefore = h.VoiceTrustBefore, CreatedMessageId = h.CreatedMessageId,DispatchRules=h.DispatchRules,DeckRules=h.DeckRules,PriorReceipt=h.PriorReceipt
     };
     private static MessageSaveData[] SaveMessages(MessageEnvelope[] items)
     {
@@ -266,7 +278,7 @@ public sealed partial class RelationshipRun
                 Id = m.Id, Source = m.Source, Phase = m.Phase, SourceTrust = m.SourceTrust, PriorManaged = m.PriorManaged, PriorAlliances = m.PriorAlliances,
                 HasNeed = m.HasNeed, Promised = m.Promised, PermissionPhase = m.PermissionPhase,
                 Permission = (int)m.Permission, Status = (int)m.Status, Sharing = (int)m.Sharing,
-                PublicProgress=m.PublicProgress,DispatchAttempts=m.DispatchAttempts,Inspected=m.Inspected,PrivateHeard=m.PrivateHeard,GuessHeard=m.GuessHeard,Assumed=m.Assumed
+                PublicProgress=m.PublicProgress,DispatchAttempts=m.DispatchAttempts,Inspected=m.Inspected,PrivateHeard=m.PrivateHeard,GuessHeard=m.GuessHeard,Assumed=m.Assumed,SourceChecked=m.SourceChecked,TaskActive=m.TaskActive,TaskHandedOff=m.TaskHandedOff,LastTool=(int)m.LastTool
             };
         }
         return saved;
@@ -276,7 +288,7 @@ public sealed partial class RelationshipRun
         Id = m.Id, Source = m.Source, Phase = m.Phase, SourceTrust = m.SourceTrust, PriorManaged = m.PriorManaged, PriorAlliances = m.PriorAlliances,
         HasNeed = m.HasNeed, Promised = m.Promised, PermissionPhase = m.PermissionPhase,
         Permission = (MessagePermission)m.Permission, Status = (MessageStatus)m.Status, Sharing = (SharingPreference)m.Sharing,
-        PublicProgress=m.PublicProgress,DispatchAttempts=m.DispatchAttempts,Inspected=m.Inspected,PrivateHeard=m.PrivateHeard,GuessHeard=m.GuessHeard,Assumed=m.Assumed
+        PublicProgress=m.PublicProgress,DispatchAttempts=m.DispatchAttempts,Inspected=m.Inspected,PrivateHeard=m.PrivateHeard,GuessHeard=m.GuessHeard,Assumed=m.Assumed,SourceChecked=m.SourceChecked,TaskActive=m.TaskActive,TaskHandedOff=m.TaskHandedOff,LastTool=(DispatchTool)m.LastTool
     };
     private static CorrespondenceEventSaveData SaveEvent(CorrespondenceEvent e) => new CorrespondenceEventSaveData
     {
@@ -286,7 +298,7 @@ public sealed partial class RelationshipRun
         CapacityDelta = e.CapacityDelta, LoadDelta = e.LoadDelta, BridgeDelta = e.BridgeDelta,
         SourceTrustDelta = e.SourceTrustDelta, RecipientTrustDelta = e.RecipientTrustDelta,
         Packet=e.Packet,Completed=e.Completed,Provisional=e.Provisional,Interrupted=e.Interrupted,PriorityMiss=e.PriorityMiss,Guarded=e.Guarded,Unbelieved=e.Unbelieved,QuestionedGuess=e.QuestionedGuess,CorrectedAssumption=e.CorrectedAssumption,
-        First=(int)e.First,Second=(int)e.Second,Tool=(int)e.Tool,PublicBefore=e.PublicBefore,PublicAfter=e.PublicAfter,HearingRoom=e.HearingRoom,HeardCount=e.HeardCount
+        First=(int)e.First,Second=(int)e.Second,Tool=(int)e.Tool,PublicBefore=e.PublicBefore,PublicAfter=e.PublicAfter,HearingRoom=e.HearingRoom,HeardCount=e.HeardCount,Combo=(int)e.Combo,CheckMissing=e.CheckMissing
     };
     private static CorrespondenceEvent LoadEvent(CorrespondenceEventSaveData e) => new CorrespondenceEvent
     {
@@ -296,7 +308,7 @@ public sealed partial class RelationshipRun
         CapacityDelta = e.CapacityDelta, LoadDelta = e.LoadDelta, BridgeDelta = e.BridgeDelta,
         SourceTrustDelta = e.SourceTrustDelta, RecipientTrustDelta = e.RecipientTrustDelta,
         Packet=e.Packet,Completed=e.Completed,Provisional=e.Provisional,Interrupted=e.Interrupted,PriorityMiss=e.PriorityMiss,Guarded=e.Guarded,Unbelieved=e.Unbelieved,QuestionedGuess=e.QuestionedGuess,CorrectedAssumption=e.CorrectedAssumption,
-        First=(DispatchFragment)e.First,Second=(DispatchFragment)e.Second,Tool=(DispatchTool)e.Tool,PublicBefore=e.PublicBefore,PublicAfter=e.PublicAfter,HearingRoom=e.HearingRoom,HeardCount=e.HeardCount
+        First=(DispatchFragment)e.First,Second=(DispatchFragment)e.Second,Tool=(DispatchTool)e.Tool,PublicBefore=e.PublicBefore,PublicAfter=e.PublicAfter,HearingRoom=e.HearingRoom,HeardCount=e.HeardCount,Combo=(DispatchCombo)e.Combo,CheckMissing=e.CheckMissing
     };
 
     private sealed partial class Snapshot

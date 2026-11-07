@@ -99,7 +99,8 @@ public static class ModelTests
         }
         for(int i=1;i<=7;i++)Check(witness.ContainsKey((RelationshipEnding)i),"ending reachable: "+(RelationshipEnding)i);
         DispatchTests.Run();
-        var output=new List<string>{"RELATIONSHIP MODEL / PASS", "Dispatch V8 checks: "+DispatchTests.Checks, "Dispatch V8 resolved packets: "+DispatchTests.Packets, "Legacy compatibility checks: "+checks,"Checks: "+checks,"Random journeys: 3000","Exhaustive choice/rest/final combinations: 17496"};
+        CaseDeckTests.Run();
+        var output=new List<string>{"RELATIONSHIP MODEL / PASS", "Case deck V9 checks: "+CaseDeckTests.Checks, "Dispatch V8 checks: "+DispatchTests.Checks, "Dispatch V8 resolved packets: "+DispatchTests.Packets, "Legacy compatibility checks: "+checks,"Checks: "+checks,"Random journeys: 3000","Exhaustive choice/rest/final combinations: 17496"};
         output.Add("Random correspondence journeys: 900");
         output.Add("Office random journeys: 600 / exhaustive combinations: 69984 / endings: 7");
         output.Add("Random save roundtrips: 250 across two cases");
