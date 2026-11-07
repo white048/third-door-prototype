@@ -55,8 +55,9 @@ public sealed class CaseDeckPanel : MonoBehaviour
         for(int i=0;i<9;i++)
         {
             var tool=(DispatchTool)(i+1);bool selected=(draft&(1<<i))!=0;var label=cards[i].GetComponentInChildren<ExhibitionText>();
-            label.text=(selected?"● ":"")+CaseDeckText.Name(tool)+(read?"  ×"+run.DeckStock(tool):"")+"\n"+CaseDeckText.Detail(tool);
-            cards[i].interactable=!read;var colors=cards[i].colors;colors.normalColor=selected?ExhibitionDesign.Red:ExhibitionDesign.Ink;colors.selectedColor=colors.normalColor;colors.highlightedColor=Color.Lerp(colors.normalColor,ExhibitionDesign.Red,.3f);colors.disabledColor=selected?ExhibitionDesign.Red:ExhibitionDesign.Ink;cards[i].colors=colors;label.color=ExhibitionDesign.Paper;
+            label.text=(selected?"● ":"")+CaseDeckText.Name(tool)+(read?"  ×"+run.DeckStock(tool):"");
+            cards[i].transform.Find("Card rule").GetComponent<ExhibitionText>().text=CaseDeckText.Detail(tool);
+            cards[i].interactable=!read;var colors=cards[i].colors;colors.normalColor=selected?ExhibitionDesign.Red:ExhibitionDesign.Ink;colors.selectedColor=colors.normalColor;colors.highlightedColor=Color.Lerp(colors.normalColor,ExhibitionDesign.Red,.3f);colors.disabledColor=read&&selected&&run.DeckStock(tool)==0?ExhibitionDesign.Muted:selected?ExhibitionDesign.Red:ExhibitionDesign.Ink;cards[i].colors=colors;label.color=ExhibitionDesign.Paper;
         }
         for(int i=0;i<3;i++)
         {
@@ -65,7 +66,8 @@ public sealed class CaseDeckPanel : MonoBehaviour
         }
         hand.text=L("选入手牌\n\n","YOUR HAND\n\n");int number=0;
         for(int i=0;i<9;i++)if((draft&(1<<i))!=0)hand.text+=(++number)+" / "+CaseDeckText.Name((DispatchTool)(i+1))+(read?"  ×"+run.DeckStock((DispatchTool)(i+1)):"")+"\n";
-        hint.text=L("核对 → 原话\n已核对时，原话不加承重。\n\n停顿 → 翻译\n下一次翻译省余力，留两段工夫。\n\n代办 → 交接\n送到后把清单交回本人。","VERIFY → QUOTE\nChecked words add no extra load.\n\nPAUSE → REFRAME\nSave breath; room for two pieces.\n\nTASK → HANDOFF\nDeliver, then hand the list back.");
+        hint.text=CaseDeckText.Plan(draft);
+        GetComponent<CaseDeckArt>().Refresh(run.Phase);
         int count=RelationshipRun.BitCount(draft);selection.text=error.Length>0?error:L("已选 ","SELECTED ")+count+" / 5"+(run.Phase>0&&!read&&RelationshipRun.BitCount(draft^run.DeckMask)>2?L(" · 这一场最多换一张"," · SWAP AT MOST ONE"):"");
         confirm.interactable=read||run.CanPrepareDeck(draft);
         confirm.GetComponentInChildren<ExhibitionText>().text=read?L("返回展厅","RETURN TO THE GALLERY"):L("带上这五张 →","TAKE THIS HAND →");

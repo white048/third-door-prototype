@@ -61,7 +61,7 @@ public sealed partial class RelationshipRun
         if (caseId != CaseId.Home && caseId != CaseId.Office) throw new ArgumentOutOfRangeException(nameof(caseId));
         Case = caseId;
         DispatchRules=dispatchRules;
-        if(deckRules){if(caseId!=CaseId.Office||!dispatchRules)throw new ArgumentException("Deck mode requires the office dispatch case.");caseDeck=new CaseDeckData();}
+        if(deckRules){if(caseId!=CaseId.Office||!dispatchRules)throw new ArgumentException("Deck mode requires the office dispatch case.");caseDeck=new CaseDeckData{Edition=1};}
         Draw(ConversationCard.Pause);
         Draw(ConversationCard.Quote);
         Draw(ConversationCard.Boundary);

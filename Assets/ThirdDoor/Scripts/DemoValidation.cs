@@ -72,7 +72,7 @@ public partial class DemoValidation : MonoBehaviour
     {
         output=Path.Combine(Application.dataPath,"..","QA",scenario);Directory.CreateDirectory(output);
         detailed=scenario.Contains("table")||scenario.Contains("cards")||scenario.Contains("aspect")||scenario.StartsWith("v3-")||scenario.StartsWith("v4-")||scenario.StartsWith("v5-")||scenario.StartsWith("v7-");
-        if(scenario.StartsWith("v4-")||scenario.StartsWith("v5-")||scenario.StartsWith("v7-")||scenario.StartsWith("v8-")||scenario.StartsWith("v9-"))CheckpointStore.Clear();
+        if(scenario.StartsWith("v4-")||scenario.StartsWith("v5-")||scenario.StartsWith("v7-")||scenario.StartsWith("v8-")||scenario.StartsWith("v9-")||scenario.StartsWith("v10-"))CheckpointStore.Clear();
         yield return new WaitForSecondsRealtime(.8f);
         player=FindObjectOfType<PlayerController>();ui=FindObjectOfType<DialogueUI>();state=GameStateManager.Instance;
         Check(FindObjectsOfType<PlayerController>().Length==1&&FindObjectsOfType<AudioListener>().Length==1,"one player and one listener");
@@ -107,9 +107,10 @@ public partial class DemoValidation : MonoBehaviour
             Click("Close notebook");yield return null;
         }
         Check(player.ControlsEnabled&&!IntroSequence.IsActive,"introduction returns control");
-        // V8 and historical scenarios are explicit compatibility fixtures; V9 exercises the production work case.
+        // Previous editions are compatibility fixtures; V10 exercises production new-game rules.
         if(scenario.StartsWith("v8-"))state.RestoreRun(new RelationshipRun(state.Run.Case));
-        else if(!scenario.StartsWith("v9-"))state.RestoreRun(RelationshipRun.Legacy(state.Run.Case));
+        else if(scenario.StartsWith("v9-"))state.RestoreRun(RelationshipRun.PreviousDeckCase());
+        else if(!scenario.StartsWith("v10-"))state.RestoreRun(RelationshipRun.Legacy(state.Run.Case));
         if(scenario.Contains("office")||scenario.Contains("save-resume"))Check(state.Run.Case==CaseId.Office,"selected case owns the new model");
         float performanceTime=Time.realtimeSinceStartup;int calmFrames=0;
         while(Time.realtimeSinceStartup-performanceTime<1){calmFrames++;yield return null;}
@@ -146,7 +147,7 @@ public partial class DemoValidation : MonoBehaviour
         Check(!ExhibitionHUD.Paused&&player.ControlsEnabled,"resume restores controls");
         foreach(var door in FindObjectsOfType<DoorDialogue>())
         {if(door.Actor==DialogueActor.RedDoor)red=door;else if(door.Actor==DialogueActor.BlueDoor)blue=door;else exit=door;}
-        if(scenario.StartsWith("v9-")){yield return RunCaseDeckDemo();yield break;}
+        if(scenario.StartsWith("v9-")||scenario.StartsWith("v10-")){yield return RunCaseDeckDemo();yield break;}
         if(scenario.StartsWith("v8-")){yield return RunDispatchDemo();yield break;}
         if(scenario.StartsWith("v7-"))yield return ProbeRibbon("00-empty-strip");
         string route="122122";int restMask=1,final=1;RelationshipEnding expected=RelationshipEnding.SharedTable;
@@ -426,7 +427,7 @@ public partial class DemoValidation : MonoBehaviour
                 if(preferred>sdf.rectTransform.rect.height+3)clipped.Add("SDF "+text.name+" "+preferred.ToString("0")+"/"+sdf.rectTransform.rect.height.ToString("0"));
                 sdf.Rendered.ForceMeshUpdate();
                 var glyphs=sdf.Rendered.textInfo;
-                bool fullCheck=text.GetComponentInParent<DispatchComposer>()!=null||text.GetComponentInParent<CaseDeckPanel>()!=null||((scenario.StartsWith("v8-")||scenario.StartsWith("v9-"))&&(stage=="all seven new ending summaries"||stage=="translated ending summaries"||stage=="notes before the collage"));
+                bool fullCheck=text.GetComponentInParent<DispatchComposer>()!=null||text.GetComponentInParent<CaseDeckPanel>()!=null||((scenario.StartsWith("v8-")||scenario.StartsWith("v9-")||scenario.StartsWith("v10-"))&&(stage=="all seven new ending summaries"||stage=="translated ending summaries"||stage=="notes before the collage"));
                 int checkedGlyphs=fullCheck?glyphs.characterCount:Mathf.Min(6,glyphs.characterCount);
                 for(int index=0;index<checkedGlyphs;index++)
                 {

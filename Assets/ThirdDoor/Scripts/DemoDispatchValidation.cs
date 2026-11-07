@@ -33,6 +33,8 @@ public partial class DemoValidation
         Check(composer.First==first&&composer.Second==second&&composer.Tool==tool&&JsonUtility.ToJson(state.Run.ExportSave())==before,"translation preserves the exact draft and all model fields");
         yield return Shot(shot+"-composer");CheckTextLayout("composer");
         Click("Proof composed packet");yield return null;Check(folio.ProofOpen,"composed packet still requires a full-word proof");
+        if(state.Run.TunedDeck&&state.Run.Phase==2&&tool==DispatchTool.Handoff)
+            Check(GameObject.Find("Proof actual words").GetComponent<ExhibitionText>().text.Contains(NarrativeText.L("现在可以确认吗","confirm your own part now")),"handoff confirmation is an explicit spoken question in the proof");
         CheckTextLayout("packet proof");Click("Cancel dispatch proof");yield return null;
         Check(!folio.ProofOpen&&composer.IsOpen&&JsonUtility.ToJson(state.Run.ExportSave())==before,"cancelling a packet spends neither a card nor an attempt");
         Click("Proof composed packet");yield return null;yield return Shot(shot+"-proof");

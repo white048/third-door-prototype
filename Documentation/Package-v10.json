@@ -1,0 +1,21 @@
+{
+  "version": "10.0",
+  "created": "2026-11-07T10:25:19.8019909Z",
+  "file": "TheThirdDoor_Constructivist_v10_Preview.zip",
+  "bytes": 43839046,
+  "sha256": "606ABAA68B5D1926B598827793F76F0D00366BEE016609B5D10884E47A81A7FF",
+  "assemblySHA256": "553BDFB5DEE7EB6BAE69BEA458075F7391DA82ED9FB5F17A47B031452EB95D28",
+  "sourceBaseCommit": "9e2a7e80dc7c737c44043e90e036c9024482678e",
+  "sourceBranch": "codex/case-deck-v10",
+  "balanceStudyInputs": 1764,
+  "nativeMatrixChecks": 3780,
+  "nativeMatrixScenarios": 17,
+  "extractedPackageSmoke": {
+    "passed": true,
+    "scenario": "v10-office-mixed-en",
+    "checks": 292,
+    "failures": 0,
+    "description": "Full three-scene custom mixed-hand journey in a separate extraction of the final ZIP on this machine",
+    "cleanMachine": false
+  }
+}

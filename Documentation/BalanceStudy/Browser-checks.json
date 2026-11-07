@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-07T10:07:02.3610765Z",
+  "tool": "computer-use browser API",
+  "checks": [
+    "Loaded 1764-input report with 192-wide search scope visible",
+    "Selected rushed-confirmation fixture",
+    "Filtered for task and handoff: 35 hands, 35 found routes",
+    "Sorted by final breath",
+    "Switched V9 and V10 and observed distinct preset costs",
+    "Expanded actual task/handoff sequence"
+  ],
+  "passed": true,
+  "playerTest": false
+}

@@ -11,14 +11,16 @@ public partial class SceneBootstrapper
         var board=new GameObject("Office / Public workplan").transform;
         board.SetParent(installation,false);
         board.SetPositionAndRotation(new Vector3(-9.4f,0,1.6f),Quaternion.Euler(0,-48,0));
+        var reader=new GameObject("Workplan / Read target");reader.transform.SetParent(board,false);
+        var readingTarget=reader.AddComponent<BoxCollider>();readingTarget.center=new Vector3(0,2.5f,-.05f);readingTarget.size=new Vector3(4.46f,4.76f,.12f);readingTarget.isTrigger=true;reader.AddComponent<WorkplanStation>();
         CaseBox("Workplan / carbon backing",board,new Vector3(0,2.5f,.025f),new Vector3(4.56f,4.86f,.08f),printInk);
         CaseBox("Workplan / paper",board,new Vector3(0,2.5f,-.03f),new Vector3(4.46f,4.76f,.04f),printPaper);
         CaseBox("Workplan / red register",board,new Vector3(-2.15f,2.5f,-.06f),new Vector3(.07f,4.7f,.025f),printRed);
         CasePrint("02 / WORK PLAN",board,new Vector3(0,4.5f,-.07f),.3f,ExhibitionDesign.Ink);
         CasePrint("ONLY WHAT THE WORK NEEDS",board,new Vector3(0,4.08f,-.07f),.105f,ExhibitionDesign.Ink);
         CaseBox("Workplan / heading rule",board,new Vector3(0,3.84f,-.07f),new Vector3(3.84f,.025f,.015f),printInk);
-        CasePrint("DELIVERABLES",board,new Vector3(0,3.5f,-.07f),.17f,ExhibitionDesign.Red);
-        CasePrint("FRIDAY DRAFT\nDAYTIME REVIEW",board,new Vector3(0,2.92f,-.07f),.24f,ExhibitionDesign.Ink);
+        var workHeading=CasePrint("DELIVERABLES",board,new Vector3(0,3.5f,-.07f),.17f,ExhibitionDesign.Red);
+        var workDetails=CasePrint("FRIDAY DRAFT\nDAYTIME REVIEW",board,new Vector3(0,2.92f,-.07f),.24f,ExhibitionDesign.Ink);
         CaseBox("Workplan / task rule",board,new Vector3(0,2.2f,-.07f),new Vector3(3.84f,.025f,.015f),printInk);
         CasePrint("REASON",board,new Vector3(0,1.92f,-.07f),.16f,ExhibitionDesign.Ink);
         // An outlined field is deliberately left empty. Private words never appear here.
@@ -37,7 +39,7 @@ public partial class SceneBootstrapper
         CasePrint("LIMITED AGREEMENT",agreement,new Vector3(0,.22f,-.016f),.075f,ExhibitionDesign.Ink);
         CasePrint("TASK / TIME / SCOPE",agreement,new Vector3(0,-.02f,-.016f),.06f,ExhibitionDesign.Ink);
         CasePrint("REASON: __________",agreement,new Vector3(0,-.3f,-.016f),.065f,ExhibitionDesign.Ink);
-        installation.gameObject.AddComponent<CaseInstallation>().Configure(board.gameObject,agreement.gameObject,caseDoorFaces,caseDoorHeadings,receipt);
+        installation.gameObject.AddComponent<CaseInstallation>().Configure(board.gameObject,agreement.gameObject,caseDoorFaces,caseDoorHeadings,receipt,workHeading,workDetails);
     }
 
     private GameObject CaseBox(string name,Transform parent,Vector3 at,Vector3 size,Material material)

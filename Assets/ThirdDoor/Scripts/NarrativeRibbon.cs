@@ -160,7 +160,7 @@ public sealed class NarrativeRibbon : MonoBehaviour
         Photo(root,tile,new Vector2(65,135),new Vector2(440,440),receipt.Breach?12:-5);
         Caption(root,CorrespondenceText.Source(receipt.Source)+" / "+CorrespondenceText.ActionName(receipt.Action),70,27,Red);
         var item=run.Message(receipt.MessageId);
-        string words=receipt.Packet?DispatchText.Packet(run.Case,receipt.Source,receipt.First,receipt.Second,receipt.Tool,receipt.Phase):receipt.Action==MessageAction.Deliver&&item!=null?(receipt.Payload==MessagePayload.Request?CorrespondenceText.Request(item):CorrespondenceText.Need(item)):NarrativeText.L("记录本人实际确认的内容，不代替另一人的答复。","Record what this person confirmed. It does not answer for anyone else.");
+        string words=receipt.Packet?DispatchText.Packet(run.Case,receipt.Source,receipt.First,receipt.Second,receipt.Tool,receipt.Phase,receipt.ConsentRenewed):receipt.Action==MessageAction.Deliver&&item!=null?(receipt.Payload==MessagePayload.Request?CorrespondenceText.Request(item):CorrespondenceText.Need(item)):NarrativeText.L("记录本人实际确认的内容，不代替另一人的答复。","Record what this person confirmed. It does not answer for anyone else.");
         Words(root,"Ribbon delivered words",words,600,117,680,210,28,Ink);
         Words(root,"Ribbon receipt reply",CorrespondenceText.Outcome(receipt),600,376,680,270,25,Ink);
         Words(root,"Ribbon receipt costs",CorrespondenceText.Delta(receipt),70,688,1210,105,22,Muted);

@@ -3,9 +3,9 @@ using System;
 [Serializable]
 public sealed class CaseDeckData
 {
-    public int Mask,PreparedPhase=-1;
+    public int Mask,PreparedPhase=-1,Edition;
     public int[] Stock=new int[9],Loadouts=new int[3],Combos=new int[4];
-    public CaseDeckData Copy()=>new CaseDeckData{Mask=Mask,PreparedPhase=PreparedPhase,Stock=(int[])Stock.Clone(),Loadouts=(int[])Loadouts.Clone(),Combos=(int[])Combos.Clone()};
+    public CaseDeckData Copy()=>new CaseDeckData{Mask=Mask,PreparedPhase=PreparedPhase,Edition=Edition,Stock=(int[])Stock.Clone(),Loadouts=(int[])Loadouts.Clone(),Combos=(int[])Combos.Clone()};
 }
 
 public enum DispatchCombo { None, CheckedQuote, PacedReframe, ReceiptChain, Handoff }
@@ -14,6 +14,8 @@ public sealed partial class RelationshipRun
 {
     private CaseDeckData caseDeck;
     public bool DeckRules=>caseDeck!=null;
+    public bool TunedDeck=>DeckRules&&caseDeck.Edition==1;
+    public static RelationshipRun PreviousDeckCase(){var r=DeckCase();r.caseDeck.Edition=0;return r;}
     public bool DeckReady=>DeckRules&&caseDeck.PreparedPhase==Phase&&BitCount(caseDeck.Mask)==5;
     public int DeckMask=>caseDeck==null?0:caseDeck.Mask;
     public static RelationshipRun DeckCase()=>new RelationshipRun(CaseId.Office,true,true);
@@ -47,7 +49,7 @@ public sealed partial class RelationshipRun
         if(tool==DispatchTool.Check)return !m.SourceChecked;
         if(tool==DispatchTool.Receipt){var other=MessageFrom(1-source);return m.PublicProgress>0||(other!=null&&other.PublicProgress==3&&!other.Assumed);}
         if(tool==DispatchTool.Handoff)return m.TaskActive&&m.PublicProgress==3&&!m.Assumed;
-        if(tool==DispatchTool.TakeOver)return Capacity>=2;
+        if(tool==DispatchTool.TakeOver)return Capacity>=(TunedDeck&&m.SourceChecked?1:2);
         if(tool==DispatchTool.Quote)return Clarity(source)>0;
         if(tool==DispatchTool.Reframe)return Clarity(source)>0;
         if(tool==DispatchTool.Boundary)return Clarity(1-source)>0;

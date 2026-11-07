@@ -16,14 +16,18 @@ public partial class SceneBootstrapper
         for(int i=0;i<9;i++)
         {
             cards[i]=Button(sheet.transform,"Deck choice / "+(DispatchTool)(i+1),"",new Vector2(35+(i%3)*365,225+(i/3)*195),new Vector2(345,178),Ink,Paper,chineseUiFont);
-            var label=cards[i].GetComponentInChildren<ExhibitionText>();label.fontSize=20;label.alignment=TextAnchor.UpperLeft;label.rectTransform.anchoredPosition=new Vector2(18,-12);label.rectTransform.sizeDelta=new Vector2(309,154);
+            var label=cards[i].GetComponentInChildren<ExhibitionText>();label.fontSize=23;label.alignment=TextAnchor.MiddleLeft;label.rectTransform.anchoredPosition=new Vector2(18,-7);label.rectTransform.sizeDelta=new Vector2(254,37);
+            ToolMark.Create(cards[i].transform,(DispatchTool)(i+1),new Vector2(291,9),new Vector2(34,34),Paper);
+            Block(cards[i].transform,"Card heading rule",new Vector2(18,47),new Vector2(309,1),new Color(Paper.r,Paper.g,Paper.b,.4f));
+            Type(cards[i].transform,"Card rule","",new Vector2(18,55),new Vector2(309,112),19,Paper,chineseUiFont);
         }
         Block(sheet.transform,"Deck side rule",new Vector2(1150,225),new Vector2(3,570),Red);
-        var hand=Type(sheet.transform,"Deck selected hand","",new Vector2(1190,225),new Vector2(530,250),25,Ink,chineseUiFont);
+        var hand=Type(sheet.transform,"Deck selected hand","",new Vector2(1190,225),new Vector2(300,250),25,Ink,chineseUiFont);
         var hint=Type(sheet.transform,"Deck combinations","",new Vector2(1190,490),new Vector2(530,310),21,Muted,chineseUiFont);
         var count=Type(sheet.transform,"Deck selected count","",new Vector2(35,825),new Vector2(1680,42),23,Red,chineseUiFont);
         var back=Button(sheet.transform,"Close case deck","",new Vector2(35,895),new Vector2(590,62),Ink,Paper,chineseUiFont);
         var confirm=Button(sheet.transform,"Confirm case deck","",new Vector2(1190,895),new Vector2(530,62),Red,Paper,chineseUiFont);
+        var artwork=veil.gameObject.AddComponent<CaseDeckArt>();artwork.Configure(sheet.transform,chineseUiFont);
         var view=veil.gameObject.AddComponent<CaseDeckPanel>();view.Configure(veil.gameObject,book,controller,dialogue,cards,presets,confirm,back,title,rule,hand,hint,count);book.ConfigureDeck(view);
     }
 }

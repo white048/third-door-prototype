@@ -1,11 +1,14 @@
 param(
     [string]$EditorRoot = 'E:\014_Unity\Editor\2022.3.62f3\Editor',
-    [switch]$CheckEditor
+    [switch]$CheckEditor,
+    [string]$OutputDirectory = 'Builds/Constructivist'
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $sourceBuild = Join-Path $projectRoot 'Builds\Windows'
-$previewBuild = Join-Path $projectRoot 'Builds\Constructivist'
+$previewBuild = [IO.Path]::GetFullPath((Join-Path $projectRoot $OutputDirectory))
+$allowedBuildRoot=[IO.Path]::GetFullPath((Join-Path $projectRoot 'Builds'))+[IO.Path]::DirectorySeparatorChar
+if(!$previewBuild.StartsWith($allowedBuildRoot,[StringComparison]::OrdinalIgnoreCase)){throw 'Preview output must be inside the project Builds directory.'}
 $scratch = Join-Path $PSScriptRoot '.build'
 $compiler = Join-Path $EditorRoot 'Data\DotNetSdkRoslyn\csc.dll'
 $dotnet = Join-Path $EditorRoot 'Data\NetCoreRuntime\dotnet.exe'

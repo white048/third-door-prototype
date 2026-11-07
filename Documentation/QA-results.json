@@ -1,16 +1,120 @@
 {
-  "version": "9.0",
-  "date": "2026-11-07T00:36:51.2012180Z",
+  "version": "10.0",
+  "date": "2026-11-07T10:20:21.2612431Z",
   "engine": "2022.3.62f3",
   "build": "Original Windows player resources with newly compiled project assembly",
   "runtimeCompilation": "Passed",
   "editorCodeCompilation": "Passed with pinned Unity references",
   "freshUnityBuild": "Not completed in this iteration; inherited Windows preview player used",
-  "productStatus": "Three-scene work-case deck experiment; home case and old saves retain previous rules. No Steam submission or player blind test.",
-  "assemblySHA256": "AF55484748623114C04588F92D75E05067625892F3EA689C3E0A8D9FD9C3DB7E",
-  "nativePassed": 3033,
+  "productStatus": "Three-scene work-case deck experiment with revised hearing-window balance, explicit bundled confirmation and a readable physical workplan. Previous saves retain their own rules. No player blind test or Steam submission.",
+  "assemblySHA256": "553BDFB5DEE7EB6BAE69BEA458075F7391DA82ED9FB5F17A47B031452EB95D28",
+  "nativePassed": 3780,
   "nativeScenarioCount": 17,
   "cases": [
+    {
+      "scenario": "v10-office-paper-art-cn",
+      "rules": "case-deck-v10",
+      "passed": 295,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-room-en",
+      "rules": "case-deck-v10",
+      "passed": 291,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-task-cn",
+      "rules": "case-deck-v10",
+      "passed": 282,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-mixed-en",
+      "rules": "case-deck-v10",
+      "passed": 292,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-swap-cn",
+      "rules": "case-deck-v10",
+      "passed": 279,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-basic-en",
+      "rules": "case-deck-v10",
+      "passed": 251,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-resume-en",
+      "rules": "case-deck-v10",
+      "passed": 159,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-room-aspect-cn",
+      "rules": "case-deck-v10",
+      "passed": 291,
+      "failed": 0,
+      "resolution": "1280x960",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-task-store-en",
+      "rules": "case-deck-v10",
+      "passed": 282,
+      "failed": 0,
+      "resolution": "1920x1080",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v10-office-paper-fallback-en",
+      "rules": "case-deck-v10",
+      "passed": 277,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": true
+    },
+    {
+      "scenario": "v9-office-paper-en",
+      "rules": "case-deck-v9",
+      "passed": 255,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-task-cn",
+      "rules": "case-deck-v9",
+      "passed": 262,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
+    {
+      "scenario": "v9-office-resume-cn",
+      "rules": "case-deck-v9",
+      "passed": 160,
+      "failed": 0,
+      "resolution": "1600x900",
+      "missingArtFallback": false
+    },
     {
       "scenario": "v8-dispatch-home-cn",
       "rules": "ordered-dispatch-v8",
@@ -20,25 +124,9 @@
       "missingArtFallback": false
     },
     {
-      "scenario": "v8-dispatch-office-aspect-en",
-      "rules": "ordered-dispatch-v8",
-      "passed": 129,
-      "failed": 0,
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-late-cn",
+      "scenario": "v8-dispatch-late-en",
       "rules": "ordered-dispatch-v8",
       "passed": 146,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v8-dispatch-falsepeace-en",
-      "rules": "ordered-dispatch-v8",
-      "passed": 84,
       "failed": 0,
       "resolution": "1600x900",
       "missingArtFallback": false
@@ -58,99 +146,11 @@
       "failed": 0,
       "resolution": "1600x900",
       "missingArtFallback": false
-    },
-    {
-      "scenario": "v2-cards-cn",
-      "rules": "legacy-save-compatibility",
-      "passed": 101,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v3-dispatch-breach-en",
-      "rules": "legacy-save-compatibility",
-      "passed": 110,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-paper-cn",
-      "rules": "case-deck-v9",
-      "passed": 250,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-room-en",
-      "rules": "case-deck-v9",
-      "passed": 287,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-task-cn",
-      "rules": "case-deck-v9",
-      "passed": 257,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-swap-en",
-      "rules": "case-deck-v9",
-      "passed": 252,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-basic-cn",
-      "rules": "case-deck-v9",
-      "passed": 246,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-resume-en",
-      "rules": "case-deck-v9",
-      "passed": 156,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-paper-aspect-en",
-      "rules": "case-deck-v9",
-      "passed": 250,
-      "failed": 0,
-      "resolution": "1280x960",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-task-store-cn",
-      "rules": "case-deck-v9",
-      "passed": 257,
-      "failed": 0,
-      "resolution": "1920x1080",
-      "missingArtFallback": false
-    },
-    {
-      "scenario": "v9-office-paper-fallback-en",
-      "rules": "case-deck-v9",
-      "passed": 250,
-      "failed": 0,
-      "resolution": "1600x900",
-      "missingArtFallback": true
     }
   ],
   "model": {
-    "passed": 512517,
-    "caseDeckPassed": 24115,
+    "passed": 512600,
+    "caseDeckV9AndV10Passed": 24198,
     "dispatchV8Passed": 83869,
     "legacyCompatibilityPassed": 404533,
     "caseDeckRandomJourneys": 250,
@@ -178,5 +178,17 @@
     "suppliedReferenceArtDistributed": false,
     "originalsEdited": false
   },
-  "scope": "Nine v9 real-window scenarios cover three full preset journeys, a one-card swap, an all-basic route, actual title Continue after PAUSE with saved stocks, bilingual draft preservation, proof/cancel, readonly hand, current notes, all seven archive summaries via an isolated UI fixture, original-scene collage, 4:3 and 1080p, and missing-art fallback. Four v8 and four legacy cases are selected regressions, not a rerun of the full v8 matrix. Native tests use CharacterController movement, physics sight checks and UI raycasts. Model checks include save roundtrips and preview equivalence. No human playtest, new Unity BuildPipeline build, clean-machine verification or hardware certification was completed."
+  "balanceStudy": {
+    "inputs": 1764,
+    "hands": 126,
+    "fixtures": 7,
+    "beamWidth": 192,
+    "depth": 10,
+    "previousCommonBestMasks": 5,
+    "currentCommonBestMasks": 0,
+    "playerWinRates": false,
+    "globalOptimalityProven": false,
+    "replayedCertificates": true
+  },
+  "scope": "Ten v10 production-rule scenarios cover three preset journeys, a custom mixed hand, one-card swap, no-card route, real title Continue after a partial combo, 4:3, 1080p, missing-art fallback, scalable card marks, read-only loadout, scene-dependent physical workplan, real interaction-ray focus and bilingual readonly reading, explicit handoff confirmation question in the proof, actual-question history and zero-breath closure guidance. Three v9, two v8 and two older-save scenarios are selected compatibility regressions, not a rerun of all historical matrices. Native tests use CharacterController movement, physics and UI raycasts. The balance study is bounded search through the actual model, including controlled stress states; it is not a player success-rate estimate. No human playtest, fresh Unity BuildPipeline build or clean-machine verification."
 }

@@ -19,16 +19,16 @@ public static class DispatchText
         return part==DispatchFragment.Fact?(source==0?L("草稿的期限是周五。","The draft is due on Friday."):L("同事能在周五交出草稿。","Your colleague can deliver the draft on Friday."))
             :(source==0?L("请同事报一个能参加评审的时间。","The manager asks for a review time your colleague can attend."):L("同事希望评审改到白天。","Your colleague asks to move the review to daytime."));
     }
-    public static string Packet(CaseId id,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool,int phase=-1)
+    public static string Packet(CaseId id,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool,int phase=-1,bool confirmationQuestion=false)
     {
-        if(id==CaseId.Office&&CaseDeckText.Active)return CaseDeckText.Packet(phase<0?GameStateManager.Instance.Run.Phase:phase,source,first,second,tool);
+        if(id==CaseId.Office&&CaseDeckText.Active)return CaseDeckText.Packet(phase<0?GameStateManager.Instance.Run.Phase:phase,source,first,second,tool,confirmationQuestion);
         string text=Fragment(id,source,first,tool);
         if(second!=DispatchFragment.None)text+="\n"+Fragment(id,source,second,tool);
         if(first==DispatchFragment.None)return L("我先问一句，你现在最急着弄清什么？","Before I pass this on, what do you need to know first?");
         string prefix=tool==DispatchTool.Quote?L("这是对方原来的意思：\n","Their words, as they meant them:\n"):tool==DispatchTool.Boundary?L("这趟我只带这几句：\n","This time, I'm only carrying these words:\n"):tool==DispatchTool.TakeOver?L("我先替这份安排担保：\n","I'll put my name behind this plan:\n"):tool==DispatchTool.Pause?L("等一下，我理一理：\n","Give me a moment to get this straight:\n"):"";
         return prefix+text;
     }
-    public static string HeardWords(CorrespondenceEvent e)=>Packet(CaseInfo.Active,e.Source,e.First,e.Second,e.Tool,e.Phase);
+    public static string HeardWords(CorrespondenceEvent e)=>Packet(CaseInfo.Active,e.Source,e.First,e.Second,e.Tool,e.Phase,e.ConsentRenewed);
     public static string Actor(RelationshipRun run,MessageEnvelope m)
     {
         if(run.DeckRules)return CaseDeckText.Actor(run,m.Source);

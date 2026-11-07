@@ -2,24 +2,26 @@
 
 一款关于传话的第一人称叙事策略试玩。你替两个人带话，要决定带哪两段、先说哪段，是否用掉一张卡，以及愿意替谁的安排担保。Unity 2022.3 URP，中文 / English。
 
-![第九版九选五牌组实机画面](Documentation/Preview/DeckBuilder.png)
+![第十版九选五牌组实机画面](Documentation/Preview/DeckBuilder-v10.png)
 
-第九版把工作案例做成一段完整的牌组实验：九张工具选五张，处理三场条件不同的传话，场间最多换一张。先商量交稿与评审，再核对改过的通知，最后交清下一步由谁来做。每场真正送完两封话，再去 03 收场；门前的两句回应不会直接跳到下一场。
+第十版继续完善工作案例的九选五：三场条件不同的传话，场间最多换一张。先商量交稿与评审，再核对改过的通知，最后交清下一步由谁来做。每场真正送完两封话，再去 03 收场；门前的两句回应不会直接跳到下一场。
 
-留证、周旋、承接三套预设可以混搭。核对影响原话的成本，停顿为后续翻译留下窗口，代办整理清单后须把任务交回。卡改变处理局面的办法，基本传达、核对和交接仍可不用卡。家人案例保留第八版玩法，两案的既有结局和拼贴长卷仍可回看。
+停顿与回执现在各自处理余力，不再同时延长接话窗口；停顿接翻译才会留两段工夫。已核对的代办不重复支付核对余力；交接可一并询问对方已等候的那一项确认，实际问题会写在校样里。基本传达、核对和交接仍可不用卡。
+
+本轮对 126 副手牌、七个局面和两版规则作了 1,764 个输入的有界搜索，保留了完整行动记录。[交互对照](Documentation/BalanceStudy/index.html)可筛选手牌、切换规则与查看路线；[方法与限制](Documentation/Balance-v10.txt)说明它为何不能当作玩家胜率或最优证明。
 
 ## 本地游玩
 
-运行 [PlayDemo.cmd](Builds/Constructivist/PlayDemo.cmd) 或同目录的 `TheThirdDoor.exe`。便携包为 `Builds/TheThirdDoor_Constructivist_v9_Preview.zip`。
+运行 [PlayDemo.cmd](Builds/Constructivist-v10/PlayDemo.cmd) 或同目录的 `TheThirdDoor.exe`。便携包为 `Builds/TheThirdDoor_Constructivist_v10_Preview.zip`。V9 目录与压缩包保留。
 
-[包记录](Documentation/Package-v9.json)包含校验码和独立解压后的启动检查结果。试玩包是本地构建产物，不包含在源码仓库中。
+[包记录](Documentation/Package-v10.json)包含校验码和独立解压后的启动检查结果。试玩包是本地构建产物，不包含在源码仓库中。
 
-**体验新版请选择工作案例《事由的空白》，开始新局。** 继续旧存档会沿用那一局的规则和原有进度。
+**体验新版请选择工作案例《事由的空白》，开始新局。** 继续 V9 存档会保留 V9 的牌效；家人案例与更早存档也沿用各自规则。
 
 | 操作 | 按键 |
 | --- | --- |
 | 移动 / 观察 | WASD / 鼠标 |
-| 接话、休息、阅读实体纸卷 | E |
+| 接话、休息、阅读实体纸卷与当前工作看板 | E |
 | 在门前打开传话夹、组句 | F |
 | 手记 / 本局拼贴长卷 | Tab / V |
 | 阅读长卷 | 滚轮 / ↑ ↓；左侧跳转轮次 |
@@ -43,7 +45,7 @@
 
 每封话通常最多四次接话，工作新局的代办可以换第五次。已经听进去的项会保留，不能重复刷取效果。**把公开安排送到，同样能增加理解，不必问出所有私事。**
 
-工作新局的九张牌是原话、停顿、追问、翻译、界限、代办、核对、回执、交接。五张手牌全可见，每张每场一次，在组句中使用。已核对的原话不加额外承重；停顿之后的翻译省余力并留出两段工夫；实际回执能节省回程余力。代办额外花 1 余力、承重 +3，送到后交回任务。
+工作新局的九张牌是原话、停顿、追问、翻译、界限、代办、核对、回执、交接。五张手牌全可见，每张每场一次，在组句中使用。已核对的原话不加额外承重；停顿之后的翻译省余力并留出两段工夫；实际回执能节省回程余力。代办承重 +3，未核对时额外花 1 余力，送到后交回任务。
 
 没有核对牌，可回说话人门前按 F 做基本核对；没有交接牌，可在收信人门前按 F 交回清单。基本动作需要余力。第二场必须核对版本，第三场对方赶时间，开头顺序和分次送达会更重要。
 
@@ -59,9 +61,9 @@
 
 这是一个可从选牌走到结局的三场实验，尚需通过真人试玩判断选牌与遭遇变化是否带来重玩价值。没有随机抽牌、商店、职业树或地图成长。
 
-[本版设计](Documentation/Design-Iteration-v9.txt)解释规则与参考边界；[规则与验证范围](Documentation/Balance-v9.txt)区分新版、八版与旧存档检查；[试玩记录单](Documentation/Playtest-v9.txt)用于观察选牌、改计划和重玩的原因。
+[本版设计](Documentation/Design-Iteration-v10.txt)解释规则与参考边界；[规则与验证范围](Documentation/Balance-v10.txt)区分模型搜索、窗口检查与真人试玩；[试玩记录单](Documentation/Playtest-v10.txt)用于观察选牌、改计划和重玩的原因。
 
-[检查报告](Documentation/QA-results.json)记录当前程序集、真实窗口矩阵及三套规则的单独统计；[八版报告](Documentation/QA-results-v8.json)保留此前完整矩阵。自动检查不能证明玩家觉得好玩。预览沿用原 Windows 播放器资源；全新 Unity 构建、干净机器验证、手柄全流程、玩家盲测及 Steam 提交仍待完成。
+[检查报告](Documentation/QA-results.json)记录当前程序集、真实窗口矩阵与各套规则统计；[九版报告](Documentation/QA-results-v9.json)和[八版报告](Documentation/QA-results-v8.json)保留此前矩阵。自动检查不能证明玩家觉得好玩。预览沿用原 Windows 播放器资源；全新 Unity 构建、干净机器验证、手柄全流程、玩家盲测及 Steam 提交仍待完成。
 
 ## 视觉与声音
 
@@ -87,22 +89,21 @@
 
 ```powershell
 # 重新编译预览，并检查编辑器代码
-./Tools/Build-Preview.ps1 -CheckEditor
+./Tools/Build-Preview.ps1 -CheckEditor -OutputDirectory Builds/Constructivist-v10
 
 # 独立关系模型的随机、穷举与边界检查
 ./Tools/Test-Model.ps1
 
-# 主对话路线的资源轨迹（不包含传话操作组合）
-./Tools/Explore-Balance.ps1
+# 第十版预设、混搭、看板、换牌、零卡、续玩及旧版兼容
+./Tools/Test-CaseDeck-v10.ps1
 
-# 第九版三种牌组、换牌、零卡使用、续玩及旧规则回归矩阵
-./Tools/Test-CaseDeck-Demo.ps1
-
-# 单独检查第九版 4:3 布局
-./Tools/Test-Demo.ps1 -Scenarios v9-office-paper-aspect-en -Width 1280 -Height 960
+# 重跑两版牌组搜索，再生成离线报告
+./Tools/Explore-CaseDeck.ps1 -Output Documentation/BalanceStudy/V9-baseline -Width 192 -PreviousEdition
+./Tools/Explore-CaseDeck.ps1 -Output Documentation/BalanceStudy/V10-tuned -Width 192
+python ./Tools/Build-Balance-Review.py
 
 # 仅在当前程序集的实机验收全部通过后生成预览包
-./Tools/Package-CaseDeck-Preview.ps1
+./Tools/Package-CaseDeck-v10.ps1
 ```
 
 构建脚本先完成编译再更新播放器，编译失败会保留已有程序集。实机测试使用 CharacterController、物理射线、UI 射线和按钮事件，检查布局、结算、回退、结局、通行、真实场景切换、JSON 存档与损坏恢复。结果和截图在 `Builds/Constructivist/QA/`；汇总在 `Documentation/QA-results.json`。测试存档使用隔离目录，不修改正常结局、语言与灵敏度记录。

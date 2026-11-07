@@ -19,7 +19,11 @@ public partial class DemoValidation
         {
             var panel=FindObjectOfType<CaseDeckPanel>();Check(panel!=null&&panel.IsOpen&&NarrativeNotebook.Open&&!player.ControlsEnabled,"E at a door opens loadout preparation before the conversation");
             Check(JsonUtility.ToJson(state.Run.ExportSave())==before,"opening the loadout spends nothing");
-            if(state.Run.Phase==0){Click("Deck preset / "+preset);yield return null;}
+            if(state.Run.Phase==0)
+            {
+                Click("Deck preset / "+preset);yield return null;
+                if(scenario.Contains("mixed")){Click("Deck choice / Listen");Click("Deck choice / Quote");yield return null;Check((panel.DraftMask&(1<<((int)DispatchTool.Quote-1)))!=0&&(panel.DraftMask&(1<<((int)DispatchTool.Listen-1)))==0,"a custom mixed hand replaces the preset's listen with quote");}
+            }
             else if(scenario.Contains("swap")&&state.Run.Phase==1)
             {
                 Click("Deck choice / Pause");Click("Deck choice / Listen");yield return null;
@@ -27,6 +31,7 @@ public partial class DemoValidation
             }
             int draft=panel.DraftMask;LocalizationManager.ToggleLanguage();yield return null;CheckTextLayout("translated case deck");LocalizationManager.ToggleLanguage();yield return null;
             Check(panel.DraftMask==draft&&JsonUtility.ToJson(state.Run.ExportSave())==before,"translation keeps the draft without preparing or refilling it");
+            Check(FindObjectsOfType<ToolMark>().Length>=9,"every candidate has a scalable print mark without covering its button");
             CheckTextLayout("case deck");yield return Shot("30-deck-scene-"+state.Run.Phase);
             Click("Confirm case deck");yield return null;
             Check(state.Run.DeckReady&&!NarrativeNotebook.Open&&ui.IsChoosing,"confirming five cards saves the hand and opens the addressed speaker");
@@ -66,7 +71,13 @@ public partial class DemoValidation
     private IEnumerator RunCaseDeckDemo()
     {
         detailed=true;Check(state.Run.Case==CaseId.Office&&state.Run.DeckRules&&!state.Run.DeckReady,"production work case starts the new deck campaign");
-        bool basic=scenario.Contains("basic");int preset=scenario.Contains("room")||scenario.Contains("resume")?1:scenario.Contains("task")?2:0;
+        Check(state.Run.TunedDeck==scenario.StartsWith("v10-"),"the selected edition keeps its own balance rules");
+        if(scenario.StartsWith("v9-"))
+        {
+            string oldJson=JsonUtility.ToJson(state.Run.ExportSave()).Replace("\"Edition\":0,","").Replace(",\"Edition\":0","");RelationshipRun oldLoaded;
+            Check(RelationshipRun.TryRestoreSave(JsonUtility.FromJson<RelationshipSaveData>(oldJson),out oldLoaded)&&oldLoaded.DeckRules&&!oldLoaded.TunedDeck,"Unity JSON without the new edition field preserves real v9 balance");
+        }
+        bool basic=scenario.Contains("basic");int preset=scenario.Contains("room")||scenario.Contains("resume")||scenario.Contains("mixed")?1:scenario.Contains("task")?2:0;
         for(int phase=0;phase<3;phase++)
         {
             yield return RestAtBench(phase*2);
@@ -120,13 +131,14 @@ public partial class DemoValidation
                 }
                 else yield return ComposePacket(DispatchFragment.None,DispatchFragment.None,DispatchTool.Handoff,"33-handoff");
                 Check(!state.Run.MessageFrom(0).TaskActive&&state.Run.MessageFrom(0).TaskHandedOff,"card or basic handoff actually returns the task");
+                if(state.Run.TunedDeck&&phase==2)Check(state.Run.BlueConsents&&!state.Run.RedConsents,"final handoff asks the eligible recipient again without answering for the other person");
             }
             FindObjectOfType<NarrativeNotebook>().Close();yield return null;
             if(!(basic&&phase==2))
             {
                 if(preset==1&&!basic&&phase==1)yield return DeckBasic(1,MessageAction.CheckFacts);
                 yield return DeckOpen(1);
-                var t=basic?DispatchTool.None:preset==1?DispatchTool.Listen:DispatchTool.Receipt;
+                var t=basic?DispatchTool.None:preset==1?(scenario.Contains("mixed")?DispatchTool.Quote:DispatchTool.Listen):DispatchTool.Receipt;
                 yield return ComposePacket(DispatchFragment.Fact,DispatchFragment.Request,t,"33-return-message");
                 if(!state.Run.PublicPlanVerified(1))yield return ComposePacket(DispatchFragment.Request,DispatchFragment.None,DispatchTool.None,"33-return-follow");
                 FindObjectOfType<NarrativeNotebook>().Close();yield return null;
@@ -134,10 +146,26 @@ public partial class DemoValidation
             Check(state.Run.BothPlansVerified&&!state.Run.CurrentTasks,"both current messages are real and no task is silently dropped");
             Check(!state.Run.MessageFrom(0).HasNeed&&!state.Run.MessageFrom(1).HasNeed,"the work campaign never requires private reasons");
             yield return DeckReadHand();
+            if(scenario.Contains("art"))
+            {
+                yield return Approach(new Vector3(-6.9f,.05f,-2.7f),new Vector3(-9.4f,2.5f,1.6f));yield return new WaitForEndOfFrame();
+                var print=FindObjectOfType<CaseInstallation>().PrintedWorkplan;
+                Check(print.Contains(phase==0?"DRAFT AT 1":phase==1?"ROOM B":"MANAGER / INVITE"),"physical workplan prints this scene's actual edition and responsibility");
+                yield return Shot("40-workplan-scene-"+phase);
+                var station=FindObjectOfType<WorkplanStation>();var camera=player.PlayerCamera;
+                bool hit=Physics.SphereCast(camera.transform.position,.28f,camera.transform.forward,out RaycastHit ray,5.5f,~0,QueryTriggerInteraction.Collide);
+                Check(hit&&ray.collider.GetComponentInParent<WorkplanStation>()==station&&WorkplanStation.Focused,"workplan focus comes from a real interaction ray and clears obstructing HUD");
+                string beforeRead=JsonUtility.ToJson(state.Run.ExportSave());station.Interact(player);yield return null;yield return new WaitForEndOfFrame();Check(ui.IsReflection&&!player.ControlsEnabled,"workplan opens a readable current-state transcript");CheckTextLayout("workplan reader");
+                LocalizationManager.ToggleLanguage();yield return null;CheckTextLayout("translated workplan reader");LocalizationManager.ToggleLanguage();yield return null;
+                yield return Shot("41-workplan-read-"+phase);Click("Continue feedback");yield return null;
+                Check(JsonUtility.ToJson(state.Run.ExportSave())==beforeRead&&player.ControlsEnabled,"reading and translating the workplan costs no resource or response");
+            }
             if(phase<2)yield return DeckNext(phase);
         }
         for(int source=0;source<2;source++)if(state.Run.CanReconfirmPlan(source))yield return DeckBasic(source,MessageAction.Reconfirm);
         Check(state.Run.RedConsents&&state.Run.BlueConsents,"each person confirms their own arrangement");
+        yield return null;
+        if(state.Run.TunedDeck&&state.Run.Capacity==0)Check(GameObject.Find("Resource pressure note").GetComponent<ExhibitionText>().text.Contains("03"),"zero breath with completed plans directs the player to closure, not an unavailable pause");
         if(basic)for(int i=1;i<=9;i++)if(state.Run.InDeck((DispatchTool)i))Check(state.Run.DeckStock((DispatchTool)i)==1,"basic route consumes no strategy card");
         Check(NarrativeText.RecordedLine(state.Run.History[0]).Contains(NarrativeText.L("咖啡","coffee"))&&CaseDeckText.Packet(0,0,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.None)!=CaseDeckText.Packet(1,0,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.None),"history retains the actual edition and original character scene");
         yield return DeckApproach(2);exit.Interact(player);yield return null;Click("Option 2");yield return new WaitForSecondsRealtime(3.1f);

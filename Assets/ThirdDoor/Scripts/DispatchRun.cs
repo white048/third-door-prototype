@@ -12,9 +12,10 @@ public sealed partial class RelationshipRun
     {var m=MessageFrom(source);return m!=null&&m.PublicProgress==3&&!m.Assumed;}
     public bool BothPlansVerified=>PublicPlanVerified(0)&&PublicPlanVerified(1);
     public bool HasAssumedPlan=>messages.Exists(m=>m.Assumed);
-    public bool CanReconfirmPlan(int voice)
+    public bool CanReconfirmPlan(int voice)=>Capacity>0&&EligiblePlanConfirmation(voice);
+    private bool EligiblePlanConfirmation(int voice)
     {
-        if(!DispatchRules||Ended||voice<0||voice>1||Phase!=2||Capacity==0||Trust(voice)<1||Clarity(voice)<2||HasUnrepairedDisclosure(voice)||!PublicPlanVerified(1-voice)||(voice==0?RedConsents:BlueConsents))return false;
+        if(!DispatchRules||Ended||voice<0||voice>1||Phase!=2||Trust(voice)<1||Clarity(voice)<2||HasUnrepairedDisclosure(voice)||!PublicPlanVerified(1-voice)||(voice==0?RedConsents:BlueConsents))return false;
         return history.Exists(r=>r.Phase==2&&r.Voice==voice&&IsConsentResponse(voice,r.Option));
     }
     public int ReceiptState(int recipient)
@@ -98,7 +99,7 @@ public sealed partial class RelationshipRun
         Capacity--;
         int room=HearingRoom(target,m);
         bool bypass=tool==DispatchTool.Quote||tool==DispatchTool.TakeOver;
-        if(tool==DispatchTool.Pause){Capacity+=2;room=2;}
+        if(tool==DispatchTool.Pause){Capacity+=2;if(!TunedDeck)room=2;}
         if(tool==DispatchTool.Quote){Load++;room=2;}
         if(tool==DispatchTool.Listen){m.Inspected=true;AddClarity(target,1);room=2;}
         if(tool==DispatchTool.Reframe){Load--;AddTrust(target,1);m.Inspected=true;}
@@ -110,15 +111,19 @@ public sealed partial class RelationshipRun
             if(tool==DispatchTool.Receipt)
             {
                 var other=MessageFrom(target);if(other!=null&&other.PublicProgress==3&&!other.Assumed)m.SourceChecked=true;
-                Capacity++;room=2;result.Combo=DispatchCombo.ReceiptChain;
+                Capacity++;if(!TunedDeck)room=2;result.Combo=DispatchCombo.ReceiptChain;
             }
             if(tool==DispatchTool.Quote&&m.SourceChecked){Load--;result.Combo=DispatchCombo.CheckedQuote;}
             if(tool==DispatchTool.Reframe&&m.LastTool==DispatchTool.Pause){Capacity++;room=2;result.Combo=DispatchCombo.PacedReframe;}
-            if(tool==DispatchTool.TakeOver){Capacity--;m.TaskActive=true;m.SourceChecked=true;}
+            if(tool==DispatchTool.TakeOver){if(!TunedDeck||!m.SourceChecked)Capacity--;m.TaskActive=true;m.SourceChecked=true;}
         }
         result.HearingRoom=room;
         if(DeckRules&&tool==DispatchTool.Handoff)
-        {Capacity++;DeckTaskHandoff(m);result.Combo=DispatchCombo.Handoff;result.Completed=true;}
+        {
+            Capacity++;DeckTaskHandoff(m);result.Combo=DispatchCombo.Handoff;result.Completed=true;
+            if(TunedDeck&&EligiblePlanConfirmation(target))
+            {if(target==0)RedConsents=true;else BlueConsents=true;Bridge++;result.ConsentRenewed=true;}
+        }
         else if(NeedsSourceCheck(m)&&(first==DispatchFragment.Fact||first==DispatchFragment.Request||second==DispatchFragment.Fact||second==DispatchFragment.Request))
         {result.CheckMissing=true;Load++;}
         else if(Trust(target)==0&&!bypass)

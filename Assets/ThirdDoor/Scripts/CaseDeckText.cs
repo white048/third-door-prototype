@@ -3,10 +3,18 @@ using static NarrativeText;
 public static class CaseDeckText
 {
     public static bool Active=>GameStateManager.Instance!=null&&GameStateManager.Instance.Run.DeckRules;
+    public static bool Tuned=>GameStateManager.Instance!=null&&GameStateManager.Instance.Run.TunedDeck;
     public static string Phase(int phase)=>phase==0?L("先报安排","THE FIRST PLAN"):phase==1?L("你拿的是哪一版","WHICH EDITION?"):L("下一步谁来做","WHO TAKES IT FROM HERE?");
     public static string Name(DispatchTool tool)=>tool==DispatchTool.Check?L("核对","VERIFY"):tool==DispatchTool.Receipt?L("回执","RECEIPT"):tool==DispatchTool.Handoff?L("交接","HANDOFF"):tool==DispatchTool.TakeOver?L("代办","DO A TASK"):DispatchText.ToolNameLegacy(tool);
     public static string Detail(DispatchTool tool)
     {
+        if(Tuned)
+        {
+            if(tool==DispatchTool.Pause)return L("恢复 2 余力，接话长度不变。接着翻译，才会留出两段工夫。","Restore 2 BREATH. Same hearing window. Follow with REFRAME to make room for two pieces.");
+            if(tool==DispatchTool.Receipt)return L("凭真实回执返还本次余力，接话长度不变。对面已送齐时也核对来源。","Refund this attempt with a real receipt. Same hearing window. A full opposite receipt checks the source.");
+            if(tool==DispatchTool.TakeOver)return L("整理清单，承重 +3。未核对时多花 1 余力。跨过打断，送达后须交接。","Compile the list: LOAD +3. Unchecked: 1 extra BREATH. Bypass interruptions; hand it back later.");
+            if(tool==DispatchTool.Handoff)return L("送达后空格使用：承重 -3。对方已等着确认的那一项，也一并再问。","After delivery: LOAD -3. Use empty slots. Also ask any pending eligible confirmation from the recipient.");
+        }
         switch(tool)
         {
             case DispatchTool.Quote:return L("原话两段都能听完；已核对时，不增加承重。需要了解说话人。","Hear both pieces, even through doubt. A checked source avoids extra LOAD. Know the source first.");
@@ -22,6 +30,17 @@ public static class CaseDeckText
         }
     }
     public static string Preset(int id)=>id==0?L("留证 / 核对与回执","PAPER TRAIL"):id==1?L("周旋 / 留出接话工夫","MAKE ROOM"):L("承接 / 代办与交接","LEND A HAND");
+    public static string Plan(int mask)
+    {
+        System.Func<DispatchTool,bool> has=t=>(mask&(1<<((int)t-1)))!=0;
+        string text=L("这副手牌可以怎样配合\n\n","PLANS IN THIS HAND\n\n");
+        if(has(DispatchTool.Quote))text+=(has(DispatchTool.Check)?L("核对 → 原话","VERIFY → QUOTE"):L("基本核对 → 原话","BASIC CHECK → QUOTE"))+L("\n核对后免额外承重。\n","\nChecked words avoid extra load.\n");
+        if(has(DispatchTool.Pause)&&has(DispatchTool.Reframe))text+=L("停顿 → 翻译\n同一封话省余力，留两段工夫。\n","PAUSE → REFRAME\nSave breath on this envelope.\n");
+        if(has(DispatchTool.TakeOver))text+=(has(DispatchTool.Handoff)?L("代办 → 交接","TASK → HANDOFF"):L("代办 → 基本交接","TASK → BASIC HANDOFF"))+L("\n清单送到后，把任务交回。\n","\nDeliver, then return the task.\n");
+        if(has(DispatchTool.Receipt))text+=Tuned?L("真实回执\n回程省余力，仍须留意接话长度。\n","ACTUAL RECEIPT\nSave breath; check the hearing window.\n"):L("真实回执\n对面已送到，回程可省余力。\n","ACTUAL RECEIPT\nDelivered words help the return trip.\n");
+        if(!has(DispatchTool.Quote)&&!has(DispatchTool.TakeOver)&&!has(DispatchTool.Receipt)&&!(has(DispatchTool.Pause)&&has(DispatchTool.Reframe)))text+=L("单张工具也可应急。\n基本核对与交接不用牌。","Single tools can cover a gap.\nBasic checking and handoff need no card.");
+        return text;
+    }
     public static string Fragment(int phase,int source,DispatchFragment part,DispatchTool tool)
     {
         if(part==DispatchFragment.None)return "";
@@ -31,8 +50,9 @@ public static class CaseDeckText
         if(phase==1)return part==DispatchFragment.Fact?(source==0?L("新通知用 B 会议室，旧的 A 室单已作废。","The new notice says room B. The old room A slip is void."):L("同事手里的新版也写 B 会议室。","Your colleague's new copy also says room B.")):(source==0?L("请按新版确认两点半的评审。","Please confirm the 2:30 review using the new notice."):L("同事想在回信里标明这是新版。","Your colleague asks you to label the reply as the new edition."));
         return part==DispatchFragment.Fact?(source==0?L("B 会议室已预留到两点半。","Room B is reserved for 2:30."):L("一点上传草稿，两点半能到。","The draft goes up at 1. They can attend at 2:30.")):(source==0?L("负责人发正式邀请，同事负责上传草稿。","The manager sends the invitation; your colleague uploads the draft."):L("后续变更请负责人直接通知，同事自己确认。","The manager should send later changes directly; your colleague will confirm them."));
     }
-    public static string Packet(int phase,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool)
+    public static string Packet(int phase,int source,DispatchFragment first,DispatchFragment second,DispatchTool tool,bool confirmationQuestion=false)
     {
+        if(first==DispatchFragment.None&&tool==DispatchTool.Handoff&&confirmationQuestion)return L("清单已经送到，我把这件事交回。\n刚才留待确认的安排，你自己的那一项，现在可以确认吗？","The list has arrived. I'm handing the task back.\nAbout the plan we left open: can you confirm your own part now?");
         if(first==DispatchFragment.None)return tool==DispatchTool.Check?L("我先把刚才记的版本核对一遍，别把两张通知混在一起。","Let me check the edition I noted down. I don't want to mix up the two notices."):tool==DispatchTool.Handoff?L("这张清单已经送到。接下来由你们各自确认，我把这部分交回。","The list has arrived. You can each confirm your own part. I'm handing this task back."):tool==DispatchTool.Receipt?L("我带回刚才实际听到的回执。这里只记已听到的内容，不替本人答应。","Here's the receipt for what was actually heard. It records the words, without answering for anyone."):L("你现在最急着听哪一项？我先按这个顺序来。","Which part do you need first? I'll start there.");
         string text=Fragment(phase,source,first,tool);if(second!=DispatchFragment.None)text+="\n"+Fragment(phase,source,second,tool);
         string prefix=tool==DispatchTool.TakeOver?L("我先把这份安排整理成清单：\n","I'll compile these arrangements into a list:\n"):tool==DispatchTool.Receipt?L("接着刚才的实际回执，这一边说的是：\n","Following the actual receipt, this side says:\n"):tool==DispatchTool.Quote?L("按记录里的原话：\n","As recorded:\n"):tool==DispatchTool.Pause?L("等一等，给这两句留点工夫：\n","Give me a moment for these pieces:\n"):tool==DispatchTool.Boundary?L("这趟我只带这几句：\n","This trip, I'm carrying these words only:\n"):"";
@@ -69,7 +89,7 @@ public static class CaseDeckText
     public static string Reaction(CorrespondenceEvent e)
     {
         if(e.CheckMissing)return L("“先别往下读。这是新通知吗？把来源核对了再来，原话卡也替不了这一步。”","Don't read on yet. Is this the new notice? Check the source first. QUOTE can't do that for you.");
-        if(e.Combo==DispatchCombo.Handoff)return L("“清单留这儿。下一版我自己发。”\n你手里少了一件待办。","Leave the list here. I'll send the next edition myself.\nOne less task in your hands.");
+        if(e.Combo==DispatchCombo.Handoff)return L("“清单留这儿。下一版我自己发。”\n你手里少了一件待办。","Leave the list here. I'll send the next edition myself.\nOne less task in your hands.")+(e.ConsentRenewed?L("\n你再问了一次，对方确认了自己的那一项。","\nYou ask again. They confirm their own part."):"");
         if(e.First==DispatchFragment.None&&e.Tool==DispatchTool.Check)return L("你把刚才听到的版本重新对了一遍，在角上记了日期。","You check the edition you heard and put the date in the corner.");
         if(e.First==DispatchFragment.None&&e.Tool==DispatchTool.Receipt)return L("“这项对方听到了，我记下。答应没答应，另问本人。”","I'll note that they heard this. Ask them separately whether they agree.");
         string text=e.Completed?(e.Phase==0?L("“一点的稿，两点半的评审，记下了。”","Draft at one. Review at 2:30. Got it."):e.Phase==1?L("“B 室，新版。旧纸可以翻过来垫杯子了。”","Room B, new edition. The old slip can be a coaster now."):L("“谁上传，谁发邀请，这次各有一格。”","One box for the upload, one for the invitation. A name in each.")):DispatchText.ReactionLegacy(e);
@@ -81,6 +101,7 @@ public static class CaseDeckText
     {
         if(r.Ended)return L("V 回看这趟 / R 再组一副牌","V REVISIT THIS RUN / R BUILD ANOTHER HAND");
         if(!r.DeckReady)return L("工作案例 ","WORK CASE ")+(r.Phase+1)+" / 3\n"+(r.Phase==0?L("E 门前选五张牌，再接话。Tab 也可查看。","E AT A DOOR: choose five cards, then listen. TAB also opens the hand."):L("下一场可换一张牌。E 门前打开牌组。","Swap up to one card for the next scene. E at a door opens your hand."));
+        if(r.Phase==2&&r.BothPlansVerified&&!r.CurrentTasks)return r.RedConsents&&r.BlueConsents?L("两边确认了自己的安排。去 03 收工，V 可回看这趟。","Both confirmed their own part. Finish at 03; V revisits this run."):L("两份原话已到。回本人门前按 F，分别再问一次安排。","Both messages arrived. F at each speaker's door to ask for their own confirmation.");
         if(r.RedDone&&r.BlueDone)return r.CurrentTasks?L("清单送到后还要交接：F / 交接卡或交接按钮。","After the list arrives, hand it back: F / HANDOFF card or task button."):r.Phase<2&&r.CanAdvanceEncounter?L("两边都对上了。去 03，进入下一场。","Both sides match. Go to 03 for the next scene."):L("F 补送缺的项；最后还须各自确认。03 可收这一趟。","F to deliver missing items; each person still confirms their own part. Finish at 03.");
         return L("第 ","SCENE ")+(r.Phase+1)+" / 3 · "+Phase(r.Phase)+"\n"+L("E 接话 / F 组句 / 00 休息 / Tab 查看五张手牌","E LISTEN / F COMPOSE / 00 REST / TAB YOUR FIVE CARDS");
     }

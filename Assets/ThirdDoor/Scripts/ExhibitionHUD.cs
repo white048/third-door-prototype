@@ -82,8 +82,9 @@ public class ExhibitionHUD : MonoBehaviour
         endingCard.SetActive(endingVisible&&endingRead&&!Paused&&!NarrativeNotebook.Open);
         if(caseNavigation!=null)caseNavigation.SetActive(endingVisible&&endingRead&&!Paused&&!NarrativeNotebook.Open&&!IntroSequence.IsActive);
         if(help!=null)help.text=endingVisible?NarrativeText.L("空格 收起/展开结局 / Alt 点击菜单 / Tab 回看 / R 重玩 / N 切换案例 / Esc 暂停","SPACE FOLD / UNFOLD ENDING / ALT CLICK MENU / TAB REVISIT / R REPLAY / N NEXT CASE / ESC PAUSE"):LocalizationManager.Get("help_hint");
+        if(help!=null&&state.Run.DeckRules&&!endingVisible)help.text=NarrativeText.L("WASD 行走 / 鼠标观察 / E 接话与阅读 / F 组句出牌 / Tab 手牌 / V 长卷 / Esc 暂停 / F2 语言","WASD MOVE / MOUSE LOOK / E LISTEN OR READ / F COMPOSE / TAB HAND / V STRIP / ESC PAUSE / F2 LANGUAGE");
         if(navigationCaption!=null)navigationCaption.text=(cn?"案例完成 / ":"CASE COMPLETE / ")+CaseInfo.Title(state.Run.Case);
-        objective.SetActive(!ended&&!IntroSequence.IsActive);
+        objective.SetActive(!ended&&!IntroSequence.IsActive&&!WorkplanStation.Focused);
         crosshair.SetActive(player.ControlsEnabled&&!Paused&&!IntroSequence.IsActive);
         chapter.text=ended?"ENDING 0"+(int)state.Run.Ending+" / 07":"CASE 0"+((int)state.Run.Case+1)+" / ROUND 0"+(state.Run.Phase+1);
     }

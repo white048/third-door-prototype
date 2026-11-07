@@ -27,6 +27,7 @@ public static class CaseDeckTests
         Check(RelationshipRun.TryRestoreSave(inlineLegacy,out inlineRestored)&&!inlineRestored.DeckRules,"old saves keep their rules even when the serializer allocates the missing class");
         var missingDeck=RelationshipRun.DeckCase().ExportSave();missingDeck.Deck=null;
         Check(!RelationshipRun.TryRestoreSave(missingDeck,out inlineRestored),"explicit deck mode requires its deck data");
+        RelationshipSaveData rushedPaper=null,rushedTask=null;
         for(int preset=0;preset<3;preset++)
         {
             var r=RelationshipRun.DeckCase();Save(r);
@@ -37,6 +38,8 @@ public static class CaseDeckTests
             {
                 r.Rest();r.Respond(0,phase==2?1:0);r.Respond(1,phase==2?2:0);
                 Check(r.Phase==phase&&r.RedDone&&r.BlueDone,"hearing both voices waits for actual delivery");Save(r);
+                if(phase==2&&preset==0)rushedPaper=r.ExportSave();
+                if(phase==2&&preset==2)rushedTask=r.ExportSave();
                 if(phase==1)
                 {
                     var missed=Send(r,0,DispatchFragment.Request,DispatchFragment.Fact);
@@ -47,6 +50,7 @@ public static class CaseDeckTests
                     if(!r.MessageFrom(0).SourceChecked)Send(r,0,DispatchFragment.None,DispatchFragment.None,DispatchTool.Check);
                     Check(Send(r,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.Quote).Combo==DispatchCombo.CheckedQuote,"check powers quote");
                     Check(Send(r,1,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.Receipt).Combo==DispatchCombo.ReceiptChain,"actual opposite receipt powers return trip");
+                    if(!r.PublicPlanVerified(1))Send(r,1,DispatchFragment.Request);
                 }
                 else if(preset==1)
                 {
@@ -62,6 +66,7 @@ public static class CaseDeckTests
                     Check(r.MessageFrom(0).TaskActive&&!r.CanAdvanceEncounter,"own job persists after hearing the words");
                     Check(Send(r,0,DispatchFragment.None,DispatchFragment.None,DispatchTool.Handoff).Combo==DispatchCombo.Handoff&&!r.MessageFrom(0).TaskActive,"handoff returns the actual job");
                     Send(r,1,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.Receipt);
+                    if(!r.PublicPlanVerified(1))Send(r,1,DispatchFragment.Request);
                 }
                 Check(r.BothPlansVerified,"both current plans are verified");
                 if(phase<2)
@@ -107,6 +112,26 @@ public static class CaseDeckTests
             Save(basic);
         }
         for(int i=1;i<=9;i++)if(basic.InDeck((DispatchTool)i))Check(basic.DeckStock((DispatchTool)i)==1,"basic route spends no card");
+        RelationshipRun tuned,previous;
+        Check(RelationshipRun.TryRestoreSave(rushedPaper,out tuned)&&tuned.TunedDeck,"new run stores the tuned edition");
+        var oldData=tuned.ExportSave();oldData.Deck.Edition=0;
+        Check(RelationshipRun.TryRestoreSave(oldData,out previous)&&!previous.TunedDeck,"a v9 save keeps its original balance");
+        var tunedPause=Send(tuned,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.Pause);
+        var oldPause=Send(previous,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.Pause);
+        Check(tunedPause.PublicAfter==2&&tunedPause.Interrupted&&oldPause.PublicAfter==3,"pause restores breath without erasing the rushed window; v9 retains two-piece pause");
+        RelationshipRun.TryRestoreSave(rushedPaper,out tuned);oldData=tuned.ExportSave();oldData.Deck.Edition=0;RelationshipRun.TryRestoreSave(oldData,out previous);
+        Send(tuned,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.Quote);Send(previous,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.Quote);
+        var receipt=Send(tuned,1,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.Receipt);var oldReceipt=Send(previous,1,DispatchFragment.Fact,DispatchFragment.Request,DispatchTool.Receipt);
+        Check(receipt.PublicAfter==1&&receipt.CapacityDelta==0&&oldReceipt.PublicAfter==3,"receipt refunds breath but does not buy extra hearing time in the new edition");
+        RelationshipRun.TryRestoreSave(rushedTask,out tuned);var oneBreath=tuned.ExportSave();oneBreath.State.Capacity=1;RelationshipRun.TryRestoreSave(oneBreath,out tuned);
+        Check(tuned.MessageFrom(0).SourceChecked,"rushed task source was actually checked");
+        Send(tuned,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.TakeOver);
+        Check(tuned.Capacity==0&&tuned.MessageFrom(0).TaskActive,"a checked list takes one breath without a duplicate checking charge");
+        var handed=Send(tuned,0,DispatchFragment.None,DispatchFragment.None,DispatchTool.Handoff);
+        Check(handed.ConsentRenewed&&tuned.BlueConsents&&!tuned.RedConsents,"handoff asks the eligible recipient again and never signs for the other person");
+        RelationshipRun.TryRestoreSave(rushedTask,out tuned);var noQuestion=tuned.ExportSave();noQuestion.History[noQuestion.History.Length-1].Option=0;noQuestion.State.BlueConsents=false;RelationshipRun.TryRestoreSave(noQuestion,out tuned);
+        Send(tuned,0,DispatchFragment.Request,DispatchFragment.Fact,DispatchTool.TakeOver);handed=Send(tuned,0,DispatchFragment.None,DispatchFragment.None,DispatchTool.Handoff);
+        Check(!handed.ConsentRenewed&&!tuned.BlueConsents,"handoff cannot invent an unasked confirmation");
         var random=new Random(9116);
         for(int test=0;test<250;test++)
         {

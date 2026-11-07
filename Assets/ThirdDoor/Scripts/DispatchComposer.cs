@@ -85,8 +85,9 @@ public class DispatchComposer : MonoBehaviour
             tools[i].GetComponentInChildren<ExhibitionText>().text=DispatchText.ToolName(t)+(i==0?"":"  ×"+(run.DeckRules?run.DeckStock(t):run.Stock(RelationshipRun.CardFor(t))));
             Style(tools[i],tool==t);
         }
-        words.text=first==DispatchFragment.None&&tool!=DispatchTool.Listen?L("先点一段，再点一段。\n点击已选的话可移除；先选的先说。","Choose a piece, then another.\nTap a selected piece to remove it. First picked, first spoken."):DispatchText.Packet(run.Case,source,first,second,tool);
+        bool emptyAction=tool==DispatchTool.Listen||(run.DeckRules&&(tool==DispatchTool.Check||tool==DispatchTool.Receipt||tool==DispatchTool.Handoff));
         var preview=run.PreviewPacket(m.Id,first,second,tool,CorrespondenceFolio.NearbyVoice(player));
+        words.text=first==DispatchFragment.None&&!emptyAction?L("先点一段，再点一段。\n点击已选的话可移除；先选的先说。","Choose a piece, then another.\nTap a selected piece to remove it. First picked, first spoken."):DispatchText.Packet(run.Case,source,first,second,tool,run.Phase,preview!=null&&preview.ConsentRenewed);
         send.interactable=preview!=null;
         // Do not solve the encounter by revealing the recipient's future answer in a preview.
         cost.text=DispatchText.ToolDetail(tool)+"\n"+L("余力 ","BREATH ")+run.Capacity+" / 8    "+L("承重 ","LOAD ")+run.Load+" / 8";

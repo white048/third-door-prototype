@@ -4,7 +4,7 @@ public sealed partial class RelationshipRun
     {
         if(!data.CaseDeckRules)return true;
         var d=data.Deck;if(d==null)return false;
-        if(data.Version<3||data.Case!=(int)CaseId.Office||!data.DispatchRules||data.HasUndo||data.SelectedCard!=-1||d.Mask<0||d.Mask>=512
+        if(data.Version<3||!InRange(d.Edition,1)||data.Case!=(int)CaseId.Office||!data.DispatchRules||data.HasUndo||data.SelectedCard!=-1||d.Mask<0||d.Mask>=512
             ||d.Stock==null||d.Stock.Length!=9||d.Loadouts==null||d.Loadouts.Length!=3||d.Combos==null||d.Combos.Length!=4)return false;
         int phase=data.State.Phase;
         if(d.Mask==0)

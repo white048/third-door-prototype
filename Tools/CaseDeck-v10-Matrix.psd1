@@ -1,0 +1,21 @@
+@{
+    Cases = @(
+        @{Name='v10-office-paper-art-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-room-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-task-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-mixed-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-swap-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-basic-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-resume-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v10-office-room-aspect-cn';Width=1280;Height=960;Fallback=$false}
+        @{Name='v10-office-task-store-en';Width=1920;Height=1080;Fallback=$false}
+        @{Name='v10-office-paper-fallback-en';Width=1600;Height=900;Fallback=$true}
+        @{Name='v9-office-paper-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v9-office-task-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v9-office-resume-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v8-dispatch-home-cn';Width=1600;Height=900;Fallback=$false}
+        @{Name='v8-dispatch-late-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v4-save-resume-en';Width=1600;Height=900;Fallback=$false}
+        @{Name='v4-session-nav-cn';Width=1600;Height=900;Fallback=$false}
+    )
+}
